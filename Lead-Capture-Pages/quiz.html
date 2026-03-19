@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Is Your Business Built to Scale? | J Ryan Russow</title>
+  <meta name="description" content="Take this free 2-minute quiz to discover if your business is ready to scale — or if hidden gaps are holding you back." />
+  <link rel="canonical" href="https://jryanrussow.com/quiz.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-name">J Ryan Russow</a>
+        <p class="brand-tagline">Free Business Assessment</p>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="compound-circle.html" class="nav-link">Coaching</a></li>
+          <li><a href="application.html" class="nav-link nav-cta">Apply Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-content">
+    <div class="container content-narrow">
+
+      <h2 class="page-title">Is Your Business Built to Scale?</h2>
+      <p class="lead">Answer 5 quick questions to find out where you stand — and what to fix first.</p>
+
+      <form id="quizForm" class="application-form">
+
+        <input type="hidden" name="form_type" value="scale_quiz" />
+
+        <div class="form-group">
+          <label for="quiz-name">Your Name <span class="required">*</span></label>
+          <input type="text" id="quiz-name" name="name" required autocomplete="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="quiz-email">Email Address <span class="required">*</span></label>
+          <input type="email" id="quiz-email" name="email" required autocomplete="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="quiz-company">Company Name</label>
+          <input type="text" id="quiz-company" name="company" />
+        </div>
+
+        <div class="form-group">
+          <label for="q1">1. Do you have documented systems for your core operations? <span class="required">*</span></label>
+          <select id="q1" name="q1_systems" required>
+            <option value="">Select</option>
+            <option value="yes">Yes — fully documented</option>
+            <option value="partial">Partially — some things are written down</option>
+            <option value="no">No — it's all in my head</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q2">2. Could your business run for 2 weeks without you? <span class="required">*</span></label>
+          <select id="q2" name="q2_independence" required>
+            <option value="">Select</option>
+            <option value="yes">Yes — it has before</option>
+            <option value="maybe">Maybe — with some chaos</option>
+            <option value="no">No — everything stops without me</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q3">3. What's your approximate annual revenue? <span class="required">*</span></label>
+          <select id="q3" name="q3_revenue" required>
+            <option value="">Select</option>
+            <option value="under-100k">Under \$100K</option>
+            <option value="100k-250k">\$100K – \$250K</option>
+            <option value="250k-500k">\$250K – \$500K</option>
+            <option value="500k-1m">\$500K – \$1M</option>
+            <option value="over-1m">Over \$1M</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q4">4. Do you have a clear financial plan for the next 12 months? <span class="required">*</span></label>
+          <select id="q4" name="q4_financial_plan" required>
+            <option value="">Select</option>
+            <option value="yes">Yes — detailed plan in place</option>
+            <option value="rough">Rough idea but nothing formal</option>
+            <option value="no">No — I'm winging it</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="q5">5. What's your biggest challenge right now? <span class="required">*</span></label>
+          <select id="q5" name="q5_challenge" required>
+            <option value="">Select</option>
+            <option value="revenue">Growing revenue</option>
+            <option value="time">Time management / overwhelm</option>
+            <option value="team">Hiring / managing people</option>
+            <option value="systems">Building systems & processes</option>
+            <option value="mindset">Confidence / decision fatigue</option>
+          </select>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Get My Results</button>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 J Ryan Russow. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
