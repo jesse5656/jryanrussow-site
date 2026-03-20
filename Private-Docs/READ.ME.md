@@ -1,6 +1,7 @@
 git add .
 git commit -m "update"
 git push
+git push --set-upstream origin main
 
 # Navigate to your project
 cd /path/to/jryanrussow-site
