@@ -5,58 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Compound Performance Circle | J Ryan Russow</title>
   <meta name="description" content="The Compound Performance Circle: A private 12-month coaching experience for elite performers — limited to 6 members per year.">
-  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    :root {
+      --navy: #0A2E5A;
+      --gold: #D4AF37;
+      --dark: #0F172A;
+      --gray: #647481;
+      --light: #F8FAFC;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+    header {
+      background: var(--navy); color: white; padding: 2rem 0; text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    main { padding: 3rem 0; }
+    section { margin-bottom: 2.5rem; }
+    h2 { color: var(--navy); font-size: 2rem; margin-bottom: 1.2rem; font-weight: 700; }
+    h3 { color: var(--gold); font-size: 1.4rem; margin: 1.8rem 0 0.8rem; }
+    ul { padding-left: 1.5rem; margin: 1rem 0; }
+    li { margin-bottom: 0.7rem; }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;
+    }
+    .tile {
+      background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+    .tile h4 { color: var(--navy); margin-bottom: 0.7rem; font-size: 1.25rem; }
+    .cta {
+      text-align: center; margin-top: 3rem;
+    }
+    .btn {
+      display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700;
+      padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #b89a2d; }    footer {
+      background: var(--dark); color: #CBD5E1; padding: 2rem 0; text-align: center;
+      margin-top: 4rem;
+    }
+  </style>
 </head>
-<body class="bg-navy text-white font-sans">
-  <header class="container py-6 border-b border-gold">
-    <h1 class="text-3xl font-bold"><a href="index.html">J Ryan Russow</a></h1>
-    <p class="mt-1">The Compound Performance Circle</p>
+<body>
+  <header>
+    <div class="container">
+      <h1>The Compound Performance Circle</h1>
+      <p>A 12-month private coaching experience for elite performers</p>
+    </div>
   </header>
 
-  <main class="container py-10 max-w-3xl mx-auto px-4">
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-4">The Compound Performance Circle</h2>
+  <main class="container">
+    <section>
+      <h2>The Compound Performance Circle</h2>
       <p>A 12-month private coaching experience for founders, executives, and high-performers who want to master wealth, strength, and mindset — together. Not theory. Not hype. Real transformation.</p>
     </section>
 
-    <section class="mb-8">
-      <h3 class="text-xl font-bold mb-3">Why This Works</h3>
+    <section>
+      <h3>Why This Works</h3>
       <p>Most people fail because they try to fix one area while ignoring the rest. They grow revenue — but burn out. They lift heavy — but make weak decisions. They meditate — but live paycheck to paycheck. Real power comes when all three rise together.</p>
     </section>
 
-    <section class="mb-8">
-      <h3 class="text-xl font-bold mb-3">Three Pillars, One Path</h3>
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-gray-800 p-4 rounded">
-          <h4 class="font-bold text-gold">Wealth Engine</h4>
+    <section>
+      <h3>Three Pillars, One Path</h3>
+      <div class="grid">
+        <div class="tile">
+          <h4>Wealth Engine</h4>
           <p>Scale income, buy assets, invest wisely — using The Three-Pillar Method™</p>
         </div>
-        <div class="bg-gray-800 p-4 rounded">
-          <h4 class="font-bold text-gold">Body Code</h4>
+        <div class="tile">
+          <h4>Body Code</h4>
           <p>Westside-inspired strength, recovery, and nutrition — for real life</p>
         </div>
-        <div class="bg-gray-800 p-4 rounded">
-          <h4 class="font-bold text-gold">Mind Forge</h4>
+        <div class="tile">
+          <h4>Mind Forge</h4>
           <p>Identity-based habits, discomfort training, and courageous action</p>
         </div>
       </div>
     </section>
 
-    <section class="mb-8">
-      <h3 class="text-xl font-bold mb-3">Investment & Structure</h3>
-      <ul class="list-disc ml-6 space-y-2">
+    <section>
+      <h3>Investment & Structure</h3>
+      <ul>
         <li><strong>Duration:</strong> 12 months</li>
         <li><strong>Format:</strong> Hybrid — monthly in-person intensives (or virtual) + weekly 1:1 calls</li>
         <li><strong>Cohort Size:</strong> Max 6 members</li>
-        <li><strong>Investment:</strong> $25,000/year (or $2,500/month)</li>
-        <li><strong>Includes:</strong> Custom workout plan, business review, journal prompts, private portal, emergency support</li>
+        <li><strong>Investment:</strong> $25,000/year (or $2,500/month)</li>        <li><strong>Includes:</strong> Custom workout plan, business review, journal prompts, private portal, emergency support</li>
       </ul>
     </section>
 
-    <section class="mb-8">
-      <h3 class="text-xl font-bold mb-3">Who Gets In</h3>
+    <section>
+      <h3>Who Gets In</h3>
       <p>You must:</p>
-      <ul class="list-disc ml-6 space-y-2">
+      <ul>
         <li>Be an entrepreneur, founder, or executive</li>
         <li>Earn $500K+ annually (or have significant assets)</li>
         <li>Value discipline over motivation</li>
@@ -66,12 +113,12 @@
       <p>This is not for beginners. It’s for those ready to go deeper.</p>
     </section>
 
-    <div class="text-center">
-      <a href="contact.html" class="inline-block bg-gold text-black px-6 py-2 rounded">Apply to Join</a>
+    <div class="cta">
+      <a href="contact.html" class="btn">Apply to Join</a>
     </div>
   </main>
 
-  <footer class="container py-8 border-t border-gray-700 mt-12 text-sm">
+  <footer>
     <p><a href="index.html">← Home</a> | &copy; 2026 J Ryan Russow</p>
   </footer>
 </body>
