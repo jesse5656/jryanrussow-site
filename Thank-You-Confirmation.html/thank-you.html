@@ -2,82 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You | J Ryan Russow</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
-<body>
+<body class="bg-navy text-white font-sans">
 
-  <main class="page-content">
-    <div class="container content-narrow text-center" style="padding-top: 6rem;">
+  <header class="container py-6 border-b border-gold">
+    <h1 class="text-3xl font-bold"><a href="../index.html">J Ryan Russow</a></h1>
+    <p class="mt-1">Application Received</p>
+  </header>
 
-      <h1 class="page-title" style="color: var(--gold);">Thank You</h1>
+  <main class="container py-16 max-w-2xl mx-auto px-4 text-center">
 
-      <!-- Dynamic message based on form type -->
-      <div id="msg-application" class="thank-you-msg" style="display:none;">
-        <h2>Your Application Has Been Received</h2>
-        <p>I personally review every application. If there's a fit, I'll reach out within 48 hours to schedule a discovery call.</p>
-        <p>In the meantime, take a look at the pillars that drive The Circle:</p>
-      </div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mx-auto text-gold mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
 
-      <div id="msg-workbook" class="thank-you-msg" style="display:none;">
-        <h2>Your Workbook Is On Its Way</h2>
-        <p>Check your inbox in the next few minutes. If you don't see it, check your spam folder.</p>
-        <p>While you wait — here's what makes The Three-Pillar Method™ different:</p>
-      </div>
+    <h2 class="text-3xl font-bold mb-4">Thank You</h2>
+    <p class="mb-6 text-lg">Your application for The Compound Performance Circle has been received.</p>
+    <p>We review all submissions personally and will respond within 5 business days.</p>
 
-      <div id="msg-quiz" class="thank-you-msg" style="display:none;">
-        <h2>Your Results Are Being Prepared</h2>
-        <p>I'll review your answers and send personalized insights to your email within 24 hours.</p>
-        <p>Want to go deeper? Explore these resources:</p>
-      </div>
-
-      <div id="msg-contact" class="thank-you-msg" style="display:none;">
-        <h2>Message Received</h2>
-        <p>I'll get back to you as soon as possible — typically within 1-2 business days.</p>
-      </div>
-
-      <div id="msg-default" class="thank-you-msg">
-        <h2>Submission Received</h2>
-        <p>Thank you for reaching out. I'll be in touch soon.</p>
-      </div>
-
-      <div class="pillar-detail-grid" style="margin-top: 2rem; text-align: left;">
-        <a href="three-pillar-method.html" class="pillar-card">
-          <h3 class="pillar-title">The Three-Pillar Method™</h3>
-          <p class="pillar-desc">Build wealth from zero with a proven sequence.</p>
-        </a>
-        <a href="compound-circle.html" class="pillar-card">
-          <h3 class="pillar-title">The Compound Performance Circle</h3>
-          <p class="pillar-desc">Elite 1:1 coaching — 6 spots per year.</p>
-        </a>
-      </div>
-
-      <div class="mt-lg">
-        <a href="index.html" class="btn btn-primary">Back to Home</a>
-      </div>
-
+    <div class="mt-8">
+      <a href="../index.html" class="inline-block bg-gold text-black px-6 py-3 rounded font-bold">Back to Home</a>
     </div>
+
   </main>
 
-  <script>
-    // Show the right thank-you message based on URL parameter
-    const params = new URLSearchParams(window.location.search);
-    const type = params.get('type');
-    
-    if (type) {
-      // Hide default message
-      document.getElementById('msg-default').style.display = 'none';
-      // Show specific message
-      const target = document.getElementById('msg-' + type);
-      if (target) target.style.display = 'block';
-    }
-  </script>
+  <footer class="container py-8 border-t border-gray-700 mt-12 text-sm">
+    <p>&copy; 2026 J Ryan Russow | jesse@midwestguard.net</p>
+  </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
