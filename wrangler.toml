@@ -2,7 +2,6 @@ name = "jryanrussow-site"
 main = "worker.js"
 compatibility_date = "2026-03-20"
 
-# ✅ Valid route definitions (only uses 'pattern')
 [[routes]]
 pattern = "jryanrussow.com/*"
 
