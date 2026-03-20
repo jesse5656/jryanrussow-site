@@ -7,7 +7,7 @@
     <!-- Primary SEO -->
     <title>The Daily Check-In | J Ryan Russow - Performance Coaching System</title>
     <meta name="description" content="Printable daily check-in system for elite performers. Morning and evening protocols for building mental resilience, accountability, and unbreakable habits. Westside Barbell Certified.">
-    <meta name="keywords" content="daily check-in, performance coaching, Jesse Russow, mental resilience, accountability system, morning routine, evening routine, founder coaching">
+    <meta name="keywords" content="daily check-in, performance coaching, Jesse Russow, mental resilience, accountability system, morning routine, evening routine, founder coaching, Westside Barbell">
     <meta name="author" content="J Ryan Russow">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.jryansow.com/daily-checkin.html">
@@ -17,17 +17,17 @@
     <meta property="og:url" content="https://www.jryansow.com/daily-checkin.html">
     <meta property="og:title" content="The Daily Check-In | J Ryan Russow">
     <meta property="og:description" content="Printable daily system for elite performers. Build unbreakable habits through structured accountability.">
-    <meta property="og:image" content="https://www.jryansow.com/images/og-image.jpg">
+    <meta property="og:image" content="https://www.jryansow.com/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.jryansow.com/daily-checkin.html">
     <meta property="twitter:title" content="The Daily Check-In | J Ryan Russow">
     <meta property="twitter:description" content="Printable daily system for elite performers.">
-    <meta property="twitter:image" content="https://www.jryansow.com/images/og-image.jpg">
+    <meta property="twitter:image" content="https://www.jryansow.com/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.ico">
     
     <style>
         * {
@@ -43,11 +43,12 @@
             background: #f8f9fa;
         }
 
+        /* Hero */
         .hero {
             background: linear-gradient(135deg, #0f2b5b 0%, #1a417a 100%);
             color: white;
-            padding: 80px 20px 60px;
-            text-align: center;        }
+            padding: 80px 20px 60px;            text-align: center;
+        }
 
         .hero h1 {
             font-size: 2.5rem;
@@ -60,6 +61,7 @@
             opacity: 0.95;
         }
 
+        /* Sections */
         .section {
             padding: 60px 20px;
             max-width: 900px;
@@ -72,6 +74,7 @@
             margin-bottom: 20px;
         }
 
+        /* Feature List */
         .feature-list {
             margin: 30px 0;
             padding-left: 0;
@@ -93,19 +96,462 @@
             left: 0;
             color: #0f2b5b;
             font-weight: bold;
-            font-size: 1.3rem;
-        }
+            font-size: 1.3rem;        }
 
-        .feature-list strong {            color: #0f2b5b;
+        .feature-list strong {
+            color: #0f2b5b;
             display: block;
             margin-bottom: 5px;
             font-size: 1.15rem;
         }
 
+        /* Check-In Box */
         .checkin-box {
             background: #0f2b5b;
             color: white;
             padding: 50px 40px;
             border-radius: 12px;
             margin: 40px 0;
-            box-shadow: 0 10px 30px rgba(15, 43, 91
+            box-shadow: 0 10px 30px rgba(15, 43, 91, 0.2);
+        }
+
+        .checkin-box h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #ffd700;
+            text-align: center;
+        }
+
+        .checkin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .checkin-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #ffd700;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 10px;
+        }
+
+        .checkin-section ul {
+            list-style: none;
+        }
+
+        .checkin-section li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;            line-height: 1.6;
+        }
+
+        .checkin-section li:before {
+            content: "−";
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* Credentials/Certificate Section */
+        .credentials-section {
+            background: linear-gradient(135deg, #f0f4f8 0%, #e6edf5 100%);
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin: 50px 0;
+            border: 3px solid #0f2b5b;
+            text-align: center;
+        }
+
+        .credentials-section h2 {
+            font-size: 2rem;
+            color: #0f2b5b;
+            margin-bottom: 20px;
+        }
+
+        .certificate-badge {
+            display: inline-block;
+            background: #0f2b5b;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .certificate-logo {
+            max-width: 300px;
+            margin: 30px auto;
+            display: block;
+        }
+
+        .certificate-logo img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);            border: 3px solid #0f2b5b;
+        }
+
+        .cert-details {
+            margin: 30px 0;
+        }
+
+        .cert-details p {
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .cert-details strong {
+            color: #0f2b5b;
+            font-weight: 700;
+        }
+
+        .score {
+            font-size: 1.6rem;
+            color: #0f2b5b;
+            font-weight: 700;
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .cert-link {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 35px;
+            background: #d4af37;
+            color: #0f2b5b;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .cert-link:hover {
+            background: #c4a030;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
+        }
+        /* Why Founders Section */
+        .why-founders {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 12px;
+            margin: 50px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #0f2b5b;
+        }
+
+        .why-founders h2 {
+            font-size: 2rem;
+            color: #0f2b5b;
+            margin-bottom: 25px;
+        }
+
+        .why-founders p {
+            font-size: 1.15rem;
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .founder-quote {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #0f2b5b;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0f2b5b 0%, #1a417a 100%);
+            color: white;
+            padding: 70px 40px;
+            border-radius: 12px;
+            margin: 50px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(15, 43, 91, 0.3);
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: #d4af37;
+            color: #0f2b5b;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn:hover {
+            background: #c4a030;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-large {
+            padding: 22px 55px;
+            font-size: 1.3rem;
+        }
+        /* Footer */
+        footer {
+            background: #0f2b5b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Print Hint */
+        .print-hint {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .print-hint p {
+            color: #856404;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+
+            .checkin-box {
+                padding: 40px 25px;
+            }
+
+            .checkin-grid {                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .certificate-logo {
+                max-width: 220px;
+            }
+
+            .credentials-section,
+            .why-founders,
+            .cta-section {
+                padding: 40px 25px;
+            }
+
+            .trust-indicators {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero, .btn, footer, .cert-link, .cta-section, .print-hint {
+                display: none;
+            }
+
+            .checkin-box {
+                box-shadow: none;
+                border: 3px solid #0f2b5b;
+                page-break-inside: avoid;
+            }
+
+            body {
+                background: white;
+            }
+
+            .section {
+                max-width: 100%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <header class="hero">
+        <h1>The Daily Check-In</h1>
+        <p>Printable Daily System for Elite Performers</p>
+    </header>
+    <main>
+        <section class="section">
+            <!-- Feature List (from original) -->
+            <ul class="feature-list">
+                <li>
+                    <strong>Discomfort Training</strong>
+                    Cold showers, hard conversations, early mornings — not for suffering, but for signal calibration.
+                </li>
+                <li>
+                    <strong>Daily Anchors</strong>
+                    5 minutes of journaling: "What went well?" / "One courageous act today?"
+                </li>
+            </ul>
+
+            <!-- Print Hint -->
+            <div class="print-hint">
+                <p>📄 <strong>Pro Tip:</strong> Press Ctrl+P (or Cmd+P on Mac) to print this daily check-in and keep it by your desk</p>
+            </div>
+
+            <!-- Daily Check-In Box (from original) -->
+            <div class="checkin-box">
+                <h2>The Daily Check-In (Printable)</h2>
+                
+                <div class="checkin-grid">
+                    <div class="checkin-section">
+                        <h3>🌅 Morning</h3>
+                        <ul>
+                            <li>What's one thing I own today?</li>
+                            <li>What will I do that scares me (just a little)?</li>
+                        </ul>
+                    </div>
+
+                    <div class="checkin-section">
+                        <h3>🌙 Evening</h3>
+                        <ul>
+                            <li>What went well?</li>
+                            <li>What did I avoid — and why?</li>
+                            <li>One win I'm proud of:</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificate Section (NEW - with logo, score, date, link) -->
+        <section class="section">
+            <div class="credentials-section">
+                <h2>Certification & Credentials</h2>
+                
+                <div class="certificate-badge">                    ✓ Westside Barbell Certified
+                </div>
+
+                <div class="certificate-logo">
+                    <img src="westside-certificate-logo.png" alt="Westside Barbell Personal Training & Athletic Coaching Certificate">
+                </div>
+                
+                <div class="cert-details">
+                    <p><strong>Personal Training & Athletic Coaching Certificate</strong></p>
+                    <p><strong>Issued by:</strong> Westside Barbell</p>
+                    <div class="score">Score: 95.12/100 (95.12%)</div>
+                    <p><strong>Date Earned:</strong> May 23, 2025</p>
+                    <p style="margin-top: 20px; font-size: 1rem; color: #4a5568; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Certified in Louie Simmons' proven methodology for building elite strength and performance systems — 
+                        the same principles that power world-record holders, now applied to mental, financial, and physical resilience.
+                    </p>
+                    
+                    <a href="https://web.archive.org/web/20231201041641mp_/https://www.westside-barbell.com/products/personal-training-and-athletic-coaching-certificate" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="cert-link">
+                        View Course Information →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why This Works for Founders (from original) -->
+        <section class="section">
+            <div class="why-founders">
+                <h2>Why This Works for Founders</h2>
+                <p>
+                    You don't need more willpower. You need better systems. When your business is on fire, 
+                    your mind must be the calm center — not another source of chaos. The Mind Forge gives you that anchor.
+                </p>
+                <div class="founder-quote">
+                    "I am someone who shows up."
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section (from original) -->
+        <section class="section">
+            <div class="cta-section">
+                <h2>Ready to Build Unbreakable Systems?</h2>
+                <p>Join The Compound Performance Circle — limited to 6 elite performers per year</p>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">✓ Westside Barbell Certified</div>
+                    <div class="trust-item">✓ 24 Years Experience</div>                    <div class="trust-item">✓ 6 Spots/Year</div>
+                </div>
+
+                <a href="index.html#apply" class="btn btn-large">Apply to Join The Circle</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="daily-checkin.html">Daily Check-In</a> | 
+            © 2025 J Ryan Russow
+        </p>
+    </footer>
+</body>
+</html>
