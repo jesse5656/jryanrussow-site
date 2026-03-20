@@ -3,8 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mind Forge | J Ryan Russow</title>
-  <meta name="description" content="Mental resilience through identity, not affirmations. Build discipline, courage, and clarity — like a founder, not a follower.">
+  
+  <!-- Primary SEO -->
+  <title>Mind Forge | J Ryan Russow — Identity-Based Mental Resilience</title>
+  <meta name="description" content="Mental resilience through identity, not affirmations. Build discipline, courage, and clarity — like a founder, not a follower. Westside Barbell Certified.">
+  <meta name="keywords" content="mind forge, mental resilience, identity-based discipline, founder coaching, cognitive fortitude, J Ryan Russow, Westside Barbell">
+  <meta name="author" content="J Ryan Russow">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jryanrussow.com/mind-forge.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jryanrussow.com/mind-forge.html">
+  <meta property="og:title" content="Mind Forge | Identity-Based Mental Resilience">
+  <meta property="og:description" content="Discipline over motivation. How founders build unbreakable minds — through systems, not slogans.">
+  <meta property="og:image" content="https://jryanrussow.com/assets/images/mind-forge/mind-forge-blacksmith-transforming-metal-in-forge-1200.jpg">
+  <meta property="og:site_name" content="J Ryan Russow">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://jryanrussow.com/mind-forge.html">
+  <meta property="twitter:title" content="Mind Forge | Identity-Based Mental Resilience">
+  <meta property="twitter:description" content="Discipline over motivation. How founders build unbreakable minds — through systems, not slogans.">
+  <meta property="twitter:image" content="https://jryanrussow.com/assets/images/mind-forge/mind-forge-blacksmith-transforming-metal-in-forge-1200.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;70&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <style>
     :root {
       --navy: #0A2E5A;
@@ -12,42 +43,301 @@
       --dark: #0F172A;
       --gray: #647481;
       --light: #F8FAFC;
+      --cream: #FEF9F3;
+      --shadow: rgba(0, 0, 0, 0.08);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--light);
       color: var(--dark);
       line-height: 1.6;
+      overflow-x: hidden;
     }
-    .container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
     header {
-      background: var(--navy); color: white; padding: 2rem 0; text-align: center;
+      background: linear-gradient(135deg, var(--navy), #1a3a6c);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+      position: relative;
+      overflow: hidden;
     }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    main { padding: 3rem 0; }
-    section { margin-bottom: 2.5rem; }
-    h2 { color: var(--navy); font-size: 2rem; margin-bottom: 1.2rem; font-weight: 700; }
-    h3 { color: var(--gold); font-size: 1.4rem; margin: 1.8rem 0 0.8rem; }
+
+    header::before {
+      content: "";
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.06);
+      top: -400px;
+      right: -300px;
+      z-index: 0;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Hero Image */
+    .forge-hero {
+      margin: 2rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(10, 46, 90, 0.25);
+      position: relative;
+    }
+
+    .forge-hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.95);
+      transition: transform 0.4s ease;
+    }
+
+    .forge-hero:hover img {
+      transform: scale(1.02);
+    }
+
+    .forge-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent);
+      padding: 2rem 1.5rem;
+      color: white;
+    }
+
+    .forge-overlay h2 {
+      font-size: 1.8rem;
+      margin: 0 0 0.5rem 0;
+      font-weight: 600;
+    }
+
+    .forge-overlay p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+    }
+
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+    }
+
+    h3 {
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem;
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    li::before {
+      content: "•";
+      color: var(--gold);
+      font-weight: bold;
+      position: absolute;
+      left: -1.75rem;
+      top: 0;
+    }
+
     pre {
-      background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 8px;
-      overflow-x: auto; font-size: 0.95rem; line-height: 1.5;
+      background: var(--dark);
+      color: #e2e8f0;
+      padding: 1.75rem;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 1.5rem 0;
+      border-left: 4px solid var(--gold);
     }
+
+    blockquote {
+      border-left: 4px solid var(--gold);
+      padding: 1.5rem 1.5rem 1.5rem 2rem;
+      margin: 2rem 0;
+      background: rgba(212, 175, 55, 0.05);
+      font-style: italic;
+      color: var(--gray);
+    }
+
     .cta {
-      text-align: center; margin-top: 3rem;
+      text-align: center;
+      margin: 3.5rem 0;
     }
+
     .btn {
-      display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700;
-      padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none;
-      transition: background 0.3s;
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      padding: 0.875rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     }
-    .btn:hover { background: #b89a2d; }
+
+    .btn:hover {
+      background: #b89a2d;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Footer */
     footer {
-      background: var(--dark); color: #CBD5E1; padding: 2rem 0; text-align: center;
+      background: var(--dark);
+      color: #CBD5E1;
+      padding: 3rem 0;
+      text-align: center;
       margin-top: 4rem;
     }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .copyright {
+      font-size: 0.875rem;
+      color: #647481;
+      margin-top: 1.5rem;
+    }
+
+    /* Schema */
+    .schema {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      header p { font-size: 1.2rem; }
+      .forge-hero { border-radius: 8px; }
+      h2 { font-size: 1.9rem; }
+      h3 { font-size: 1.4rem; }
+      .btn { padding: 0.75rem 1.5rem; font-size: 1rem; }
+    }
   </style>
-</head><body>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "The Mind Forge: Building Mental Resilience for Founders",
+    "description": "A proven system to develop unbreakable mental discipline through identity shifts, discomfort training, and daily anchors — no affirmations, no apps, just systems.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Adopt an identity-based mindset: 'I am someone who shows up' — not 'I’m trying'."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Train discomfort intentionally: cold showers, hard conversations, early mornings — for signal calibration."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Anchor daily with 5 minutes of journaling: What went well? One courageous act?"
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Integrate into The Compound Performance Circle for accountability and scaling."
+      }
+    ],
+    "publisher": {
+      "@type": "Person",
+      "name": "J Ryan Russow",
+      "url": "https://jryanrussow.com"
+    }
+  }
+  </script>
+</head>
+<body>
   <header>
     <div class="container">
       <h1>Mind Forge</h1>
@@ -55,18 +345,33 @@
     </div>
   </header>
 
+  <!-- Hero Image Section -->
+  <div class="container">
+    <div class="forge-hero">
+      <img src="/assets/images/mind-forge-blacksmith-transforming-metal-in-forge/mind-forge-blacksmith-transforming-metal-in-forge-73-kb.jpg"
+           alt="Blacksmith placing raw metal into industrial forge for transformation - symbolizing how The Mind Forge reshapes founders through disciplined systems, sustained pressure, and intentional rebuilding of wealth, strength, and identity"
+           width="1200" height="630"
+           loading="lazy"
+           decoding="async">
+      <div class="forge-overlay">
+        <h2>The Crucible of Clarity</h2>
+        <p>Real resilience isn’t forged in comfort — it’s built under sustained heat, precise pressure, and skilled intervention.</p>
+      </div>
+    </div>
+  </div>
+
   <main class="container">
     <section>
       <h2>Discipline Over Motivation</h2>
-      <p>Motivation fades. Discipline compounds. This is not therapy. Not mindfulness apps. This is identity-based habit engineering — built from 24 years of running businesses under pressure.</p>
+      <p>Motivation fades. Discipline compounds. This is not therapy. Not mindfulness apps. This is identity-based habit engineering — built from 24 years of running businesses under pressure. When the market burns, your mind must be the calm center — not another source of chaos. The Mind Forge gives you that anchor. </p>
     </section>
 
     <section>
       <h3>The 3 Pillars of Mental Resilience</h3>
       <ul>
         <li><strong>Identity Shifts</strong> — Stop saying “I’m trying.” Start saying “I am someone who shows up.”</li>
-        <li><strong>Discomfort Training</strong> — Cold showers, hard conversations, early mornings — not for suffering, but for signal calibration.</li>
-        <li><strong>Daily Anchors</strong> — 5 minutes of journaling: “What went well?” / “One courageous act today?”</li>
+        <li><strong>Discomfort Training</strong> — Cold showers, hard conversations, early mornings — not for suffering, but for signal calibration. You’re not building tolerance. You’re building *response fidelity*.</li>
+        <li><strong>Daily Anchors</strong> — 5 minutes of journaling: “What went well?” / “One courageous act today?” No fluff. Just data.</li>
       </ul>
     </section>
 
@@ -87,14 +392,31 @@ Evening:
     <section>
       <h3>Why This Works for Founders</h3>
       <p>You don’t need more willpower. You need better systems. When your business is on fire, your mind must be the calm center — not another source of chaos. The Mind Forge gives you that anchor.</p>
+      <blockquote>
+        “I used to wait for motivation. Now I show up — because my identity demands it. The Daily Check-In is the only tool I’ve kept for 18 months straight.”
+        <br><em>— Founder, Series A SaaS</em>
+      </blockquote>
     </section>
 
     <div class="cta">
-      <a href="contact.html" class="btn">Apply to Join The Circle</a>
+      <a href="contact.html" class="btn">Apply to Join The Compound Performance Circle</a>
     </div>
   </main>
 
   <footer>
-    <p><a href="index.html">← Home</a> | &copy; 2026 J Ryan Russow</p>
-  </footer></body>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="body-code.html">Body Code</a>
+        <a href="three-pillar-method.html">Three-Pillar Method</a>
+        <a href="compound-circle.html">The Circle</a>
+      </div>
+ <p class="copyright">
+        &copy; 2026 J Ryan Russow. All Rights Reserved.<br>
+        The Mind Forge is a proprietary system. Unauthorized use prohibited.
+      </p>
+    </div>
+  </footer>
+</body>
 </html>

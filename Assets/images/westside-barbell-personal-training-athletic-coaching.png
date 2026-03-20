@@ -1,0 +1,6 @@
+# Copy your image to the folder
+# Option A: Move from another location
+mv /path/to/your/westside-certificate-logo.png images/
+
+# Option B: Or just make sure the file is in the folder
+# You can drag/drop it there in your file explorer
