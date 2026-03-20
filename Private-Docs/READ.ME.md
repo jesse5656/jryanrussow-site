@@ -1,3 +1,7 @@
+git add .
+git commit -m "update"
+git push
+
 # Navigate to your project
 cd /path/to/jryanrussow-site
 
