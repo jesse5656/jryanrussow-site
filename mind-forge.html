@@ -5,32 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mind Forge | J Ryan Russow</title>
   <meta name="description" content="Mental resilience through identity, not affirmations. Build discipline, courage, and clarity — like a founder, not a follower.">
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body class="bg-navy text-white font-sans">
-  <header class="container py-6 border-b border-gold">
-    <h1 class="text-3xl font-bold"><a href="index.html">J Ryan Russow</a></h1>
-    <p class="mt-1">Mind Forge</p>
+  <style>
+    :root {
+      --navy: #0A2E5A;
+      --gold: #D4AF37;
+      --dark: #0F172A;
+      --gray: #647481;
+      --light: #F8FAFC;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+    header {
+      background: var(--navy); color: white; padding: 2rem 0; text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    main { padding: 3rem 0; }
+    section { margin-bottom: 2.5rem; }
+    h2 { color: var(--navy); font-size: 2rem; margin-bottom: 1.2rem; font-weight: 700; }
+    h3 { color: var(--gold); font-size: 1.4rem; margin: 1.8rem 0 0.8rem; }
+    pre {
+      background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 8px;
+      overflow-x: auto; font-size: 0.95rem; line-height: 1.5;
+    }
+    .cta {
+      text-align: center; margin-top: 3rem;
+    }
+    .btn {
+      display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700;
+      padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #b89a2d; }
+    footer {
+      background: var(--dark); color: #CBD5E1; padding: 2rem 0; text-align: center;
+      margin-top: 4rem;
+    }
+  </style>
+</head><body>
+  <header>
+    <div class="container">
+      <h1>Mind Forge</h1>
+      <p>Discipline over motivation</p>
+    </div>
   </header>
 
-  <main class="container py-10 max-w-3xl mx-auto px-4">
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-4">Mind Forge: Discipline Over Motivation</h2>
+  <main class="container">
+    <section>
+      <h2>Discipline Over Motivation</h2>
       <p>Motivation fades. Discipline compounds. This is not therapy. Not mindfulness apps. This is identity-based habit engineering — built from 24 years of running businesses under pressure.</p>
     </section>
 
-    <section class="mb-8">
-      <h3 class="text-xl font-bold mb-3">The 3 Pillars of Mental Resilience</h3>
-      <ul class="list-disc ml-6 space-y-2">
+    <section>
+      <h3>The 3 Pillars of Mental Resilience</h3>
+      <ul>
         <li><strong>Identity Shifts</strong> — Stop saying “I’m trying.” Start saying “I am someone who shows up.”</li>
         <li><strong>Discomfort Training</strong> — Cold showers, hard conversations, early mornings — not for suffering, but for signal calibration.</li>
         <li><strong>Daily Anchors</strong> — 5 minutes of journaling: “What went well?” / “One courageous act today?”</li>
       </ul>
     </section>
 
-    <section class="mb-8">
-      <h3 class="text-xl font-bold mb-3">The Daily Check-In (Printable)</h3>
-      <pre class="bg-gray-900 p-4 rounded text-sm whitespace-pre-wrap">
+    <section>
+      <h3>The Daily Check-In (Printable)</h3>
+      <pre>
 Morning:
 - What’s one thing I own today?
 - What will I do that scares me (just a little)?
@@ -42,18 +84,17 @@ Evening:
       </pre>
     </section>
 
-    <section class="mb-8">
-      <h3 class="text-xl font-bold mb-3">Why This Works for Founders</h3>
+    <section>
+      <h3>Why This Works for Founders</h3>
       <p>You don’t need more willpower. You need better systems. When your business is on fire, your mind must be the calm center — not another source of chaos. The Mind Forge gives you that anchor.</p>
     </section>
 
-    <div class="text-center">
-      <a href="contact.html" class="inline-block bg-gold text-black px-6 py-2 rounded">Apply to Join The Circle</a>
+    <div class="cta">
+      <a href="contact.html" class="btn">Apply to Join The Circle</a>
     </div>
   </main>
 
-  <footer class="container py-8 border-t border-gray-700 mt-12 text-sm">
+  <footer>
     <p><a href="index.html">← Home</a> | &copy; 2026 J Ryan Russow</p>
-  </footer>
-</body>
+  </footer></body>
 </html>
