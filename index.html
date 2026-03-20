@@ -1,247 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>J Ryan Russow | Architect of The Compound Performance Circle</title>
-  <meta name="description" content="J Ryan Russow builds unbreakable humans through wealth, strength, and mindset. Founder of The Compound Performance Circle — a 12-month private coaching experience for elite performers.">
-  <style>
-    :root {
-      --navy: #0A2E5A;
-      --gold: #D4AF37;
-      --dark: #0F172A;
-      --gray: #647481;
-      --light: #F8FAFC;
-      --card-bg: #FFFFFF;
-      --shadow: rgba(0, 0, 0, 0.08);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    header {
-      background: linear-gradient(135deg, var(--navy), #1a3a6c);
-      color: white;
-      text-align: center;
-      padding: 3rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%;
-      background: rgba(212, 175, 55, 0.08); top: -300px; right: -300px; z-index: 0;
-    }
-    header h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; position: relative; z-index: 2; }
-    header p { font-size: 1.4rem; opacity: 0.9; max-width: 700px; margin: 0 auto; position: relative; z-index: 2; }
-    .hero { padding: 4rem 0; text-align: center; }
-    .hero h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 1.5rem; font-weight: 700; }
-    .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto; color: var(--gray); }
-    .cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.8rem; margin: 3rem 0;
-    }
-    .card {
-      background: var(--card-bg); border-radius: 12px; overflow: hidden;
-      box-shadow: 0 10px 30px var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
-      border: 1px solid #e2e8f0;
-    }    .card:hover { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(10, 46, 90, 0.15); }
-    .card-header { padding: 1.5rem 1.5rem 1rem; background: var(--navy); color: white; }
-    .card-header h3 { font-size: 1.5rem; font-weight: 700; }
-    .card-body { padding: 1.5rem; }
-    .card-body p { color: var(--gray); margin-bottom: 1.2rem; }
-    .btn {
-      display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700;
-      padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none;
-      transition: background 0.3s; border: none; cursor: pointer; font-size: 1rem;
-    }
-    .btn:hover { background: #b89a2d; transform: scale(1.03); }
-    .cta {
-      text-align: center; padding: 4rem 0; background: var(--navy); color: white;
-    }
-    .cta h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
-    .cta p { max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; }
-    footer {
-      background: var(--dark); color: #CBD5E1; padding: 2.5rem 0; margin-top: 4rem;
-    }
-    .footer-links {
-      display: flex; gap: 1.5rem; margin: 1.5rem 0;
-    }
-    .footer-links a {
-      color: #94A3B8; text-decoration: none; font-size: 0.95rem;
-    }
-    .footer-links a:hover { color: white; text-decoration: underline; }
-    .copyright { font-size: 0.875rem; text-align: center; }
-    @media (max-width: 768px) {
-      header h1 {✅ **Done.**
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Ryan Russow | Architect of The Compound Performance Circle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-Below are **all 9 production-ready HTML files**, fully designed, branded (navy `#0A2E5A` + gold `#D4AF37`), responsive, and ready to paste directly into GitHub’s web editor — no local tools needed.
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #f8f9fa;
+        }
 
-You’re remote. You’re not at your office.  
-So I’ve made them **copy-paste perfect** — each file is self-contained with embedded CSS (no external dependencies), mobile-friendly, and consistent with your voice: **direct, no fluff, field-tested.**
+        .hero {
+            background: linear-gradient(135deg, #0f2b5b 0%, #1a417a 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
 
----
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
 
-### 📁 How to Use (Git-Only, Browser-Only)
-1. Go to: [https://github.com/jesse5656/jryanrussow-site](https://github.com/jesse5656/jryanrussow-site)  
-2. Click a filename (e.g., `index.html`) → ✏️ **Edit this file**  
-3. Replace *all* content with the code below  
-4. Scroll down → **Commit changes** (to `main`)  
-5. Repeat for all 9 files  
-6. Cloudflare auto-deploys in ~2 minutes
+        .hero-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
 
----
+        .credentials {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .credentials strong {
+            color: #ffd700;
+        }
 
-## 1. `index.html`
-```html
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>J Ryan Russow | Architect of The Compound Performance Circle</title>
-  <meta name="description" content="J Ryan Russow builds unbreakable humans through wealth, strength, and mindset. Founder of The Compound Performance Circle — a 12-month private coaching experience for elite performers.">
-  <style>
-    :root {
-      --navy: #0A2E5A;
-      --gold: #D4AF37;
-      --dark: #0F172A;
-      --gray: #647481;
-      --light: #F8FAFC;
-      --card-bg: #FFFFFF;
-      --shadow: rgba(0, 0, 0, 0.08);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    header {
-      background: linear-gradient(135deg, var(--navy), #1a3a6c);
-      color: white;
-      text-align: center;
-      padding: 3rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%;
-      background: rgba(212, 175, 55, 0.08); top: -300px; right: -300px; z-index: 0;
-    }
-    header h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; position: relative; z-index: 2; }
-    header p { font-size: 1.4rem; opacity: 0.9; max-width: 700px; margin: 0 auto; position: relative; z-index: 2; }
-    .hero { padding: 4rem 0; text-align: center; }
-    .hero h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 1.5rem; font-weight: 700; }
-    .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto; color: var(--gray); }
-    .cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.8rem; margin: 3rem 0;
-    }
-    .card {
-      background: var(--card-bg); border-radius: 12px; overflow: hidden;
-      box-shadow: 0 10px 30px var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
-      border: 1px solid #e2e8f0;
-    }
-    .card:hover { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(10, 46, 90, 0.15); }    .card-header { padding: 1.5rem 1.5rem 1rem; background: var(--navy); color: white; }
-    .card-header h3 { font-size: 1.5rem; font-weight: 700; }
-    .card-body { padding: 1.5rem; }
-    .card-body p { color: var(--gray); margin-bottom: 1.2rem; }
-    .btn {
-      display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700;
-      padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none;
-      transition: background 0.3s; border: none; cursor: pointer; font-size: 1rem;
-    }
-    .btn:hover { background: #b89a2d; transform: scale(1.03); }
-    .cta {
-      text-align: center; padding: 4rem 0; background: var(--navy); color: white;
-    }
-    .cta h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
-    .cta p { max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; }
-    footer {
-      background: var(--dark); color: #CBD5E1; padding: 2.5rem 0; margin-top: 4rem;
-    }
-    .footer-links {
-      display: flex; gap: 1.5rem; margin: 1.5rem 0;
-    }
-    .footer-links a {
-      color: #94A3B8; text-decoration: none; font-size: 0.95rem;
-    }
-    .footer-links a:hover { color: white; text-decoration: underline; }
-    .copyright { font-size: 0.875rem; text-align: center; }
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.5rem; }
-      .hero h2 { font-size: 2rem; }
-      .cards { grid-template-columns: 1fr; }
-    }
-  </style>
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0f2b5b;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #4a5568;
+            margin-bottom: 30px;
+        }
+
+        .highlight-box {
+            background: #0f2b5b;
+            color: white;
+            padding: 50px 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(15, 43, 91, 0.2);
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;            background: #d4af37;
+            color: #0f2b5b;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #c4a030;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .credentials-section {
+            background: #f0f4f8;
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin: 60px 0;
+            text-align: center;
+            border-left: 5px solid #0f2b5b;
+        }
+
+        .credentials-section h2 {
+            font-size: 2rem;
+            color: #0f2b5b;
+            margin-bottom: 15px;
+        }
+
+        .credentials-section .cert-name {
+            font-size: 1.3rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .credentials-section .achievement {
+            font-size: 1.5rem;
+            color: #0f2b5b;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .credentials-section .credential-note {
+            font-size: 1rem;
+            color: #4a5568;            max-width: 600px;
+            margin: 15px auto 0;
+        }
+
+        .trust-badge {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge p {
+            font-size: 1rem;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .trust-badge p:before {
+            content: "✓ ";
+            color: #0f2b5b;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        footer {
+            background: #0f2b5b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 80px;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+            .highlight-box {
+                padding: 40px 25px;
+            }
+
+            .trust-badge {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>J Ryan Russow</h1>
-      <p>Architect of The Compound Performance Circle</p>
-    </div>
-  </header>
-
-  < class="hero container">
-    <h2>Building Unbreakable Humans</h2>
-    <p>Not through motivation. Through systems.</p>
-    <p>This is where financial strength, physical power, and mental resilience converge — proven by 24 years of entrepreneurship.</p>
-  </section>
-
-  <div class="container">
-    <div class="cards">
-      <div class="card">        <div class="card-header"><h3>The Compound Performance Circle</h3></div>
-        <div class="card-body">
-          <p>Private coaching for elite performers. Limited to 6 per year.</p>
-          <a href="compound-circle.html" class="btn">Learn More</a>
+    <header class="hero">
+        <div class="hero-container">
+            <h1>J Ryan Russow</h1>
+            <p class="hero-subtitle">Architect of The Compound Performance Circle</p>
+            <div class="credentials">
+                <strong>Westside Barbell Certified</strong> • Score: 95.12% • May 2025
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><h3>The Three-Pillar Method™</h3></div>
-        <div class="card-body">
-          <p>Wealth building for regular people who start small.</p>
-          <a href="three-pillar-method.html" class="btn">Start Here</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><h3>Body Code</h3></div>
-        <div class="card-body">
-          <p>Westside-inspired strength training for real life.</p>
-          <a href="body-code.html" class="btn">Read Guide</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><h3>Mind Forge</h3></div>
-        <div class="card-body">
-          <p>Mental resilience through identity, not slogans.</p>
-          <a href="mind-forge.html" class="btn">Deep Dive</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    </header>
 
-  <section class="cta container">
-    <h2>Ready to Build Your Unbreakable Life?</h2>
-    <p>Join a cohort of founders, executives, and high-performers who are done with theory — and ready for results.</p>
-    <a href="contact.html" class="btn">Apply to Join</a>
-  </section>
+    <main>
+        <section class="section">
+            <div class="hero-container">
+                <h2 class="section-title">Building Unbreakable Humans</h2>
+                <p class="section-subtitle">Not through motivation. Through systems.</p>
+                <p style="font-size: 1.1rem; color: #4a5568; margin-top: 20px;">
+                    This is where financial strength, physical power, and mental resilience converge — proven by 24 years of entrepreneurship.
+                </p>
+            </div>
+        </section>
 
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-      </div>
-      <p class="copyright">
-       copy; 2026 J Ryan Russow. All Rights Reserved.<br>
-        The Compound Performance Circle & The Three-Pillar Method™ are original intellectual property.
-      </p>
-    </div>
-  </footer></body>
+        <section class="section">
+            <div class="highlight-box">
+                <h2>The Compound Performance Circle</h2>
+                <p>Private coaching for elite performers. Limited to 6 per year.</p>
+                <a href="#apply" class="btn">Learn More</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="credentials-section">
+                <h2>Certified Excellence</h2>
+                <p class="cert-name">Westside Barbell Personal Training & Athletic Coaching Certificate</p>
+                <p class="achievement">Score: 95.12% (May 23, 2025)</p>
+                <p class="credential-note">
+                    Trained in Louie Simmons' proven methodology for building elite strength and performance systems — 
+                    the same principles that power world-record holders, now applied to mental, financial, and physical resilience.                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">The Three-Pillar Method™</h2>
+            <p style="font-size: 1.1rem; color: #4a5568; margin: 30px 0;">
+                A systematic approach to building unbreakable humans through:
+            </p>
+            <ul style="font-size: 1.1rem; color: #4a5568; margin-left: 30px; margin-bottom: 30px;">
+                <li style="margin-bottom: 15px;"><strong>Physical Power</strong> — Westside Barbell strength principles</li>
+                <li style="margin-bottom: 15px;"><strong>Mental Resilience</strong> — Systems over willpower</li>
+                <li style="margin-bottom: 15px;"><strong>Financial Strength</strong> — Entrepreneurial mastery</li>
+            </ul>
+            <p style="font-size: 1.1rem; color: #4a5568;">
+                Backed by Westside Barbell methodology — the same systems used to build world-record strength — 
+                applied to mental, financial, and physical resilience.
+            </p>
+        </section>
+
+        <section class="section" id="apply">
+            <div class="highlight-box" style="text-align: center;">
+                <h2>Why This Works for Founders</h2>
+                <p style="font-size: 1.1rem; margin: 20px 0;">
+                    You don't need more willpower. You need better systems. When your business is on fire, 
+                    your mind must be the calm center — not another source of chaos. The Mind Forge gives you that anchor.
+                </p>
+                
+                <div class="trust-badge">
+                    <p>Westside Barbell Certified</p>
+                    <p>24 Years Entrepreneurship</p>
+                    <p>6 Spots/Year Maximum</p>
+                </div>
+
+                <a href="#" class="btn">Apply to Join The Circle</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Home</a> | © 2025 J Ryan Russow</p>
+    </footer>
+</body>
 </html>
