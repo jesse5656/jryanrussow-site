@@ -19,174 +19,50 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align✅ **Done.**
-
-Below are **all 9 production-ready HTML files**, fully designed, branded (navy `#0A2E5A` + gold `#D4AF37`), responsive, and ready to paste directly into GitHub’s web editor — no local tools needed.
-
-You’re remote. You’re not at your office.  
-So I’ve made them **copy-paste perfect** — each file is self-contained with embedded CSS (no external dependencies), mobile-friendly, and consistent with your voice: **direct, no fluff, field-tested.**
-
----
-
-### 📁 How to Use (Git-Only, Browser-Only)
-1. Go to: [https://github.com/jesse5656/jryanrussow-site](https://github.com/jesse5656/jryanrussow-site)  
-2. Click a filename (e.g., `index.html`) → ✏️ **Edit this file**  
-3. Replace *all* content with the code below  
-4. Scroll down → **Commit changes** (to `main`)  
-5. Repeat for all 9 files  
-6. Cloudflare auto-deploys in ~2 minutes
-
----
-
-## 1. `index.html`
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>J Ryan Russow | Architect of The Compound Performance Circle</title>
-  <meta name="description" content="J Ryan Russow builds unbreakable humans through wealth, strength, and mindset. Founder of The Compound Performance Circle — a 12-month private coaching experience for elite performers.">
-  <style>    :root {
-      --navy: #0A2E5A;
-      --gold: #D4AF37;
-      --dark: #0F172A;
-      --gray: #647481;
-      --light: #F8FAFC;
-      --card-bg: #FFFFFF;
-      --shadow: rgba(0, 0, 0, 0.08);
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    header {
-      background: linear-gradient(135deg, var(--navy), #1a3a6c);
-      color: white;
+    .container {
       text-align: center;
-      padding: 3rem 0;
-      position: relative;
-      overflow: hidden;
+      max-width: 600px;
     }
-    header::before {
-      content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%;
-      background: rgba(212, 175, 55, 0.08); top: -300px; right: -300px; z-index: 0;
+    svg {
+      width: 100px; height: 100px; margin: 0 auto 2rem;
+      fill: var(--gold);
     }
-    header h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; position: relative; z-index: 2; }
-    header p { font-size: 1.4rem; opacity: 0.9; max-width: 700px; margin: 0 auto; position: relative; z-index: 2; }
-    .hero { padding: 4rem 0; text-align: center; }
-    .hero h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 1.5rem; font-weight: 700; }
-    .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto; color: var(--gray); }
-    .cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.8rem; margin: 3rem 0;
+    h1 {
+      font-size: 3rem;
+      color: var(--navy);
+      margin-bottom: 1rem;
     }
-    .card {
-      background: var(--card-bg); border-radius: 12px; overflow: hidden;
-      box-shadow: 0 10px 30px var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
-      border: 1px solid #e2e8f0;
+    p {
+      font-size: 1.25rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
     }
-    .card:hover { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(10, 46, 90, 0.15); }
-    .card-header { padding: 1.5rem 1.5rem 1rem; background: var(--navy); color: white; }
-    .card-header h3 { font-size: 1.5rem; font-weight: 700; }
-    .card-body { padding: 1.5rem; }
-    .card-body p { color: var(--gray); margin-bottom: 1.2rem; }
     .btn {
       display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700;
-      padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none;      transition: background 0.3s; border: none; cursor: pointer; font-size: 1rem;
+      padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none;
+      transition: background 0.3s;
     }
-    .btn:hover { background: #b89a2d; transform: scale(1.03); }
-    .cta {
-      text-align: center; padding: 4rem 0; background: var(--navy); color: white;
-    }
-    .cta h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
-    .cta p { max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; }
+    .btn:hover { background: #b89a2d; }
     footer {
-      background: var(--dark); color: #CBD5E1; padding: 2.5rem 0; margin-top: 4rem;
-    }
-    .footer-links {
-      display: flex; gap: 1.5rem; margin: 1.5rem 0;
-    }
-    .footer-links a {
-      color: #94A3B8; text-decoration: none; font-size: 0.95rem;
-    }
-    .footer-links a:hover { color: white; text-decoration: underline; }
-    .copyright { font-size: 0.875rem; text-align: center; }
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.5rem; }
-      .hero h2 { font-size: 2rem; }
-      .cards { grid-template-columns: 1fr; }
+      margin-top: 4rem;
+      color: var(--gray);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>J Ryan Russow</h1>
-      <p>Architect of The Compound Performance Circle</p>
-    </div>
-  </header>
-
-  < class="hero container">
-    <h2>Building Unbreakable Humans</h2>
-    <p>Not through motivation. Through systems.</p>
-    <p>This is where financial strength, physical power, and mental resilience converge — proven by 24 years of entrepreneurship.</p>
-  </section>
-
   <div class="container">
-    <div class="cards">
-      <div class="card">
-        <div class="card-header"><h3>The Compound Performance Circle</h3></div>
-        <div class="card-body">
-          <p>Private coaching for elite performers. Limited to 6 per year.</p>
-          <a href="compound-circle.html" class="btn">Learn More</a>
-        </div>
-      </div>
-      <div class="card">        <div class="card-header"><h3>The Three-Pillar Method™</h3></div>
-        <div class="card-body">
-          <p>Wealth building for regular people who start small.</p>
-          <a href="three-pillar-method.html" class="btn">Start Here</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><h3>Body Code</h3></div>
-        <div class="card-body">
-          <p>Westside-inspired strength training for real life.</p>
-          <a href="body-code.html" class="btn">Read Guide</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header"><h3>Mind Forge</h3></div>
-        <div class="card-body">
-          <p>Mental resilience through identity, not slogans.</p>
-          <a href="mind-forge.html" class="btn">Deep Dive</a>
-        </div>
-      </div>
-    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+    <h1>404</h1>
+    <p>We can't find the page you're looking for.</p>
+    <a href="index.html" class="btn">Return Home</a>
   </div>
-
-  <section class="cta container">
-    <h2>Ready to Build Your Unbreakable Life?</h2>
-    <p>Join a cohort of founders, executives, and high-performers who are done with theory — and ready for results.</p>
-    <a href="contact.html" class="btn">Apply to Join</a>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-      </div>
-      <p class="copyright">
-       copy; 2026 J Ryan Russow. All Rights Reserved.<br>
-        The Compound Performance Circle & The Three-Pillar Method™ are original intellectual property.
-      </p>
-    </div>
-  </footer>
+  <footer>&copy; 2026 J Ryan Russow. All Rights Reserved.</footer>
 </body>
 </html>
