@@ -4,113 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>J Ryan Russow | Architect of The Compound Performance Circle</title>
+  <meta name="description" content="J Ryan Russow builds unbreakable humans through wealth, strength, and mindset. Founder of The Three-Pillar Method™ and The Compound Performance Circle.">
   <style>
     :root {
       --navy: #0A2E5A;
       --gold: #D4AF37;
-      --gray: #1e293b;
-      --light: #f8fafc;
+      --dark: #0F172A;
+      --gray: #647481;
+      --light: #F8FAFC;
+      --card-bg: #FFFFFF;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background-color: var(--light);
-      color: var(--gray);
+      color: var(--dark);
       line-height: 1.6;
     }
     .container {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 0 1.5rem;
     }
     header {
-      text-align: center;
+      background: var(--navy);
+      color: white;
       padding: 2rem 0;
-      border-bottom: 2px solid var(--gold);
-      margin-bottom: 2rem;
-    }
-    h1 {
-      color: var(--navy);
-      font-size: 2.5rem;
-      margin: 0;
-      font-weight: 700;
-    }
-    h2 {
-      color: var(--navy);
-      font-size: 1.8rem;
-      margin: 1.5rem 0 1rem;
-    }
-    a {
-      color: var(--gold);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover {
-      text-decoration: underline;
-    }    footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #e2e8f0;
-      font-size: 0.9rem;
-      color: #647481;
       text-align: center;
     }
-    .link-grid {
-      display: grid;
-      gap: 1.2rem;
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
     }
-    .link-item {
-      padding: 1rem;
-      background: white;
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero-cta {
+      margin-top: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      padding: 0.9rem 2.2rem;
       border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
+      text-decoration: none;
+      font 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
     }
-    .link-item:hover {
+    .btn:hover {
+      background: #C29D2E;
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
     }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>J Ryan Russow</h1>
-      <p>Architect of The Compound Performance Circle</p>
-    </header>
-
-    <section>
-      <h2>Building Unbreakable Humans</h2>
-      <p>Not through motivation. Through systems.</p>
-      <p>This is where financial strength, physical power, and mental resilience converge — proven by 24 years of entrepreneurship.</p>
-    </section>
-
-    <section class="link-grid">
-      <div class="link-item">
-        <h3><a href="compound-circle.html">The Compound Performance Circle</a></h3>
-        <p>Private coaching for elite performers. Limited to 6 per year.</p>
-      </div>
-      <div class="link-item">
-        <h3><a href="three-pillar-method.html">The Three-Pillar Method™</a></h3>
-        <p>Wealth building for regular people who start small.</p>
-      </div>
-      <div class="link-item">
-        <h3><a href="body-code.html">Body Code</a></h3>
-        <p>Westside-inspired strength training for real life.</p>      </div>
-      <div class="link-item">
-        <h3><a href="mind-forge.html">Mind Forge</a></h3>
-        <p>Mental resilience through identity, not slogans.</p>
-      </div>
-    </section>
-
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="contact.html" style="display:inline-block; background:#D4AF37; color:#0A2E5A; padding:0.75rem 1.5rem; border-radius:4px; font-weight:700; font-size:1.1rem;">Apply to Join</a>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2026 J Ryan Russow. All Rights Reserved.<br>
-    The Compound Performance Circle & The Three-Pillar Method™ are original intellectual property.
-  </footer>
-</body>
-</html>
+    section {
+      padding: 5rem 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--navy
