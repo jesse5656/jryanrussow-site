@@ -1,0 +1,52 @@
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1000" fill="#0A2E5A"/>
+  
+  <!-- Head silhouette -->
+  <path d="M300 500 C250 450 200 450 200 550 C200 650 300 700 400 700 C500 700 600 650 600 550 C600 450 550 450 500 500 Z" fill="none" stroke="#D4AF37" stroke-width="3"/>
+  
+  <!-- Anvil -->
+  <path d="M380 600 L420 600 L420 640 L380 640 Z M370 640 L430 640 L430 660 L370 660 Z M360 660 L440 660 L440 680 L360 680 Z" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <!-- Spark -->
+  <line x1="400" y1="580" x2="400" y2="560" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Icons (gold, 64x64) -->
+  <!-- Lightbulb (top) -->
+  <circle cx="400" cy="300" r="24" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="400" y1="276" x2="400" y2="250" stroke="#D4AF37" stroke-width="2"/>
+  <circle cx="400" cy="250" r="10" fill="#D4AF37"/>
+  
+  <!-- Gears (left) -->
+  <circle cx="250" cy="450" r="20" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <circle cx="250" cy="450" r="12" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="230" y1="450" x2="210" y2="450" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="270" y1="450" x2="290" y2="450" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="250" y1="430" x2="250" y2="410" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="250" y1="470" x2="250" y2="490" stroke="#D4AF37" stroke-width="2"/>
+
+  <!-- Book (bottom-left) -->
+  <rect x="250" y="650" width="40" height="30" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="250" y1="665" x2="290" y2="665" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="250" y1="675" x2="290" y2="675" stroke="#D4AF37" stroke-width="2"/>
+
+  <!-- Target (right) -->
+  <circle cx="750" cy="450" r="30" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <circle cx="750" cy="450" r="20" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <circle cx="750" cy="450" r="10" fill="#D4AF37"/>
+
+  <!-- Knight (top-right) -->
+  <path d="M750 250 L770 230 L790 250 L770 270 Z" fill="#D4AF37"/>
+  <rect x="765" y="270" width="10" height="40" fill="#D4AF37"/>
+  <rect x="755" y="310" width="30" height="10" fill="#D4AF37"/>
+
+  <!-- Key (bottom-right) -->
+  <rect x="750" y="650" width="40" height="10" fill="#D4AF37"/>
+  <circle cx="770" cy="655" r="15" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="770" y1="640" x2="770" y2="620" stroke="#D47" stroke-width="2"/>
+
+  <!-- Central text -->
+  <text x="500" y="530" text-anchor="middle" font-family="EB Garamond, serif" font-size="56" fill="#D4AF37" font-weight="700">MIND</text>
+  <text x="500" y="580" text-anchor="middle" font-family="EB Garamond, serif" font-size="56" fill="#D4AF37" font-weight="700">FORGE</text>
+
+  <title>Mind Forge — Symbolic Icon Set for Mental Resilience</title>
+  <desc>Gold-on-navy SVG visual: human head with anvil at center, surrounded by lightbulb (ideas), gears (systems), book (knowledge), target (strategy), knight (leadership), and key (execution) — representing the Mind Forge methodology by J Ryan Russow.</desc>
+</svg>
