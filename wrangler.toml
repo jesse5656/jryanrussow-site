@@ -1,9 +1,9 @@
 name = "jryanrussow-site"
-main = "worker.js"
-compatibility_date = "2026-03-20"
+   main = "worker.js"
+   compatibility_date = "2026-03-20"
 
-[[routes]]
-pattern = "jryanrussow.com/*"
+   [[routes]]
+   pattern = "jryanrussow.com/*"
 
-[[routes]]
-pattern = "www.jryanrussow.com/*"
+   [[routes]]
+   pattern = "www.jryanrussow.com/*"
