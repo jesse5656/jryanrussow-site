@@ -43,8 +43,6 @@
       --dark: #0F172A;
       --gray: #647481;
       --light: #F8FAFC;
-      --cream: #FEF9F3;
-      --shadow: rgba(0, 0, 0, 0.08);
     }
 
     * {
@@ -61,10 +59,7 @@
       overflow-x: hidden;
     }
 
-    h1, h2, h3, h4, h5 {
-      font-family: 'EB Garamond', serif;
-      font-weight: 600;
-    }
+    h1, h2, h3 { font-family: 'EB Garamond', serif; font-weight: 600; }
 
     .container {
       max-width: 800px;
@@ -112,7 +107,7 @@
       z-index: 2;
     }
 
-    /* Hero Image: Corner Pillar */
+    /* Hero Image */
     .pillar-hero {
       margin: 2.5rem 0;
       border-radius: 12px;
@@ -138,7 +133,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
       padding: 2.5rem 2rem;
       color: white;
     }
@@ -147,12 +142,14 @@
       font-size: 1.9rem;
       margin: 0 0 0.75rem 0;
       font-weight: 700;
+      color: var(--gold);
     }
 
     .pillar-overlay p {
       font-size: 1.2rem;
-      opacity: 0.9;
+      opacity: 0.95;
       max-width: 600px;
+      line-height: 1.6;
     }
 
     /* Main Content */
@@ -188,14 +185,13 @@
       font-weight: 600;
     }
 
-    ul {
+    ul, ol {
       padding-left: 1.75rem;
       margin: 1.5rem 0;
     }
 
     li {
       margin-bottom: 1rem;
-      position: relative;
     }
 
     li::before {
@@ -205,11 +201,6 @@
       position: absolute;
       left: -1.75rem;
       top: 0;
-    }
-
-    ol {
-      padding-left: 1.8rem;
-      margin: 1.5rem 0;
     }
 
     blockquote {
@@ -246,7 +237,6 @@
       box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
     }
 
-    /* Footer */
     footer {
       background: var(--dark);
       color: #CBD5E1;
@@ -263,7 +253,7 @@
       margin: 1.5rem 0;
     }
 
-    .footer-links {
+    .footer-links a {
       color: #94A3B8;
       text-decoration: none;
       font-size: 0.95rem;
@@ -280,15 +270,6 @@
       font-size: 0.875rem;
       color: #647481;
       margin-top: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1.2rem; }
-      .pillar-overlay h2 { font-size: 1.6rem; }
-      h2 { font-size: 1.9rem; }
-      h3 { font-size: 1.4rem; }
-      .btn { padding: 0.75rem 1.5rem; font-size: 1rem; }
     }
   </style>
 
@@ -332,11 +313,11 @@
     </div>
   </header>
 
-  <!-- Hero: Corner Pillar Image -->
+  <!-- Hero Image -->
   <div class="container">
     <div class="pillar-hero">
       <img src="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/fba63d89badb58fbf35b6d946efc3640cce330a1/Assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg"
-           alt="Ancient Roman corner pillar among three columns — symbolizing the foundational stone of discipline, wealth, and mindset in The Three-Pillar Method™"
+           alt="Ancient Roman corner pillar among three columns — symbolizing the foundational stone of discipline, wealth, and mindset in The Three-Pillar Method™ by J Ryan Russow"
            width="1200" height="630"
            loading="lazy"
            decoding="async">
@@ -357,9 +338,9 @@
       <h3>Pillar 1: The Cornerstone Strategy™</h3>
       <p>Generate active income with a low-cost service business — no experience needed.</p>
       <ul>
-        <li>Lawn care, pressure washing, cleaning, handyman — all start under $1,000</li>
-        <li>First client strategy: “First home free” for referrals</li>
-        <li>Goal: $500–$2,000/month profit in 90 days</li>
+        <li><strong>Lawn care, pressure washing, cleaning, handyman</strong> — all start under $1,000</li>
+        <li><strong>First client strategy:</strong> “First home free” for referrals</li>
+        <li><strong>Goal:</strong> $500–$2,000/month profit in 90 days</li>
       </ul>
     </section>
 
@@ -367,11 +348,11 @@
       <h3>Pillar 2: The Short-Term Growth Engine™</h3>
       <p>Use those profits to buy income-producing real estate — not speculation. Only if it passes the 5-Point Rental Scorecard:</p>
       <ol>
-        <li>Positive cash flow ($100+/mo after all expenses)</li>
-        <li>Safe, growing area</li>
-        <li>Easy to maintain (no major repairs)</li>
-        <li>Can be managed remotely or self-managed</li>
-        <li>Appreciation potential > inflation</li>
+        <li><strong>Positive cash flow</strong> ($100+/mo after all expenses)</li>
+        <li><strong>Safe, growing area</strong></li>
+        <li><strong>Easy to maintain</strong> (no major repairs)</li>
+        <li><strong>Can be managed remotely or self-managed</strong></li>
+        <li><strong>Appreciation potential > inflation</strong></li>
       </ol>
       <p>✅ Pass 4+ → buy. ❌ 3 or fewer → walk away.</p>
     </section>
@@ -380,12 +361,12 @@
       <h3>Pillar 3: The Long-Term Wealth Foundation™</h3>
       <p>Reinvest into passive assets that grow while you sleep:</p>
       <ul>
-        <li>Roth IRA (tax-free growth)</li>
-        <li>Brokerage (low-cost index funds)</li>
-        <li>REITs (real estate exposure without ownership)</li>
-        <li>P2P lending (higher yield, higher risk — optional)</li>
+        <li><strong>Roth IRA</strong> (tax-free growth)</li>
+        <li><strong>Brokerage</strong> (low-cost index funds)</li>
+        <li><strong>REITs</strong> (real estate exposure without ownership)</li>
+        <li><strong>P2P lending</strong> (higher yield, higher risk — optional)</li>
       </ul>
-      <p>Rule: Automate contributions. Start with $50/month. Increase with each raise.</p>
+      <p><strong>Rule:</strong> Automate contributions. Start with $50/month. Increase with each raise.</p>
     </section>
 
     <section>
