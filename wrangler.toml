@@ -1,3 +1,12 @@
 name = "jryanrussow-site"
 main = "worker.js"
 compatibility_date = "2026-03-20"
+
+# Define routes for your custom domain
+[[routes]]
+pattern = "jryanrussow.com/*"
+script_name = "jryanrussow-site"
+
+[[routes]]
+pattern = "www.jryanrussow.com/*"
+script_name = "jryanrussow-site"
