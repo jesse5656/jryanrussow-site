@@ -7,7 +7,7 @@
     <!-- Primary SEO -->
     <title>J Ryan Russow | Architect of The Compound Performance Circle</title>
     <meta name="description" content="Building unbreakable humans through systems. Private coaching for elite performers where financial strength, physical power, and mental resilience converge. Limited to 6 per year.">
-    <meta name="keywords" content="performance coach, athletic coaching, personal training, mental resilience, founder coaching, Jesse Russow">
+    <meta name="keywords" content="performance coach, athletic coaching, personal training, mental resilience, founder coaching, Jesse Russow, Compound Performance Circle">
     <meta name="author" content="J Ryan Russow">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.jryansow.com/">
@@ -17,17 +17,17 @@
     <meta property="og:url" content="https://www.jryansow.com/">
     <meta property="og:title" content="J Ryan Russow | Architect of The Compound Performance Circle">
     <meta property="og:description" content="Building unbreakable humans through systems. Private coaching for elite performers.">
-    <meta property="og:image" content="https://www.jryansow.com/images/og-image.jpg">
+    <meta property="og:image" content="https://www.jryansow.com/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.jryansow.com/">
     <meta property="twitter:title" content="J Ryan Russow | Architect of The Compound Performance Circle">
     <meta property="twitter:description" content="Building unbreakable humans through systems.">
-    <meta property="twitter:image" content="https://www.jryansow.com/images/og-image.jpg">
+    <meta property="twitter:image" content="https://www.jryansow.com/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.ico">
     
     <style>
         * {
@@ -43,11 +43,12 @@
             background: #f8f9fa;
         }
 
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #0f2b5b 0%, #1a417a 100%);
             color: white;
-            padding: 120px 20px 80px;
-            text-align: center;        }
+            padding: 120px 20px 80px;            text-align: center;
+        }
 
         .hero h1 {
             font-size: 3.5rem;
@@ -60,6 +61,7 @@
             font-size: 1.5rem;
             opacity: 0.95;
             margin-bottom: 10px;
+            line-height: 1.4;
         }
 
         .hero-container {
@@ -67,6 +69,7 @@
             margin: 0 auto;
         }
 
+        /* Sections */
         .section {
             padding: 80px 20px;
             max-width: 900px;
@@ -85,9 +88,15 @@
             margin-bottom: 30px;
         }
 
+        .section-text {
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        /* Highlight Boxes (Cards) */
         .highlight-box {
-            background: #0f2b5b;
-            color: white;
+            background: #0f2b5b;            color: white;
             padding: 50px 40px;
             border-radius: 12px;
             margin: 40px 0;
@@ -96,14 +105,17 @@
 
         .highlight-box h2 {
             font-size: 2rem;
-            margin-bottom: 20px;        }
+            margin-bottom: 20px;
+        }
 
         .highlight-box p {
             font-size: 1.1rem;
             opacity: 0.95;
             margin-bottom: 15px;
+            line-height: 1.6;
         }
 
+        /* Buttons */
         .btn {
             display: inline-block;
             padding: 16px 40px;
@@ -127,27 +139,18 @@
 
         .btn-large {
             padding: 20px 50px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
-        .trust-badge {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px 0;
-            flex-wrap: wrap;
+        /* Three Pillar Method */
+        .pillars-section {
+            background: white;
+            padding: 80px 20px;            margin: 60px 0;
         }
 
-        .trust-badge p {
-            font-size: 1rem;
-            color: #4a5568;
-            font-weight: 500;
-        }
-
-        .trust-badge p:before {
-            content: "✓ ";            color: #0f2b5b;
-            font-weight: 700;
-            margin-right: 5px;
+        .pillars-container {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .pillars-grid {
@@ -158,149 +161,13 @@
         }
 
         .pillar-card {
-            background: white;
+            background: #f8f9fa;
             padding: 40px 30px;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             text-align: center;
             border-top: 4px solid #0f2b5b;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         .pillar-card h3 {
-            color: #0f2b5b;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-
-        .pillar-card p {
-            color: #4a5568;
-            font-size: 1rem;
-        }
-
-        footer {
-            background: #0f2b5b;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 80px;
-        }
-
-        footer a {
-            color: #d4af37;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .section {
-                padding: 60px 20px;
-            }
-
-            .highlight-box {
-                padding: 40px 25px;
-            }
-
-            .trust-badge {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .btn-large {
-                padding: 18px 40px;
-                font-size: 1.1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="hero">
-        <div class="hero-container">
-            <h1>J Ryan Russow</h1>
-            <p class="hero-subtitle">Architect of The Compound Performance Circle</p>
-        </div>
-    </header>
-
-    <main>
-        <section class="section">
-            <div class="hero-container">
-                <h2 class="section-title">Building Unbreakable Humans</h2>
-                <p class="section-subtitle">Not through motivation. Through systems.</p>
-                <p style="font-size: 1.1rem; color: #4a5568; margin-top: 20px; line-height: 1.8;">
-                    This is where financial strength, physical power, and mental resilience converge — 
-                    proven by 24 years of entrepreneurship.
-                </p>            </div>
-        </section>
-
-        <section class="section">
-            <div class="highlight-box">
-                <h2>The Compound Performance Circle</h2>
-                <p>Private coaching for elite performers. Limited to 6 per year.</p>
-                <a href="daily-checkin.html" class="btn btn-large">Learn More</a>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">The Three-Pillar Method™</h2>
-            <p style="font-size: 1.1rem; color: #4a5568; margin: 30px 0; text-align: center;">
-                A systematic approach to building unbreakable humans through:
-            </p>
-            
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <h3>Physical Power</h3>
-                    <p>Elite strength training principles backed by proven methodology</p>
-                </div>
-                <div class="pillar-card">
-                    <h3>Mental Resilience</h3>
-                    <p>Systems over willpower. Build habits that stick under pressure</p>
-                </div>
-                <div class="pillar-card">
-                    <h3>Financial Strength</h3>
-                    <p>Entrepreneurial mastery from 24 years in the trenches</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="apply">
-            <div class="highlight-box" style="text-align: center;">
-                <h2>Why This Works for Founders</h2>
-                <p style="font-size: 1.1rem; margin: 20px 0; line-height: 1.8;">
-                    You don't need more willpower. You need better systems. 
-                    When your business is on fire, your mind must be the calm center — 
-                    not another source of chaos. The Mind Forge gives you that anchor.
-                </p>
-                
-                <div class="trust-badge">
-                    <p>24 Years Entrepreneurship</p>
-                    <p>6 Spots/Year Maximum</p>
-                    <p>Systems-Based Approach</p>
-                </div>
-
-                <a href="daily-checkin.html" class="btn btn-large">Apply to Join The Circle</a>
-            </div>        </section>
-    </main>
-
-    <footer>
-        <p>
-            <a href="index.html">Home</a> | 
-            <a href="daily-checkin.html">Daily Check-In</a> | 
-            © 2025 J Ryan Russow
-        </p>
-    </footer>
-</body>
-</html>
+            color
