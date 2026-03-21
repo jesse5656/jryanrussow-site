@@ -3,8 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Body Code | J Ryan Russow</title>
-  <meta name="description" content="Westside Barbell-inspired strength training for real life — no gym required, no ego, just results.">
+  
+  <!-- Primary SEO -->
+  <title>Body Code | J Ryan Russow — Westside Barbell–Inspired Strength for Founders</title>
+  <meta name="description" content="Westside Barbell–inspired strength training for real life — no gym required, no ego, just results. Build durability, clarity, and resilience.">
+  <meta name="keywords" content="Body Code, Westside Barbell, strength training, founder fitness, durable performance, J Ryan Russow">
+  <meta name="author" content="J Ryan Russow">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jryanrussow.com/body-code.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jryanrussow.com/body-code.html">
+  <meta property="og:title" content="Body Code | Westside Barbell–Inspired Strength for Founders">
+  <meta property="og:description" content="Strength training that builds mental clarity, physical durability, and relentless execution — not Instagram poses. By J Ryan Russow, Westside Barbell Certified Coach.">
+  <meta property="og:image" content="https://jryanrussow.com/Assets/images/body-code-wbsc-certified.png">
+  <meta property="og:site_name" content="J Ryan Russow">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://jryanrussow.com/body-code.html">
+  <meta property="twitter:title" content="Body Code | Westside Barbell–Inspired Strength for Founders">
+  <meta property="twitter:description" content="Train like an elite performer. Not for size. For signal fidelity, recovery, and sustained output.">
+  <meta property="twitter:image" content="https://jryanrussow.com/Assets/images/body-code-wbsc-certified.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <style>
     :root {
       --navy: #0A2E5A;
@@ -12,58 +43,277 @@
       --dark: #0F172A;
       --gray: #647481;
       --light: #F8FAFC;
+      --cream: #FEF9F3;
+      --shadow: rgba(0, 0, 0, 0.08);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: var(--light);
       color: var(--dark);
       line-height: 1.6;
+      overflow-x: hidden;
     }
-    .container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
     header {
-      background: var(--navy); color: white; padding: 2rem 0; text-align: center;
+      background: linear-gradient(135deg, var(--navy), #1a3a6c);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      position: relative;
+      overflow: hidden;
     }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    main { padding: 3rem 0; }
-    section { margin-bottom: 2.5rem; }
-    h2 { color: var(--navy); font-size: 2rem; margin-bottom: 1.2rem; font-weight: 700; }
-    h3 { color: var(--gold); font-size: 1.4rem; margin: 1.8rem 0 0.8rem; }
-    ul { padding-left: 1.5rem; margin: 1rem 0; }
-    li { margin-bottom: 0.7rem; }
+
+    header::before {
+      content: "";
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.06);
+      top: -400px;
+      right: -300px;
+      z-index: 0;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+    }
+
+    h3 {
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem;
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    li::before {
+      content: "•";
+      color: var(--gold);
+      font-weight: bold;
+      position: absolute;
+      left: -1.75rem;
+      top: 0;
+    }
+
+    ol {
+      padding-left: 1.8rem;
+      margin: 1.5rem 0;
+    }
+
+    /* Table Styling */
     table {
-      width: 100%; border-collapse: collapse; margin: 1.5rem 0;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      overflow: hidden;
     }
+
     th, td {
-      padding: 12px; text-align: left; border-bottom: 1px solid #e2e8f0;
+      padding: 14px 12px;
+      text-align: left;
     }
-    th { background: var(--navy); color: white; }
+
+    th {
+      background: var(--navy);
+      color: white;
+      font-weight: 600;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    tbody tr:hover {
+      background: rgba(212, 175, 55, 0.05);
+    }
+
+    /* CTA */
     .cta {
-      text-align: center; margin-top: 3rem;
+      text-align: center;
+      margin: 3.5rem 0;
     }
+
     .btn {
-      display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700;
-      padding: 0.75rem 1.75rem; border-radius: 8px; text-decoration: none;
-      transition: background 0.3s;
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      padding: 0.875rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     }
-    .btn:hover { background: #b89a2d; }
-    footer {      background: var(--dark); color: #CBD5E1; padding: 2rem 0; text-align: center;
+
+    .btn:hover {
+      background: #b89a2d;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #CBD5E1;
+      padding: 3rem 0;
+      text-align: center;
       margin-top: 4rem;
     }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .copyright {
+      font-size: 0.875rem;
+      color: #647481;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1.2rem; }
+      h2 { font-size: 1.9rem; }
+      h3 { font-size: 1.4rem; }
+      .btn { padding: 0.75rem 1.5rem; font-size: 1rem; }
+    }
   </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Body Code: Westside Barbell–Inspired Strength for Founders",
+    "description": "A proven system to build physical durability, mental clarity, and relentless execution through frequency-based strength training.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "text": "Train 3x per week with moderate intensity — focus on consistency over max effort."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Prioritize recovery: sleep 7+ hours, hydrate, daily mobility."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Progressive overload: add 2.5 lbs weekly — not 25 at once."
+      },
+      {
+        "@type": "HowToStep",
+        "text": "Eat protein first, fill half plate with vegetables, carbs around workouts."
+      }
+    ],
+    "provider": {
+      "@type": "Person",
+      "name": "J Ryan Russow",
+      "url": "https://jryanrussow.com"
+    }
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="container">
       <h1>Body Code</h1>
-      <p>Westside Barbell-inspired strength training for real life</p>
+      <p>Westside Barbell–inspired strength training for real life</p>
     </div>
   </header>
 
   <main class="container">
     <section>
       <h2>Strength for Real Life</h2>
-      <p>This is not bodybuilding. Not CrossFit. Not fitness influencer nonsense. This is Westside Barbell–inspired strength training — adapted for busy founders who need durability, not Instagram poses.</p>
+      <p>This is not bodybuilding. Not CrossFit. Not fitness influencer nonsense. This is <strong>Westside Barbell–inspired strength training</strong> — adapted for busy founders who need durability, not Instagram poses.</p>
     </section>
 
     <section>
@@ -96,12 +346,12 @@
 
     <section>
       <h3>Nutrition That Sticks</h3>
-      <p>No calorie counting. No macros. Just three rules:      <ol>
+      <p>No calorie counting. No macros. Just three rules:</p>
+      <ol>
         <li>Eat protein first at every meal (chicken, eggs, fish, tofu)</li>
         <li>Fill half your plate with vegetables (frozen is fine)</li>
         <li>Carbs only around workouts or dinner (rice, potatoes, oats)</li>
       </ol>
-      </p>
     </section>
 
     <div class="cta">
@@ -110,7 +360,19 @@
   </main>
 
   <footer>
-    <p><a href="index.html">← Home</a> | &copy; 2026 J Ryan Russow</p>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mind-forge.html">Mind Forge</a>
+        <a href="three-pillar-method.html">Three-Pillar Method</a>
+        <a href="compound-circle.html">The Circle</a>
+      </div>
+      <p class="copyright">
+        &copy; 2026 J Ryan Russow. All Rights Reserved.<br>
+        Body Code is a proprietary system. Unauthorized use prohibited.
+      </p>
+    </div>
   </footer>
 </body>
 </html>
