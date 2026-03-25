@@ -34,7 +34,7 @@
    1. CONFIG
    ============================================================ */
 const CONFIG = {
-  webhookBase: 'https://your-n8n-instance.com/webhook',
+  webhookBase: 'https://automation.midwestguard.net/webhook',
 
   webhooks: {
     contact:     '/contact-form',
