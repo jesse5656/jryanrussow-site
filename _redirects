@@ -2,8 +2,8 @@
 /home                            /                                        301
 /apply                           /Lead-Capture-Pages/application.html     301
 
-# Block private and internal folders from public access
-/Private-Docs/*                  /404.html                                404
-/Backend-Odoo-Seperate-system/*  /404.html                                404
-/Cloudflare-Config/*             /404.html                                404
-/partials/*                      /404.html                                404
+# Block private and internal folders
+/Private-Docs/*                  /404.html                                301
+/Backend-Odoo-Seperate-system/*  /404.html                                301
+/Cloudflare-Config/*             /404.html                                301
+/partials/*                      /404.html                                301
