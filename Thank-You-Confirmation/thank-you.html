@@ -1,182 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <title>Thank You | Application Received - Jesse Russow</title>
-    <meta name="description" content="Thank you for applying to The Compound Performance Circle. Your application has been received and will be reviewed within 48 hours.">
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://www.jrrussow.com/thank-you-confirmation.html">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-        gtag('event', 'conversion', {'send_to': 'G-XXXXXXXXXX/application_submit'});
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1a1a2e;
-            background: #f8f9fa;
-        }
+  <!-- Primary SEO -->
+  <title>Thank You | Application Received — J Ryan Russow</title>
+  <meta name="description" content="Thank you for applying to The Compound Performance Circle. Your application has been received and will be reviewed within 48 hours." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://jryanrussow.com/Thank-You-Confirmation/thank-you.html" />
 
-        .hero {
-            background: linear-gradient(135deg, #0f2b5b 0%, #1a417a 100%);
-            color: white;
-            padding: 120px 20px 80px;
-            text-align: center;
-        }
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;            font-weight: 700;
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
 
-        .success-icon {
-            font-size: 5rem;
-            margin-bottom: 20px;
-        }
+  <style>
+    :root {
+      --navy: #0A2E5A;
+      --gold: #D4AF37;
+      --dark: #0F172A;
+      --gray: #647481;
+      --light: #F8FAFC;
+    }
 
-        .section {
-            padding: 80px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .section h2 {
-            font-size: 2rem;
-            color: #0f2b5b;
-            margin-bottom: 20px;
-        }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        .section p {
-            font-size: 1.2rem;
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
+    h1, h2, h3 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+    }
 
-        .next-steps {
-            background: white;
-            padding: 50px 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(15, 43, 91, 0.1);
-            margin: 40px 0;
-            text-align: left;
-        }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
-        .next-steps h3 {
-            color: #0f2b5b;
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            text-align: center;
-        }
+    /* Success Hero Banner */
+    .success-banner {
+      background: linear-gradient(135deg, var(--navy), #1a3a6c);
+      color: white;
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .next-steps ol {
-            margin-left: 30px;
-            color: #4a5568;
-        }
+    .success-banner::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.06);
+      top: -300px;
+      right: -200px;
+      z-index: 0;
+    }
 
-        .next-steps li {            margin-bottom: 15px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
+    .success-icon {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 1.5rem;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 16px 40px;
-            background: #d4af37;
-            color: #0f2b5b;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-        }
+    .success-icon svg {
+      width: 80px;
+      height: 80px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-        .btn:hover {
-            background: #c4a030;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-        }
+    .success-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-        footer {
-            background: #0f2b5b;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
+    .success-banner p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      position: relative;
+      z-index: 2;
+    }
 
-        footer a {
-            color: #d4af37;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+    /* Main Content */
+    main {
+      padding: 3rem 0 4rem;
+    }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+    .content-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+    }
+
+    .intro-text {
+      font-size: 1.15rem;
+      color: var(--gray);
+      line-height: 1.8;
+      margin: 2rem 0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Next Steps Card */
+    .next-steps {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(10, 46, 90, 0.08);
+      border: 1px solid #e2e8f0;
+      margin: 2.5rem 0;
+      text-align: left;
+    }
+
+    .next-steps h3 {
+      color: var(--navy);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .next-steps ol {
+      padding-left: 1.5rem;
+      color: var(--gray);
+      counter-reset: steps;
+      list-style: none;
+    }
+
+    .next-steps ol li {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      padding-left: 0.5rem;
+      position: relative;
+      counter-increment: steps;
+    }
+
+    .next-steps ol li::before {
+      content: counter(steps);
+      position: absolute;
+      left: -2rem;
+      top: 0.1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* CTA Buttons */
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      padding: 0.875rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn:hover {
+      background: #b89a2d;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy);
+      font-weight: 600;
+      padding: 0.875rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      border: 2px solid var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .success-banner h1 { font-size: 2.2rem; }
+      .success-banner p { font-size: 1.05rem; }
+      h2 { font-size: 1.7rem; }
+      .next-steps { padding: 1.75rem 1.25rem; }
+      .cta-group { flex-direction: column; align-items: center; }
+      .btn, .btn-secondary { width: 100%; text-align: center; }
+    }
+  </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="success-icon">✓</div>
-        <h1>Thank You!</h1>
-        <p>Your application has been received</p>    </header>
 
-    <main>
-        <section class="section">
-            <h2>What Happens Next?</h2>
-            
-            <div class="next-steps">
-                <h3>Next Steps:</h3>
-                <ol>
-                    <li><strong>Application Review</strong> — I'll review your application within 48 hours</li>
-                    <li><strong>Schedule a Call</strong> — If there's a potential fit, I'll email you to schedule a discovery call</li>
-                    <li><strong>Discovery Call</strong> — We'll discuss your goals, challenges, and whether The Compound Performance Circle is right for you</li>
-                    <li><strong>Decision</strong> — Within 24 hours of our call, I'll let you know if you've been accepted</li>
-                </ol>
-            </div>
+  <!-- Success Hero Banner -->
+  <div class="success-banner">
+    <div class="success-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="9 12 11 14 15 10" />
+      </svg>
+    </div>
+    <h1>Thank You!</h1>
+    <p>Your application has been received</p>
+  </div>
 
-            <p>
-                While you wait, check out the Daily Check-In system to start building your foundation today.
-            </p>
+  <main>
+    <section class="content-section">
 
-            <a href="daily-checkin.html" class="btn">View The Daily Check-In</a>
-            <a href="index.html" class="btn" style="margin-left: 15px;">Back to Home</a>
-        </section>
-    </main>
+      <h2>What Happens Next?</h2>
 
-    <footer>
-        <p>
-            <a href="index.html">Home</a> | 
-            <a href="about.html">About</a> | 
-            <a href="contact.html">Contact</a> | 
-            © 2025 Jesse Russow
-        </p>
-    </footer>
+      <p class="intro-text">
+        I personally review every application. Here's exactly what to expect over the next few days.
+      </p>
+
+      <div class="next-steps">
+        <h3>Your Next Steps</h3>
+        <ol>
+          <li>
+            <strong>Application Review</strong> — I'll review your application within 48 hours
+          </li>
+          <li>
+            <strong>Schedule a Call</strong> — If there's a potential fit, I'll email you to schedule a discovery call
+          </li>
+          <li>
+            <strong>Discovery Call</strong> — We'll discuss your goals, challenges, and whether The Compound Performance Circle is right for you
+          </li>
+          <li>
+            <strong>Decision</strong> — Within 24 hours of our call, I'll let you know if you've been accepted
+          </li>
+        </ol>
+      </div>
+
+      <p class="intro-text">
+        While you wait, start building your foundation today with the Daily Check-In system.
+      </p>
+
+      <div class="cta-group">
+        <a href="/daily-checkin.html" class="btn">View The Daily Check-In</a>
+        <a href="/index.html" class="btn-secondary">Back to Home</a>
+      </div>
+
+    </section>
+  </main>
+
 </body>
-</html></html>
+</html>

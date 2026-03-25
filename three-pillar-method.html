@@ -3,28 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "The Three-Pillar Method™",
-  "description": "A proven system to build real wealth starting under $1,000 — no six-figure salary required. Pillars: Cornerstone Strategy, Short-Term Growth Engine, Long-Term Wealth Foundation.",
-  "provider": {
-    "@type": "Organization",
-    "name": "J Ryan Russow",
-    "sameAs": "https://jryanrussow.com"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "description": "Free starter guide available"
-  }
-}
-</script> 
+
   <!-- Primary SEO -->
-  <title>The Three-Pillar Method™ | J Ryan Russow — Build Real Wealth Starting Under $1,000</title>
-  <meta name="description" content="The Three-Pillar Method™: A proven system to build real wealth — starting with under $1,000. No six-figure salary required. Westside Barbell Certified Coach.">
+  <title>The Three-Pillar Method™ | J Ryan Russow — Build Real Wealth Starting Under \$1,000</title>
+  <meta name="description" content="The Three-Pillar Method™: A proven system to build real wealth — starting with under \$1,000. No six-figure salary required. Westside Barbell Certified Coach.">
   <meta name="keywords" content="Three-Pillar Method, wealth building, founder finance, cash flow business, rental property scorecard, J Ryan Russow, corner stone discipline">
   <meta name="author" content="J Ryan Russow">
   <meta name="robots" content="index, follow">
@@ -33,7 +15,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://jryanrussow.com/three-pillar-method.html">
-  <meta property="og:title" content="The Three-Pillar Method™ | Build Real Wealth Starting Under $1,000">
+  <meta property="og:title" content="The Three-Pillar Method™ | Build Real Wealth Starting Under \$1,000">
   <meta property="og:description" content="A proven system for founders and executives to build wealth from scratch — no six-figure income required. Cornerstone Strategy, Short-Term Growth Engine, Long-Term Foundation.">
   <meta property="og:image" content="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/fba63d89badb58fbf35b6d946efc3640cce330a1/Assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg">
   <meta property="og:site_name" content="J Ryan Russow">
@@ -41,8 +23,8 @@
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://jryanrussow.com/three-pillar-method.html">
-  <meta property="twitter:title" content="The Three-Pillar Method™ | Build Real Wealth Starting Under $1,000">
-  <meta property="twitter:description" content="A proven system: Cornerstone Strategy → Short-Term Growth Engine → Long-Term Foundation. Start with under $1,000.">
+  <meta property="twitter:title" content="The Three-Pillar Method™ | Build Real Wealth Starting Under \$1,000">
+  <meta property="twitter:description" content="A proven system: Cornerstone Strategy → Short-Term Growth Engine → Long-Term Foundation. Start with under \$1,000.">
   <meta property="twitter:image" content="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/fba63d89badb58fbf35b6d946efc3640cce330a1/Assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg">
 
   <!-- Favicon -->
@@ -53,7 +35,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "The Three-Pillar Method™",
+    "description": "A proven system to build real wealth starting with under \$1,000 — no six-figure salary required. Built on three pillars: Cornerstone Strategy, Short-Term Growth Engine, Long-Term Wealth Foundation.",
+    "hasPart": [
+      {
+        "@type": "HowTo",
+        "name": "Pillar 1: The Cornerstone Strategy™",
+        "description": "Generate active income with a low-cost service business (e.g., lawn care, pressure washing) — all start under \$1,000."
+      },
+      {
+        "@type": "HowTo",
+        "name": "Pillar 2: The Short-Term Growth Engine™",
+        "description": "Buy income-producing real estate using the 5-Point Rental Scorecard: cash flow, safety, maintenance, manageability, appreciation."
+      },
+      {
+        "@type": "HowTo",
+        "name": "Pillar 3: The Long-Term Wealth Foundation™",
+        "description": "Reinvest into passive assets: Roth IRA, index funds, REITs, P2P lending — automate and scale."
+      }
+    ],
+    "provider": {
+      "@type": "Person",
+      "name": "J Ryan Russow",
+      "url": "https://jryanrussow.com"
+    }
+  }
+  </script>
+
   <style>
     :root {
       --navy: #0A2E5A;
@@ -77,7 +90,10 @@
       overflow-x: hidden;
     }
 
-    h1, h2, h3 { font-family: 'EB Garamond', serif; font-weight: 600; }
+    h1, h2, h3 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+    }
 
     .container {
       max-width: 800px;
@@ -85,8 +101,8 @@
       padding: 0 1.5rem;
     }
 
-    /* Header */
-    header {
+    /* Page Title Banner */
+    .page-banner {
       background: linear-gradient(135deg, var(--navy), #1a3a6c);
       color: white;
       text-align: center;
@@ -95,7 +111,7 @@
       overflow: hidden;
     }
 
-    header::before {
+    .page-banner::before {
       content: "";
       position: absolute;
       width: 800px;
@@ -107,7 +123,7 @@
       z-index: 0;
     }
 
-    header h1 {
+    .page-banner h1 {
       font-size: 2.8rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
@@ -116,7 +132,7 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    header p {
+    .page-banner p {
       font-size: 1.4rem;
       opacity: 0.95;
       max-width: 600px;
@@ -210,9 +226,10 @@
 
     li {
       margin-bottom: 1rem;
+      position: relative;
     }
 
-    li::before {
+    ul li::before {
       content: "•";
       color: var(--gold);
       font-weight: bold;
@@ -255,90 +272,38 @@
       box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
     }
 
-    footer {
-      background: var(--dark);
-      color: #CBD5E1;
-      padding: 3rem 0;
-      text-align: center;
-      margin-top: 4rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .footer-links a {
-      color: #94A3B8;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .footer-links a:hover {
-      color: white;
-      text-decoration: underline;
-    }
-
-    .copyright {
-      font-size: 0.875rem;
-      color: #647481;
-      margin-top: 1.5rem;
+    @media (max-width: 768px) {
+      .page-banner h1 { font-size: 2rem; }
+      .page-banner p { font-size: 1.1rem; }
+      .pillar-overlay h2 { font-size: 1.5rem; }
+      .pillar-overlay p { font-size: 1rem; }
+      h2 { font-size: 1.9rem; }
+      h3 { font-size: 1.3rem; }
+      .btn { padding: 0.75rem 1.5rem; font-size: 1rem; }
     }
   </style>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "The Three-Pillar Method™",
-    "description": "A proven system to build real wealth starting with under $1,000 — no six-figure salary required. Built on three pillars: Cornerstone Strategy, Short-Term Growth Engine, Long-Term Wealth Foundation.",
-    "hasPart": [
-      {
-        "@type": "HowTo",
-        "name": "Pillar 1: The Cornerstone Strategy™",
-        "description": "Generate active income with a low-cost service business (e.g., lawn care, pressure washing) — all start under $1,000."
-      },
-      {
-        "@type": "HowTo",
-        "name": "Pillar 2: The Short-Term Growth Engine™",
-        "description": "Buy income-producing real estate using the 5-Point Rental Scorecard: cash flow, safety, maintenance, manageability, appreciation."
-      },
-      {
-        "@type": "HowTo",
-        "name": "Pillar 3: The Long-Term Wealth Foundation™",
-        "description": "Reinvest into passive assets: Roth IRA, index funds, REITs, P2P lending — automate and scale."
-      }
-    ],
-    "provider": {
-      "@type": "Person",
-      "name": "J Ryan Russow",
-      "url": "https://jryanrussow.com"
-    }
-  }
-  </script>
 </head>
 <body>
-  <header>
+
+  <!-- Page Title Banner -->
+  <div class="page-banner">
     <div class="container">
       <h1>The Three-Pillar Method™</h1>
-      <p>A proven system to build real wealth — starting with under $1,000</p>
+      <p>A proven system to build real wealth — starting with under \$1,000</p>
     </div>
-  </header>
+  </div>
 
   <!-- Hero Image -->
   <div class="container">
     <div class="pillar-hero">
-      <img src="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/fba63d89badb58fbf35b6d946efc3640cce330a1/Assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg"
-           alt="Ancient Roman corner pillar among three columns — symbolizing the foundational stone of discipline, wealth, and mindset in The Three-Pillar Method™ by J Ryan Russow"
-           width="1200" height="630"
-           loading="lazy"
-           decoding="async">
+      <img
+        src="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/fba63d89badb58fbf35b6d946efc3640cce330a1/Assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg"
+        alt="Ancient Roman corner pillar among three columns — symbolizing the foundational stone of discipline, wealth, and mindset in The Three-Pillar Method™ by J Ryan Russow"
+        width="1200"
+        height="630"
+        loading="lazy"
+        decoding="async"
+      >
       <div class="pillar-overlay">
         <h2>The Corner Stone of Wealth</h2>
         <p>Just as Roman architecture relies on a corner pillar for structural integrity, your financial freedom requires one non-negotiable foundation: disciplined cash flow. This is Pillar 1.</p>
@@ -349,16 +314,16 @@
   <main class="container">
     <section>
       <h2>The Only System That Starts Where You Are</h2>
-      <p>Most financial advice assumes you already have savings. This one doesn’t. The Three-Pillar Method™ starts with cash flow — because you can’t invest what you don’t have. No debt. No luck. Just sequence.</p>
+      <p>Most financial advice assumes you already have savings. This one doesn't. The Three-Pillar Method™ starts with cash flow — because you can't invest what you don't have. No debt. No luck. Just sequence.</p>
     </section>
 
     <section>
       <h3>Pillar 1: The Cornerstone Strategy™</h3>
       <p>Generate active income with a low-cost service business — no experience needed.</p>
       <ul>
-        <li><strong>Lawn care, pressure washing, cleaning, handyman</strong> — all start under $1,000</li>
-        <li><strong>First client strategy:</strong> “First home free” for referrals</li>
-        <li><strong>Goal:</strong> $500–$2,000/month profit in 90 days</li>
+        <li><strong>Lawn care, pressure washing, cleaning, handyman</strong> — all start under \$1,000</li>
+        <li><strong>First client strategy:</strong> "First home free" for referrals</li>
+        <li><strong>Goal:</strong> \$500–\$2,000/month profit in 90 days</li>
       </ul>
     </section>
 
@@ -366,7 +331,7 @@
       <h3>Pillar 2: The Short-Term Growth Engine™</h3>
       <p>Use those profits to buy income-producing real estate — not speculation. Only if it passes the 5-Point Rental Scorecard:</p>
       <ol>
-        <li><strong>Positive cash flow</strong> ($100+/mo after all expenses)</li>
+        <li><strong>Positive cash flow</strong> (\$100+/mo after all expenses)</li>
         <li><strong>Safe, growing area</strong></li>
         <li><strong>Easy to maintain</strong> (no major repairs)</li>
         <li><strong>Can be managed remotely or self-managed</strong></li>
@@ -384,14 +349,14 @@
         <li><strong>REITs</strong> (real estate exposure without ownership)</li>
         <li><strong>P2P lending</strong> (higher yield, higher risk — optional)</li>
       </ul>
-      <p><strong>Rule:</strong> Automate contributions. Start with $50/month. Increase with each raise.</p>
+      <p><strong>Rule:</strong> Automate contributions. Start with \$50/month. Increase with each raise.</p>
     </section>
 
     <section>
       <h3>Real Results</h3>
       <blockquote>
-        “I launched lawn care at 58. Made $1,200/month profit in 90 days. Bought a duplex. Now I live rent-free.”<br>
-        — Mark T., Ohio
+        "I launched lawn care at 58. Made \$1,200/month profit in 90 days. Bought a duplex. Now I live rent-free."
+        <br>— Mark T., Ohio
       </blockquote>
     </section>
 
@@ -400,20 +365,5 @@
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="mind-forge.html">Mind Forge</a>
-        <a href="body-code.html">Body Code</a>
-        <a href="compound-circle.html">The Circle</a>
-      </div>
-      <p class="copyright">
-        &copy; 2026 J Ryan Russow. All Rights Reserved.<br>
-        The Three-Pillar Method™ is a proprietary system. Unauthorized use prohibited.
-      </p>
-    </div>
-  </footer>
 </body>
 </html>
