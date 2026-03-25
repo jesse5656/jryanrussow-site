@@ -736,7 +736,7 @@ function initContactForm() {
       showFormSuccess(form, 'Thanks for reaching out! I will be in touch within 24 hours.');
       form.reset();
     } else {
-      showFormError(form, 'Something went wrong. Please email me directly at hello@jryanrussow.com');
+      showFormError(form, 'Something went wrong. Please email me directly at jesse@jryanrussow.com');
     }
   });
 }
