@@ -16,7 +16,7 @@
  */
 
 export async function onRequest(context) {
-  const { request, next } = context;
+  const { request, next, env } = context;
   const url = new URL(request.url);
 
   // ── Skip non-HTML assets ──────────────────────────────────
@@ -31,12 +31,8 @@ export async function onRequest(context) {
 
   if (skip) return next();
 
-  // ── Fetch page + both partials in parallel ────────────────
-  const [pageResponse, headerResponse, footerResponse] = await Promise.all([
-    next(),
-    fetch(new URL('/partials/header.html', url.origin).href),
-    fetch(new URL('/partials/footer.html', url.origin).href),
-  ]);
+  // ── Fetch page first ──────────────────────────────────────
+  const pageResponse = await next();
 
   // ── Pass through anything that isn't HTML ─────────────────
   const contentType = pageResponse.headers.get('Content-Type') || '';
@@ -44,21 +40,30 @@ export async function onRequest(context) {
     return pageResponse;
   }
 
-  // ── Read partial strings ──────────────────────────────────
-  const [headerHTML, footerHTML] = await Promise.all([
-    headerResponse.ok ? headerResponse.text() : Promise.resolve('<!-- header partial missing -->'),
-    footerResponse.ok ? footerResponse.text() : Promise.resolve('<!-- footer partial missing -->'),
+  // ── Fetch partials using absolute URL ─────────────────────
+  const origin = url.origin;
+
+  const [headerResponse, footerResponse] = await Promise.all([
+    fetch(`${origin}/partials/header.html`, {
+      headers: { 'Accept': 'text/html' }
+    }),
+    fetch(`${origin}/partials/footer.html`, {
+      headers: { 'Accept': 'text/html' }
+    }),
   ]);
 
-  // ── Rewrite mount points with real HTML ───────────────────
-  const rewriter = new HTMLRewriter()
+  const [headerHTML, footerHTML] = await Promise.all([
+    headerResponse.ok ? headerResponse.text() : Promise.resolve('<!-- header missing -->'),
+    footerResponse.ok ? footerResponse.text() : Promise.resolve('<!-- footer missing -->'),
+  ]);
 
+  // ── Rewrite mount points ──────────────────────────────────
+  const rewriter = new HTMLRewriter()
     .on('#site-header-mount', {
       element(el) {
         el.replace(headerHTML, { html: true });
       },
     })
-
     .on('#site-footer-mount', {
       element(el) {
         el.replace(footerHTML, { html: true });
