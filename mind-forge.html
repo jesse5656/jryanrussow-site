@@ -31,7 +31,7 @@
     />
     <meta
       property="og:image"
-      content="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/main/Assets/images/mind-forge-blacksmith-transforming-metal-in-forge/mind-forge-blacksmith-transforming-metal-in-forge-518-kb.jpg"
+      content="https://jryanrussow.com/css/assets/images/mind-forge-blacksmith-transforming-metal-in-forge/mind-forge-blacksmith-transforming-metal-in-forge-518-kb.jpg"
     />
     <meta property="og:site_name" content="J Ryan Russow" />
 
@@ -51,7 +51,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/main/Assets/images/mind-forge-blacksmith-transforming-metal-in-forge/mind-forge-blacksmith-transforming-metal-in-forge-518-kb.jpg"
+      content="https://jryanrussow.com/css/assets/images/mind-forge-blacksmith-transforming-metal-in-forge/mind-forge-blacksmith-transforming-metal-in-forge-518-kb.jpg"
     />
 
     <!-- Favicon -->
@@ -199,12 +199,13 @@
         margin: 1.5rem 0;
       }
 
-      li {
+      /* Scoped to direct ul li only — prevents bleed into nested or ol elements */
+      ul > li {
         margin-bottom: 1rem;
         position: relative;
       }
 
-      li::before {
+      ul > li::before {
         content: "•";
         color: var(--gold);
         font-weight: bold;
@@ -274,6 +275,10 @@
     </style>
   </head>
   <body>
+
+    <!-- Middleware injects header here -->
+    <div id="site-header-mount"></div>
+
     <!-- Hero Image -->
     <div class="container">
       <div class="forge-hero">
@@ -288,7 +293,7 @@
       </div>
     </div>
 
-    <main class="container">
+    <main id="main-content" class="container">
       <section>
         <h2>Discipline Over Motivation</h2>
         <p>
@@ -331,8 +336,7 @@ Evening:
 - What went well?
 - What did I avoid — and why?
 - One win I'm proud of:
-      </pre
-        >
+        </pre>
       </section>
 
       <section>
@@ -351,10 +355,17 @@ Evening:
       </section>
 
       <div class="cta">
-        <a href="contact.html" class="btn"
-          >Apply to Join The Compound Performance Circle</a
-        >
+        <a href="/Lead-Capture-Pages/application.html" class="btn">
+          Apply to Join The Compound Performance Circle
+        </a>
       </div>
     </main>
+
+    <!-- Middleware injects footer here -->
+    <div id="site-footer-mount"></div>
+
+    <!-- Main JS -->
+    <script src="/js/main.js"></script>
+
   </body>
 </html>
