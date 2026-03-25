@@ -1,0 +1,10 @@
+.git
+.wrangler
+Private-Docs
+Backend-Odoo-Seperate-system
+Cloudflare-Config
+*.md
+*.bat
+*.txt
+file-tree.txt
+generate.tree.bat
