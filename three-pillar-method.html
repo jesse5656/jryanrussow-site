@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://jryanrussow.com/three-pillar-method.html">
   <meta property="og:title" content="The Three-Pillar Method™ | Build Real Wealth Starting Under \$1,000">
   <meta property="og:description" content="A proven system for founders and executives to build wealth from scratch — no six-figure income required. Cornerstone Strategy, Short-Term Growth Engine, Long-Term Foundation.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/fba63d89badb58fbf35b6d946efc3640cce330a1/Assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg">
+  <meta property="og:image" content="https://jryanrussow.com/css/assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg">
   <meta property="og:site_name" content="J Ryan Russow">
 
   <!-- Twitter -->
@@ -25,7 +25,7 @@
   <meta property="twitter:url" content="https://jryanrussow.com/three-pillar-method.html">
   <meta property="twitter:title" content="The Three-Pillar Method™ | Build Real Wealth Starting Under \$1,000">
   <meta property="twitter:description" content="A proven system: Cornerstone Strategy → Short-Term Growth Engine → Long-Term Foundation. Start with under \$1,000.">
-  <meta property="twitter:image" content="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/fba63d89badb58fbf35b6d946efc3640cce330a1/Assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg">
+  <meta property="twitter:image" content="https://jryanrussow.com/css/assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -224,18 +224,23 @@
       margin: 1.5rem 0;
     }
 
-    li {
+    /* Scoped to ul only — does not bleed into ol */
+    ul > li {
       margin-bottom: 1rem;
       position: relative;
     }
 
-    ul li::before {
+    ul > li::before {
       content: "•";
       color: var(--gold);
       font-weight: bold;
       position: absolute;
       left: -1.75rem;
       top: 0;
+    }
+
+    ol > li {
+      margin-bottom: 1rem;
     }
 
     blockquote {
@@ -285,6 +290,9 @@
 </head>
 <body>
 
+  <!-- Middleware injects header here -->
+  <div id="site-header-mount"></div>
+
   <!-- Page Title Banner -->
   <div class="page-banner">
     <div class="container">
@@ -297,7 +305,7 @@
   <div class="container">
     <div class="pillar-hero">
       <img
-        src="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/fba63d89badb58fbf35b6d946efc3640cce330a1/Assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg"
+        src="/css/assets/images/three-pillar-method-corner-stone-roman-columns/three-pillar-method-corner-stone-roman-columns-2.jpg"
         alt="Ancient Roman corner pillar among three columns — symbolizing the foundational stone of discipline, wealth, and mindset in The Three-Pillar Method™ by J Ryan Russow"
         width="1200"
         height="630"
@@ -311,7 +319,7 @@
     </div>
   </div>
 
-  <main class="container">
+  <main id="main-content" class="container">
     <section>
       <h2>The Only System That Starts Where You Are</h2>
       <p>Most financial advice assumes you already have savings. This one doesn't. The Three-Pillar Method™ starts with cash flow — because you can't invest what you don't have. No debt. No luck. Just sequence.</p>
@@ -361,9 +369,15 @@
     </section>
 
     <div class="cta">
-      <a href="contact.html" class="btn">Get the Free Starter Kit</a>
+      <a href="/Lead-Capture-Pages/workbook.html" class="btn">Get the Free Starter Kit</a>
     </div>
   </main>
+
+  <!-- Middleware injects footer here -->
+  <div id="site-footer-mount"></div>
+
+  <!-- Main JS -->
+  <script src="/js/main.js"></script>
 
 </body>
 </html>
