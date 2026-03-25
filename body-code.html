@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary SEO -->
-    <title>Body Code | J Ryan Russow — Westside Barbell–Inspired Strength Training</title>
+    <title>
+      Body Code | J Ryan Russow — Westside Barbell–Inspired Strength Training
+    </title>
     <meta
       name="description"
       content="Strength training for founders: durable performance through frequency, recovery, and progressive overload. Westside Barbell Certified Coach."
@@ -21,17 +23,38 @@
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://jryanrussow.com/body-code.html" />
-    <meta property="og:title" content="Body Code | Westside Barbell–Inspired Strength for Founders" />
-    <meta property="og:description" content="Train like an elite performer. Not for size. For signal fidelity, recovery, and sustained output." />
-    <meta property="og:image" content="https://jryanrussow.com/Assets/images/jryanrussow-logo.png" />
+    <meta
+      property="og:title"
+      content="Body Code | Westside Barbell–Inspired Strength for Founders"
+    />
+    <meta
+      property="og:description"
+      content="Train like an elite performer. Not for size. For signal fidelity, recovery, and sustained output."
+    />
+    <meta
+      property="og:image"
+      content="https://jryanrussow.com/Assets/images/jryanrussow-logo.png"
+    />
     <meta property="og:site_name" content="J Ryan Russow" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://jryanrussow.com/body-code.html" />
-    <meta property="twitter:title" content="Body Code | Westside Barbell–Inspired Strength for Founders" />
-    <meta property="twitter:description" content="Frequency > Intensity. Recovery = Non-Negotiable. Train like you lead." />
-    <meta property="twitter:image" content="https://jryanrussow.com/Assets/images/jryanrussow-logo.png" />
+    <meta
+      property="twitter:url"
+      content="https://jryanrussow.com/body-code.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Body Code | Westside Barbell–Inspired Strength for Founders"
+    />
+    <meta
+      property="twitter:description"
+      content="Frequency > Intensity. Recovery = Non-Negotiable. Train like you lead."
+    />
+    <meta
+      property="twitter:image"
+      content="https://jryanrussow.com/Assets/images/jryanrussow-logo.png"
+    />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -44,30 +67,116 @@
       rel="stylesheet"
     />
 
-    <!-- Global Stylesheets -->
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Page-Specific Styles -->
+    <!-- Styles -->
     <style>
-      /* ── Body Code Page Overrides ── */
-
-      /* Light content area sits on --light bg */
-      .page-wrapper {
-        background: var(--light, #F8FAFC);
-        color: var(--dark, #0F172A);
+      :root {
+        --navy: #0a2e5a;
+        --gold: #d4af37;
+        --dark: #0f172a;
+        --gray: #647481;
+        --light: #f8fafc;
+        --cream: #fef9f3;
+        --shadow: rgba(0, 0, 0, 0.08);
       }
 
-      /* Section headings */
-      .page-wrapper h2 {
-        font-family: 'EB Garamond', serif;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "EB Garamond", serif;
+        font-weight: 600;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(135deg, var(--navy), #1a3a6c);
+        color: white;
+        text-align: center;
+        padding: 3rem 1rem 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.06);
+        top: -400px;
+        right: -300px;
+        z-index: 0;
+      }
+
+      .logo {
+        display: block;
+        max-width: 120px;
+        margin: 0 auto 1rem;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+      }
+
+      header h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        position: relative;
+        z-index: 2;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header p {
+        font-size: 1.4rem;
+        opacity: 0.95;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Main Content */
+      main {
+        padding: 3rem 0;
+      }
+
+      section {
+        margin-bottom: 3rem;
+      }
+
+      h2 {
         font-size: 2.2rem;
         color: var(--navy);
         margin-bottom: 1.5rem;
         position: relative;
       }
 
-      .page-wrapper h2::after {
+      h2::after {
         content: "";
         position: absolute;
         bottom: -0.5rem;
@@ -77,223 +186,142 @@
         background: var(--gold);
       }
 
-      .page-wrapper h3 {
-        font-family: 'EB Garamond', serif;
+      h3 {
         color: var(--gold);
         font-size: 1.5rem;
         margin: 2rem 0 1rem;
+        font-weight: 600;
       }
 
-      .page-wrapper p {
-        color: #334155;
-        font-size: 1.05rem;
-        margin-bottom: 1rem;
-      }
-
-      /* Lists */
-      .page-wrapper ul {
+      ul {
         padding-left: 1.75rem;
         margin: 1.5rem 0;
-        list-style: none;
       }
 
-      .page-wrapper ul li {
+      li {
         margin-bottom: 1rem;
         position: relative;
-        color: #334155;
-        font-size: 1.05rem;
       }
 
-      .page-wrapper ul li::before {
+      li::before {
         content: "•";
         color: var(--gold);
         font-weight: bold;
         position: absolute;
         left: -1.75rem;
+        top: 0;
       }
 
-      .page-wrapper ol {
+      ol {
         padding-left: 1.8rem;
         margin: 1.5rem 0;
       }
 
-      .page-wrapper ol li {
-        margin-bottom: 0.75rem;
-        color: #334155;
-        font-size: 1.05rem;
-      }
-
-      /* Table */
-      .body-code-table {
+      table {
         width: 100%;
         border-collapse: collapse;
         margin: 1.5rem 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         border-radius: 8px;
         overflow: hidden;
-        font-size: 1rem;
       }
 
-      .body-code-table th,
-      .body-code-table td {
-        padding: 14px 16px;
+      th,
+      td {
+        padding: 14px 12px;
         text-align: left;
       }
 
-      .body-code-table thead tr {
+      th {
         background: var(--navy);
         color: white;
         font-weight: 600;
-        letter-spacing: 0.5px;
       }
 
-      .body-code-table tbody tr {
+      tbody tr {
         border-bottom: 1px solid #e2e8f0;
-        background: #fff;
       }
 
-      .body-code-table tbody tr:last-child {
-        border-bottom: none;
-      }
-
-      .body-code-table tbody tr:hover {
+      tbody tr:hover {
         background: rgba(212, 175, 55, 0.05);
       }
 
-      /* CTA Block */
-      .cta-block {
+      .cta {
         text-align: center;
         margin: 3.5rem 0;
-        padding: 3rem 2rem;
-        background: linear-gradient(135deg, var(--navy), #1a3a6c);
-        border-radius: 12px;
-        color: white;
       }
 
-      .cta-block h3 {
-        color: var(--gold) !important;
-        font-size: 1.8rem !important;
-        margin-bottom: 1rem !important;
-      }
-
-      .cta-block p {
-        color: rgba(255, 255, 255, 0.85) !important;
-        margin-bottom: 1.5rem;
-        font-size: 1.1rem;
-      }
-
-      /* Hero Badge */
-      .hero-badge {
+      .btn {
         display: inline-block;
-        background: rgba(212, 175, 55, 0.15);
-        border: 1px solid rgba(212, 175, 55, 0.4);
-        color: var(--gold);
-        font-size: 0.8rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        padding: 0.4rem 1.2rem;
-        border-radius: 20px;
-        margin-bottom: 1.25rem;
-      }
-
-      /* Hero text overrides for light readability */
-      .hero-section {
-        background: linear-gradient(135deg, var(--navy), #1a3a6c);
-        color: white;
-        text-align: center;
-        padding: 4rem 1rem 3rem;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero-section::before {
-        content: "";
-        position: absolute;
-        width: 700px;
-        height: 700px;
-        border-radius: 50%;
-        background: rgba(212, 175, 55, 0.05);
-        top: -350px;
-        right: -250px;
-        pointer-events: none;
-      }
-
-      .hero-section h1 {
-        font-family: 'EB Garamond', serif;
-        font-size: 3.2rem;
+        background: var(--gold);
+        color: var(--navy);
         font-weight: 700;
-        color: white;
-        margin-bottom: 0.75rem;
-        position: relative;
-        z-index: 2;
+        padding: 0.875rem 2rem;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
       }
 
-      .hero-section p {
-        font-size: 1.35rem;
-        color: rgba(255, 255, 255, 0.9);
-        max-width: 600px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 2;
+      .btn:hover {
+        background: #b89a2d;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
       }
 
-      /* Footer overrides for this page */
-      .site-footer-light {
-        background: var(--dark, #0F172A);
-        color: #CBD5E1;
+      footer {
+        background: var(--dark);
+        color: #cbd5e1;
         padding: 3rem 0;
         text-align: center;
         margin-top: 4rem;
-        border-top: 2px solid var(--gold);
       }
 
-      .site-footer-light .footer-links a {
-        color: #94A3B8;
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .footer-links a {
+        color: #94a3b8;
         text-decoration: none;
         font-size: 0.95rem;
         font-weight: 500;
         transition: color 0.3s;
       }
 
-      .site-footer-light .footer-links a:hover {
-        color: var(--gold);
-        text-decoration: none;
+      .footer-links a:hover {
+        color: white;
+        text-decoration: underline;
       }
 
-      .site-footer-light .copyright {
+      .copyright {
         font-size: 0.875rem;
         color: #647481;
         margin-top: 1.5rem;
-        line-height: 1.8;
       }
 
-      .footer-logo {
-        height: 50px;
-        margin: 0 auto 1.5rem;
-        opacity: 0.85;
-      }
-
-      /* Responsive */
       @media (max-width: 768px) {
-        .hero-section h1 {
+        header h1 {
           font-size: 2.2rem;
         }
-
-        .hero-section p {
-          font-size: 1.1rem;
+        header p {
+          font-size: 1.2rem;
         }
-
-        .page-wrapper h2 {
-          font-size: 1.8rem;
+        h2 {
+          font-size: 1.9rem;
         }
-
-        .body-code-table {
-          font-size: 0.875rem;
+        h3 {
+          font-size: 1.4rem;
         }
-
-        .body-code-table th,
-        .body-code-table td {
-          padding: 10px 10px;
+        .btn {
+          padding: 0.75rem 1.5rem;
+          font-size: 1rem;
         }
       }
     </style>
@@ -304,7 +332,7 @@
         "@context": "https://schema.org",
         "@type": "ExercisePlan",
         "name": "Body Code: Westside Barbell–Inspired Strength Training",
-        "description": "Strength training for real life — 3x/week, progressive overload, recovery-first approach.",
+        "description": "Strength training for real life — 3x/week, progressive overload, recovery-first approach. No gym required.",
         "category": "strength",
         "intensity": "moderate",
         "timeRequired": "P30M",
@@ -312,233 +340,113 @@
       }
     </script>
   </head>
-
   <body>
-
-    <!-- ===== SKIP LINK (Accessibility) ===== -->
-    <a href="#main-content" class="skip-link">Skip to content</a>
-
-    <!-- ===== HEADER / NAVBAR ===== -->
-    <header class="site-header">
-      <div class="container">
-        <div class="header-inner">
-
-          <!-- Brand Logo -->
-          <a href="01-index.html" class="nav-logo">
-            <img
-              src="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/main/Assets/images/jryanrussow-logo/jrryanrussow-header-logo.webp"
-              alt="J Ryan Russow — Home"
-              height="52"
-            />
-          </a>
-
-          <!-- Mobile Toggle -->
-          <button
-            class="nav-toggle"
-            id="navToggle"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-            aria-controls="mainNav"
-          >
-            <span class="hamburger"></span>
-          </button>
-
-          <!-- Navigation -->
-          <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-            <ul class="nav-list">
-              <li>
-                <a href="01-index.html" class="nav-link">Home</a>
-              </li>
-              <li>
-                <a href="02-about.html" class="nav-link">About</a>
-              </li>
-              <li>
-                <a href="04-mind-forge.html" class="nav-link">Mind Forge</a>
-              </li>
-              <li>
-                <a href="05-three-pillar-method.html" class="nav-link">
-                  Three-Pillar
-                </a>
-              </li>
-              <li>
-                <a href="body-code.html" class="nav-link active">
-                  Body Code
-                </a>
-              </li>
-              <li>
-                <a href="06-compound-circle.html" class="nav-link nav-cta">
-                  Join The Circle
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-        </div>
-      </div>
-    </header>
-
-    <!-- ===== HERO ===== -->
-    <section class="hero-section" aria-label="Body Code Introduction">
-      <div class="container">
-        <span class="hero-badge">Westside Barbell Inspired</span>
-        <h1>Body Code</h1>
-        <p>Westside Barbell–inspired strength training for real life</p>
-      </div>
-    </section>
-
-    <!-- ===== MAIN CONTENT ===== -->
-    <div class="page-wrapper">
-      <main class="container" id="main-content">
-        <div class="page-content">
-
-          <!-- Strength for Real Life -->
-          <section aria-labelledby="strength-heading">
-            <h2 id="strength-heading">Strength for Real Life</h2>
-            <p>
-              This is not bodybuilding. Not CrossFit. Not fitness influencer
-              nonsense. This is
-              <strong>Westside Barbell–inspired strength training</strong> —
-              adapted for busy founders who need durability, not Instagram poses.
-            </p>
-          </section>
-
-          <!-- Core Principles -->
-          <section aria-labelledby="principles-heading">
-            <h3 id="principles-heading">Core Principles</h3>
-            <ul>
-              <li>
-                <strong>Frequency &gt; Intensity</strong> — 3x/week beats
-                1x/week at max effort
-              </li>
-              <li>
-                <strong>Recovery is non-negotiable</strong> — sleep,
-                hydration, mobility
-              </li>
-              <li>
-                <strong>Progressive overload, not pain</strong> — add 2.5
-                lbs, not 25
-              </li>
-              <li>
-                <strong>Train like you lead</strong> — strong body = clear
-                mind = decisive action
-              </li>
-            </ul>
-          </section>
-
-          <!-- Weekly Plan -->
-          <section aria-labelledby="weekly-heading">
-            <h3 id="weekly-heading">Sample Weekly Plan (Founder-Friendly)</h3>
-            <table class="body-code-table" role="table">
-              <thead>
-                <tr>
-                  <th scope="col">Day</th>
-                  <th scope="col">Focus</th>
-                  <th scope="col">Workout</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Mon</td>
-                  <td>Upper Body</td>
-                  <td>
-                    Bench Press (3x5), Rows (3x6), Overhead Press (2x5)
-                  </td>
-                </tr>
-                <tr>
-                  <td>Wed</td>
-                  <td>Lower Body</td>
-                  <td>
-                    Squats (3x5), Deadlifts (2x3), Leg Press (2x8)
-                  </td>
-                </tr>
-                <tr>
-                  <td>Fri</td>
-                  <td>Active Recovery</td>
-                  <td>
-                    Walk 30 min + foam roll + 10 min mobility
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <!-- Nutrition -->
-          <section aria-labelledby="nutrition-heading">
-            <h3 id="nutrition-heading">Nutrition That Sticks</h3>
-            <p>No calorie counting. No macros. Just three rules:</p>
-            <ol>
-              <li>
-                Eat protein first at every meal (chicken, eggs, fish, tofu)
-              </li>
-              <li>
-                Fill half your plate with vegetables (frozen is fine)
-              </li>
-              <li>
-                Carbs only around workouts or dinner (rice, potatoes, oats)
-              </li>
-            </ol>
-          </section>
-
-          <!-- CTA Block -->
-          <div class="cta-block" role="complementary">
-            <h3>Ready to Train Like You Lead?</h3>
-            <p>
-              Join founders who build strength, clarity, and durability
-              through the Compound Performance Circle.
-            </p>
-            <a href="contact.html" class="btn btn-primary">
-              Join The Compound Performance Circle
-            </a>
-          </div>
-
-        </div>
-      </main>
-    </div>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="site-footer-light" role="contentinfo">
+    <header>
       <div class="container">
         <img
           src="https://raw.githubusercontent.com/jesse5656/jryanrussow-site/main/Assets/images/jryanrussow-logo/jrryanrussow-header-logo.webp"
-          alt="J Ryan Russow"
-          class="footer-logo"
+          alt="J Ryan Russow Logo"
+          width="120"
         />
-        <nav aria-label="Footer navigation">
-          <div class="footer-links">
-            <a href="01-index.html">Home</a>
-            <a href="02-about.html">About</a>
-            <a href="04-mind-forge.html">Mind Forge</a>
-            <a href="05-three-pillar-method.html">Three-Pillar Method</a>
-            <a href="06-compound-circle.html">The Circle</a>
-            <a href="body-code.html">Body Code</a>
-          </div>
-        </nav>
+        <h1>Body Code</h1>
+        <p>Westside Barbell–inspired strength training for real life</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>Strength for Real Life</h2>
+        <p>
+          This is not bodybuilding. Not CrossFit. Not fitness influencer
+          nonsense. This is
+          <strong>Westside Barbell–inspired strength training</strong> — adapted
+          for busy founders who need durability, not Instagram poses.
+        </p>
+      </section>
+
+      <section>
+        <h3>Core Principles</h3>
+        <ul>
+          <li>
+            <strong>Frequency > Intensity</strong> — 3x/week beats 1x/week at
+            max effort
+          </li>
+          <li>
+            <strong>Recovery is non-negotiable</strong> — sleep, hydration,
+            mobility
+          </li>
+          <li>
+            <strong>Progressive overload, not pain</strong> — add 2.5 lbs, not
+            25
+          </li>
+          <li>
+            <strong>Train like you lead</strong> — strong body = clear mind =
+            decisive action
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Sample Weekly Plan (Founder-Friendly)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Focus</th>
+              <th>Workout</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mon</td>
+              <td>Upper Body</td>
+              <td>Bench Press (3x5), Rows (3x6), Overhead Press (2x5)</td>
+            </tr>
+            <tr>
+              <td>Wed</td>
+              <td>Lower Body</td>
+              <td>Squats (3x5), Deadlifts (2x3), Leg Press (2x8)</td>
+            </tr>
+            <tr>
+              <td>Fri</td>
+              <td>Active Recovery</td>
+              <td>Walk 30 min + foam roll + 10 min mobility</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h3>Nutrition That Sticks</h3>
+        <p>No calorie counting. No macros. Just three rules:</p>
+        <ol>
+          <li>Eat protein first at every meal (chicken, eggs, fish, tofu)</li>
+          <li>Fill half your plate with vegetables (frozen is fine)</li>
+          <li>Carbs only around workouts or dinner (rice, potatoes, oats)</li>
+        </ol>
+      </section>
+
+      <div class="cta">
+        <a href="contact.html" class="btn"
+          >Join The Compound Performance Circle</a
+        >
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-links">
+          <a href="01-index.html">Home</a>
+          <a href="02-about.html">About</a>
+          <a href="04-mind-forge.html">Mind Forge</a>
+          <a href="05-three-pillar-method.html">Three-Pillar Method</a>
+          <a href="06-compound-circle.html">The Circle</a>
+        </div>
         <p class="copyright">
           &copy; 2026 J Ryan Russow. All Rights Reserved.<br />
           Body Code is a proprietary system. Unauthorized use prohibited.
         </p>
       </div>
     </footer>
-
-    <!-- ===== SCRIPTS ===== -->
-    <script>
-      // Mobile nav toggle
-      const navToggle = document.getElementById("navToggle");
-      const mainNav   = document.getElementById("mainNav");
-
-      navToggle.addEventListener("click", () => {
-        const isOpen = mainNav.classList.toggle("nav-open");
-        navToggle.setAttribute("aria-expanded", isOpen);
-      });
-
-      // Close nav when any link is clicked
-      mainNav.querySelectorAll(".nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          mainNav.classList.remove("nav-open");
-          navToggle.setAttribute("aria-expanded", "false");
-        });
-      });
-    </script>
-
   </body>
 </html>
