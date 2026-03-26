@@ -2132,13 +2132,15 @@ tbody tr:hover {
   margin-top: 0.1rem;
 }
 
-.alert-info {
+.alert-info.alert-info {
   background: rgba(59, 130, 246, 0.07);
   border-left-color: #3B82F6;
-  color: #1E3A
+  color: #1E3A5F;
+}
   /* ============================================
    29. QUIZ COMPONENTS
    ============================================ */
+   
 .quiz-wrap {
   max-width: 680px;
   margin: 0 auto;
