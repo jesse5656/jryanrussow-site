@@ -1,0 +1,11 @@
+.git
+.wrangler
+Private-Docs
+Backend-Odoo-Seperate-system
+Cloudflare-Config
+file-tree.txt
+generate.tree.bat
+README.md
+worker.js
+wrangler.toml
+functions

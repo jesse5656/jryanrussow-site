@@ -1,0 +1,40 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0A2E5A"/>
+  <!-- Head silhouette -->
+  <path d="M400 300 C350 250 300 250 300 350 C300 450 400 500 500 500 C600 500 700 450 700 350 C700 250 650 250 600 300 Z" fill="none" stroke="#D4AF37" stroke-width="4"/>
+  <!-- Anvil inside head -->
+  <path d="M480 400 L520 400 L520 440 L480 440 Z M470 440 L530 440 L530 460 L470 460 Z M460 460 L540 460 L540 480 L460 480 Z" fill="none" stroke="#D4AF37" stroke-width="3"/>
+  <!-- Spark lines -->
+  <line x1="500" y1="380" x2="500" y2="360" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+  <line x1="510" y1="385" x2="520" y2="370" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+  <line x1="490" y1="385" x2="480" y2="370" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Pillars (gold ovals + text) -->
+  <ellipse cx="280" cy="200" rx="120" ry="50" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text x="280" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#D4AF37" font-weight="600">INNOVATION</text>
+
+  <ellipse cx="880" cy="200" rx="120" ry="50" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text x="880" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#D4AF37" font-weight="600">IDEAS</text>
+
+  <ellipse cx="280" cy="600" rx="120" ry="50" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text x="280" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#D4AF37" font-weight="600">CREATIVITY</text>
+
+  <ellipse cx="880" cy="600" rx="120" ry="50" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text x="880" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#D4AF37" font-weight="600">STRATEGY</text>
+
+  <ellipse cx="200" cy="400" rx="120" ry="50" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text x="200" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#D4AF37" font-weight="600">KNOWLEDGE</text>
+
+  <ellipse cx="1000" cy="400" rx="120" ry="50" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text x="1000" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#D4AF37" font-weight="600">VISION</text>
+
+  <ellipse cx="600" cy="700" rx="120" ry="50" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text x="600" y="708" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#D4AF37" font-weight="600">LEADERSHIP</text>
+
+  <!-- Central text -->
+  <text x="600" y="450" text-anchor="middle" font-family="EB Garamond, serif" font-size="48" fill="#D4AF37" font-weight="700">MIND</text>
+  <text x="600" y="500" text-anchor="middle" font-family="EB Garamond, serif" font-size="48" fill="#D4AF37" font-weight="700">FORGE</text>
+
+  <title>Mind Forge — The 7 Pillars of Unbreakable Human Performance</title>
+  <desc>Visual mind map showing Innovation, Ideas, Strategy, Vision, Leadership, Knowledge, and Creativity radiating from a human head with an anvil at its center — symbolizing disciplined mental forging by J Ryan Russow.</desc>
+</svg>

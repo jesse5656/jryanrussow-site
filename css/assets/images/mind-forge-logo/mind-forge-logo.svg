@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 420 130"
+     width="420" height="130">
+
+  <!-- Background -->
+  <rect width="420" height="130" fill="#0A2E5A" rx="8"/>
+
+  <!-- Outer Gold Border -->
+  <rect x="4" y="4" width="412" height="122"
+        fill="none"
+        stroke="#D4AF37"
+        stroke-width="1.5"
+        rx="6"/>
+
+  <!-- ===== FLAMES CENTERED at x=110 ===== -->
+  <!-- Far Left Wispy Flame -->
+  <path d="M93 65
+           C92 58 90 53 91 46
+           C92 42 93 44 93 48
+           C94 43 96 38 95 33
+           C98 38 98 47 96 53
+           C97 49 98 52 97 57
+           C96 61 95 64 93 65Z"
+        fill="#D4AF37"
+        opacity="0.55"/>
+
+  <!-- Left Flame -->
+  <path d="M101 65
+           C99 55 96 47 98 37
+           C99 32 102 34 101 40
+           C103 33 106 25 104 19
+           C110 27 110 40 107 49
+           C108 43 110 47 109 54
+           C108 59 104 64 101 65Z"
+        fill="#D4AF37"
+        opacity="0.8"/>
+
+  <!-- Center Tallest Flame -->
+  <path d="M111 65
+           C109 52 105 41 108 27
+           C109 20 113 23 112 30
+           C115 22 118 12 116 7
+           C124 17 125 33 120 43
+           C122 36 125 41 123 49
+           C121 57 116 64 111 65Z"
+        fill="#D4AF37"/>
+
+  <!-- Right Flame -->
+  <path d="M122 65
+           C124 55 127 47 125 37
+           C124 32 121 34 122 40
+           C120 33 117 25 119 19
+           C125 27 126 40 129 49
+           C127 43 130 47 131 54
+           C130 59 126 64 122 65Z"
+        fill="#D4AF37"
+        opacity="0.8"/>
+
+  <!-- Far Right Wispy Flame -->
+  <path d="M132 65
+           C133 58 135 53 134 46
+           C133 42 132 44 132 48
+           C131 43 129 38 130 33
+           C133 38 135 47 137 53
+           C136 49 138 52 138 57
+           C137 61 135 64 132 65Z"
+        fill="#D4AF37"
+        opacity="0.55"/>
+
+  <!-- Tiny Wispy Top -->
+  <path d="M114 21
+           C113 17 111 14 112 10
+           C113 8 114 9 114 12
+           C115 9 116 6 116 5
+           C118 8 118 13 117 17Z"
+        fill="#D4AF37"
+        opacity="0.6"/>
+
+  <!-- Flame Base Glow -->
+  <ellipse cx="115" cy="66" rx="26" ry="4"
+           fill="#D4AF37"
+           opacity="0.2"/>
+
+  <!-- ===== ANVIL CENTERED at x=115 ===== -->
+  <!-- Anvil Top -->
+  <rect x="57" y="74" width="116" height="18"
+        fill="#D4AF37" rx="3"/>
+
+  <!-- Anvil Horn -->
+  <polygon points="57,76 44,81 57,86"
+           fill="#D4AF37"/>
+
+  <!-- Anvil Body -->
+  <rect x="71" y="92" width="88" height="20"
+        fill="#D4AF37" rx="2"/>
+
+  <!-- Anvil Base -->
+  <rect x="57" y="109" width="116" height="9"
+        fill="#D4AF37" rx="2"/>
+
+  <!-- ===== DIVIDER ===== -->
+  <line x1="188" y1="12" x2="188" y2="120"
+        stroke="#D4AF37"
+        stroke-width="1"
+        opacity="0.5"/>
+
+  <!-- ===== TEXT ===== -->
+  <!-- MIND -->
+  <text x="204" y="65"
+        font-family="Georgia, serif"
+        font-size="34"
+        font-weight="bold"
+        fill="#D4AF37"
+        letter-spacing="5">MIND</text>
+
+  <!-- FORGE -->
+  <text x="204" y="98"
+        font-family="Georgia, serif"
+        font-size="34"
+        font-weight="bold"
+        fill="#D4AF37"
+        letter-spacing="4">FORGE</text>
+
+  <!-- Tagline -->
+  <text x="204" y="116"
+        font-family="Arial, sans-serif"
+        font-size="9"
+        fill="#D4AF37"
+        opacity="0.75"
+        letter-spacing="3">FORGE YOUR FUTURE</text>
+
+</svg>

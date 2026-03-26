@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>The 3-Minute Performance Audit | J Ryan Russow</title>
+  <meta name="description" content="Take the 3-minute audit to discover where your performance is leaking — Wealth, Mind, or Body — and get your personalized next step." />
+  <meta name="keywords" content="performance audit, founder assessment, J Ryan Russow, Three-Pillar Method, Mind Forge, Body Code" />
+  <meta name="author" content="J Ryan Russow" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://jryanrussow.com/quiz-assessment.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jryanrussow.com/quiz-assessment.html" />
+  <meta property="og:title" content="The 3-Minute Performance Audit | J Ryan Russow" />
+  <meta property="og:description" content="Where is your performance leaking? Take the 3-minute audit — get your personalized result across Wealth, Mind, and Body." />
+  <meta property="og:site_name" content="J Ryan Russow" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://jryanrussow.com/quiz-assessment.html" />
+  <meta property="twitter:title" content="The 3-Minute Performance Audit | J Ryan Russow" />
+  <meta property="twitter:description" content="Where is your performance leaking? Take the 3-minute audit — get your personalized result." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "The 3-Minute Performance Audit",
+    "description": "Diagnose where your founder performance is leaking — Wealth, Mind, or Body — and get a personalized next step.",
+    "url": "https://jryanrussow.com/quiz-assessment.html",
+    "author": {
+      "@type": "Person",
+      "name": "J Ryan Russow",
+      "url": "https://jryanrussow.com"
+    },
+    "typicalAgeRange": "25-65",
+    "educationalLevel": "Adult"
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy: #0A2E5A;
+      --gold: #D4AF37;
+      --dark: #0F172A;
+      --gray: #647481;
+      --light: #F8FAFC;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Page Title Banner */
+    .page-banner {
+      background: linear-gradient(135deg, var(--navy), #1a3a6c);
+      color: white;
+      text-align: center;
+      padding: 3.5rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-banner::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.06);
+      top: -300px;
+      right: -200px;
+      z-index: 0;
+    }
+
+    .page-banner .badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+    }
+
+    .page-banner h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .page-banner p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 520px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Main Content */
+    main {
+      padding: 3.5rem 0 4rem;
+    }
+
+    .content-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Progress Indicator */
+    .progress-bar {
+      height: 4px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--gold);
+      border-radius: 4px;
+      transition: width 0.4s ease;
+      width: 0%;
+    }
+
+    /* Quiz Form Card */
+    .quiz-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 25px rgba(10, 46, 90, 0.08);
+      border: 1px solid #e2e8f0;
+      border-top: 4px solid var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    /* Question */
+    .question {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .question:last-of-type {
+      border-bottom: none;
+      margin-bottom: 1rem;
+    }
+
+    .question-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .question p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      font-family: 'EB Garamond', serif;
+    }
+
+    /* Radio Options */
+    .option-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.975rem;
+    }
+
+    .option-label:hover {
+      border-color: var(--gold);
+      background: rgba(212, 175, 55, 0.04);
+    }
+
+    .option-label input[type="radio"] {
+      margin-top: 0.15rem;
+      accent-color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .option-label:has(input:checked) {
+      border-color: var(--gold);
+      background: rgba(212, 175, 55, 0.08);
+    }
+
+    /* Submit Button */
+    button.btn {
+      display: block;
+      width: 100%;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    button.btn:hover {
+      background: #b89a2d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Email Capture Card */
+    .email-card {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 25px rgba(10, 46, 90, 0.08);
+      border: 1px solid #e2e8f0;
+      border-top: 4px solid var(--gold);
+      text-align: center;
+    }
+
+    .email-card h2 {
+      font-size: 1.75rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .email-card .sub {
+      color: var(--gray);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .email-card label {
+      display: block;
+      text-align: left;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .email-card input[type="email"],
+    .email-card input[type="text"] {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1.5px solid #dde1e7;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      transition: border-color 0.2s ease;
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+
+    .email-card input:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: white;
+    }
+
+    /* Results Card */
+    .results-card {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 25px rgba(10, 46, 90, 0.08);
+      border: 1px solid #e2e8f0;
+      border-top: 4px solid var(--gold);
+      text-align: center;
+    }
+
+    .result-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .results-card h2 {
+      font-size: 1.9rem;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+
+    .result-desc {
+      font-size: 1.05rem;
+      color: var(--gray);
+      margin-bottom: 0.75rem;
+      line-height: 1.8;
+    }
+
+    .result-callout {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2rem;
+    }
+
+    .cta-link {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      padding: 0.875rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .cta-link:hover {
+      background: #b89a2d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .privacy-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-top: 1.25rem;
+    }
+
+    .privacy-note a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .privacy-note a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .page-banner h1 { font-size: 2.1rem; }
+      .page-banner p { font-size: 1.05rem; }
+      .quiz-card, .email-card, .results-card { padding: 1.75rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Title Banner -->
+  <div class="page-banner">
+    <div class="container">
+      <div class="badge">Free Assessment</div>
+      <h1>The 3-Minute Performance Audit</h1>
+      <p>Answer 4 honest questions — discover where your performance is leaking</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="content-wrap">
+
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <!-- Quiz Form Card -->
+      <div class="quiz-card" id="quizCard">
+
+        <form id="auditForm">
+
+          <div class="question">
+            <div class="question-number">Question 1 of 4</div>
+            <p>When money gets tight, what happens first?</p>
+            <label class="option-label">
+              <input type="radio" name="q1" value="wealth" required />
+              I delay investing or cut back on savings
+            </label>
+            <label class="option-label">
+              <input type="radio" name="q1" value="mind" />
+              I start doubting my decisions
+            </label>
+            <label class="option-label">
+              <input type="radio" name="q1" value="body" />
+              I skip workouts or sleep
+            </label>
+          </div>
+
+          <div class="question">
+            <div class="question-number">Question 2 of 4</div>
+            <p>You wake up tired. What do you do?</p>
+            <label class="option-label">
+              <input type="radio" name="q2" value="body" required />
+              Skip training, push through work
+            </label>
+            <label class="option-label">
+              <input type="radio" name="q2" value="mind" />
+              Meditate or journal instead
+            </label>
+            <label class="option-label">
+              <input type="radio" name="q2" value="wealth" />
+              Check revenue dashboards early
+            </label>
+          </div>
+
+          <div class="question">
+            <div class="question-number">Question 3 of 4</div>
+            <p>A client cancels last minute. How do you respond?</p>
+            <label class="option-label">
+              <input type="radio" name="q3" value="mind" required />
+              Spiral into self-doubt
+            </label>
+            <label class="option-label">
+              <input type="radio" name="q3" value="wealth" />
+              Immediately go prospecting
+            </label>
+            <label class="option-label">
+              <input type="radio" name="q3" value="body" />
+              Use it as an excuse to rest
+            </label>
+          </div>
+
+          <div class="question">
+            <div class="question-number">Question 4 of 4</div>
+            <p>Your business hits a plateau. What's missing?</p>
+            <label class="option-label">
+              <input type="radio" name="q4" value="wealth" required />
+              A new income stream
+            </label>
+            <label class="option-label">
+              <input type="radio" name="q4" value="mind" />
+              Clarity of identity
+            </label>
+            <label class="option-label">
+              <input type="radio" name="q4" value="body" />
+              Physical stamina
+            </label>
+          </div>
+
+          <button type="submit" class="btn">See My Results →</button>
+
+        </form>
+      </div>
+
+      <!-- Email Capture Card -->
+      <div class="email-card" id="emailCard">
+        <h2>One Last Step</h2>
+        <p class="sub">Enter your details to unlock your personalized result and next steps</p>
+
+        <form
+          action="https://buttondown.email/api/emails/embed-subscribe/jryanrussow"
+          method="post"
+          target="popupwindow"
+          id="emailForm"
+          onsubmit="handleEmailSubmit(event)"
+        >
+          <label for="bd-name">First Name</label>
+          <input
+            type="text"
+            name="name"
+            id="bd-name"
+            placeholder="Your first name"
+            required
+          />
+
+          <label for="bd-email">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="bd-email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <input type="hidden" name="embed" value="1" />
+
+          <button type="submit" class="btn">Unlock My Results →</button>
+        </form>
+
+        <p class="privacy-note">
+          No spam. Unsubscribe anytime. &nbsp;
+          <a href="/privacy.html">Privacy Policy</a>
+        </p>
+      </div>
+
+      <!-- Results Card -->
+      <div class="results-card" id="resultsCard">
+        <div class="result-icon" id="resultIcon"></div>
+        <h2 id="resultTitle"></h2>
+        <p class="result-desc" id="resultDesc"></p>
+        <p class="result-callout" id="resultCallout"></p>
+        <a class="cta-link" id="resultLink" href="#">Start Here →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    // ─── Progress Bar ───────────────────────────────────────────
+    const radios = document.querySelectorAll('input[type="radio"]');
+    const progressFill = document.getElementById('progressFill');
+    const totalQuestions = 4;
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        const answered = new Set(
+          [...document.querySelectorAll('input[type="radio"]:checked')]
+            .map(r => r.name)
+        ).size;
+        progressFill.style.width = `${(answered / totalQuestions) * 100}%`;
+      });
+    });
+
+    // ─── Store quiz result ───────────────────────────────────────
+    let quizResultData = {};
+
+    document.getElementById('auditForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const q1 = document.querySelector('input[name="q1"]:checked').value;
+      const q2 = document.querySelector('input[name="q2"]:checked').value;
+      const q3 = document.querySelector('input[name="q3"]:checked').value;
+      const q4 = document.querySelector('input[name="q4"]:checked').value;
+
+      const counts = { wealth: 0, mind: 0, body: 0 };
+      [q1, q2, q3, q4].forEach(v => counts[v]++);
+
+      if (counts.wealth >= 2) {
+        quizResultData = {
+          icon: '💰',
+          title: 'Your Leak: Wealth Architecture',
+          desc: "You're stuck in survival mode. You need systems — not more hours. The path forward is building a real cash flow engine first.",
+          callout: 'Start with The Three-Pillar Method™.',
+          link: '/three-pillar-method.html'
+        };
+      } else if (counts.mind >= 2) {
+        quizResultData = {
+          icon: '🔥',
+          title: 'Your Leak: Mental Resilience',
+          desc: 'Distraction, doubt, and indecision are draining your focus. Your identity needs a foundation stronger than motivation.',
+          callout: 'Rebuild clarity with The Mind Forge.',
+          link: '/mind-forge.html'
+        };
+      } else {
+        quizResultData = {
+          icon: '💪',
+          title: 'Your Leak: Physical Foundation',
+          desc: 'Low energy, poor recovery, and inconsistent movement are slowing everything down — your business included.',
+          callout: 'Restore durability with Body Code.',
+          link: '/body-code.html'
+        };
+      }
+
+      // Show email gate
+      progressFill.style.width = '100%';
+      document.getElementById('quizCard').style.display = 'none';
+      document.getElementById('emailCard').style.display = 'block';
+    });
+
+    // ─── Email submit → show results ────────────────────────────
+    function handleEmailSubmit(e) {
+      // Let Buttondown process in popup, then show results
+      window.open('https://buttondown.email/jryanrussow', 'popupwindow');
+
+      setTimeout(() => {
+        document.getElementById('emailCard').style.display = 'none';
+
+        const card = document.getElementById('resultsCard');
+        document.getElementById('resultIcon').textContent = quizResultData.icon;
+        document.getElementById('resultTitle').textContent = quizResultData.title;
+        document.getElementById('resultDesc').textContent = quizResultData.desc;
+        document.getElementById('resultCallout').textContent = quizResultData.callout;
+        document.getElementById('resultLink').href = quizResultData.link;
+
+        card.style.display = 'block';
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 800);
+    }
+  </script>
+
+</body>
+</html>
