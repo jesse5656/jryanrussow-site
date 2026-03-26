@@ -1,18 +1,20 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const path = url.pathname;
 
-    console.log('Worker hit:', url.pathname);
+    console.log('Worker hit:', path);
 
-    const skip =
-      url.pathname.startsWith('/css/') ||
-      url.pathname.startsWith('/js/') ||
-      url.pathname.startsWith('/partials/') ||
-      url.pathname.match(
-        /\.(ico|png|jpg|jpeg|webp|svg|gif|woff|woff2|ttf|pdf|xml|txt|json)$/i
-      );
+    const isStaticDir =
+      path.startsWith('/css/') ||
+      path.startsWith('/js/') ||
+      path.startsWith('/images/') ||
+      path.startsWith('/partials/');
 
-    if (skip) {
+    const isStaticExt = /\.(css|js|ico|png|jpg|jpeg|webp|svg|gif|woff|woff2|ttf|pdf|xml|txt|json|map)$/i.test(path);
+
+    if (isStaticDir || isStaticExt) {
+      console.log('Skipping (static asset):', path);
       return env.ASSETS.fetch(request);
     }
 
@@ -21,10 +23,11 @@ export default {
 
     const contentType = pageResponse.headers.get('Content-Type') || '';
     if (!contentType.includes('text/html')) {
+      console.log('Non-HTML, passing through:', path, contentType);
       return pageResponse;
     }
 
-    const origin = `https://${url.hostname}`;  // ← more reliable than url.origin
+    const origin = `https://${url.hostname}`;
 
     const [headerResponse, footerResponse] = await Promise.all([
       env.ASSETS.fetch(`${origin}/partials/header.html`),
