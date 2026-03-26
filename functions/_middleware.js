@@ -1,15 +1,10 @@
 /**
- * ============================================================
- *  Cloudflare Worker — HTMLRewriter Header/Footer Injection
- *  functions/_middleware.js
- * ============================================================
+ * Cloudflare Pages Middleware — Header/Footer Injection
+ * functions/_middleware.js
  */
 
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request));
-});
-
-async function handleRequest(request) {
+export async function onRequest(context) {
+  const { request, next, env } = context;
   const url = new URL(request.url);
 
   // ── Skip non-HTML assets ──────────────────────────────────
@@ -17,47 +12,44 @@ async function handleRequest(request) {
     url.pathname.startsWith('/css/') ||
     url.pathname.startsWith('/js/') ||
     url.pathname.startsWith('/partials/') ||
-    url.pathname.startsWith('/functions/') ||
     url.pathname.match(
       /\.(ico|png|jpg|jpeg|webp|svg|gif|woff|woff2|ttf|pdf|xml|txt|json)$/i
     );
 
-  if (skip) return fetch(request);
+  if (skip) return next(request);
 
-  // ── Fetch page ────────────────────────────────────────────
-  const pageResponse = await fetch(request);
+  // ── Get the page response ─────────────────────────────────
+  const response = await next(request);
 
   // ── Pass through non-HTML ─────────────────────────────────
-  const contentType = pageResponse.headers.get('Content-Type') || '';
+  const contentType = response.headers.get('content-type') || '';
   if (!contentType.includes('text/html')) {
-    return pageResponse;
+    return response;
   }
 
-  // ── Fetch partials ────────────────────────────────────────
-  const origin = url.origin;
-
-  const [headerResponse, footerResponse] = await Promise.all([
-    fetch(`${origin}/partials/header.html`),
-    fetch(`${origin}/partials/footer.html`),
+  // ── Fetch partials using ASSETS binding (NOT origin fetch) ─
+  const [headerRes, footerRes] = await Promise.all([
+    env.ASSETS.fetch('https://placeholder/partials/header.html'),
+    env.ASSETS.fetch('https://placeholder/partials/footer.html'),
   ]);
 
   const [headerHTML, footerHTML] = await Promise.all([
-    headerResponse.ok ? headerResponse.text() : Promise.resolve('<!-- header missing -->'),
-    footerResponse.ok ? footerResponse.text() : Promise.resolve('<!-- footer missing -->'),
+    headerRes.ok ? headerRes.text() : Promise.resolve('<!-- header missing -->'),
+    footerRes.ok ? footerRes.text() : Promise.resolve('<!-- footer missing -->'),
   ]);
 
   // ── Rewrite mount points ──────────────────────────────────
   const rewriter = new HTMLRewriter()
     .on('#site-header-mount', {
       element(el) {
-        el.replace(headerHTML, { html: true });
+        el.replace(headerHTML); // ✅ No {html: true} option
       },
     })
     .on('#site-footer-mount', {
       element(el) {
-        el.replace(footerHTML, { html: true });
+        el.replace(footerHTML); // ✅ No {html: true} option
       },
     });
 
-  return rewriter.transform(pageResponse);
+  return rewriter.transform(response);
 }
