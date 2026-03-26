@@ -1,54 +1,63 @@
-export default {
-  async fetch(request, env, ctx) {
-    const url = new URL(request.url);
+/**
+ * ============================================================
+ *  Cloudflare Worker — HTMLRewriter Header/Footer Injection
+ *  functions/_middleware.js
+ * ============================================================
+ */
 
-    // ── Skip non-HTML assets ──────────────────────────────────
-    const skip =
-      url.pathname.startsWith('/css/') ||
-      url.pathname.startsWith('/js/') ||
-      url.pathname.startsWith('/partials/') ||
-      url.pathname.startsWith('/functions/') ||
-      url.pathname.match(
-        /\.(ico|png|jpg|jpeg|webp|svg|gif|woff|woff2|ttf|pdf|xml|txt|json)$/i
-      );
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
-    if (skip) return env.ASSETS.fetch(request);
+async function handleRequest(request) {
+  const url = new URL(request.url);
 
-    // ── Fetch page first ──────────────────────────────────────
-    const pageResponse = await env.ASSETS.fetch(request);
+  // ── Skip non-HTML assets ──────────────────────────────────
+  const skip =
+    url.pathname.startsWith('/css/') ||
+    url.pathname.startsWith('/js/') ||
+    url.pathname.startsWith('/partials/') ||
+    url.pathname.startsWith('/functions/') ||
+    url.pathname.match(
+      /\.(ico|png|jpg|jpeg|webp|svg|gif|woff|woff2|ttf|pdf|xml|txt|json)$/i
+    );
 
-    // ── Pass through anything that isn't HTML ─────────────────
-    const contentType = pageResponse.headers.get('Content-Type') || '';
-    if (!contentType.includes('text/html')) {
-      return pageResponse;
-    }
+  if (skip) return fetch(request);
 
-    // ── Fetch partials directly from asset store ──────────────
-    const origin = url.origin;
+  // ── Fetch page ────────────────────────────────────────────
+  const pageResponse = await fetch(request);
 
-    const [headerResponse, footerResponse] = await Promise.all([
-      env.ASSETS.fetch(new Request(`${origin}/partials/header.html`)),
-      env.ASSETS.fetch(new Request(`${origin}/partials/footer.html`)),
-    ]);
-
-    const [headerHTML, footerHTML] = await Promise.all([
-      headerResponse.ok ? headerResponse.text() : Promise.resolve('<!-- header missing -->'),
-      footerResponse.ok ? footerResponse.text() : Promise.resolve('<!-- footer missing -->'),
-    ]);
-
-    // ── Rewrite mount points ──────────────────────────────────
-    const rewriter = new HTMLRewriter()
-      .on('#site-header-mount', {
-        element(el) {
-          el.replace(headerHTML, { html: true });
-        },
-      })
-      .on('#site-footer-mount', {
-        element(el) {
-          el.replace(footerHTML, { html: true });
-        },
-      });
-
-    return rewriter.transform(pageResponse);
+  // ── Pass through non-HTML ─────────────────────────────────
+  const contentType = pageResponse.headers.get('Content-Type') || '';
+  if (!contentType.includes('text/html')) {
+    return pageResponse;
   }
-};
+
+  // ── Fetch partials ────────────────────────────────────────
+  const origin = url.origin;
+
+  const [headerResponse, footerResponse] = await Promise.all([
+    fetch(`${origin}/partials/header.html`),
+    fetch(`${origin}/partials/footer.html`),
+  ]);
+
+  const [headerHTML, footerHTML] = await Promise.all([
+    headerResponse.ok ? headerResponse.text() : Promise.resolve('<!-- header missing -->'),
+    footerResponse.ok ? footerResponse.text() : Promise.resolve('<!-- footer missing -->'),
+  ]);
+
+  // ── Rewrite mount points ──────────────────────────────────
+  const rewriter = new HTMLRewriter()
+    .on('#site-header-mount', {
+      element(el) {
+        el.replace(headerHTML, { html: true });
+      },
+    })
+    .on('#site-footer-mount', {
+      element(el) {
+        el.replace(footerHTML, { html: true });
+      },
+    });
+
+  return rewriter.transform(pageResponse);
+}
