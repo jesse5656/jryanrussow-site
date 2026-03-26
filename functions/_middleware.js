@@ -16,7 +16,9 @@ export async function onRequest(context) {
       /\.(ico|png|jpg|jpeg|webp|svg|gif|woff|woff2|ttf|pdf|xml|txt|json)$/i
     );
 
-  if (skip) return next(request);
+  if (skip) {
+    return next(request);
+  }
 
   // ── Get the page response ─────────────────────────────────
   const response = await next(request);
@@ -27,7 +29,7 @@ export async function onRequest(context) {
     return response;
   }
 
-  // ── Fetch partials using ASSETS binding (NOT origin fetch) ─
+  // ── Fetch partials using ASSETS binding ───────────────────
   const [headerRes, footerRes] = await Promise.all([
     env.ASSETS.fetch('https://placeholder/partials/header.html'),
     env.ASSETS.fetch('https://placeholder/partials/footer.html'),
@@ -38,16 +40,16 @@ export async function onRequest(context) {
     footerRes.ok ? footerRes.text() : Promise.resolve('<!-- footer missing -->'),
   ]);
 
-  // ── Rewrite mount points ──────────────────────────────────
+  // ── Rewrite mount points with HTMLRewriter ────────────────
   const rewriter = new HTMLRewriter()
     .on('#site-header-mount', {
       element(el) {
-        el.replace(headerHTML); // ✅ No {html: true} option
+        el.replace(headerHTML);
       },
     })
     .on('#site-footer-mount', {
       element(el) {
-        el.replace(footerHTML); // ✅ No {html: true} option
+        el.replace(footerHTML);
       },
     });
 
