@@ -24,8 +24,9 @@
  *  18. Checkin Tabs
  *  19. Rating Buttons
  *  20. Page Loader
- *  21. Shared Helpers
- *  22. Init
+ *  21. Footer Year
+ *  22. Shared Helpers
+ *  23. Init
  * ============================================================
  */
 
@@ -844,7 +845,18 @@ function initPageLoader() {
 
 
 /* ============================================================
-   21. SHARED HELPERS
+   21. FOOTER YEAR
+   ============================================================ */
+function initFooterYear() {
+  var yearEl = document.getElementById('footer-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+}
+
+
+/* ============================================================
+   22. SHARED HELPERS
    ============================================================ */
 function setLoading(btn, isLoading) {
   if (!btn) return;
@@ -878,7 +890,7 @@ function removeFormMessages(form) {
 
 
 /* ============================================================
-   22. INIT
+   23. INIT
    ============================================================
    Header and footer are injected at the edge by the
    Cloudflare Worker / middleware before the browser
@@ -901,4 +913,5 @@ onReady(function() {
   initContactForm();
   initPageLoader();
   initProgressBars();
+  initFooterYear();
 });

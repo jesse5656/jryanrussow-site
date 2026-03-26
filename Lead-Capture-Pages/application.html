@@ -4,30 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Primary SEO -->
   <title>Apply to Join The Compound Performance Circle | J Ryan Russow</title>
-  <meta name="description" content="Application for private coaching: Where financial strength, physical power, and mental resilience converge. Limited to 6 per year." />
-  <meta name="keywords" content="Compound Performance Circle, apply, private coaching, J Ryan Russow, elite performance, founder coaching" />
+  <meta
+    name="description"
+    content="Application for private coaching where financial strength, physical power, and mental resilience converge. Limited to 6 members per year."
+  />
+  <meta
+    name="keywords"
+    content="Compound Performance Circle, apply, private coaching, J Ryan Russow, elite performance, founder coaching"
+  />
   <meta name="author" content="J Ryan Russow" />
   <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://jryanrussow.com/apply.html" />
+  <link rel="canonical" href="https://jryanrussow.com/Lead-Capture-Pages/application.html" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Structured Data -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "The Compound Performance Circle",
-    "description": "Private coaching for elite performers. Limited to 6 per year. Focus: Wealth, Strength, Mind.",
-    "url": "https://jryanrussow.com/apply.html",
+    "description": "Private coaching for elite performers, limited to 6 per year. Focus: wealth, strength, and mindset.",
+    "url": "https://jryanrussow.com/Lead-Capture-Pages/application.html",
     "provider": {
       "@type": "Person",
       "name": "J Ryan Russow",
@@ -40,576 +47,300 @@
     }
   }
   </script>
-
-  <style>
-    :root {
-      --navy: #0A2E5A;
-      --gold: #D4AF37;
-      --dark: #0F172A;
-      --gray: #647481;
-      --light: #F8FAFC;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3 {
-      font-family: 'EB Garamond', serif;
-      font-weight: 600;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Page Title Banner */
-    .page-banner {
-      background: linear-gradient(135deg, var(--navy), #1a3a6c);
-      color: white;
-      text-align: center;
-      padding: 3.5rem 1.5rem 3rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .page-banner::before {
-      content: "";
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: rgba(212, 175, 55, 0.06);
-      top: -300px;
-      right: -200px;
-      z-index: 0;
-    }
-
-    .page-banner .badge {
-      display: inline-block;
-      background: rgba(212, 175, 55, 0.15);
-      color: var(--gold);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 0.35rem 1rem;
-      border-radius: 20px;
-      margin-bottom: 1.25rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .page-banner h1 {
-      font-size: 2.75rem;
-      margin-bottom: 0.75rem;
-      position: relative;
-      z-index: 2;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .page-banner p {
-      font-size: 1.15rem;
-      opacity: 0.9;
-      max-width: 580px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Main */
-    main {
-      padding: 3.5rem 0 4rem;
-    }
-
-    .content-wrap {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Scarcity Bar */
-    .scarcity-bar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      background: rgba(212, 175, 55, 0.08);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      margin-bottom: 2.5rem;
-      font-size: 0.975rem;
-      font-weight: 600;
-      color: var(--navy);
-      text-align: center;
-    }
-
-    .scarcity-bar .dot {
-      width: 10px;
-      height: 10px;
-      background: var(--gold);
-      border-radius: 50%;
-      flex-shrink: 0;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    /* Form Sections */
-    .form-section {
-      margin-bottom: 2rem;
-    }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 0.4rem;
-      font-weight: 500;
-      font-size: 0.95rem;
-      color: var(--dark);
-    }
-
-    .label-note {
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--gray);
-      margin-left: 0.5rem;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea,
-    select {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      border: 1.5px solid #dde1e7;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      background: white;
-      color: var(--dark);
-      transition: border-color 0.2s ease;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      outline: none;
-      border-color: var(--gold);
-      background: white;
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-      line-height: 1.6;
-    }
-
-    select {
-      cursor: pointer;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%230A2E5A' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      background-color: white;
-      padding-right: 2.5rem;
-    }
-
-    /* Commitment checklist */
-    .commitment-list {
-      list-style: none;
-      padding: 0;
-      margin: 0.75rem 0 1.25rem;
-    }
-
-    .commitment-list li {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.95rem;
-      color: var(--gray);
-      padding: 0.35rem 0;
-    }
-
-    .commitment-list li::before {
-      content: "✓";
-      color: var(--gold);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    /* Application Card */
-    .application-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
-      box-shadow: 0 8px 25px rgba(10, 46, 90, 0.08);
-      border: 1px solid #e2e8f0;
-      border-top: 4px solid var(--gold);
-    }
-
-    /* Submit */
-    .submit-wrap {
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    button[type="submit"] {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 1rem 3rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      letter-spacing: 0.5px;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-    }
-
-    button[type="submit"]:hover {
-      background: #b89a2d;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-    }
-
-    button[type="submit"]:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .submit-note {
-      font-size: 0.85rem;
-      color: var(--gray);
-      margin-top: 1rem;
-    }
-
-    /* Success Message */
-    .success-msg {
-      display: none;
-      text-align: center;
-      padding: 2.5rem 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(10, 46, 90, 0.08);
-      border: 1px solid #e2e8f0;
-      border-top: 4px solid var(--gold);
-    }
-
-    .success-msg .icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .success-msg h2 {
-      color: var(--navy);
-      font-size: 1.9rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .success-msg p {
-      color: var(--gray);
-      font-size: 1rem;
-      max-width: 440px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .success-msg a {
-      color: var(--gold);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .success-msg a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .page-banner h1 { font-size: 2.1rem; }
-      .page-banner p { font-size: 1rem; }
-      .application-card { padding: 1.75rem 1.25rem; }
-      button[type="submit"] { width: 100%; padding: 1rem; }
-    }
-  </style>
 </head>
 <body>
+  <div id="site-header-mount"></div>
 
-  <!-- Page Title Banner -->
-  <div class="page-banner">
-    <div class="container">
-      <div class="badge">2026 Cohort — 6 Seats</div>
-      <h1>Apply to Join The Compound Performance Circle</h1>
-      <p>This is not motivation. This is where financial strength, physical power, and mental resilience converge — proven by 24 years of entrepreneurship under pressure.</p>
-    </div>
-  </div>
+  <main id="main-content">
 
-  <main>
-    <div class="content-wrap">
-
-      <!-- Scarcity Bar -->
-      <div class="scarcity-bar">
-        <span class="dot"></span>
-        Limited to 6 members per year — applications reviewed weekly
+    <!-- PAGE HERO -->
+    <section class="hero-section" aria-labelledby="application-heading">
+      <div class="container">
+        <span class="hero-badge" data-animate="fade-up">2026 Cohort — 6 Seats</span>
+        <h1 id="application-heading" data-animate="fade-up" data-delay="100">
+          Apply to Join The Compound Performance Circle
+        </h1>
+        <p class="hero-sub" data-animate="fade-up" data-delay="200">
+          This is where financial strength, physical power, and mental resilience
+          converge into one system. Applications are reviewed personally.
+        </p>
       </div>
+    </section>
 
-      <!-- Application Card -->
-      <div class="application-card" id="applicationCard">
+    <!-- AVAILABILITY NOTE -->
+    <section class="section-sm" aria-label="Application introduction">
+      <div class="container-narrow">
+        <div class="quote-panel text-center" data-animate="fade-up">
+          <p>
+            Limited to 6 members per year. Applications reviewed weekly.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <form id="applicationForm" novalidate>
+    <!-- APPLICATION FORM -->
+    <section class="section" aria-labelledby="application-form-heading">
+      <div class="container">
 
-          <!-- Section 1: Identity -->
-          <div class="form-section">
-            <div class="section-label">01 — Who You Are</div>
-
-            <div class="form-group">
-              <label for="full-name">Full Name</label>
-              <input type="text" id="full-name" name="full_name" required placeholder="First and last name" />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required placeholder="you@example.com" />
-            </div>
-
-            <div class="form-group">
-              <label for="business">Business or Role
-                <span class="label-note">What do you do?</span>
-              </label>
-              <input type="text" id="business" name="business" required placeholder="e.g., Founder, SaaS CEO, Executive Coach" />
-            </div>
-          </div>
-
-          <!-- Section 2: Business -->
-          <div class="form-section">
-            <div class="section-label">02 — Where You Stand</div>
-
-            <div class="form-group">
-              <label for="revenue">Annual Business Revenue</label>
-              <select id="revenue" name="revenue" required>
-                <option value="">Select range</option>
-                <option value="under-100k">Under \$100K</option>
-                <option value="100k-250k">\$100K – \$250K</option>
-                <option value="250k-500k">\$250K – \$500K</option>
-                <option value="500k-1m">\$500K – \$1M</option>
-                <option value="1m-plus">\$1M+</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="years-in-business">Years in Business</label>
-              <select id="years-in-business" name="years_in_business" required>
-                <option value="">Select range</option>
-                <option value="0-2">0–2 years</option>
-                <option value="3-5">3–5 years</option>
-                <option value="6-10">6–10 years</option>
-                <option value="10-plus">10+ years</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Section 3: Performance Leak -->
-          <div class="form-section">
-            <div class="section-label">03 — Where You're Leaking</div>
-
-            <div class="form-group">
-              <label for="weakest-pillar">Which pillar is your weakest right now?</label>
-              <select id="weakest-pillar" name="weakest_pillar" required>
-                <option value="">Select one</option>
-                <option value="wealth">Wealth — I'm not building systems</option>
-                <option value="body">Body — My physical foundation is slipping</option>
-                <option value="mind">Mind — Doubt and distraction are winning</option>
-                <option value="all">All three — That's why I'm here</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="performance-leak">Where are you leaking performance?
-                <span class="label-note">Be honest. No wrong answers.</span>
-              </label>
-              <textarea
-                id="performance-leak"
-                name="performance_leak"
-                required
-                placeholder="e.g., 'I start strong but fade after 6 weeks.' / 'Revenue is up but I'm running on empty.'"
-              ></textarea>
-            </div>
-          </div>
-
-          <!-- Section 4: Readiness -->
-          <div class="form-section">
-            <div class="section-label">04 — Why Now</div>
-
-            <div class="form-group">
-              <label for="why-now">What changed in the last 90 days?
-                <span class="label-note">What made you apply today — not 6 months ago?</span>
-              </label>
-              <textarea
-                id="why-now"
-                name="why_now"
-                required
-                placeholder="e.g., 'Lost a key client.' / 'Burnout hit.' / 'Ready to stop coasting.'"
-              ></textarea>
-            </div>
-
-            <div class="form-group">
-              <label>Can you commit to the full 12-month system?</label>
-              <ul class="commitment-list">
-                <li>Weekly 1:1 sessions — no skipping</li>
-                <li>Daily check-in protocol — non-negotiable</li>
-                <li>Discomfort training — intentional, not optional</li>
-                <li>Cash flow systems — built and maintained</li>
-              </ul>
-              <select id="commitment" name="commitment" required>
-                <option value="">Select</option>
-                <option value="yes-ready">Yes — I'm ready to be held to this</option>
-                <option value="yes-questions">Yes — but I have questions first</option>
-                <option value="not-yet">Not yet — but I want to understand more</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Section 5: Context -->
-          <div class="form-section">
-            <div class="section-label">05 — Final Context</div>
-
-            <div class="form-group">
-              <label for="how-found">How did you find J Ryan Russow?</label>
-              <input
-                type="text"
-                id="how-found"
-                name="how_found"
-                placeholder="e.g., LinkedIn, Podcast, Referral from [name], Google"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="anything-else">Anything else you want me to know?
-                <span class="label-note">Optional</span>
-              </label>
-              <textarea
-                id="anything-else"
-                name="anything_else"
-                placeholder="Context, questions, or anything that didn't fit above."
-                style="min-height: 100px;"
-              ></textarea>
-            </div>
-          </div>
-
-          <!-- Submit -->
-          <div class="submit-wrap">
-            <button type="submit" id="submitBtn">
-              Submit My Application →
-            </button>
-            <p class="submit-note">
-              Applications are reviewed weekly. If there's a fit, you'll receive an
-              invitation to schedule a discovery call within 48 hours.
+        <div class="content-card" id="applicationCard">
+          <div class="section-intro text-center">
+            <span class="badge">Application</span>
+            <h2 id="application-form-heading" class="section-heading centered mt-md">
+              Start with the truth
+            </h2>
+            <p class="section-copy section-copy-narrow">
+              This is not about saying the right thing. It is about being honest about where you are,
+              where you are leaking, and whether you are ready to be coached at a higher standard.
             </p>
           </div>
 
-        </form>
-      </div>
+          <form id="applicationForm" novalidate>
 
-      <!-- Success Message -->
-      <div class="success-msg" id="successMsg">
-        <div class="icon">✓</div>
-        <h2>Application Received</h2>
-        <p>
-          I review every application personally. If there's a fit, you'll hear
-          from me within 48 hours with an invitation to schedule a discovery call.
-        </p>
-        <p>
-          While you wait — <a href="/daily-checkin.html">start the Daily Check-In today</a>.
-          It's the first thing every Circle member does.
-        </p>
-      </div>
+            <!-- 01 WHO YOU ARE -->
+            <div class="mt-xl">
+              <span class="badge mb-md">01 — Who You Are</span>
 
-    </div>
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full_name"
+                  required
+                  placeholder="First and last name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="business">
+                  Business or Role
+                  <span class="text-muted"> — What do you do?</span>
+                </label>
+                <input
+                  type="text"
+                  id="business"
+                  name="business"
+                  required
+                  placeholder="e.g., Founder, SaaS CEO, Executive Coach"
+                />
+              </div>
+            </div>
+
+            <!-- 02 WHERE YOU STAND -->
+            <div class="mt-xl">
+              <span class="badge mb-md">02 — Where You Stand</span>
+
+              <div class="form-group">
+                <label for="revenue">Annual Business Revenue</label>
+                <select id="revenue" name="revenue" required>
+                  <option value="">Select range</option>
+                  <option value="under-100k">Under \$100K</option>
+                  <option value="100k-250k">\$100K - \$250K</option>
+                  <option value="250k-500k">\$250K - \$500K</option>
+                  <option value="500k-1m">\$500K - \$1M</option>
+                  <option value="1m-plus">\$1M+</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="years-in-business">Years in Business</label>
+                <select id="years-in-business" name="years_in_business" required>
+                  <option value="">Select range</option>
+                  <option value="0-2">0–2 years</option>
+                  <option value="3-5">3–5 years</option>
+                  <option value="6-10">6–10 years</option>
+                  <option value="10-plus">10+ years</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 03 WHERE YOU ARE LEAKING -->
+            <div class="mt-xl">
+              <span class="badge mb-md">03 — Where You Are Leaking</span>
+
+              <div class="form-group">
+                <label for="weakest-pillar">Which pillar is your weakest right now?</label>
+                <select id="weakest-pillar" name="weakest_pillar" required>
+                  <option value="">Select one</option>
+                  <option value="wealth">Wealth — I am not building systems</option>
+                  <option value="body">Body — My physical foundation is slipping</option>
+                  <option value="mind">Mind — Doubt and distraction are winning</option>
+                  <option value="all">All three — That is why I am here</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="performance-leak">
+                  Where are you leaking performance?
+                  <span class="text-muted"> — Be honest. No wrong answers.</span>
+                </label>
+                <textarea
+                  id="performance-leak"
+                  name="performance_leak"
+                  required
+                  placeholder="e.g., 'I start strong but fade after 6 weeks.' or 'Revenue is up but I am running on empty.'"
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- 04 WHY NOW -->
+            <div class="mt-xl">
+              <span class="badge mb-md">04 — Why Now</span>
+
+              <div class="form-group">
+                <label for="why-now">
+                  What changed in the last 90 days?
+                  <span class="text-muted"> — What made you apply today, not 6 months ago?</span>
+                </label>
+                <textarea
+                  id="why-now"
+                  name="why_now"
+                  required
+                  placeholder="e.g., 'Burnout hit.' or 'I am ready to stop coasting.'"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="commitment">Can you commit to the full 12-month system?</label>
+                <ul class="icon-list mb-md">
+                  <li><span class="list-icon">✓</span><span>Weekly 1:1 sessions with no skipping</span></li>
+                  <li><span class="list-icon">✓</span><span>Daily check-in protocol as a non-negotiable</span></li>
+                  <li><span class="list-icon">✓</span><span>Discomfort training that is intentional, not optional</span></li>
+                  <li><span class="list-icon">✓</span><span>Cash flow systems that are built and maintained</span></li>
+                </ul>
+                <select id="commitment" name="commitment" required>
+                  <option value="">Select one</option>
+                  <option value="yes-ready">Yes — I am ready to be held to this</option>
+                  <option value="yes-questions">Yes — but I have questions first</option>
+                  <option value="not-yet">Not yet — but I want to understand more</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 05 FINAL CONTEXT -->
+            <div class="mt-xl">
+              <span class="badge mb-md">05 — Final Context</span>
+
+              <div class="form-group">
+                <label for="how-found">How did you find J Ryan Russow?</label>
+                <input
+                  type="text"
+                  id="how-found"
+                  name="how_found"
+                  placeholder="e.g., LinkedIn, podcast, referral, Google"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="anything-else">
+                  Anything else you want me to know?
+                  <span class="text-muted"> — Optional</span>
+                </label>
+                <textarea
+                  id="anything-else"
+                  name="anything_else"
+                  placeholder="Context, questions, or anything that did not fit above."
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="mt-xl text-center">
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-lg">
+                Submit My Application
+              </button>
+              <p class="text-muted mt-md">
+                Applications are reviewed weekly. If there is a fit, you will receive an invitation
+                to schedule a discovery call within 48 hours.
+              </p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- SUCCESS STATE -->
+        <div class="content-card content-card-accent text-center" id="successMsg" hidden>
+          <div aria-hidden="true" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;">✓</div>
+          <h2>Application Received</h2>
+          <p>
+            I review every application personally. If there is a fit, you will hear from me
+            within 48 hours with an invitation to schedule a discovery call.
+          </p>
+          <p>
+            While you wait, <a href="/daily-checkin.html">start the Daily Check-In today</a>.
+            It is the first thing every Circle member does.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
+  <div id="site-footer-mount"></div>
+
+  <script src="/js/main.js"></script>
   <script>
     const form = document.getElementById('applicationForm');
     const submitBtn = document.getElementById('submitBtn');
     const applicationCard = document.getElementById('applicationCard');
     const successMsg = document.getElementById('successMsg');
 
-    // ─── n8n Webhook ─────────────────────────────────────────────
     const N8N_WEBHOOK = 'https://automation.midwestguard.net/webhook/compound-circle-application';
 
-    form.addEventListener('submit', async function(e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
-      // Validation
-      const required = form.querySelectorAll('[required]');
+      const requiredFields = form.querySelectorAll('[required]');
       let valid = true;
-      required.forEach(field => {
-        if (!field.value.trim()) {
-          field.style.borderColor = '#ef4444';
+      let firstInvalid = null;
+
+      requiredFields.forEach((field) => {
+        const value = field.value.trim();
+        if (!value) {
+          field.classList.add('is-invalid');
           valid = false;
+          if (!firstInvalid) firstInvalid = field;
         } else {
-          field.style.borderColor = '';
+          field.classList.remove('is-invalid');
         }
       });
 
       if (!valid) {
-        const firstInvalid = form.querySelector('[style*="ef4444"]');
-        if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (firstInvalid) {
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstInvalid.focus();
+        }
         return;
       }
 
-      // Disable button
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Submitting…';
+      submitBtn.textContent = 'Submitting...';
 
-      // Build payload
       const payload = {
-        full_name:         form.full_name.value.trim(),
-        email:             form.email.value.trim(),
-        business:          form.business.value.trim(),
-        revenue:           form.revenue.value,
+        full_name: form.full_name.value.trim(),
+        email: form.email.value.trim(),
+        business: form.business.value.trim(),
+        revenue: form.revenue.value,
         years_in_business: form.years_in_business.value,
-        weakest_pillar:    form.weakest_pillar.value,
-        performance_leak:  form.performance_leak.value.trim(),
-        why_now:           form.why_now.value.trim(),
-        commitment:        form.commitment.value,
-        how_found:         form.how_found.value.trim(),
-        anything_else:     form.anything_else.value.trim(),
-        submitted_at:      new Date().toISOString()
+        weakest_pillar: form.weakest_pillar.value,
+        performance_leak: form.performance_leak.value.trim(),
+        why_now: form.why_now.value.trim(),
+        commitment: form.commitment.value,
+        how_found: form.how_found.value.trim(),
+        anything_else: form.anything_else.value.trim(),
+        submitted_at: new Date().toISOString()
       };
 
       try {
@@ -619,29 +350,29 @@
           body: JSON.stringify(payload)
         });
 
-        if (response.ok) {
-          applicationCard.style.display = 'none';
-          successMsg.style.display = 'block';
-          successMsg.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else {
+        if (!response.ok) {
           throw new Error('Webhook returned non-OK status');
         }
 
-      } catch (err) {
+        applicationCard.hidden = true;
+        successMsg.hidden = false;
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch (error) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Submit My Application →';
+        submitBtn.textContent = 'Submit My Application';
         alert('Something went wrong. Please email jesse@midwestguard.net directly.');
-        console.error('Application submission error:', err);
+        console.error('Application submission error:', error);
       }
     });
 
-    // Clear red borders on input
-    form.querySelectorAll('input, textarea, select').forEach(field => {
+    form.querySelectorAll('input, textarea, select').forEach((field) => {
       field.addEventListener('input', () => {
-        field.style.borderColor = '';
+        field.classList.remove('is-invalid');
+      });
+      field.addEventListener('change', () => {
+        field.classList.remove('is-invalid');
       });
     });
   </script>
-
 </body>
 </html>

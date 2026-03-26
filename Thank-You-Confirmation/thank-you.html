@@ -3,312 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Primary SEO -->
-  <title>Thank You | Application Received — J Ryan Russow</title>
-  <meta name="description" content="Thank you for applying to The Compound Performance Circle. Your application has been received and will be reviewed within 48 hours." />
+  <title>Thank You | Application Received | J Ryan Russow</title>
+  <meta
+    name="description"
+    content="Thank you for applying to The Compound Performance Circle. Your application has been received and will be personally reviewed within 48 hours."
+  />
   <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href="https://jryanrussow.com/Thank-You-Confirmation/thank-you.html" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-  <style>
-    :root {
-      --navy: #0A2E5A;
-      --gold: #D4AF37;
-      --dark: #0F172A;
-      --gray: #647481;
-      --light: #F8FAFC;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3 {
-      font-family: 'EB Garamond', serif;
-      font-weight: 600;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Success Hero Banner */
-    .success-banner {
-      background: linear-gradient(135deg, var(--navy), #1a3a6c);
-      color: white;
-      padding: 4rem 1.5rem 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .success-banner::before {
-      content: "";
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: rgba(212, 175, 55, 0.06);
-      top: -300px;
-      right: -200px;
-      z-index: 0;
-    }
-
-    .success-icon {
-      position: relative;
-      z-index: 2;
-      margin-bottom: 1.5rem;
-    }
-
-    .success-icon svg {
-      width: 80px;
-      height: 80px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .success-banner h1 {
-      font-size: 3rem;
-      margin-bottom: 0.75rem;
-      position: relative;
-      z-index: 2;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .success-banner p {
-      font-size: 1.25rem;
-      opacity: 0.9;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Main Content */
-    main {
-      padding: 3rem 0 4rem;
-    }
-
-    .content-section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: var(--navy);
-      margin-bottom: 1.2rem;
-      position: relative;
-      display: inline-block;
-    }
-
-    h2::after {
-      content: "";
-      position: absolute;
-      bottom: -0.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: var(--gold);
-    }
-
-    .intro-text {
-      font-size: 1.15rem;
-      color: var(--gray);
-      line-height: 1.8;
-      margin: 2rem 0;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Next Steps Card */
-    .next-steps {
-      background: white;
-      padding: 2.5rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(10, 46, 90, 0.08);
-      border: 1px solid #e2e8f0;
-      margin: 2.5rem 0;
-      text-align: left;
-    }
-
-    .next-steps h3 {
-      color: var(--navy);
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .next-steps ol {
-      padding-left: 1.5rem;
-      color: var(--gray);
-      counter-reset: steps;
-      list-style: none;
-    }
-
-    .next-steps ol li {
-      margin-bottom: 1.25rem;
-      font-size: 1.05rem;
-      line-height: 1.7;
-      padding-left: 0.5rem;
-      position: relative;
-      counter-increment: steps;
-    }
-
-    .next-steps ol li::before {
-      content: counter(steps);
-      position: absolute;
-      left: -2rem;
-      top: 0.1rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      background: var(--gold);
-      color: var(--navy);
-      border-radius: 50%;
-      font-size: 0.8rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* CTA Buttons */
-    .cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      font-weight: 700;
-      padding: 0.875rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 1rem;
-      letter-spacing: 0.5px;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-    }
-
-    .btn:hover {
-      background: #b89a2d;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-    }
-
-    .btn-secondary {
-      display: inline-block;
-      background: transparent;
-      color: var(--navy);
-      font-weight: 600;
-      padding: 0.875rem 2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 1rem;
-      border: 2px solid var(--navy);
-    }
-
-    .btn-secondary:hover {
-      background: var(--navy);
-      color: white;
-      transform: translateY(-3px);
-    }
-
-    @media (max-width: 768px) {
-      .success-banner h1 { font-size: 2.2rem; }
-      .success-banner p { font-size: 1.05rem; }
-      h2 { font-size: 1.7rem; }
-      .next-steps { padding: 1.75rem 1.25rem; }
-      .cta-group { flex-direction: column; align-items: center; }
-      .btn, .btn-secondary { width: 100%; text-align: center; }
-    }
-  </style>
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
+  <div id="site-header-mount"></div>
 
-  <!-- Success Hero Banner -->
-  <div class="success-banner">
-    <div class="success-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="9 12 11 14 15 10" />
-      </svg>
-    </div>
-    <h1>Thank You!</h1>
-    <p>Your application has been received</p>
-  </div>
+  <main id="main-content">
 
-  <main>
-    <section class="content-section">
-
-      <h2>What Happens Next?</h2>
-
-      <p class="intro-text">
-        I personally review every application. Here's exactly what to expect over the next few days.
-      </p>
-
-      <div class="next-steps">
-        <h3>Your Next Steps</h3>
-        <ol>
-          <li>
-            <strong>Application Review</strong> — I'll review your application within 48 hours
-          </li>
-          <li>
-            <strong>Schedule a Call</strong> — If there's a potential fit, I'll email you to schedule a discovery call
-          </li>
-          <li>
-            <strong>Discovery Call</strong> — We'll discuss your goals, challenges, and whether The Compound Performance Circle is right for you
-          </li>
-          <li>
-            <strong>Decision</strong> — Within 24 hours of our call, I'll let you know if you've been accepted
-          </li>
-        </ol>
+    <!-- PAGE HERO -->
+    <section class="hero-section" aria-labelledby="thank-you-heading">
+      <div class="container">
+        <span class="hero-badge" data-animate="fade-up">Application Received</span>
+        <h1 id="thank-you-heading" data-animate="fade-up" data-delay="100">
+          Thank You
+        </h1>
+        <p class="hero-sub" data-animate="fade-up" data-delay="200">
+          Your application has been submitted successfully and is now under review.
+        </p>
       </div>
-
-      <p class="intro-text">
-        While you wait, start building your foundation today with the Daily Check-In system.
-      </p>
-
-      <div class="cta-group">
-        <a href="/daily-checkin.html" class="btn">View The Daily Check-In</a>
-        <a href="/index.html" class="btn-secondary">Back to Home</a>
-      </div>
-
     </section>
+
+    <!-- NEXT STEPS -->
+    <section class="section" aria-labelledby="next-steps-heading">
+      <div class="container-narrow">
+
+        <!-- SUCCESS CONFIRMATION -->
+        <div class="content-card content-card-accent text-center" data-animate="fade-up">
+          <div
+            aria-hidden="true"
+            style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"
+          >✓</div>
+          <h2 id="next-steps-heading" class="section-heading mt-md">
+            Here's what happens next
+          </h2>
+          <p class="section-copy section-copy-narrow">
+            I personally review each application. If there is a strong fit, you will hear
+            from me directly with the next step.
+          </p>
+        </div>
+
+        <!-- STEPS CARD -->
+        <div class="content-card mt-xl" data-animate="fade-up" data-delay="100">
+          <div class="content-card-header content-card-header-centered">
+            <h3>Your Next Steps</h3>
+          </div>
+
+          <ol class="styled-list">
+            <li>
+              <strong>Application Review</strong> — Your application will be reviewed
+              within 48 hours.
+            </li>
+            <li>
+              <strong>Invitation to Connect</strong> — If there is a potential fit, you
+              will receive an email to schedule a discovery call.
+            </li>
+            <li>
+              <strong>Discovery Call</strong> — We will talk through your goals, current
+              challenges, and whether The Compound Performance Circle is the right next move.
+            </li>
+            <li>
+              <strong>Final Decision</strong> — Within 24 hours of the call, you will know
+              whether you have been accepted.
+            </li>
+          </ol>
+        </div>
+
+        <!-- WHILE YOU WAIT -->
+        <div class="quote-panel mt-xl" data-animate="fade-up" data-delay="200">
+          <p>
+            While you wait, start strengthening the foundation with the Daily Check-In system.
+          </p>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="button-group button-group-centered mt-lg" data-animate="fade-up" data-delay="300">
+          <a href="/daily-checkin.html" class="btn btn-primary btn-lg">
+            View the Daily Check-In
+          </a>
+          <a href="/" class="btn btn-secondary btn-lg">
+            Back to Home
+          </a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
+  <div id="site-footer-mount"></div>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>

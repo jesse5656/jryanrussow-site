@@ -1,6 +1,8 @@
 git add .
 git commit -m "update"
 git push origin HEAD:main
+git push origin master
+npx wrangler deploy
 
 # Navigate to your project
 cd /path/to/jryanrussow-site
