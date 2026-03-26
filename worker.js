@@ -2,6 +2,8 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    console.log('Worker hit:', url.pathname);
+
     const skip =
       url.pathname.startsWith('/css/') ||
       url.pathname.startsWith('/js/') ||
@@ -11,11 +13,18 @@ export default {
         /\.(ico|png|jpg|jpeg|webp|svg|gif|woff|woff2|ttf|pdf|xml|txt|json)$/i
       );
 
-    if (skip) return env.ASSETS.fetch(request);
+    if (skip) {
+      console.log('Skipping:', url.pathname);
+      return env.ASSETS.fetch(request);
+    }
 
+    console.log('Fetching page:', url.pathname);
     const pageResponse = await env.ASSETS.fetch(request);
+    console.log('Page response status:', pageResponse.status);
 
     const contentType = pageResponse.headers.get('Content-Type') || '';
+    console.log('Content-Type:', contentType);
+
     if (!contentType.includes('text/html')) {
       return pageResponse;
     }
