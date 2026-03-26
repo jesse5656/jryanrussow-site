@@ -1,4 +1,3 @@
-// functions/_middleware.js
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -21,17 +20,24 @@ export default {
       return pageResponse;
     }
 
-    const origin = url.origin;
+    const headerRequest = new Request(`${url.origin}/partials/header.html`, request);
+    const footerRequest = new Request(`${url.origin}/partials/footer.html`, request);
 
     const [headerResponse, footerResponse] = await Promise.all([
-      env.ASSETS.fetch(`${origin}/partials/header.html`),
-      env.ASSETS.fetch(`${origin}/partials/footer.html`),
+      env.ASSETS.fetch(headerRequest),
+      env.ASSETS.fetch(footerRequest),
     ]);
+
+    console.log('header status:', headerResponse.status);
+    console.log('footer status:', footerResponse.status);
 
     const [headerHTML, footerHTML] = await Promise.all([
       headerResponse.ok ? headerResponse.text() : Promise.resolve('<!-- header missing -->'),
       footerResponse.ok ? footerResponse.text() : Promise.resolve('<!-- footer missing -->'),
     ]);
+
+    console.log('headerHTML length:', headerHTML.length);
+    console.log('footerHTML length:', footerHTML.length);
 
     const rewriter = new HTMLRewriter()
       .on('#site-header-mount', {
