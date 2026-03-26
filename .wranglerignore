@@ -9,3 +9,8 @@ README.md
 worker.js
 wrangler.toml
 functions
+dist
+test-dist
+file-tree.txt
+_headers
+_redirects
