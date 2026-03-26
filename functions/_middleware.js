@@ -1,57 +1,50 @@
-/**
- * Cloudflare Pages Middleware — Header/Footer Injection
- * functions/_middleware.js
- */
+// functions/_middleware.js
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
 
-export async function onRequest(context) {
-  const { request, next, env } = context;
-  const url = new URL(request.url);
+    const skip =
+      url.pathname.startsWith('/css/') ||
+      url.pathname.startsWith('/js/') ||
+      url.pathname.startsWith('/partials/') ||
+      url.pathname.startsWith('/functions/') ||
+      url.pathname.match(
+        /\.(ico|png|jpg|jpeg|webp|svg|gif|woff|woff2|ttf|pdf|xml|txt|json)$/i
+      );
 
-  // ── Skip non-HTML assets ──────────────────────────────────
-  const skip =
-    url.pathname.startsWith('/css/') ||
-    url.pathname.startsWith('/js/') ||
-    url.pathname.startsWith('/partials/') ||
-    url.pathname.match(
-      /\.(ico|png|jpg|jpeg|webp|svg|gif|woff|woff2|ttf|pdf|xml|txt|json)$/i
-    );
+    if (skip) return env.ASSETS.fetch(request);
 
-  if (skip) {
-    return next(request);
-  }
+    const pageResponse = await env.ASSETS.fetch(request);
 
-  // ── Get the page response ─────────────────────────────────
-  const response = await next(request);
+    const contentType = pageResponse.headers.get('Content-Type') || '';
+    if (!contentType.includes('text/html')) {
+      return pageResponse;
+    }
 
-  // ── Pass through non-HTML ─────────────────────────────────
-  const contentType = response.headers.get('content-type') || '';
-  if (!contentType.includes('text/html')) {
-    return response;
-  }
+    const origin = url.origin;
 
-  // ── Fetch partials using ASSETS binding ───────────────────
-  const [headerRes, footerRes] = await Promise.all([
-    env.ASSETS.fetch('https://placeholder/partials/header.html'),
-    env.ASSETS.fetch('https://placeholder/partials/footer.html'),
-  ]);
+    const [headerResponse, footerResponse] = await Promise.all([
+      env.ASSETS.fetch(`${origin}/partials/header.html`),
+      env.ASSETS.fetch(`${origin}/partials/footer.html`),
+    ]);
 
-  const [headerHTML, footerHTML] = await Promise.all([
-    headerRes.ok ? headerRes.text() : Promise.resolve('<!-- header missing -->'),
-    footerRes.ok ? footerRes.text() : Promise.resolve('<!-- footer missing -->'),
-  ]);
+    const [headerHTML, footerHTML] = await Promise.all([
+      headerResponse.ok ? headerResponse.text() : Promise.resolve('<!-- header missing -->'),
+      footerResponse.ok ? footerResponse.text() : Promise.resolve('<!-- footer missing -->'),
+    ]);
 
-  // ── Rewrite mount points with HTMLRewriter ────────────────
-  const rewriter = new HTMLRewriter()
-    .on('#site-header-mount', {
-      element(el) {
-        el.replace(headerHTML);
-      },
-    })
-    .on('#site-footer-mount', {
-      element(el) {
-        el.replace(footerHTML);
-      },
-    });
+    const rewriter = new HTMLRewriter()
+      .on('#site-header-mount', {
+        element(el) {
+          el.replace(headerHTML, { html: true });
+        },
+      })
+      .on('#site-footer-mount', {
+        element(el) {
+          el.replace(footerHTML, { html: true });
+        },
+      });
 
-  return rewriter.transform(response);
-}
+    return rewriter.transform(pageResponse);
+  },
+};
