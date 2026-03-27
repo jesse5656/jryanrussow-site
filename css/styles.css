@@ -1016,11 +1016,17 @@ select:focus {
 .feature-hero {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
+  align-items: stretch;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: visible;           /* changed from hidden — was clipping card content */
   box-shadow: var(--shadow-lg);
+}
+
+.feature-hero-media {
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  overflow: hidden;            /* keeps image clipping on the media side only */
 }
 
 .feature-hero-media img {
@@ -1030,6 +1036,14 @@ select:focus {
   object-fit: cover;
 }
 
+.feature-hero-media .content-card {
+  height: 100%;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
 .feature-hero-body {
   background: linear-gradient(135deg, var(--navy) 0%, #1a3a6c 100%);
   color: var(--white);
@@ -1037,6 +1051,7 @@ select:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 }
 
 .feature-hero-body h2 {
@@ -1051,6 +1066,16 @@ select:focus {
 .feature-hero-body p {
   color: rgba(255, 255, 255, 0.9);
 }
+
+.feature-hero-body strong {
+  color: var(--white);
+}
+
+.feature-hero-body .badge {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
 /* White text overrides inside navy feature-hero-body */
 .feature-hero-body .styled-list li,
 .feature-hero-body .numbered-list li {
@@ -1062,6 +1087,10 @@ select:focus {
   color: var(--gold);
 }
 
+.feature-hero-body .icon-list li {
+  color: rgba(255, 255, 255, 0.88);
+}
+
 .quote-panel {
   text-align: left;
   padding: var(--space-xl) var(--space-2xl);
@@ -1069,6 +1098,7 @@ select:focus {
   border-left: 4px solid var(--gold);
   border-radius: 0 var(--radius) var(--radius) 0;
 }
+
 .quote-panel p {
   font-size: 1.1rem;
   font-style: italic;
@@ -1076,13 +1106,13 @@ select:focus {
   line-height: 1.75;
   margin: 0;
 }
+
 .quote-attribution {
   margin-top: var(--space-sm);
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--gray-500);
 }
-
 /* ============================================
    21. ACCORDION / FAQ
    ============================================ */
