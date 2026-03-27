@@ -1074,6 +1074,10 @@ select:focus {
 .feature-hero-body .badge {
   background: rgba(212, 175, 55, 0.2);
   border-color: rgba(212, 175, 55, 0.5);
+  display: block;          /* add this */
+  text-align: center;      /* add this */
+  width: fit-content;      /* add this — keeps it pill-shaped, not full width */
+  margin: 0 auto;          /* add this — centers it */
 }
 
 /* White text overrides inside navy feature-hero-body */
@@ -1825,12 +1829,12 @@ select:focus {
    ============================================ */
 .feature-logo {
   display: block;
-  width: auto;
-  height: auto;
-  max-width: 180px;
-  max-height: 180px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
+  object-position: center;
   margin: 0 auto var(--space-md);
+  flex-shrink: 0;
 }
 
 /* ============================================
@@ -1850,6 +1854,16 @@ select:focus {
 
 .content-card-header-centered p {
   margin-bottom: 0;
+}
+
+/* Cap the logo image area so it never fills the card */
+.feature-hero-media .content-card-header {
+  max-height: 220px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ============================================
