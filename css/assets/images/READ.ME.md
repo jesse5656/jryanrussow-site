@@ -1,24 +1,28 @@
-🖼️ How to Get Raw Image Links on GitHub
-For image files, GitHub does not provide a visible "Raw" button. To get the direct URL, use one of the following methods:
+The fix: Prefix Convention
 
-Option 1: Right-click the image preview and select "Copy image link."
+The messages follow a convention called Conventional Commits:
 
-Option 2: Right-click the image and select "Open image in new tab," then copy the URL from your browser's address bar.
-
-[!TIP]
-This link is essential when embedding images into your README.md or other documentation.
+Prefix Meaning
+fix: Bug fix
+feat: New feature added
+style: CSS/visual changes
+refactor: Code restructured, no behavior change
+docs: Documentation only
 
 # List workspace files tracked by git
+
 git ls-files > file-tree.txt
 
 `tree` is a command-line utility that recursively lists the contents of a directory in a tree-like format.
 
 **Basic usage:**
+
 ```bash
 tree
 ```
 
 **Common flags:**
+
 ```bash
 tree -a                  # Show hidden files
 tree -d                  # Directories only
@@ -30,12 +34,14 @@ tree --dirsfirst         # List directories before files
 ```
 
 **Combined examples:**
+
 ```bash
 tree -L 2 --dirsfirst
 tree -a -I '.git|node_modules' -o tree.txt
 ```
 
 **Example output:**
+
 ```
 .
 ├── src
