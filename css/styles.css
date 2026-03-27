@@ -1704,10 +1704,36 @@ select:focus {
   color: var(--light);
 }
 
-.bg-navy * {
-  color: inherit;
+.bg-dark {
+  background: var(--dark);
+  color: var(--light);
 }
 
+/* --- Stat Cards (used inside .bg-navy) --- */
+.stat-card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  overflow: visible;
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.1;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.35rem;
+  color: rgba(255, 255, 255, 0.85);
+}
 /* --- Stat Cards (used inside .bg-navy) --- */
 .stat-card {
   text-align: center;
