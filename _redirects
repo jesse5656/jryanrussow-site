@@ -1,5 +1,8 @@
-@"
 # Friendly URL redirects
 /home                            /                                        301
 /apply                           /Lead-Capture-Pages/application.html     301
-"@ | Set-Content .\_redirects -Encoding UTF8
+
+# Block private folders (backup if exclude fails)
+/Private-Docs/*                  /404.html                                301
+/Backend-Odoo-Seperate-system/*  /404.html                                301
+/Cloudflare-Config/*             /404.html                                301
