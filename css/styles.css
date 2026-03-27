@@ -1826,9 +1826,10 @@ select:focus {
 .feature-logo {
   display: block;
   width: 120px;
-  height: 120px;
+  height: 120px !important;  /* override img { height: auto } reset */
   object-fit: contain;
   margin: 0 auto var(--space-md);
+  max-width: 120px !important;  /* prevent 100% width stretch */
 }
 
 /* ============================================
