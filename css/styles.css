@@ -1672,6 +1672,41 @@ select:focus {
 .bg-navy {
   background: var(--navy);
 }
+/* --- Icon list (checkmark/icon + text layout) --- */
+.icon-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.icon-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.icon-list li::marker {
+  display: none;
+}
+
+.list-icon {
+  flex-shrink: 0;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Icon list on navy background (feature-hero-body) */
+.feature-hero-body .icon-list li {
+  color: rgba(255, 255, 255, 0.88);
+}
 /* ============================================
    30. DAILY CHECK-IN COMPONENTS
    ============================================ */
