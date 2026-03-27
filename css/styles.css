@@ -1051,11 +1051,31 @@ select:focus {
 .feature-hero-body p {
   color: rgba(255, 255, 255, 0.9);
 }
+/* White text overrides inside navy feature-hero-body */
+.feature-hero-body .styled-list li,
+.feature-hero-body .numbered-list li {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.feature-hero-body .styled-list li::marker,
+.feature-hero-body .numbered-list li::marker {
+  color: var(--gold);
+}
 
 .quote-panel {
   text-align: left;
+  padding: var(--space-xl) var(--space-2xl);
+  background: rgba(212, 175, 55, 0.06);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
-
+.quote-panel p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.75;
+  margin: 0;
+}
 .quote-attribution {
   margin-top: var(--space-sm);
   font-size: 0.95rem;
@@ -1636,6 +1656,22 @@ select:focus {
   display: block;
   text-align: center;
 }
+/* --- Content card icon (emoji/icon above card heading) --- */
+.content-card-icon {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-sm);
+  display: block;
+  line-height: 1;
+}
+
+/* --- Background utilities --- */
+.bg-light {
+  background: var(--light);
+}
+
+.bg-navy {
+  background: var(--navy);
+}
 /* ============================================
    30. DAILY CHECK-IN COMPONENTS
    ============================================ */
@@ -1895,6 +1931,16 @@ select:focus {
   h2 { font-size: 1.85rem; }
   h3 { font-size: 1.35rem; }
 
+  /* ... all existing rules ... */
+
+  .feature-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-hero-media .content-card {
+    border-radius: var(--radius-lg);
+  }
+}
   .nav-toggle {
     display: flex;
   }
@@ -2004,9 +2050,20 @@ select:focus {
     font-size: 0.96rem;
   }
 
-  .feature-hero-media img {
-    min-height: 220px;
-  }
+.feature-hero-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+/* When feature-hero-media contains a card instead of an image */
+.feature-hero-media .content-card {
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
 
   .toast-container {
     left: var(--space-md);
