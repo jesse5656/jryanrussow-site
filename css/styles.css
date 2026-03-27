@@ -1734,31 +1734,6 @@ select:focus {
   margin-top: 0.35rem;
   color: rgba(255, 255, 255, 0.85);
 }
-/* --- Stat Cards (used inside .bg-navy) --- */
-.stat-card {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  overflow: visible;
-}
-
-.stat-number {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1.1;
-  overflow: visible;
-  white-space: nowrap;
-}
-
-.stat-label {
-  display: block;
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-top: 0.35rem;
-  color: rgba(255, 255, 255, 0.85);
-}
 /* --- Icon list (checkmark/icon + text layout) --- */
 .icon-list {
   list-style: none;
@@ -1793,6 +1768,110 @@ select:focus {
 /* Icon list on navy background (feature-hero-body) */
 .feature-hero-body .icon-list li {
   color: rgba(255, 255, 255, 0.88);
+}
+/* ============================================
+   PILLAR CARDS
+   ============================================ */
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-decoration: none;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.pillar-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+}
+
+.pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-sm);
+}
+
+.pillar-desc {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: var(--space-md);
+}
+
+.pillar-arrow {
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: auto;
+  transition: transform var(--transition);
+}
+
+.pillar-card:hover .pillar-arrow {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   FEATURE LOGO (card media panel)
+   ============================================ */
+.feature-logo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto var(--space-md);
+}
+
+/* ============================================
+   CONTENT CARD HEADER
+   ============================================ */
+.content-card-header {
+  margin-bottom: var(--space-lg);
+}
+
+.content-card-header-centered {
+  text-align: center;
+}
+
+.content-card-header-centered h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.content-card-header-centered p {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   DARK BACKGROUND OVERRIDES
+   ============================================ */
+
+/* .text-muted is too dark on .bg-dark — lighten it */
+.bg-dark .text-muted,
+.bg-dark .section-copy {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Headings inside bg-dark need to be white */
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4 {
+  color: var(--white);
+}
+
+/* h2::after gold bar — center it under centered headings */
+.section-heading.centered::after,
+h2.centered::after {
+  margin-left: auto;
+  margin-right: auto;
 }
 /* ============================================
    30. DAILY CHECK-IN COMPONENTS
