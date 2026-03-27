@@ -1619,11 +1619,6 @@ select:focus {
   margin-bottom: var(--space-xl);
 }
 
-/* --- Container narrow --- */
-.container-narrow {
-  max-width: 720px;
-}
-
 /* --- Button group --- */
 .button-group {
   display: flex;
@@ -1641,7 +1636,6 @@ select:focus {
   display: block;
   text-align: center;
 }
-
 /* ============================================
    30. DAILY CHECK-IN COMPONENTS
    ============================================ */
