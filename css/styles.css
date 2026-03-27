@@ -1544,6 +1544,103 @@ select:focus {
   background: rgba(212, 175, 55, 0.08);
   color: var(--navy);
 }
+/* --- Answer option span target (matches quiz.html structure) --- */
+.answer-option > span {
+  display: block;
+  padding: 1rem 1.25rem;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--gray-text);
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.answer-option:hover > span,
+.answer-option input:checked + span {
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--navy);
+}
+
+/* --- Fieldset reset --- */
+.quiz-question {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quiz-question legend {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--space-md);
+}
+
+/* --- Progress bar --- */
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+}
+
+/* --- Badge pill --- */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* --- Section copy --- */
+.section-copy {
+  color: var(--gray-text);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.section-copy-narrow {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Section intro block --- */
+.section-intro {
+  margin-bottom: var(--space-xl);
+}
+
+/* --- Container narrow --- */
+.container-narrow {
+  max-width: 720px;
+}
+
+/* --- Button group --- */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.button-group-centered {
+  justify-content: center;
+}
+
+/* --- Button block (full width) --- */
+.btn-block {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
 
 /* ============================================
    30. DAILY CHECK-IN COMPONENTS
