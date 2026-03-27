@@ -1931,16 +1931,6 @@ select:focus {
   h2 { font-size: 1.85rem; }
   h3 { font-size: 1.35rem; }
 
-  /* ... all existing rules ... */
-
-  .feature-hero {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-hero-media .content-card {
-    border-radius: var(--radius-lg);
-  }
-}
   .nav-toggle {
     display: flex;
   }
@@ -2036,7 +2026,15 @@ select:focus {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-}
+
+  .feature-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-hero-media .content-card {
+    border-radius: var(--radius-lg);
+  }
+} /* ← closing brace goes HERE, after everything */
 
 @media (max-width: 480px) {
   h1 { font-size: 1.85rem; }
