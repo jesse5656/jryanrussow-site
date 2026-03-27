@@ -1026,7 +1026,7 @@ select:focus {
 
 .feature-hero-media {
   border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-  overflow: hidden;            /* keeps image clipping on the media side only */
+  overflow: visible;  /* changed from hidden */
 }
 
 .feature-hero-media img {
