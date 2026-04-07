@@ -15,7 +15,7 @@
   />
   <meta name="author" content="J Ryan Russow" />
   <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://jryanrussow.com/Lead-Capture-Pages/application.html" />
+  <link rel="canonical" href="https://jryanrussow.com/get/apply.html" />
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
@@ -34,7 +34,7 @@
     "@type": "Service",
     "name": "The Compound Performance Circle",
     "description": "Private coaching for elite performers, limited to 6 per year. Focus: wealth, strength, and mindset.",
-    "url": "https://jryanrussow.com/Lead-Capture-Pages/application.html",
+    "url": "https://jryanrussow.com/get/apply.html",
     "provider": {
       "@type": "Person",
       "name": "J Ryan Russow",
@@ -54,10 +54,10 @@
   <main id="main-content">
 
     <!-- PAGE HERO -->
-    <section class="hero-section" aria-labelledby="application-heading">
+    <section class="hero-section" aria-labelledby="apply-heading">
       <div class="container">
         <span class="hero-badge" data-animate="fade-up">2026 Cohort — 6 Seats</span>
-        <h1 id="application-heading" data-animate="fade-up" data-delay="100">
+        <h1 id="apply-heading" data-animate="fade-up" data-delay="100">
           Apply to Join The Compound Performance Circle
         </h1>
         <p class="hero-sub" data-animate="fade-up" data-delay="200">
@@ -79,13 +79,13 @@
     </section>
 
     <!-- APPLICATION FORM -->
-    <section class="section" aria-labelledby="application-form-heading">
+    <section class="section" aria-labelledby="apply-form-heading">
       <div class="container">
 
         <div class="content-card" id="applicationCard">
           <div class="section-intro text-center">
             <span class="badge">Application</span>
-            <h2 id="application-form-heading" class="section-heading centered mt-md">
+            <h2 id="apply-form-heading" class="section-heading centered mt-md">
               Start with the truth
             </h2>
             <p class="section-copy section-copy-narrow">
@@ -274,7 +274,7 @@
           <div aria-hidden="true" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;">✓</div>
           <h2>Application Received</h2>
           <p>
-            I review every application personally. If there is a fit, you will hear from me
+            I review every apply personally. If there is a fit, you will hear from me
             within 48 hours with an invitation to schedule a discovery call.
           </p>
           <p>
@@ -297,7 +297,7 @@
     const applicationCard = document.getElementById('applicationCard');
     const successMsg = document.getElementById('successMsg');
 
-    const N8N_WEBHOOK = 'https://automation.midwestguard.net/webhook/compound-circle-application';
+    const N8N_WEBHOOK = 'https://automation.midwestguard.net/webhook/compound-circle-apply';
 
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -346,7 +346,7 @@
       try {
         const response = await fetch(N8N_WEBHOOK, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'apply/json' },
           body: JSON.stringify(payload)
         });
 

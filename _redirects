@@ -1,8 +1,16 @@
 # Friendly URL redirects
 /home                            /                                        301
-/apply                           /Lead-Capture-Pages/application.html     301
 
 # Block private folders (backup if exclude fails)
 /Private-Docs/*                  /404.html                                301
 /Backend-Odoo-Seperate-system/*  /404.html                                301
 /Cloudflare-Config/*             /404.html                                301
+
+# Redirect legacy Lead-Capture-Pages → new /get/ paths
+/Lead-Capture-Pages/application.html      301 /apply
+/Lead-Capture-Pages/lead-three-pillar.html  301 /get/three-pillar
+/Lead-Capture-Pages/lead-body-code.html    301 /get/strength-calendar
+/Lead-Capture-Pages/lead-mind-forge.html  301 /get/daily-checkin-pdf
+/Lead-Capture-Pages/quiz.html             301 /get/audit
+/Lead-Capture-Pages/workbook.html         301 /get/workbook.html
+/Lead-Capture-Pages/workbook.html  301 /get/self-audit-workbook.html
