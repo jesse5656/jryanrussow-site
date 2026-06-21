@@ -812,6 +812,16 @@ th {
   border-top: 4px solid var(--gold);
 }
 
+.content-card h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  text-wrap: pretty;
+}
+
+.content-card h2::after {
+  width: 72px;
+}
+
 .card-kicker,
 .pillar-number {
   display: inline-block;
