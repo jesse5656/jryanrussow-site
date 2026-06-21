@@ -2062,6 +2062,13 @@ select:focus {
   color: var(--white);
 }
 
+/* Center accent lines */
+.section-heading.centered::after,
+.cta-block h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ============================================
    30. DAILY CHECK-IN COMPONENTS
    ============================================ */
@@ -2503,4 +2510,3 @@ select:focus {
     transform: rotate(360deg);
   }
 }
-
