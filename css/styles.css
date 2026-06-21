@@ -662,7 +662,7 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  width: 240px;
+  width: 420px;
   height: 3px;
   margin-top: 0.65rem;
   background: var(--gold);
