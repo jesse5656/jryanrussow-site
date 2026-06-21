@@ -1103,8 +1103,30 @@ select:focus {
   box-shadow: var(--shadow-lg);
 }
 
+.feature-hero-body {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a3a6c 100%);
+  color: var(--white);
+  padding: var(--space-2xl);
+}
+
+.feature-hero-body h2 {
+  color: var(--white);
+}
+
+.feature-hero-body h2::after {
+  display: none;
+}
+
+.feature-hero-body p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-hero-body strong {
+  color: var(--white);
+}
+
 .feature-hero-media {
-  position: relative;
+  background: var(--white);
   overflow: hidden;
 }
 
@@ -1116,103 +1138,71 @@ select:focus {
   display: block;
 }
 
-.feature-hero-media .content-card {
-  height: 100%;
-  border: none;
-  border-top: 4px solid var(--gold);
-  border-radius: 0;
-  box-shadow: none;
-  margin: 0;
-}
-
-.feature-hero-body {
-  background: linear-gradient(135deg,
-      var(--navy) 0%,
-      #1a3a6c 100%);
-  color: var(--white);
-  padding: var(--space-2xl);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.feature-hero-body h2 {
-  color: var(--white);
-  margin-bottom: var(--space-md);
-}
-
-.feature-hero-body h2::after {
-  display: none;
-}
-
-.feature-hero-body p {
-  color: rgba(255, 255, 255, .9);
-}
-
-.feature-hero-body strong {
-  color: var(--white);
-}
-
-.feature-hero-body .badge {
-  display: inline-block;
-  width: fit-content;
-  margin: 0 auto;
-  text-align: center;
-  background: rgba(212, 175, 55, .15);
-  border: 1px solid rgba(212, 175, 55, .4);
-  color: var(--gold);
-}
-
-.feature-hero-body .styled-list li,
-.feature-hero-body .numbered-list li,
-.feature-hero-body .icon-list li {
-  color: rgba(255, 255, 255, .88);
-}
-
-.feature-hero-body .styled-list li::marker,
-.feature-hero-body .numbered-list li::marker {
-  color: var(--gold);
-}
-
 /* ============================================
    QUOTE PANELS
    ============================================ */
 
 .quote-panel {
-  padding: var(--space-xl);
-  background: rgba(212, 175, 55, .06);
+  text-align: left;
+  padding: var(--space-xl) var(--space-2xl);
+  background: rgba(212, 175, 55, 0.06);
   border-left: 4px solid var(--gold);
-  border-radius: var(--radius);
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 .quote-panel p {
-  color: var(--navy);
   font-size: 1.1rem;
   font-style: italic;
   line-height: 1.75;
   margin: 0;
+  color: var(--navy);
 }
 
 .quote-attribution {
   margin-top: var(--space-sm);
-  color: var(--gray-500);
-  font-size: .95rem;
+  font-size: 0.95rem;
   font-weight: 600;
+  color: var(--gray-500);
 }
 
-/* Quote panel inside dark section */
-
+/* Quote inside navy left panel */
 .feature-hero-body .quote-panel {
-  background: rgba(255, 255, 255, .10);
+  margin-top: var(--space-xl);
+  background: rgba(255, 255, 255, 0.08);
   border-left: 4px solid var(--gold);
 }
 
 .feature-hero-body .quote-panel p {
-  color: rgba(255, 255, 255, .95);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .feature-hero-body .quote-attribution {
-  color: rgba(255, 255, 255, .75);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Quote inside white/right panel */
+.feature-hero-media .quote-panel {
+  background: rgba(212, 175, 55, 0.06);
+  height: auto;
+  min-height: 0;
+}
+
+.feature-hero-media .quote-panel p {
+  color: var(--navy);
+}
+
+.feature-hero-media .quote-attribution {
+  color: var(--gray-500);
+}
+
+@media (max-width: 900px) {
+  .feature-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-hero-media img {
+    min-height: 300px;
+  }
 }
 
 /* ============================================
@@ -2477,122 +2467,5 @@ h2.centered::after {
 @keyframes spin {
   to {
     transform: rotate(360deg);
-  }
-}
-
-/* ============================================
-   MIND FORGE HARD OVERRIDES — FINAL
-   Place at absolute bottom of stylesheet
-   ============================================ */
-
-/* Three Drivers section: force all three boxes to show the gold top border */
-section[aria-labelledby="pillars-heading"] .grid-3 > *,
-section[aria-labelledby="pillars-heading"] .grid-3 > article,
-section[aria-labelledby="pillars-heading"] .grid-3 > .content-card,
-#pillars-heading ~ * .grid-3 > *,
-.grid-3 > article.content-card,
-.grid-3 > .content-card {
-  border-top: 4px solid var(--gold) !important;
-}
-
-/* Make sure the gold border is not hidden by background or radius */
-section[aria-labelledby="pillars-heading"] .content-card {
-  background: var(--white) !important;
-  border-left: 1px solid var(--border) !important;
-  border-right: 1px solid var(--border) !important;
-  border-bottom: 1px solid var(--border) !important;
-  border-top: 4px solid var(--gold) !important;
-  border-radius: var(--radius-lg) !important;
-  overflow: visible !important;
-}
-
-/* Quote panels: default readable light card */
-.quote-panel {
-  background: rgba(212, 175, 55, 0.08) !important;
-  border-left: 4px solid var(--gold) !important;
-  border-radius: var(--radius) !important;
-  overflow: visible !important;
-}
-
-.quote-panel p {
-  color: var(--navy) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.quote-panel .quote-attribution {
-  color: var(--gray-500) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Quote panels inside split feature areas need dark-background text */
-.feature-hero .quote-panel,
-.feature-hero-media .quote-panel,
-.feature-hero-body .quote-panel,
-section[aria-labelledby="why-it-works-heading"] .quote-panel {
-  min-height: 100% !important;
-  background: var(--navy) !important;
-  border-left: 4px solid var(--gold) !important;
-  border-radius: 0 !important;
-  padding: var(--space-2xl) !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  overflow: visible !important;
-}
-
-/* Force quote text to white anywhere inside those feature panels */
-.feature-hero .quote-panel p,
-.feature-hero-media .quote-panel p,
-.feature-hero-body .quote-panel p,
-section[aria-labelledby="why-it-works-heading"] .quote-panel p {
-  color: rgba(255, 255, 255, 0.96) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Force attribution to readable white */
-.feature-hero .quote-panel .quote-attribution,
-.feature-hero-media .quote-panel .quote-attribution,
-.feature-hero-body .quote-panel .quote-attribution,
-section[aria-labelledby="why-it-works-heading"] .quote-panel .quote-attribution {
-  color: rgba(255, 255, 255, 0.78) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  margin-top: var(--space-md) !important;
-}
-
-/* Prevent feature split panels from clipping text */
-.feature-hero,
-.feature-hero-media,
-.feature-hero-body {
-  overflow: visible !important;
-}
-
-/* Keep image/card panels aligned without hiding text */
-.feature-hero-media img {
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 420px !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-
-/* Mobile cleanup */
-@media (max-width: 900px) {
-  .feature-hero {
-    grid-template-columns: 1fr !important;
-  }
-
-  .feature-hero .quote-panel,
-  .feature-hero-media .quote-panel,
-  .feature-hero-body .quote-panel {
-    min-height: 260px !important;
-    border-radius: 0 !important;
-  }
-
-  .feature-hero-media img {
-    min-height: 260px !important;
   }
 }
