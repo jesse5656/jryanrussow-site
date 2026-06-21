@@ -667,6 +667,12 @@ h2::after {
   background: var(--gold);
 }
 
+h2.section-heading::after,
+.section-heading.centered::after,
+.cta-block h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 h3 {
   color: var(--navy);
