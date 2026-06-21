@@ -659,6 +659,14 @@ h2 {
   margin-bottom: var(--space-lg);
 }
 
+h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  background: var(--gold);
+}
+
 
 h3 {
   color: var(--navy);
@@ -2060,13 +2068,6 @@ select:focus {
 .bg-dark h3,
 .bg-dark h4 {
   color: var(--white);
-}
-
-/* Center accent lines */
-.section-heading.centered::after,
-.cta-block h2::after {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ============================================
