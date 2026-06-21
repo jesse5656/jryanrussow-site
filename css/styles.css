@@ -739,6 +739,22 @@ ol li::marker {
   font-weight: 700;
 }
 
+/* Lists inside dark feature panels */
+
+.feature-hero-body .styled-list li,
+.feature-hero-body .numbered-list li,
+.feature-hero-body .pillar-list li,
+.feature-hero-body .pillar-scorecard li {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.feature-hero-body .styled-list strong,
+.feature-hero-body .numbered-list strong,
+.feature-hero-body .pillar-list strong,
+.feature-hero-body .pillar-scorecard strong {
+  color: #ffffff;
+}
+
 /* ============================================
    14. TABLES
    ============================================ */
