@@ -662,7 +662,7 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  width: 56px;
+  width: 72px;
   height: 3px;
   margin-top: 0.65rem;
   background: var(--gold);
@@ -854,11 +854,6 @@ th {
 .cta-block h2 {
   color: var(--white);
   margin-bottom: var(--space-md);
-}
-
-.cta-block h2::after {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .cta-block p {
@@ -2055,10 +2050,6 @@ select:focus {
 h2.centered::after {
   margin-left: auto;
   margin-right: auto;
-}
-
-.cta-block h2::after {
-  width: 100px;
 }
 
 /* ============================================
