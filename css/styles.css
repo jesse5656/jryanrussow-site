@@ -2057,6 +2057,10 @@ h2.centered::after {
   margin-right: auto;
 }
 
+.cta-block h2::after {
+  width: 100px;
+}
+
 /* ============================================
    30. DAILY CHECK-IN COMPONENTS
    ============================================ */
