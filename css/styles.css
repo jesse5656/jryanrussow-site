@@ -667,6 +667,7 @@ h2::after {
   background: var(--gold);
 }
 
+/* Center lines only for centered headings */
 h2.section-heading::after,
 .section-heading.centered::after,
 .cta-block h2::after {
