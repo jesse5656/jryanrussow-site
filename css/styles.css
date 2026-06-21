@@ -674,6 +674,21 @@ h3 {
   margin-bottom: var(--space-md);
 }
 
+h3 {
+  color: var(--navy);
+  margin-bottom: var(--space-md);
+}
+
+.content-card h3::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin-top: 0.65rem;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
 /* ============================================
    13. LISTS
    ============================================ */
