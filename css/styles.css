@@ -1263,8 +1263,14 @@ select:focus {
 .content-card h3 {
   color: var(--navy);
   margin-bottom: var(--space-md);
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.2;
+}
+
+@media (min-width: 769px) {
+  .content-card h3 {
+    white-space: nowrap;
+  }
 }
 
 .content-card p:last-child {
