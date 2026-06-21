@@ -669,9 +669,9 @@ h2::after {
   border-radius: 2px;
 }
 
-/* Center lines only for centered headings */
-h2.section-heading::after,
-.section-heading.centered::after,
+/* Center accent lines only inside truly centered sections */
+.text-center h2::after,
+.section-intro.text-center h2::after,
 .cta-block h2::after {
   margin-left: auto;
   margin-right: auto;
