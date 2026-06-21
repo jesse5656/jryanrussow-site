@@ -13,3 +13,12 @@
 /Lead-Capture-Pages/lead-mind-forge.html /get/daily-checkin-pdf 301
 /Lead-Capture-Pages/quiz.html /get/free-assessment 301
 /Lead-Capture-Pages/workbook.html /get/self-audit-workbook 301
+
+
+# .html → clean URL redirects
+/get/apply.html /get/apply 301
+/get/free-assessment.html /get/free-assessment 301
+/get/lead-body-code.html /get/lead-body-code 301
+/get/lead-mind-forge.html /get/lead-mind-forge 301
+/get/lead-three-pillar.html /get/lead-three-pillar 301
+/get/self-audit-workbook.html /get/self-audit-workbook 301
