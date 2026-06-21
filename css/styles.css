@@ -755,6 +755,19 @@ ol li::marker {
   color: #ffffff;
 }
 
+/* Force all text inside dark feature panels to stay readable */
+.feature-hero-body,
+.feature-hero-body p,
+.feature-hero-body li,
+.feature-hero-body span,
+.feature-hero-body strong {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.feature-hero-body strong {
+  color: #ffffff;
+}
+
 /* ============================================
    14. TABLES
    ============================================ */
