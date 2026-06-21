@@ -67,9 +67,18 @@ html {
 }
 
 body,
-h1, h2, h3, h4, h5, h6,
-p, ul, ol, blockquote,
-figure, picture {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+figure,
+picture {
   margin: 0;
 }
 
@@ -126,12 +135,29 @@ h6 {
   letter-spacing: -0.01em;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.2rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.1rem; }
-h6 { font-size: 1rem; }
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
 
 p {
   color: var(--gray-text);
@@ -397,7 +423,8 @@ a:focus-visible {
 .nav-logo {
   display: block;
   flex-shrink: 0;
-  text-decoration: none;}
+  text-decoration: none;
+}
 
 .nav-logo img {
   height: 54px;
@@ -751,7 +778,8 @@ th {
   box-shadow: var(--shadow-md);
 }
 
-.content-card-accent {
+.card,
+.content-card {
   border-top: 4px solid var(--gold);
 }
 
@@ -981,27 +1009,77 @@ select:focus {
 /* ============================================
    19. UTILITY CLASSES
    ============================================ */
-.text-gold { color: var(--gold); }
-.text-navy { color: var(--navy); }
-.text-white { color: var(--white); }
-.text-muted { color: var(--gray-500); }
-.text-dark { color: var(--dark); }
+.text-gold {
+  color: var(--gold);
+}
 
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-navy {
+  color: var(--navy);
+}
 
-.mt-sm { margin-top: var(--space-sm); }
-.mt-md { margin-top: var(--space-md); }
-.mt-lg { margin-top: var(--space-lg); }
-.mt-xl { margin-top: var(--space-xl); }
-.mt-2xl { margin-top: var(--space-2xl); }
+.text-white {
+  color: var(--white);
+}
 
-.mb-sm { margin-bottom: var(--space-sm); }
-.mb-md { margin-bottom: var(--space-md); }
-.mb-lg { margin-bottom: var(--space-lg); }
-.mb-xl { margin-bottom: var(--space-xl); }
-.mb-2xl { margin-bottom: var(--space-2xl); }
+.text-muted {
+  color: var(--gray-500);
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-sm {
+  margin-top: var(--space-sm);
+}
+
+.mt-md {
+  margin-top: var(--space-md);
+}
+
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.mt-xl {
+  margin-top: var(--space-xl);
+}
+
+.mt-2xl {
+  margin-top: var(--space-2xl);
+}
+
+.mb-sm {
+  margin-bottom: var(--space-sm);
+}
+
+.mb-md {
+  margin-bottom: var(--space-md);
+}
+
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+
+.mb-xl {
+  margin-bottom: var(--space-xl);
+}
+
+.mb-2xl {
+  margin-bottom: var(--space-2xl);
+}
 
 .gold-divider {
   border: none;
@@ -1013,6 +1091,7 @@ select:focus {
 /* ============================================
    20. INNER FEATURE PAGES
    ============================================ */
+
 .feature-hero {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -1020,37 +1099,41 @@ select:focus {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  overflow: visible;           /* changed from hidden — was clipping card content */
+  overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
 
 .feature-hero-media {
-  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-  overflow: visible;  /* changed from hidden */
+  position: relative;
+  overflow: hidden;
 }
 
-.feature-hero-media img
+.feature-hero-media img {
   width: 100%;
   height: 100%;
   min-height: 420px;
   object-fit: cover;
+  display: block;
 }
+
 .feature-hero-media .content-card {
   height: 100%;
-  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
   border: none;
+  border-top: 4px solid var(--gold);
+  border-radius: 0;
   box-shadow: none;
-  overflow: visible;
+  margin: 0;
 }
 
 .feature-hero-body {
-  background: linear-gradient(135deg, var(--navy) 0%, #1a3a6c 100%);
+  background: linear-gradient(135deg,
+      var(--navy) 0%,
+      #1a3a6c 100%);
   color: var(--white);
   padding: var(--space-2xl);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 }
 
 .feature-hero-body h2 {
@@ -1063,7 +1146,7 @@ select:focus {
 }
 
 .feature-hero-body p {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, .9);
 }
 
 .feature-hero-body strong {
@@ -1071,18 +1154,19 @@ select:focus {
 }
 
 .feature-hero-body .badge {
-  background: rgba(212, 175, 55, 0.2);
-  border-color: rgba(212, 175, 55, 0.5);
-  display: block;          /* add this */
-  text-align: center;      /* add this */
-  width: fit-content;      /* add this — keeps it pill-shaped, not full width */
-  margin: 0 auto;          /* add this — centers it */
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(212, 175, 55, .15);
+  border: 1px solid rgba(212, 175, 55, .4);
+  color: var(--gold);
 }
 
-/* White text overrides inside navy feature-hero-body */
 .feature-hero-body .styled-list li,
-.feature-hero-body .numbered-list li {
-  color: rgba(255, 255, 255, 0.88);
+.feature-hero-body .numbered-list li,
+.feature-hero-body .icon-list li {
+  color: rgba(255, 255, 255, .88);
 }
 
 .feature-hero-body .styled-list li::marker,
@@ -1090,32 +1174,93 @@ select:focus {
   color: var(--gold);
 }
 
-.feature-hero-body .icon-list li {
-  color: rgba(255, 255, 255, 0.88);
-}
+/* ============================================
+   QUOTE PANELS
+   ============================================ */
 
 .quote-panel {
-  text-align: left;
-  padding: var(--space-xl) var(--space-2xl);
-  background: rgba(212, 175, 55, 0.06);
+  padding: var(--space-xl);
+  background: rgba(212, 175, 55, .06);
   border-left: 4px solid var(--gold);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: var(--radius);
 }
 
 .quote-panel p {
+  color: var(--navy);
   font-size: 1.1rem;
   font-style: italic;
-  color: var(--navy);
   line-height: 1.75;
   margin: 0;
 }
 
 .quote-attribution {
   margin-top: var(--space-sm);
-  font-size: 0.95rem;
-  font-weight: 600;
   color: var(--gray-500);
+  font-size: .95rem;
+  font-weight: 600;
 }
+
+/* Quote panel inside dark section */
+
+.feature-hero-body .quote-panel {
+  background: rgba(255, 255, 255, .10);
+  border-left: 4px solid var(--gold);
+}
+
+.feature-hero-body .quote-panel p {
+  color: rgba(255, 255, 255, .95);
+}
+
+.feature-hero-body .quote-attribution {
+  color: rgba(255, 255, 255, .75);
+}
+
+/* ============================================
+   CONTENT CARDS
+   ============================================ */
+
+.card,
+.content-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+}
+
+.card:hover,
+.content-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.content-card h3 {
+  color: var(--navy);
+  margin-bottom: var(--space-md);
+}
+
+.content-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   MOBILE
+   ============================================ */
+
+@media (max-width: 900px) {
+
+  .feature-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-hero-media img {
+    min-height: 300px;
+  }
+
+}
+
 /* ============================================
    21. ACCORDION / FAQ
    ============================================ */
@@ -1127,7 +1272,7 @@ select:focus {
   background: var(--white);
 }
 
-.accordion-item + .accordion-item {
+.accordion-item+.accordion-item {
   border-top: 1px solid var(--border);
 }
 
@@ -1592,13 +1737,14 @@ select:focus {
 }
 
 .answer-label:hover,
-.answer-option input:checked + .answer-label {
+.answer-option input:checked+.answer-label {
   border-color: var(--gold);
   background: rgba(212, 175, 55, 0.08);
   color: var(--navy);
 }
+
 /* --- Answer option span target (matches quiz.html structure) --- */
-.answer-option > span {
+.answer-option>span {
   display: block;
   padding: 1rem 1.25rem;
   background: var(--white);
@@ -1610,8 +1756,8 @@ select:focus {
   transition: all var(--transition);
 }
 
-.answer-option:hover > span,
-.answer-option input:checked + span {
+.answer-option:hover>span,
+.answer-option input:checked+span {
   border-color: var(--gold);
   background: rgba(212, 175, 55, 0.08);
   color: var(--navy);
@@ -1689,6 +1835,7 @@ select:focus {
   display: block;
   text-align: center;
 }
+
 /* --- Content card icon (emoji/icon above card heading) --- */
 .content-card-icon {
   font-size: 1.75rem;
@@ -1737,6 +1884,7 @@ select:focus {
   margin-top: 0.35rem;
   color: rgba(255, 255, 255, 0.85);
 }
+
 /* --- Icon list (checkmark/icon + text layout) --- */
 .icon-list {
   list-style: none;
@@ -1772,6 +1920,7 @@ select:focus {
 .feature-hero-body .icon-list li {
   color: rgba(255, 255, 255, 0.88);
 }
+
 /* ============================================
    PILLAR CARDS
    ============================================ */
@@ -1888,6 +2037,7 @@ h2.centered::after {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* ============================================
    30. DAILY CHECK-IN COMPONENTS
    ============================================ */
@@ -2076,11 +2226,25 @@ h2.centered::after {
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
-[data-animate="fade-up"]   { transform: translateY(24px); }
-[data-animate="fade-in"]   { transform: none; }
-[data-animate="fade-left"] { transform: translateX(-24px); }
-[data-animate="fade-right"]{ transform: translateX(24px); }
-[data-animate="scale-up"]  { transform: scale(0.93); }
+[data-animate="fade-up"] {
+  transform: translateY(24px);
+}
+
+[data-animate="fade-in"] {
+  transform: none;
+}
+
+[data-animate="fade-left"] {
+  transform: translateX(-24px);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(24px);
+}
+
+[data-animate="scale-up"] {
+  transform: scale(0.93);
+}
 
 [data-animate].is-visible {
   opacity: 1;
@@ -2122,6 +2286,7 @@ h2.centered::after {
    35. MEDIA QUERIES
    ============================================ */
 @media (max-width: 900px) {
+
   .grid-3,
   .testimonial-grid,
   .pricing-grid,
@@ -2143,9 +2308,17 @@ h2.centered::after {
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 2.1rem; }
-  h2 { font-size: 1.85rem; }
-  h3 { font-size: 1.35rem; }
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
 
   .nav-toggle {
     display: flex;
@@ -2248,12 +2421,17 @@ h2.centered::after {
   }
 
   .feature-hero-media .content-card {
-    border-radius: var(--radius-lg);
+    border-radius: 0;
   }
-} /* ← closing brace goes HERE, after everything */
+}
+
+/* ← closing brace goes HERE, after everything */
 
 @media (max-width: 480px) {
-  h1 { font-size: 1.85rem; }
+  h1 {
+    font-size: 1.85rem;
+  }
+
   .hero-section h1,
   .page-banner h1 {
     font-size: 1.9rem;
@@ -2264,20 +2442,22 @@ h2.centered::after {
     font-size: 0.96rem;
   }
 
-.feature-hero-media img {
-  width: 100%;
-  height: 100%;
-  min-height: 420px;
-  object-fit: cover;
-}
+  .feature-hero-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+    display: block;
+  }
 
-/* When feature-hero-media contains a card instead of an image */
-.feature-hero-media .content-card {
-  height: 100%;
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
-}
+  /* When feature-hero-media contains a card instead of an image */
+  .feature-hero-media .content-card {
+    height: 100%;
+    border-radius: 0;
+    border: none;
+    border-top: 4px solid var(--gold);
+    box-shadow: none;
+  }
 
   .toast-container {
     left: var(--space-md);
@@ -2295,5 +2475,124 @@ h2.centered::after {
    36. KEYFRAMES
    ============================================ */
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   MIND FORGE HARD OVERRIDES — FINAL
+   Place at absolute bottom of stylesheet
+   ============================================ */
+
+/* Three Drivers section: force all three boxes to show the gold top border */
+section[aria-labelledby="pillars-heading"] .grid-3 > *,
+section[aria-labelledby="pillars-heading"] .grid-3 > article,
+section[aria-labelledby="pillars-heading"] .grid-3 > .content-card,
+#pillars-heading ~ * .grid-3 > *,
+.grid-3 > article.content-card,
+.grid-3 > .content-card {
+  border-top: 4px solid var(--gold) !important;
+}
+
+/* Make sure the gold border is not hidden by background or radius */
+section[aria-labelledby="pillars-heading"] .content-card {
+  background: var(--white) !important;
+  border-left: 1px solid var(--border) !important;
+  border-right: 1px solid var(--border) !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-top: 4px solid var(--gold) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: visible !important;
+}
+
+/* Quote panels: default readable light card */
+.quote-panel {
+  background: rgba(212, 175, 55, 0.08) !important;
+  border-left: 4px solid var(--gold) !important;
+  border-radius: var(--radius) !important;
+  overflow: visible !important;
+}
+
+.quote-panel p {
+  color: var(--navy) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.quote-panel .quote-attribution {
+  color: var(--gray-500) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Quote panels inside split feature areas need dark-background text */
+.feature-hero .quote-panel,
+.feature-hero-media .quote-panel,
+.feature-hero-body .quote-panel,
+section[aria-labelledby="why-it-works-heading"] .quote-panel {
+  min-height: 100% !important;
+  background: var(--navy) !important;
+  border-left: 4px solid var(--gold) !important;
+  border-radius: 0 !important;
+  padding: var(--space-2xl) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  overflow: visible !important;
+}
+
+/* Force quote text to white anywhere inside those feature panels */
+.feature-hero .quote-panel p,
+.feature-hero-media .quote-panel p,
+.feature-hero-body .quote-panel p,
+section[aria-labelledby="why-it-works-heading"] .quote-panel p {
+  color: rgba(255, 255, 255, 0.96) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Force attribution to readable white */
+.feature-hero .quote-panel .quote-attribution,
+.feature-hero-media .quote-panel .quote-attribution,
+.feature-hero-body .quote-panel .quote-attribution,
+section[aria-labelledby="why-it-works-heading"] .quote-panel .quote-attribution {
+  color: rgba(255, 255, 255, 0.78) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  margin-top: var(--space-md) !important;
+}
+
+/* Prevent feature split panels from clipping text */
+.feature-hero,
+.feature-hero-media,
+.feature-hero-body {
+  overflow: visible !important;
+}
+
+/* Keep image/card panels aligned without hiding text */
+.feature-hero-media img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 420px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Mobile cleanup */
+@media (max-width: 900px) {
+  .feature-hero {
+    grid-template-columns: 1fr !important;
+  }
+
+  .feature-hero .quote-panel,
+  .feature-hero-media .quote-panel,
+  .feature-hero-body .quote-panel {
+    min-height: 260px !important;
+    border-radius: 0 !important;
+  }
+
+  .feature-hero-media img {
+    min-height: 260px !important;
+  }
 }
