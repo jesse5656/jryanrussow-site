@@ -662,10 +662,11 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  width: 120px;
+  width: 240px;
   height: 3px;
-  background: var(--gold);
   margin-top: 0.65rem;
+  background: var(--gold);
+  border-radius: 2px;
 }
 
 /* Center lines only for centered headings */
