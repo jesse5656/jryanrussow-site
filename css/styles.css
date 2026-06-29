@@ -2528,6 +2528,7 @@ select:focus {
 /* Blog Index Page */
 .blog-index {
   padding: var(--space-3xl) 0;
+  background: var(--light);
 }
 
 .blog-hero {
@@ -2536,6 +2537,7 @@ select:focus {
 }
 
 .blog-hero h1 {
+  color: var(--white);
   margin-bottom: var(--space-md);
 }
 
@@ -2543,12 +2545,16 @@ select:focus {
   max-width: 640px;
   margin: 0 auto;
   font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .blog-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
 }
 
 /* Blog Card */
@@ -2562,11 +2568,12 @@ select:focus {
   transition: all var(--transition);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .blog-card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .blog-card-meta {
@@ -2580,26 +2587,29 @@ select:focus {
 
 .blog-card-meta time {
   font-weight: 600;
+  color: var(--gray-700);
 }
 
 .blog-tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   background: rgba(212, 175, 55, 0.12);
-  color: var(--gold);
+  color: var(--navy);
   border: 1px solid rgba(212, 175, 55, 0.3);
   border-radius: var(--radius-full);
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .blog-card h2 {
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   line-height: 1.3;
   margin-bottom: var(--space-md);
   color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 .blog-card h2::after {
@@ -2621,6 +2631,7 @@ select:focus {
   line-height: 1.7;
   margin-bottom: var(--space-lg);
   flex: 1;
+  font-size: 1rem;
 }
 
 .blog-read-more {
@@ -2631,11 +2642,13 @@ select:focus {
   font-weight: 600;
   text-decoration: none;
   transition: all var(--transition);
+  font-size: 0.95rem;
 }
 
 .blog-read-more:hover {
   color: var(--gold-hover);
   gap: 0.75rem;
+  text-decoration: none;
 }
 
 /* Individual Blog Post */
@@ -2643,6 +2656,8 @@ select:focus {
   max-width: var(--narrow-width);
   margin: 0 auto;
   padding: var(--space-3xl) var(--space-lg);
+  background: var(--light);
+  min-height: 60vh;
 }
 
 .blog-post-header {
@@ -2656,6 +2671,12 @@ select:focus {
   line-height: 1.2;
   margin-bottom: var(--space-md);
   color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.blog-post-header h1::after {
+  display: none;
 }
 
 .blog-post-subtitle {
@@ -2664,6 +2685,7 @@ select:focus {
   font-style: italic;
   line-height: 1.6;
   margin-bottom: var(--space-lg);
+  font-family: var(--font-heading);
 }
 
 .blog-post-meta {
@@ -2672,6 +2694,11 @@ select:focus {
   align-items: center;
   font-size: 0.9rem;
   color: var(--gray-500);
+  margin-bottom: var(--space-lg);
+}
+
+.blog-post-meta time {
+  font-weight: 600;
 }
 
 .blog-post-content {
@@ -2685,11 +2712,12 @@ select:focus {
   margin-top: var(--space-3xl);
   margin-bottom: var(--space-lg);
   color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 .blog-post-content h2::after {
-  width: 60px;
-  margin-top: 0.5rem;
+  display: none;
 }
 
 .blog-post-content h3 {
@@ -2697,10 +2725,13 @@ select:focus {
   margin-top: var(--space-2xl);
   margin-bottom: var(--space-md);
   color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 .blog-post-content p {
   margin-bottom: var(--space-lg);
+  color: var(--gray-text);
 }
 
 .blog-post-content ul,
@@ -2712,6 +2743,7 @@ select:focus {
 .blog-post-content li {
   margin-bottom: 0.75rem;
   line-height: 1.75;
+  color: var(--gray-text);
 }
 
 .blog-post-content strong {
@@ -2742,12 +2774,13 @@ select:focus {
 .blog-back-link:hover {
   color: var(--gold-hover);
   gap: 0.75rem;
+  text-decoration: none;
 }
 
 /* Blog Responsive */
 @media (min-width: 769px) {
   .blog-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -2762,5 +2795,9 @@ select:focus {
 
   .blog-post-content h3 {
     font-size: 1.3rem;
+  }
+
+  .blog-card h2 {
+    font-size: 1.4rem;
   }
 }
