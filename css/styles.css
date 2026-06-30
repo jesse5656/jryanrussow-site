@@ -656,40 +656,40 @@ a:focus-visible {
   max-width: 720px;
 }
 
+/* THE FIX: Make h2 shrink to fit the text */
 h2 {
+  width: fit-content;
+  max-width: 100%;
   position: relative;
   margin-bottom: var(--space-lg);
 }
 
+/* The line now matches the exact width of the text */
 h2::after {
   content: "";
   display: block;
-  width: 60px;
-  max-width: 100%;
+  width: 100%;
   height: 3px;
   margin-top: 0.65rem;
   background: var(--gold);
   border-radius: 2px;
 }
 
-/* Center accent lines only inside truly centered sections */
-.text-center h2::after,
-.section-intro.text-center h2::after,
-.cta-block h2::after {
+/* Center the heading and line if the parent is centered */
+.text-center h2,
+.section-intro.text-center h2,
+.cta-block h2,
+.hero-section h2,
+.page-banner h2 {
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 h3 {
   color: var(--navy);
   margin-bottom: var(--space-md);
 }
-
-h3 {
-  color: var(--navy);
-  margin-bottom: var(--space-md);
-}
-
 /* ============================================
    13. LISTS
    ============================================ */
@@ -878,8 +878,8 @@ th {
   margin-bottom: var(--space-md);
 }
 
+/* REMOVED width: 72px so it uses the 100% text width */
 .cta-block h2::after {
-  width: 72px;
   margin-left: auto;
   margin-right: auto;
 }
