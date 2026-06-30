@@ -1300,18 +1300,12 @@ select:focus {
   margin-bottom: var(--space-md);
   font-size: 1.75rem;
   line-height: 1.2;
-}
-
-@media (min-width: 769px) {
-  .content-card h3 {
-    white-space: nowrap;
-  }
+  white-space: normal; /* Allows long titles to wrap instead of getting cut off */
 }
 
 .content-card p:last-child {
   margin-bottom: 0;
 }
-
 /* ============================================
    MOBILE
    ============================================ */
