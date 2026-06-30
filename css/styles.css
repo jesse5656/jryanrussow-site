@@ -7,26 +7,26 @@
    1. VARIABLES
    ============================================ */
 :root {
-  --navy: #0A2E5A;
-  --navy-dark: #071E3D;
-  --navy-light: #0D3A72;
-  --gold: #D4AF37;
-  --gold-hover: #E5C84B;
-  --dark: #0F172A;
-  --light: #F8FAFC;
-  --white: #FFFFFF;
-  --white-muted: #D1D5DB;
+  --navy: #0a2e5a;
+  --navy-dark: #071e3d;
+  --navy-light: #0d3a72;
+  --gold: #d4af37;
+  --gold-hover: #e5c84b;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --white: #ffffff;
+  --white-muted: #d1d5db;
   --gray-text: #334155;
-  --gray-400: #9CA3AF;
+  --gray-400: #9ca3af;
   --gray-500: #647481;
   --gray-700: #374151;
-  --gray-800: #1F2937;
-  --border: #E2E8F0;
-  --green: #22C55E;
-  --red: #EF4444;
+  --gray-800: #1f2937;
+  --border: #e2e8f0;
+  --green: #22c55e;
+  --red: #ef4444;
 
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading: 'EB Garamond', Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "EB Garamond", Georgia, serif;
 
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -209,7 +209,9 @@ hr {
 a {
   color: var(--gold);
   text-decoration: none;
-  transition: color var(--transition), opacity var(--transition);
+  transition:
+    color var(--transition),
+    opacity var(--transition);
 }
 
 a:hover {
@@ -687,7 +689,6 @@ h3 {
   margin-bottom: var(--space-md);
 }
 
-
 /* ============================================
    13. LISTS
    ============================================ */
@@ -890,6 +891,21 @@ th {
   margin-bottom: var(--space-lg);
 }
 
+/* Fix for CTA blocks inside blog content */
+.blog-post-content .cta-block h2,
+.blog-post-content .cta-block h3 {
+  color: var(--white) !important;
+}
+
+.blog-post-content .cta-block p,
+.blog-post-content .cta-block li {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.blog-post-content .cta-block strong {
+  color: var(--white) !important;
+}
+
 .cta {
   text-align: center;
   margin: var(--space-2xl) 0;
@@ -917,7 +933,9 @@ select {
   border-radius: var(--radius);
   background: var(--white);
   color: var(--dark);
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 textarea {
@@ -952,7 +970,7 @@ select:focus {
    ============================================ */
 .site-footer {
   background: #161832;
-  color: #CBD5E1;
+  color: #cbd5e1;
   padding: 2rem 0 1.25rem;
   border-top: 2px solid var(--gold);
   margin-top: var(--space-3xl);
@@ -985,7 +1003,7 @@ select:focus {
 
 .footer-brand p {
   max-width: 340px;
-  color: #94A3B8;
+  color: #94a3b8;
   line-height: 1.5;
   font-size: 0.95rem;
 }
@@ -1011,7 +1029,7 @@ select:focus {
 }
 
 .footer-col a {
-  color: #9FB0C9;
+  color: #9fb0c9;
   font-size: 0.95rem;
   text-decoration: none;
 }
@@ -1298,7 +1316,6 @@ select:focus {
    ============================================ */
 
 @media (max-width: 900px) {
-
   .feature-hero {
     grid-template-columns: 1fr;
   }
@@ -1306,7 +1323,6 @@ select:focus {
   .feature-hero-media img {
     min-height: 300px;
   }
-
 }
 
 /* ============================================
@@ -1320,7 +1336,7 @@ select:focus {
   background: var(--white);
 }
 
-.accordion-item+.accordion-item {
+.accordion-item + .accordion-item {
   border-top: 1px solid var(--border);
 }
 
@@ -1382,7 +1398,9 @@ select:focus {
   padding: var(--space-lg);
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--transition), visibility var(--transition);
+  transition:
+    opacity var(--transition),
+    visibility var(--transition);
 }
 
 .modal-overlay.is-open {
@@ -1453,7 +1471,9 @@ select:focus {
   pointer-events: auto;
   transform: translateX(120%);
   opacity: 0;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.25s ease;
   border-left: 4px solid var(--gold);
 }
 
@@ -1707,26 +1727,26 @@ select:focus {
 
 .alert-info {
   background: rgba(59, 130, 246, 0.07);
-  border-left-color: #3B82F6;
-  color: #1E3A5F;
+  border-left-color: #3b82f6;
+  color: #1e3a5f;
 }
 
 .alert-success {
   background: rgba(34, 197, 94, 0.07);
   border-left-color: var(--green);
-  color: #14532D;
+  color: #14532d;
 }
 
 .alert-warning {
   background: rgba(245, 158, 11, 0.08);
-  border-left-color: #F59E0B;
-  color: #78350F;
+  border-left-color: #f59e0b;
+  color: #78350f;
 }
 
 .alert-error {
   background: rgba(239, 68, 68, 0.07);
   border-left-color: var(--red);
-  color: #7F1D1D;
+  color: #7f1d1d;
 }
 
 .alert-gold {
@@ -1785,14 +1805,14 @@ select:focus {
 }
 
 .answer-label:hover,
-.answer-option input:checked+.answer-label {
+.answer-option input:checked + .answer-label {
   border-color: var(--gold);
   background: rgba(212, 175, 55, 0.08);
   color: var(--navy);
 }
 
 /* --- Answer option span target (matches quiz.html structure) --- */
-.answer-option>span {
+.answer-option > span {
   display: block;
   padding: 1rem 1.25rem;
   background: var(--white);
@@ -1804,8 +1824,8 @@ select:focus {
   transition: all var(--transition);
 }
 
-.answer-option:hover>span,
-.answer-option input:checked+span {
+.answer-option:hover > span,
+.answer-option input:checked + span {
   border-color: var(--gold);
   background: rgba(212, 175, 55, 0.08);
   color: var(--navy);
@@ -2264,7 +2284,9 @@ select:focus {
 [data-animate] {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
 }
 
 [data-animate="fade-up"] {
@@ -2314,7 +2336,9 @@ select:focus {
   justify-content: center;
   flex-direction: column;
   gap: var(--space-lg);
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
 }
 
 .page-loader.is-done {
@@ -2327,7 +2351,6 @@ select:focus {
    35. MEDIA QUERIES
    ============================================ */
 @media (max-width: 900px) {
-
   .grid-3,
   .testimonial-grid,
   .pricing-grid,

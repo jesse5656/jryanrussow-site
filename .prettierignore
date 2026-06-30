@@ -1,0 +1,8 @@
+node_modules/
+dist/
+build/
+css/assets/
+Private-Docs/
+Backend-Odoo-Seperate-system/
+*.min.js
+*.min.css
