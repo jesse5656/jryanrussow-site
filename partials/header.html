@@ -1,12 +1,3 @@
-Yes. The issue with your current setup is that the **Testimonial Schema** is placed inside the `
-<main>
-  ` tag, which is invalid HTML and can cause rendering or parsing issues. Additionally, your header and footer partials
-  need to be structured as clean, semantic HTML fragments that mount correctly into `#site-header-mount` and
-  `#site-footer-mount`. Here are the corrected files: ### 1. Corrected `three-pillar-method.html` *Key Fix: Moved
-  JSON-LD schema out of `
-  <main>
-    ` and placed it in the `<head>
-      ` where it belongs for enterprise-grade SEO.* ```html
       <!doctype html>
       <html lang="en">
         <head>
