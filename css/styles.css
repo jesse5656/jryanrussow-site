@@ -2819,3 +2819,66 @@ select:focus {
     font-size: 1.4rem;
   }
 }
+/* ==================================================
+   #38 TESTIMONIAL ENHANCEMENTS - Three Pillar Method
+   ================================================== */
+
+/* Make testimonial brand link visually distinct but elegant */
+.quote-panel a[href*="midwest-link"] {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.quote-panel a[href*="midwest-link"]:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+/* Authenticity verification badges */
+.authenticity-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.badge-outline {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+/* Ensure quote attribution stands out */
+.quote-attribution {
+  margin-top: 1rem;
+  font-style: italic;
+  font-family: "EB Garamond", serif;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  opacity: 0.9;
+}
+
+/* Mobile responsiveness for badges */
+@media (max-width: 640px) {
+  .authenticity-badges {
+    justify-content: center;
+  }
+
+  .badge-outline {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+  }
+}

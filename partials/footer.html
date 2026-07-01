@@ -1,29 +1,28 @@
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="/" aria-label="J Ryan Russow — Home">
-          <img
-            src="/css/assets/images/jryanrussow-logo/jrr-full-logo.webp"
-            alt="J Ryan Russow"
-            class="footer-logo"
-            width="120"
-            height="120"
-            loading="lazy"
-          />
-        </a>
-        <p>
-          Coaching high-performing individuals through the Three Pillar Method — Body, Mind, and Circle — to build
-          strength, clarity, and momentum that compounds.
-        </p>
-        <div class="mt-md">
-          <a href="/get/apply.html" class="btn btn-primary btn-sm"> Apply Now </a>
-        </div>
-      </div>
+    <!-- Top Footer: Brand + Tagline -->
+    <div class="footer-brand">
+      <img
+        src="/css/assets/images/jryanrussow-logo/jrr-full-logo.webp"
+        alt="J Ryan Russow Full Logo"
+        width="180"
+        height="auto"
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="footer-tagline">
+        Coaching high-performing individuals through the Three Pillar Method — Body, Mind, and Circle — to build
+        strength, clarity, and momentum that compounds.
+      </p>
+      <a href="/get/apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+    </div>
 
-      <div class="footer-col">
+    <!-- Middle Footer: Link Columns -->
+    <div class="footer-links-grid">
+      <!-- The Method Column -->
+      <div class="footer-column">
         <h4>The Method</h4>
-        <ul role="list">
+        <ul>
           <li><a href="/three-pillar-method.html">Three Pillar Method</a></li>
           <li><a href="/body-code.html">Body Code</a></li>
           <li><a href="/mind-forge.html">Mind Forge</a></li>
@@ -31,30 +30,24 @@
         </ul>
       </div>
 
-      <div class="footer-col">
+      <!-- Resources Column -->
+      <div class="footer-column">
         <h4>Resources</h4>
-        <ul role="list">
+        <ul>
           <li><a href="/daily-checkin.html">Daily Check-In</a></li>
           <li><a href="/get/free-assessment.html">Free Assessment</a></li>
           <li><a href="/get/self-audit-workbook.html">Free Workbook</a></li>
-          <li>
-            <a href="/get/lead-body-code.html">Strength Calendar</a>
-          </li>
-          <li>
-            <a href="/get/lead-three-pillar.html">Three Pillar Starter Kit</a>
-          </li>
-          <li>
-            <a href="/get/lead-mind-forge.html">Mind Forge Daily Check-In PDF</a>
-          </li>
-          <li>
-            <a href="/get/apply.html">Apply to Work With Me</a>
-          </li>
+          <li><a href="/get/lead-body-code.html">Strength Calendar</a></li>
+          <li><a href="/get/lead-three-pillar.html">Three Pillar Starter Kit</a></li>
+          <li><a href="/get/lead-mind-forge.html">Mind Forge Daily Check-In PDF</a></li>
+          <li><a href="/get/apply.html">Apply to Work With Me</a></li>
         </ul>
       </div>
 
-      <div class="footer-col">
+      <!-- Company Column -->
+      <div class="footer-column">
         <h4>Company</h4>
-        <ul role="list">
+        <ul>
           <li><a href="/about.html">About</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/privacy.html">Privacy Policy</a></li>
@@ -62,17 +55,19 @@
       </div>
     </div>
 
+    <!-- Bottom Footer: Copyright + Legal -->
     <div class="footer-bottom">
-      <p class="copyright">
-        &copy; <span id="footer-year"></span> J Ryan Russow. All rights reserved.<br />
-        <small>Built to compound.</small>
-      </p>
-
-      <ul class="footer-bottom-links" role="list">
-        <li><a href="/privacy.html">Privacy Policy</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/get/apply.html">Apply Now</a></li>
-      </ul>
+      <p>&copy; <span id="current-year">2026</span> J Ryan Russow. All rights reserved. Built to compound.</p>
+      <div class="footer-legal-links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/get/apply.html">Apply Now</a>
+      </div>
     </div>
   </div>
 </footer>
+
+<!-- Dynamic Year Script (Optional but recommended for enterprise) -->
+<script>
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>

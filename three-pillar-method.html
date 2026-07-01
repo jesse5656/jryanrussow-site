@@ -83,6 +83,36 @@
         }
       }
     </script>
+    <!-- SCHEMA MARKUP FOR TESTIMONIAL (Add inside <head> or before </body>) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Testimonial",
+        "author": {
+          "@type": "Person",
+          "name": "Brandon Cline",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "LocalBusiness",
+            "name": "Midwest Link",
+            "url": "https://www.midwest-link.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Joplin",
+              "addressRegion": "MO",
+              "addressCountry": "US"
+            }
+          }
+        },
+        "itemReviewed": {
+          "@type": "CreativeWork",
+          "name": "Digital Authority Launchpad",
+          "description": "Three-Pillar Method mentorship and $50K website build program"
+        },
+        "reviewBody": "I launched Midwest Link at 52 using J. Ryan's Digital Authority Launchpad. Within 90 days, the custom website we built together landed us commercial Starlink contracts worth $8,400. I'm still paying down debt, but for the first time in my life, I have a professional digital asset working FOR me.",
+        "datePublished": "2026-07-01"
+      }
+    </script>
   </head>
   <body>
     <div id="site-header-mount"></div>
@@ -214,16 +244,33 @@
         </div>
       </section>
 
-      <!-- PROOF QUOTE -->
-      <section class="section-sm" aria-label="Real results">
+      <!-- PROOF QUOTE: DIGITAL AUTHORITY LAUNCHPAD CASE STUDY -->
+      <section class="section-sm" aria-label="Real Results">
         <div class="container-narrow">
           <span class="badge" data-animate="fade-up">Real Results</span>
           <div class="quote-panel mt-lg" data-animate="fade-up" data-delay="100">
             <p>
-              "I launched lawn care at 58, made $1,200 a month in profit within 90 days, bought a duplex, and now I live
-              rent-free."
+              "I launched
+              <a
+                href="https://www.midwest-link.com"
+                target="_blank"
+                rel="dofollow"
+                title="Visit Midwest Link - Commercial Network Solutions Joplin MO"
+                >Midwest Link</a
+              >
+              at 52 using J. Ryan's Digital Authority Launchpad™. Within 90 days, the custom website we built together
+              landed us commercial Starlink contracts worth $8,400. I'm still paying down debt, but for the first time
+              in my life, I have a professional digital asset working FOR me. I'm not just working in my business
+              anymore—I'm building equity in it. That belief? That's the real ROI."
             </p>
-            <p class="quote-attribution">— Mark T., Ohio</p>
+            <p class="quote-attribution">— Brandon Cline, Founder of Midwest Link, Joplin, MO</p>
+
+            <!-- VERIFICATION BADGES -->
+            <div class="authenticity-badges mt-md">
+              <span class="badge badge-outline">✓ Live Business</span>
+              <span class="badge badge-outline">✓ Verified Website</span>
+              <span class="badge badge-outline">✓ Real Revenue</span>
+            </div>
           </div>
         </div>
       </section>
