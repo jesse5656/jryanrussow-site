@@ -1227,6 +1227,32 @@ select:focus {
   color: var(--navy);
 }
 
+/* Quote signature */
+
+.quote-signature {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.quote-author {
+  display: block;
+  font-family: "EB Garamond", serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.quote-title {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-text);
+}
+
+/* Legacy quote attribution support */
+
 .quote-attribution {
   margin-top: var(--space-sm);
   font-size: 0.95rem;
@@ -1235,6 +1261,7 @@ select:focus {
 }
 
 /* Quote inside navy left panel */
+
 .feature-hero-body .quote-panel {
   margin-top: var(--space-xl);
   background: rgba(255, 255, 255, 0.08);
@@ -1245,11 +1272,15 @@ select:focus {
   color: rgba(255, 255, 255, 0.92);
 }
 
-.feature-hero-body .quote-attribution {
-  color: rgba(255, 255, 255, 0.75);
+.feature-hero-body .quote-attribution,
+.feature-hero-body .quote-signature,
+.feature-hero-body .quote-author,
+.feature-hero-body .quote-title {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* Quote inside white/right panel */
+
 .feature-hero-media .quote-panel {
   background: rgba(212, 175, 55, 0.06);
   height: auto;
@@ -1260,8 +1291,17 @@ select:focus {
   color: var(--navy);
 }
 
-.feature-hero-media .quote-attribution {
+.feature-hero-media .quote-attribution,
+.feature-hero-media .quote-signature {
   color: var(--gray-500);
+}
+
+.feature-hero-media .quote-author {
+  color: var(--navy);
+}
+
+.feature-hero-media .quote-title {
+  color: var(--gray-text);
 }
 
 @media (max-width: 900px) {
@@ -2818,67 +2858,67 @@ select:focus {
   .blog-card h2 {
     font-size: 1.4rem;
   }
-}
 /* ==================================================
-   #38 TESTIMONIAL ENHANCEMENTS - Three Pillar Method
+   #38 TESTIMONIAL ENHANCEMENTS
    ================================================== */
 
-/* Make testimonial brand link visually distinct but elegant */
+/* Testimonial links */
 .quote-panel a[href*="midwest-link"] {
-  color: var(--color-primary);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 600;
-  transition:
-    color 0.2s ease,
-    text-decoration-color 0.2s ease;
+    color: var(--navy);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    transition:
+        color 0.2s ease,
+        text-decoration-color 0.2s ease;
 }
 
 .quote-panel a[href*="midwest-link"]:hover {
-  color: var(--color-accent);
-  text-decoration-color: var(--color-accent);
+    color: var(--gold);
+    text-decoration-color: var(--gold);
 }
 
 /* Authenticity verification badges */
 .authenticity-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
 }
 
 .badge-outline {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  border: 1px solid var(--color-border);
-  border-radius: 9999px;
-  background: transparent;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    background: transparent;
+    color: var(--gray-text);
+    text-transform: uppercase;
 }
 
-/* Ensure quote attribution stands out */
-.quote-attribution {
-  margin-top: 1rem;
-  font-style: italic;
-  font-family: "EB Garamond", serif;
-  font-size: 1.1rem;
-  color: var(--color-text);
-  opacity: 0.9;
+/* Testimonial attribution */
+.testimonial-attribution {
+    margin-top: 1rem;
+    font-family: "EB Garamond", serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--navy);
+    opacity: 0.9;
 }
 
-/* Mobile responsiveness for badges */
+/* Mobile responsiveness */
 @media (max-width: 640px) {
-  .authenticity-badges {
-    justify-content: center;
-  }
+    .authenticity-badges {
+        justify-content: center;
+    }
 
-  .badge-outline {
-    font-size: 0.65rem;
-    padding: 0.25rem 0.6rem;
-  }
+    .badge-outline {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.6rem;
+    }
 }
