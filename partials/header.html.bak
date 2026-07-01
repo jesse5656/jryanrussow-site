@@ -351,6 +351,7 @@
           </div>
         </header>
         <!--3. Rewritten `footer.html` Partial *Enterprise Note: Structured with distinct sections for link
+        equity distribution, includes copyright year dynamically via JS placeholder if needed, and maintains consistent
         branding.-->
         <footer class="site-footer" role="contentinfo">
           <div class="container">
@@ -440,6 +441,8 @@
                   (except logo which is `eager`) to prevent Cumulative Layout Shift (CLS). 4. **Link Equity
                   Distribution:** Footer links are now organized hierarchically, ensuring internal link juice flows
                   logically to priority pages like `/three-pillar-method.html` and `/get/apply.html`. 5. **Active
+                  State:** Added `class="active"` to "The Method" nav item in header since this is the current page
+                  context. Deploy these files and re-run your Lighthouse audit to confirm the CLS and accessibility
                   improvements.
                 </ul>
               </footer>
