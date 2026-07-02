@@ -3,7 +3,6 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- Core Pages -->
 <url>
   <loc>https://jryanrussow.com/</loc>
   <lastmod>2026-04-07</lastmod>
@@ -131,4 +130,4 @@
   <loc>https://jryanrussow.com/blog/the-myth-of-getting-along.html</loc>
   <lastmod>2026-07-02</lastmod>
   <priority>0.8</priority>
-</url>
+</url></urlset>
