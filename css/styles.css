@@ -2922,3 +2922,14 @@ select:focus {
         padding: 0.25rem 0.6rem;
     }
 }
+   /* About page headshot mobile fix */
+@media (max-width: 768px) {
+  .feature-hero-media .content-card img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center top;
+    display: block;
+  }
+}
