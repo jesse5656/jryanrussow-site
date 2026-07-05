@@ -1,30 +1,33 @@
 # Controlled Vocabulary
 
-Purpose
+Version: 0.1.0
 
-Every important term used throughout the Systems Architect Discipline
-should have exactly one authoritative definition.
-
-Definitions should not vary between books,
-frameworks,
-courses,
-or software.
+Status:
+Living Standard
 
 ------------------------------------------------------------------------------
 
-Definitions belong in the Glossary.
+Purpose
 
-Other documents should reference the Glossary.
+Every important concept should have one authoritative definition.
+
+Definitions belong only in the Glossary.
+
+Other documents reference the Glossary rather than redefining terms.
 
 ------------------------------------------------------------------------------
 
 When a definition changes:
 
-The Glossary changes first.
+1. Update the Glossary.
 
-Dependent documents should then be updated.
+2. Review dependent documents.
+
+3. Update affected frameworks.
+
+4. Document the revision.
 
 ------------------------------------------------------------------------------
 
-The objective is conceptual consistency across the discipline.
+The objective is conceptual consistency across the entire discipline.
 
