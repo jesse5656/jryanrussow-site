@@ -1,4 +1,7 @@
 User-agent: *
+
 Allow: /
 
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://jryanrussow.com/sitemap.xml
+
+Host: https://jryanrussow.com
