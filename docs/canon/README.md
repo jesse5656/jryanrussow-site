@@ -9,57 +9,52 @@ Living Canon
 
 Purpose
 
-The Canon is the authoritative body of work produced by the Systems Architect Discipline.
+The Canon is the authoritative body of knowledge for the Systems Architect
+Discipline.
 
-The Canon contains the current best understanding of the discipline.
+Everything published by the Russow Institute should ultimately derive from
+the Canon.
 
-Published books are derived from the Canon.
-
-Courses are derived from the Canon.
-
-Software is informed by the Canon.
-
-AI systems reason from the Canon.
+The Canon continually evolves through research, observation, implementation,
+criticism, and refinement.
 
 ------------------------------------------------------------------------------
 
-The Canon is divided into volumes.
+Hierarchy
 
-Volume 0
+Russow Institute
 
-The Constitution
+↓
 
-Volume I
+Systems Architect Discipline
 
-The Systems Architect Philosophy
+↓
 
-Volume II
+The Canon
 
-Human Operating System
+↓
 
-Volume III
+Books
 
-Business Operating System
+↓
 
-Volume IV
+Courses
 
-Knowledge Operating System
+↓
 
-Volume V
+Software
 
-Framework Library
+↓
 
-Volume VI
+Artificial Intelligence
 
-Research
+↓
 
-Volume VII
-
-Implementation
+Consulting
 
 ------------------------------------------------------------------------------
 
-The Canon is continually refined.
+The Canon exists to preserve the current best understanding.
 
 It is never considered complete.
 
