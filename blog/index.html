@@ -3,66 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog | J Ryan Russow - Performance & Mindset</title>
+
+    <title>The Forge: Insights & Systems | J Ryan Russow Blog</title>
     <meta
       name="description"
-      content="Insights on strength training, mindset, and high-performance coaching from J Ryan Russow."
+      content="Field-tested articles from J Ryan Russow on leadership, strength, mindset, entrepreneurship, resilience, and the systems that build high-performance lives."
     />
+    <meta
+      name="keywords"
+      content="J Ryan Russow blog, leadership, mindset, Body Code, Mind Forge, Three-Pillar Method, entrepreneurship, resilience, strength training"
+    />
+    <meta name="author" content="J Ryan Russow" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jryanrussow.com/blog/index.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Forge: Insights & Systems | J Ryan Russow Blog" />
+    <meta
+      property="og:description"
+      content="Field-tested frameworks for strength, mindset, leadership, entrepreneurship, and high-performance living."
+    />
+    <meta property="og:url" content="https://jryanrussow.com/blog/index.html" />
+    <meta property="og:site_name" content="J Ryan Russow" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="The Forge: Insights & Systems" />
+    <meta
+      name="twitter:description"
+      content="Articles on strength, mindset, leadership, entrepreneurship, and high-performance systems."
+    />
+
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- SCHEMA MARKUP FOR BLOG INDEX -->
+
+    <!-- SEO STRUCTURED DATA -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "The Forge: Insights & Systems",
-      "description": "Field-tested frameworks for strength, mindset, and high-performance living from J Ryan Russow.",
-      "url": "https://jryanrussow.com/blog",
-      "author": {
-        "@type": "Person",
-        "name": "J Ryan Russow",
-        "url": "https://jryanrussow.com/about"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "J Ryan Russow"
-      },
-      "blogPost": [
-        {
-          "@type": "BlogPosting",
-          "headline": "250 Years of American Independence: Freedom, Responsibility & Building What Lasts",
-          "description": "A reflection on the 250th anniversary of American Independence and what freedom requires from entrepreneurs, leaders, and families.",
-          "url": "https://jryanrussow.com/blog/250-years-of-american-independence.html",
-          "datePublished": "2026-07-04",
-          "author": {
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
             "@type": "Person",
-            "name": "J Ryan Russow"
+            "@id": "https://jryanrussow.com/#person",
+            "name": "J Ryan Russow",
+            "alternateName": ["Jesse Russow", "Jesse R Russow"],
+            "url": "https://jryanrussow.com/about.html",
+            "jobTitle": "Entrepreneur, Coach, and Systems Builder"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://jryanrussow.com/#organization",
+            "name": "J Ryan Russow",
+            "url": "https://jryanrussow.com/",
+            "logo": "https://jryanrussow.com/css/assets/images/jryanrussow-logo/jrr-shield-logo.webp",
+            "founder": {
+              "@id": "https://jryanrussow.com/#person"
+            }
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://jryanrussow.com/blog/index.html#webpage",
+            "name": "The Forge: Insights & Systems",
+            "url": "https://jryanrussow.com/blog/index.html",
+            "description": "Field-tested articles from J Ryan Russow on leadership, strength, mindset, entrepreneurship, resilience, and high-performance systems.",
+            "isPartOf": {
+              "@id": "https://jryanrussow.com/#website"
+            }
+          },
+          {
+            "@type": "Blog",
+            "@id": "https://jryanrussow.com/blog/index.html#blog",
+            "name": "The Forge: Insights & Systems",
+            "description": "Field-tested frameworks for strength, mindset, leadership, entrepreneurship, and high-performance living.",
+            "url": "https://jryanrussow.com/blog/index.html",
+            "author": {
+              "@id": "https://jryanrussow.com/#person"
+            },
+            "publisher": {
+              "@id": "https://jryanrussow.com/#organization"
+            },
+            "blogPost": [
+              {
+                "@type": "BlogPosting",
+                "headline": "250 Years of American Independence: Freedom, Responsibility & Building What Lasts",
+                "url": "https://jryanrussow.com/blog/250-years-of-american-independence.html",
+                "datePublished": "2026-07-04",
+                "author": {
+                  "@id": "https://jryanrussow.com/#person"
+                }
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "The Winning Paradox: Why Focusing on Winning Guarantees You'll Lose",
+                "url": "https://jryanrussow.com/blog/the-winning-paradox.html",
+                "datePublished": "2026-07-02",
+                "author": {
+                  "@id": "https://jryanrussow.com/#person"
+                }
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "Body Code: Engineering Real-World Strength for High Performers",
+                "url": "https://jryanrussow.com/blog/body-code-conjugate-method.html",
+                "datePublished": "2026-06-29",
+                "author": {
+                  "@id": "https://jryanrussow.com/#person"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://jryanrussow.com/blog/index.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://jryanrussow.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://jryanrussow.com/blog/index.html"
+              }
+            ]
           }
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "The Winning Paradox: Why Focusing on Winning Guarantees You'll Lose",
-          "description": "I coached youth baseball to 29 straight wins using The Paradox of Success. Then I intentionally broke my winning streak.",
-          "url": "https://jryanrussow.com/blog/the-winning-paradox",
-          "datePublished": "2026-07-02",
-          "author": {
-            "@type": "Person",
-            "name": "J Ryan Russow"
-          }
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Body Code: Engineering Real-World Strength for High Performers",
-          "description": "Most training programs are built for people with endless time and zero responsibilities. Body Code takes the core principles of the Conjugate Method and adapts them for founders, operators, and leaders.",
-          "url": "https://jryanrussow.com/blog/body-code-conjugate-method",
-          "datePublished": "2026-06-29",
-          "author": {
-            "@type": "Person",
-            "name": "J Ryan Russow"
-          }
-        }
-      ]
-    }
+        ]
+      }
     </script>
   </head>
 
