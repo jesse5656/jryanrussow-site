@@ -1,0 +1,9 @@
+{
+  "@type": "CollectionPage",
+  "name": "PAGE NAME",
+  "url": "CANONICAL URL",
+  "description": "PAGE DESCRIPTION",
+  "isPartOf": {
+    "@id": "https://jryanrussow.com/#website"
+  }
+}

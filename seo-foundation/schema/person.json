@@ -1,0 +1,13 @@
+{
+  "@type": "Person",
+  "@id": "https://jryanrussow.com/#person",
+  "name": "J Ryan Russow",
+  "alternateName": ["Jesse Russow", "Jesse R Russow"],
+  "url": "https://jryanrussow.com/about.html",
+  "jobTitle": "Entrepreneur, Coach, and Systems Builder",
+  "description": "J Ryan Russow is an entrepreneur, coach, and systems builder focused on wealth, strength, mindset, contractor operations, private cloud technology, and real-world resilience.",
+  "sameAs": [
+    "https://www.linkedin.com/in/jryanrussow/",
+    "https://www.facebook.com/jryanrussow"
+  ]
+}

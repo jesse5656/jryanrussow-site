@@ -1,0 +1,9 @@
+{
+  "@type": "WebSite",
+  "@id": "https://jryanrussow.com/#website",
+  "url": "https://jryanrussow.com/",
+  "name": "J Ryan Russow",
+  "publisher": {
+    "@id": "https://jryanrussow.com/#person"
+  }
+}

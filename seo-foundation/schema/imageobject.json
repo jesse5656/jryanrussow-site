@@ -1,0 +1,8 @@
+{
+  "@type": "ImageObject",
+  "url": "IMAGE URL",
+  "caption": "IMAGE CAPTION",
+  "creator": {
+    "@id": "https://jryanrussow.com/#person"
+  }
+}

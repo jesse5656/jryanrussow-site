@@ -1,0 +1,10 @@
+{
+  "@type": "Organization",
+  "@id": "https://jryanrussow.com/#organization",
+  "name": "J Ryan Russow",
+  "url": "https://jryanrussow.com/",
+  "logo": "https://jryanrussow.com/css/assets/images/jryanrussow-logo/jrr-shield-logo.webp",
+  "founder": {
+    "@id": "https://jryanrussow.com/#person"
+  }
+}

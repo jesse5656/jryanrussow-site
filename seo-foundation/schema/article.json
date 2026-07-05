@@ -1,0 +1,17 @@
+{
+  "@type": "Article",
+  "headline": "ARTICLE TITLE",
+  "description": "ARTICLE DESCRIPTION",
+  "author": {
+    "@id": "https://jryanrussow.com/#person"
+  },
+  "publisher": {
+    "@id": "https://jryanrussow.com/#organization"
+  },
+  "datePublished": "YYYY-MM-DD",
+  "dateModified": "YYYY-MM-DD",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "CANONICAL URL"
+  }
+}
