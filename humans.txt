@@ -1,0 +1,16 @@
+/* TEAM */
+
+J Ryan Russow
+Entrepreneur
+Coach
+Systems Builder
+
+https://jryanrussow.com
+
+/* SITE */
+
+HTML5
+CSS3
+JavaScript
+Cloudflare
+GitHub Pages
