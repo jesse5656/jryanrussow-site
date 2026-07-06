@@ -13,30 +13,30 @@ theme:
     - content.code.copy
 
 nav:
-  - Home: docs/philosophy/THE-DISCIPLINE.md
+  - Home: philosophy/THE-DISCIPLINE.md
   - Founding:
-      - Founding Summary: docs/founding/FOUNDING-CONVERSATION-SUMMARY.md
-      - Major Breakthroughs: docs/founding/MAJOR-BREAKTHROUGHS.md
-      - Project Separation: docs/founding/PROJECT-SEPARATION.md
+      - Founding Summary: founding/FOUNDING-CONVERSATION-SUMMARY.md
+      - Major Breakthroughs: founding/MAJOR-BREAKTHROUGHS.md
+      - Project Separation: founding/PROJECT-SEPARATION.md
   - Philosophy:
-      - Systems Philosophy: docs/philosophy/00-SYSTEMS-PHILOSOPHY.md
-      - Discipline: docs/philosophy/THE-DISCIPLINE.md
-      - Manifesto: docs/philosophy/11-MANIFESTO.md
-      - Definitions: docs/philosophy/DEFINITIONS.md
+      - Systems Philosophy: philosophy/00-SYSTEMS-PHILOSOPHY.md
+      - Discipline: philosophy/THE-DISCIPLINE.md
+      - Manifesto: philosophy/11-MANIFESTO.md
+      - Definitions: philosophy/DEFINITIONS.md
   - Canon:
-      - Canon Overview: docs/canon/README.md
+      - Canon Overview: canon/README.md
   - Research:
-      - Research Manifesto: docs/research/RESEARCH-MANIFESTO.md
-      - Research Standard: docs/research/RESEARCH-STANDARD.md
-      - Evidence Map Standard: docs/research/EVIDENCE-MAP-STANDARD.md
-      - Questions: docs/research/QUESTIONS.md
+      - Research Manifesto: research/RESEARCH-MANIFESTO.md
+      - Research Standard: research/RESEARCH-STANDARD.md
+      - Evidence Map Standard: research/EVIDENCE-MAP-STANDARD.md
+      - Questions: research/QUESTIONS.md
   - Field Research:
-      - Overview: docs/field-research/README.md
-      - Master Index: docs/field-research/MASTER-RESEARCH-INDEX.md
-      - Field Research Method: docs/field-research/FIELD-RESEARCH-METHOD.md
+      - Overview: field-research/README.md
+      - Master Index: field-research/MASTER-RESEARCH-INDEX.md
+      - Field Research Method: field-research/FIELD-RESEARCH-METHOD.md
   - Life Research:
-      - Overview: docs/life-research/README.md
-      - Research Standard: docs/life-research/RESEARCH-STANDARD.md
+      - Overview: life-research/README.md
+      - Research Standard: life-research/RESEARCH-STANDARD.md
   - Operations:
-      - Development Environment: docs/operations/development-environment/JESSE-DEVELOPMENT-ENVIRONMENT-STANDARD.md
-      - ChatGPT Workspace Standard: docs/operations/workspace/CHATGPT-PROJECT-WORKSPACE-STANDARD.md
+      - Development Environment: operations/development-environment/JESSE-DEVELOPMENT-ENVIRONMENT-STANDARD.md
+      - ChatGPT Workspace Standard: operations/workspace/CHATGPT-PROJECT-WORKSPACE-STANDARD.md
