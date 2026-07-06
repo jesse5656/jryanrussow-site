@@ -13,7 +13,7 @@ theme:
     - content.code.copy
 
 nav:
-  - Home: philosophy/THE-DISCIPLINE.md
+  - Home: index.md
   - Founding:
       - Founding Summary: founding/FOUNDING-CONVERSATION-SUMMARY.md
       - Major Breakthroughs: founding/MAJOR-BREAKTHROUGHS.md
