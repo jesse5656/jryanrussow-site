@@ -1,95 +1,167 @@
 # Constitution of the Systems Architect Discipline
 
-Version: 0.1.0
+Version: 1.0.0
 
 Status:
-Living Constitution
+Foundational
 
 ------------------------------------------------------------------------------
 
-Purpose
+## Preamble
 
-The Systems Architect Discipline exists to discover, organize, preserve,
-transfer, and continually improve practical knowledge that enables people,
-organizations, and future generations to become better stewards.
+The Systems Architect Discipline exists to discover, organize, preserve, improve, and transfer knowledge that strengthens people, organizations, and future generations.
 
-------------------------------------------------------------------------------
+Reality is the highest authority.
 
-Mission
+The Canon represents the current best understanding.
 
-Preserve what matters.
-
-Strengthen human capability.
-
-Return meaningful time.
-
-Create compounding freedom.
-
-Leave every generation better equipped than the one before it.
+The Discipline remains permanently open to revision through evidence, observation, and reason.
 
 ------------------------------------------------------------------------------
 
-Vision
+# Article I — Purpose
 
-To establish Systems Architecture as a practical discipline that integrates
-human development, organizational design, knowledge stewardship,
-technology, leadership, and continual improvement.
+The purpose of the Discipline is to answer the Core Question:
 
-------------------------------------------------------------------------------
-
-The Discipline Exists To
-
-Understand systems.
-
-Design systems.
-
-Improve systems.
-
-Teach systems.
-
-Preserve systems.
-
-Transfer systems.
+How do we intentionally build systems that preserve what matters while increasing human capability across generations?
 
 ------------------------------------------------------------------------------
 
-The Discipline Rejects
+# Article II — Authority
 
-Dogma
+The order of authority is:
 
-Hero worship
+1. Reality
+2. Evidence
+3. Observation
+4. Research
+5. Canon
+6. Frameworks
+7. Opinions
 
-Intellectual stagnation
-
-Needless complexity
-
-Knowledge hoarding
-
-Frameworks without evidence
-
-------------------------------------------------------------------------------
-
-The Discipline Values
-
-Stewardship
-
-Truth
-
-Humility
-
-Clarity
-
-Transferability
-
-Continuous Improvement
-
-Generational Thinking
-
-Human Flourishing
+No document outranks reality.
 
 ------------------------------------------------------------------------------
 
-North Star
+# Article III — Stewardship
 
-Enable people to preserve and compound human capability across generations.
+Knowledge is held in stewardship.
+
+The objective is not ownership.
+
+The objective is preservation and responsible transfer.
+
+------------------------------------------------------------------------------
+
+# Article IV — Continuous Revision
+
+Nothing enters the Canon because it is persuasive.
+
+It enters the Canon because it survives repeated contact with reality.
+
+Every document remains open to improvement.
+
+------------------------------------------------------------------------------
+
+# Article V — Research
+
+Research precedes conclusions.
+
+Questions precede answers.
+
+Field observations are valued.
+
+Contradictory evidence is welcomed.
+
+------------------------------------------------------------------------------
+
+# Article VI — Architecture
+
+The Discipline develops through:
+
+Research
+
+↓
+
+Observation
+
+↓
+
+Patterns
+
+↓
+
+Principles
+
+↓
+
+Frameworks
+
+↓
+
+Implementation
+
+↓
+
+Validation
+
+↓
+
+Revision
+
+------------------------------------------------------------------------------
+
+# Article VII — Standards
+
+Standards exist to reduce unnecessary variation.
+
+Preferences remain personal.
+
+Standards remain organizational.
+
+Whenever practical:
+
+Prefer standards over preferences.
+
+------------------------------------------------------------------------------
+
+# Article VIII — Publication
+
+The Canon develops according to the Canon Maturity Model.
+
+Concept
+
+↓
+
+Foundational Draft
+
+↓
+
+Reviewed Draft
+
+↓
+
+Field Validated
+
+↓
+
+Canon
+
+------------------------------------------------------------------------------
+
+# Article IX — Responsibility
+
+A Systems Architect accepts responsibility for preserving knowledge beyond themselves.
+
+The objective is durable capability rather than individual importance.
+
+------------------------------------------------------------------------------
+
+# Closing Statement
+
+This Constitution governs the development of the Systems Architect Discipline.
+
+It should change rarely.
+
+When it changes, it should become stronger, clearer, and more faithful to reality.
 
