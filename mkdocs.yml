@@ -47,3 +47,7 @@ nav:
   - Operations:
       - Development Environment: operations/development-environment/JESSE-DEVELOPMENT-ENVIRONMENT-STANDARD.md
       - ChatGPT Workspace Standard: operations/workspace/CHATGPT-PROJECT-WORKSPACE-STANDARD.md
+
+
+  - Standards:
+      - Knowledge Linking Standard: standards/KNOWLEDGE-LINKING-STANDARD.md
