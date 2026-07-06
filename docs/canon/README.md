@@ -1,60 +1,81 @@
-# The Russow Canon
+# The Canon
 
-Version: 0.1.0
+Version: 1.0.0
 
 Status:
-Living Canon
+Foundational
 
 ------------------------------------------------------------------------------
-
-Purpose
 
 The Canon is the authoritative body of knowledge for the Systems Architect
 Discipline.
 
-Everything published by the Russow Institute should ultimately derive from
-the Canon.
-
-The Canon continually evolves through research, observation, implementation,
-criticism, and refinement.
+Every major publication, framework, course, AI model, certification,
+and software implementation should ultimately derive from the Canon.
 
 ------------------------------------------------------------------------------
 
-Hierarchy
+Volume 00
 
-Russow Institute
-
-↓
-
-Systems Architect Discipline
-
-↓
-
-The Canon
-
-↓
-
-Books
-
-↓
-
-Courses
-
-↓
-
-Software
-
-↓
-
-Artificial Intelligence
-
-↓
-
-Consulting
+Constitution
 
 ------------------------------------------------------------------------------
 
-The Canon exists to preserve the current best understanding.
+Volume 01
 
-It is never considered complete.
+Foundational Philosophy
+
+------------------------------------------------------------------------------
+
+Volume 02
+
+Human Operating System
+
+------------------------------------------------------------------------------
+
+Volume 03
+
+Business Operating System
+
+------------------------------------------------------------------------------
+
+Volume 04
+
+Knowledge Operating System
+
+------------------------------------------------------------------------------
+
+Volume 05
+
+Social Operating System
+
+------------------------------------------------------------------------------
+
+Volume 06
+
+Framework Library
+
+------------------------------------------------------------------------------
+
+Volume 07
+
+Case Studies
+
+------------------------------------------------------------------------------
+
+Volume 08
+
+Research
+
+------------------------------------------------------------------------------
+
+Volume 09
+
+Future Work
+
+------------------------------------------------------------------------------
+
+The Canon is never considered complete.
+
+It represents the current best understanding of the discipline.
 
