@@ -24,6 +24,7 @@ nav:
       - Manifesto: philosophy/11-MANIFESTO.md
       - Definitions: philosophy/DEFINITIONS.md
   - Canon:
+      - Canon Maturity Model: canon/CANON-MATURITY-MODEL.md
       - Canon Overview: canon/README.md
       - Why This Discipline Exists: canon/volume-01-foundational-philosophy/00-WHY-THIS-DISCIPLINE-EXISTS.md
       - Why Systems Matter: canon/volume-01-foundational-philosophy/01-WHY-SYSTEMS-MATTER.md
