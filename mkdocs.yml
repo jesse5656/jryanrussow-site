@@ -1,0 +1,42 @@
+site_name: Systems Architect Discipline
+site_description: Research, Canon, Field Research, and Knowledge Architecture by J. Ryan Russow
+site_author: J. Ryan Russow
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+nav:
+  - Home: docs/philosophy/THE-DISCIPLINE.md
+  - Founding:
+      - Founding Summary: docs/founding/FOUNDING-CONVERSATION-SUMMARY.md
+      - Major Breakthroughs: docs/founding/MAJOR-BREAKTHROUGHS.md
+      - Project Separation: docs/founding/PROJECT-SEPARATION.md
+  - Philosophy:
+      - Systems Philosophy: docs/philosophy/00-SYSTEMS-PHILOSOPHY.md
+      - Discipline: docs/philosophy/THE-DISCIPLINE.md
+      - Manifesto: docs/philosophy/11-MANIFESTO.md
+      - Definitions: docs/philosophy/DEFINITIONS.md
+  - Canon:
+      - Canon Overview: docs/canon/README.md
+  - Research:
+      - Research Manifesto: docs/research/RESEARCH-MANIFESTO.md
+      - Research Standard: docs/research/RESEARCH-STANDARD.md
+      - Evidence Map Standard: docs/research/EVIDENCE-MAP-STANDARD.md
+      - Questions: docs/research/QUESTIONS.md
+  - Field Research:
+      - Overview: docs/field-research/README.md
+      - Master Index: docs/field-research/MASTER-RESEARCH-INDEX.md
+      - Field Research Method: docs/field-research/FIELD-RESEARCH-METHOD.md
+  - Life Research:
+      - Overview: docs/life-research/README.md
+      - Research Standard: docs/life-research/RESEARCH-STANDARD.md
+  - Operations:
+      - Development Environment: docs/operations/development-environment/JESSE-DEVELOPMENT-ENVIRONMENT-STANDARD.md
+      - ChatGPT Workspace Standard: docs/operations/workspace/CHATGPT-PROJECT-WORKSPACE-STANDARD.md
