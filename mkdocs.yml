@@ -50,4 +50,5 @@ nav:
 
 
   - Standards:
+      - Progressive Disclosure Standard: standards/PROGRESSIVE-DISCLOSURE-STANDARD.md
       - Knowledge Linking Standard: standards/KNOWLEDGE-LINKING-STANDARD.md
