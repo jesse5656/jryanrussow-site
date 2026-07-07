@@ -5,75 +5,45 @@ Version: 1.0.0
 Status:
 Active
 
-------------------------------------------------------------------------------
-
 ## Purpose
 
-Field Laboratories preserve real-world experience as research data.
+Field Laboratories organize major real-world domains where long-term observations were generated.
 
-They are not memoirs.
+They are not raw memoir folders.
 
-They are long-term observational records that generate research questions, evidence, case studies, frameworks, and Canon candidates.
+They are research containers.
 
-Experience alone is not evidence.
+## Source Material
 
-Experience becomes evidence only after it is documented, analyzed, challenged, and compared with other sources.
+Raw narratives are captured first in:
 
-Field Laboratories provide the empirical foundation of the Systems Architect Discipline.
+docs/life-research/12-Dictation-Inbox/
 
-------------------------------------------------------------------------------
+Then relevant material may be linked or summarized into the appropriate Field Laboratory.
 
-## Capture Philosophy
+## Field Laboratory Rule
 
-Capture before compression.
+Do not duplicate full raw stories here.
 
-Document first.
+Use this area to organize:
 
-Interpret later.
+- timelines
+- observations
+- recurring patterns
+- research questions
+- lessons learned
+- related documents
+- related case studies
 
-------------------------------------------------------------------------------
+## Current Laboratories
 
-## Workflow
-
-Experience
-
-↓
-
-Narrative Capture
-
-↓
-
-Timeline
-
-↓
-
-Observations
-
-↓
-
-Research Questions
-
-↓
-
-Evidence
-
-↓
-
-Case Studies
-
-↓
-
-Research Papers
-
-↓
-
-Frameworks
-
-↓
-
-Canon Candidates
-
-↓
-
-Canon
-
+- Avalanche Roofing
+- MIDWESTGuard
+- Leadership Pikes Peak
+- BBB Excellence
+- Recovery
+- Strength Training
+- Youth Wrestling
+- Youth Football
+- Midwest24
+- Systems Architect Discipline

@@ -1,21 +1,32 @@
 # Field Research
 
-This section captures the real-world experiences, turning points, failures, successes, and observations that produced the Systems Architect Discipline.
+Version: 1.0.0
 
-The purpose is not memoir.
+Status:
+Living Research Archive
 
-The purpose is extraction.
+## Purpose
 
-Experience becomes observation.
+Field Research captures specific observations from real-world experience.
 
-Observation becomes pattern.
+A Field Research note should usually be narrower than a Field Laboratory.
 
-Pattern becomes question.
+## Relationship to Life Research
 
-Question becomes research.
+Life Research preserves raw narrative.
 
-Research becomes principle.
+Field Research extracts specific observations.
 
-Principle becomes framework.
+## Relationship to Case Studies
 
-Framework earns its place in the Canon only after testing.
+Case Studies are more polished and analytical.
+
+Field Research may later become evidence inside a case study.
+
+## Rule
+
+Do not confuse experience with conclusion.
+
+Capture what happened.
+
+Then identify questions, patterns, and possible principles.

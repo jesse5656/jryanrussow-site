@@ -5,63 +5,34 @@ Version: 1.0.0
 Status:
 Living Research Archive
 
-------------------------------------------------------------------------------
+## Purpose
 
-Purpose
+Life Research preserves personal experience as raw longitudinal data.
 
-This repository is not a memoir.
+This is not memoir writing yet.
 
-It is a research archive.
+This is evidence capture.
 
-The objective is to preserve lived experience,
-extract transferable knowledge,
-identify recurring patterns,
-develop principles,
-and strengthen the Systems Architect Discipline.
+## Relationship to Other Sections
 
-------------------------------------------------------------------------------
+Raw stories and dictated memories belong here first.
 
-Workflow
+Field Laboratories organize repeated domains of experience.
 
-Experience
+Field Research extracts specific observations.
 
-↓
+Case Studies become polished analysis.
 
-Observation
+Papers synthesize arguments.
 
-↓
+Canon preserves mature principles.
 
-Pattern
+## Core Rule
 
-↓
+Experience is not proof.
 
-Question
+Experience becomes research when it is documented, analyzed, challenged, compared, and integrated into a broader body of knowledge.
 
-↓
+## Capture Rule
 
-Research
-
-↓
-
-Principle
-
-↓
-
-Framework
-
-↓
-
-Canon
-
-------------------------------------------------------------------------------
-
-Rule
-
-Reality comes before interpretation.
-
-Primary sources outweigh memory.
-
-Memory informs research.
-
-Research informs the Canon.
-
+Capture before compression.
