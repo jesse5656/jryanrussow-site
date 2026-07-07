@@ -81,3 +81,10 @@ nav:
 
   - Research Hypotheses:
       - Capability Compounds: research/hypotheses/001-CAPABILITY-COMPOUNDS.md
+
+
+  - Institute:
+      - Institute Overview: institute/README.md
+      - Traceability Standard: institute/TRACEABILITY-STANDARD.md
+      - Primary Source Standard: institute/PRIMARY-SOURCE-STANDARD.md
+      - Knowledge Lineage: institute/KNOWLEDGE-LINEAGE.md
