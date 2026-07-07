@@ -60,3 +60,10 @@ nav:
 
   - Workflows:
       - Research Workflow: workflows/RESEARCH-WORKFLOW.md
+
+
+  - Strategy:
+      - Phases: strategy/PHASES.md
+      - Roadmap: strategy/ROADMAP.md
+      - Milestones: strategy/MILESTONES.md
+      - Research Agenda: strategy/RESEARCH-AGENDA.md
