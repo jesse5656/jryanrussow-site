@@ -31,3 +31,76 @@ matches:
       git log --oneline --decorate -5
 
       tree docs -L 3
+
+  - trigger: ":start"
+    replace: |
+      cd ~/Documents/Projects/jryanrussow-site
+
+      pwd
+
+      git branch --show-current
+
+      git status --short
+
+      git log --oneline --decorate -5
+
+      tree docs -L 3
+
+      cat START-HERE.md
+
+      cat docs/discipline/OPERATING-PLAN.md
+
+      cat docs/research-programs/001-institutional-memory/README.md
+
+  - trigger: ":rp001"
+    replace: |
+      tree docs/research-programs/001-institutional-memory -L 4
+
+      find docs/research-programs/001-institutional-memory -maxdepth 3 -type f | sort
+
+  - trigger: ":gitcheck"
+    replace: |
+      git status --short
+
+      git log --oneline --decorate -5
+
+  - trigger: ":gitpush"
+    replace: |
+      git status --short
+
+      git add .
+
+      git commit -m ""
+
+      git push origin main
+
+  - trigger: ":archivechat"
+    replace: |
+      We have reached the point where this conversation should be archived.
+
+      Do NOT continue implementation yet.
+
+      Prepare this project for transition into a new chat.
+
+      The repository—not this conversation—is now the source of truth.
+
+      Generate a complete Session Transition Prompt for the next chat.
+
+      Include:
+      - repository location
+      - repository verification commands
+      - current operating assumptions
+      - highest-priority objective
+      - active work in progress
+      - deferred work
+      - ACP/OCP rule
+      - standard close format
+
+      Also generate an Archive Summary documenting:
+      - major architectural decisions
+      - repository evolution
+      - operational improvements
+      - workflows established
+      - standards adopted
+      - aliases established
+      - remaining work

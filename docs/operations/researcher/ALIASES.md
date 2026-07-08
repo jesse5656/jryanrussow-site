@@ -1,24 +1,88 @@
 # Researcher Aliases
 
-Purpose
+Purpose:
 
-Maintain a single source of truth for recurring commands, aliases, and shortcuts used throughout Institute work.
+This file is the single source of truth for recurring commands, aliases, shortcuts, and daily project phrases used in Russow Institute work.
 
 ---
 
 ## ChatGPT Aliases
 
 EOP
+
+Expands to:
+
 Execute the Operating Plan.
 
+Purpose:
+
+Tell ChatGPT to inspect the repository, read the operating plan, and continue the highest-priority objective.
+
+---
+
 ACP
-Architecture Change Proposal.
+
+Expands to:
+
+Architecture Change Proposal
+
+Purpose:
+
+Used when a proposed change affects repository structure, doctrine, standards, folder taxonomy, or long-term architecture.
+
+---
 
 OCP
-Operational Change Proposal.
+
+Expands to:
+
+Operational Change Proposal
+
+Purpose:
+
+Used when a proposed change affects recurring workflows, tools, aliases, session procedures, or operating behavior.
+
+---
 
 CLOSE
-Close the session using:
+
+Expands to:
+
+Completed
+
+Current Objective
+
+Next Concrete Step
+
+Deferred
+
+Purpose:
+
+Standard session close format.
+
+---
+
+## Espanso Triggers
+
+:eop
+
+Execute the Operating Plan.
+
+---
+
+:acp
+
+Architecture Change Proposal
+
+---
+
+:ocp
+
+Operational Change Proposal
+
+---
+
+:close
 
 Completed
 
@@ -30,38 +94,90 @@ Deferred
 
 ---
 
-Future aliases should be documented here before becoming standard practice.
+:repo
+
+Repository verification block.
+
+Includes:
+
+cd ~/Documents/Projects/jryanrussow-site
+
+pwd
+
+git branch --show-current
+
+git status --short
+
+git log --oneline --decorate -5
+
+tree docs -L 3
 
 ---
 
-## Espanso
+:start
 
-Document every permanent text expansion.
+Full Systems Architect Discipline session start.
 
-Include:
+Includes repository verification plus:
 
-- trigger
-- expansion
-- purpose
+cat START-HERE.md
 
----
+cat docs/discipline/OPERATING-PLAN.md
 
-## Shell Aliases
-
-Document reusable shell aliases.
+cat docs/research-programs/001-institutional-memory/README.md
 
 ---
 
-## Vocalinux
+:rp001
 
-Document spoken commands and dictation shortcuts.
+Research Program 001 inspection.
+
+---
+
+:gitcheck
+
+Quick Git status and recent history.
+
+---
+
+:gitpush
+
+Generic add, commit, push scaffold.
+
+The commit message must be filled in manually.
+
+---
+
+:archivechat
+
+Generates the standard long-chat archive / transition instruction.
+
+---
+
+## Configuration Locations
+
+Repository source of truth:
+
+config/espanso/base.yml
+
+Live Espanso config:
+
+~/.config/espanso/match/base.yml
+
+Deployment command:
+
+cp config/espanso/base.yml ~/.config/espanso/match/base.yml
+espanso restart
 
 ---
 
 ## Governance
 
-Whenever an alias changes:
+When an alias changes:
 
-1. Update this file.
-2. Update Espanso if applicable.
-3. Update ChatGPT Project Instructions if applicable.
+1. Update config/espanso/base.yml
+2. Copy it to ~/.config/espanso/match/base.yml
+3. Restart Espanso
+4. Update this ALIASES.md file
+5. Commit the change
+6. If ChatGPT must understand the alias, update ChatGPT Project Instructions
