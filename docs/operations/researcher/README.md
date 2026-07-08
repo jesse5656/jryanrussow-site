@@ -14,6 +14,8 @@ It describes how researchers perform work.
 
 Contents
 
+- Research Program Execution
+
 - Aliases
 - Session Commands
 - ChatGPT Workflow
