@@ -32,3 +32,13 @@ See the `/docs` directory.
 6. Verify Deployment
 7. Request Indexing
 
+
+
+---
+
+## Daily Workflow
+
+Begin every work session by reading:
+
+- START-HERE.md
+
