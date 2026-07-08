@@ -110,3 +110,22 @@ The active chat always retains the repository workstream name.
 
 The archived chat becomes part of the historical record.
 
+
+
+------------------------------------------------------------------------------
+
+## Chat Session Archival Standard
+
+Chats are working sessions.
+
+Repositories are institutional memory.
+
+Git commits are historical milestones.
+
+When a chat becomes slow, reaches a natural milestone, or is being replaced, archive it using:
+
+YYYY-MM-DD — Repository — Sprint Name
+
+Example:
+
+2026-07-08 — Systems Architect — Foundation Sprint 01
