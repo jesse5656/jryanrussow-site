@@ -74,3 +74,13 @@ Current Objective
 Next Concrete Step
 
 Deferred
+
+
+------------------------------------------------------------------------------
+
+## Repository Governance
+
+Repository governance procedures, ACP/OCP workflow, protected files, Git
+guardrails, validation scripts, and automation standards are documented in:
+
+docs/handbook/06-REPOSITORY-GOVERNANCE.md
