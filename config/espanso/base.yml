@@ -1,0 +1,33 @@
+matches:
+  - trigger: ":eop"
+    replace: "Execute the Operating Plan."
+
+  - trigger: ":acp"
+    replace: "Architecture Change Proposal"
+
+  - trigger: ":ocp"
+    replace: "Operational Change Proposal"
+
+  - trigger: ":close"
+    replace: |
+      Completed
+
+      Current Objective
+
+      Next Concrete Step
+
+      Deferred
+
+  - trigger: ":repo"
+    replace: |
+      cd ~/Documents/Projects/jryanrussow-site
+
+      pwd
+
+      git branch --show-current
+
+      git status --short
+
+      git log --oneline --decorate -5
+
+      tree docs -L 3
