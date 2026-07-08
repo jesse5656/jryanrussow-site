@@ -183,3 +183,19 @@ Last Review
 
 Weekly
 
+
+
+------------------------------------------------------------------------------
+
+# Session Management
+
+When a work session reaches a natural milestone or conversation performance begins to degrade:
+
+□ Commit all completed work.
+
+□ Update this Operating Plan if priorities changed.
+
+□ Archive the completed chat using the repository chat naming standard.
+
+□ Begin a new work session by following START-HERE.md.
+

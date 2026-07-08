@@ -79,3 +79,34 @@ START-HERE.md explains how to begin work.
 
 OPERATING-PLAN.md explains what the Discipline is doing now.
 
+
+
+------------------------------------------------------------------------------
+
+## Chat Session Standard
+
+ChatGPT conversations are temporary working sessions.
+
+The repository is the institutional memory.
+
+When a chat becomes long, slow, or reaches a natural milestone:
+
+1. Commit all work.
+2. Update OPERATING-PLAN.md if priorities changed.
+3. Start a NEW ChatGPT conversation.
+4. Archive the previous chat.
+
+Archived chats shall use the following naming convention:
+
+YYYY-MM-DD — Repository — Sprint Name
+
+Examples:
+
+2026-07-08 — Systems Architect — Foundation Sprint 01
+2026-07-10 — Systems Architect — Institutional Memory Sprint
+2026-07-15 — Systems Architect — Challenger Evidence Sprint
+
+The active chat always retains the repository workstream name.
+
+The archived chat becomes part of the historical record.
+
