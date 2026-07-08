@@ -1,6 +1,6 @@
 # Systems Architect Discipline Operating Plan
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status:
 Active
@@ -9,193 +9,63 @@ Active
 
 ## Purpose
 
-This document governs the day-to-day execution of the Systems Architect Discipline.
-
-The Constitution defines why the Discipline exists.
-
-The Canon defines what the Discipline currently believes.
-
-The Operating Plan defines what the Discipline is doing now.
-
-Every work session should begin here.
+This document defines current execution for the Systems Architect Discipline.
 
 ------------------------------------------------------------------------------
 
-# Current Phase
+# Current Objective
 
-Phase II — Evidence
+Type:
+Research Program
 
-Goal:
+Name:
+Institutional Memory Evidence Development
 
-Transition from designing the Discipline to producing original scholarship.
+Status:
+In Progress
 
-Architecture changes should become uncommon.
+Objective:
+Advance Research Program 001 by extracting evidence, strengthening the NASA Challenger case study, and revising the Institutional Memory paper.
 
-Research and evidence become the primary focus.
+Scope:
+- Rogers Commission evidence extraction
+- NASA Challenger case study development
+- Institutional Memory paper revision
+- Knowledge lineage validation
+- Primary source workflow validation
 
-------------------------------------------------------------------------------
+Success Criteria:
+- Evidence extracted from at least one primary source
+- Case study updated with evidence
+- Institutional Memory paper improved
+- Related documents linked where appropriate
 
-# Current Quarter Objectives
-
-## Objective 1 (Highest Priority)
-
-Research Program 001 — Institutional Memory
-
-Deliverables
-
-□ Complete Rogers Commission evidence extraction
-
-□ Complete NASA Challenger case study
-
-□ Revise Institutional Memory paper
-
-□ Produce first mature framework
-
-------------------------------------------------------------------------------
-
-## Objective 2
-
-Primary Source Capture System
-
-Deliverables
-
-□ Establish Vocalinux workflow
-
-□ Capture first 25 primary source narratives
-
-□ Organize narratives into Life Research
-
-□ Link narratives to Field Laboratories
+Definition of Done:
+□ Objective completed
+□ Validation completed
+□ Verification completed
+□ Documentation updated
+□ OPERATING-PLAN.md updated
+□ Git commit completed if repository changes occurred
 
 ------------------------------------------------------------------------------
 
-## Objective 3
+# Priority Queue
 
-Midwest24 Archive Validation
-
-Deliverables
-
-□ Continue Archive development only when it directly supports Research Program 001
-
-□ Validate knowledge lineage model
-
-□ Validate traceability model
-
-------------------------------------------------------------------------------
-
-# Weekly Cadence
-
-Primary Sources
-
-Goal:
-
-3 Vocalinux sessions
-
-Research
-
-Goal:
-
-Read one primary source
-
-Writing
-
-Goal:
-
-Revise one paper
-
-Evidence
-
-Goal:
-
-Extract one evidence set
-
-Field Research
-
-Goal:
-
-Capture one observation
-
-Repository Maintenance
-
-Only when necessary.
-
-------------------------------------------------------------------------------
-
-# Current Reading Queue
-
-1. Rogers Commission Report
-
-2. Columbia Accident Investigation Board Report
-
-3. Toyota Kata
-
-4. Working Knowledge
-
-------------------------------------------------------------------------------
-
-# Parking Lot
-
-The following topics remain important but are intentionally deferred.
-
-- Human Operating System
-
-- Business Operating System
-
-- Language as Infrastructure
-
-- Cost of Rediscovery
-
-- Textbook
-
-- Canon Expansion
-
-- Additional Research Programs
-
-------------------------------------------------------------------------------
-
-# Decision Rules
-
-When choosing work:
-
-1. Follow the Operating Plan.
-
-2. Finish before expanding.
-
-3. Research before architecture.
-
-4. Preserve before compressing.
-
-5. Capture decisions.
-
-Delay commitments.
-
-------------------------------------------------------------------------------
-
-# Definition of Success
-
-Success is not measured by the number of documents produced.
-
-Success is measured by increasing human and organizational capability through evidence-based research, validated systems, and disciplined stewardship.
-
-------------------------------------------------------------------------------
-
-Last Review
-
-Weekly
-
-
+1. Complete Rogers Commission evidence extraction
+2. Complete NASA Challenger case study
+3. Revise Institutional Memory paper
+4. Validate Primary Source workflow with Vocalinux narratives
+5. Review North Star candidates after evidence development
 
 ------------------------------------------------------------------------------
 
 # Session Management
 
-When a work session reaches a natural milestone or conversation performance begins to degrade:
+When Current Objective is complete:
 
-□ Commit all completed work.
-
-□ Update this Operating Plan if priorities changed.
-
-□ Archive the completed chat using the repository chat naming standard.
-
-□ Begin a new work session by following START-HERE.md.
-
+1. Verify against Definition of Done.
+2. Update OPERATING-PLAN.md.
+3. Promote Priority Queue item #1 if appropriate.
+4. Commit changes.
+5. Stop.
