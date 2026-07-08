@@ -129,3 +129,12 @@ YYYY-MM-DD — Repository — Sprint Name
 Example:
 
 2026-07-08 — Systems Architect — Foundation Sprint 01
+
+
+------------------------------------------------------------------------------
+
+## Researcher Handbook
+
+For daily aliases, Espanso triggers, recurring prompts, Vocalinux workflow, Git commands, and researcher operating shortcuts, see:
+
+docs/handbook/RESEARCHER-HANDBOOK.md
