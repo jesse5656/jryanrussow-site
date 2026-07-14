@@ -1,3 +1,10 @@
+# Researcher Operations
+
+Version: 1.0.0
+
+Status:
+Active
+
 # Researcher Handbook
 
 The Researcher Handbook contains the recurring operational knowledge required to perform research inside the Russow Institute.
@@ -38,3 +45,9 @@ Research Standards
 
 Researcher Handbook
     Daily operational practice.
+
+## Primary Daily Reference
+
+Start here for recurring work:
+
+- [Daily Operations](DAILY-OPERATIONS.md)

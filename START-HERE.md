@@ -137,4 +137,4 @@ Example:
 
 For daily aliases, Espanso triggers, recurring prompts, Vocalinux workflow, Git commands, and researcher operating shortcuts, see:
 
-docs/handbook/RESEARCHER-HANDBOOK.md
+docs/operations/researcher/DAILY-OPERATIONS.md

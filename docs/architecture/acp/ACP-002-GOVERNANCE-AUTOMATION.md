@@ -36,7 +36,7 @@
         - `docs/institute/CONSTITUTIONAL-HIERARCHY.md`
 - `docs/discipline/CONSTITUTION.md`
 - `docs/handbook/06-REPOSITORY-GOVERNANCE.md`
-- `docs/handbook/RESEARCHER-HANDBOOK.md`
+- `docs/operations/researcher/DAILY-OPERATIONS.md`
 - `docs/standards/DETERMINISTIC-AUTOMATION-STANDARD.md`
 - `docs/operations/REPOSITORY-CHANGE-WORKFLOW.md`
 - `docs/operations/workspace/AI-COLLABORATION-STANDARD.md`

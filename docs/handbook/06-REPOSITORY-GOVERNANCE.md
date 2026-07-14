@@ -151,4 +151,4 @@ START-HERE.md
 
 docs/discipline/OPERATING-PLAN.md
 
-docs/handbook/RESEARCHER-HANDBOOK.md
+docs/operations/researcher/DAILY-OPERATIONS.md

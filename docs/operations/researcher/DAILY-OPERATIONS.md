@@ -1,4 +1,4 @@
-# Researcher Handbook
+# Daily Operations
 
 Version: 0.1.0
 
@@ -77,6 +77,23 @@ Deferred
 
 
 ------------------------------------------------------------------------------
+
+## Quick Purpose
+
+This is the primary day-to-day operating reference for work inside the Russow Institute.
+
+Use this file when you need to remember:
+
+- how to start a session;
+- how to execute the Operating Plan;
+- how to use Repository Context Resolution;
+- how to use Governance Enforcement;
+- when an ACP or OCP is required;
+- where aliases and recurring commands are documented;
+- how to close or transition a session.
+
+------------------------------------------------------------------------------
+
 
 ## Repository Governance
 
