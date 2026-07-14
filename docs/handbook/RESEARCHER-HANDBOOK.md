@@ -84,3 +84,51 @@ Repository governance procedures, ACP/OCP workflow, protected files, Git
 guardrails, validation scripts, and automation standards are documented in:
 
 docs/handbook/06-REPOSITORY-GOVERNANCE.md
+
+------------------------------------------------------------------------------
+
+## Repository Change Workflow
+
+All work intended to modify a governed repository follows this sequence:
+
+Intent to Change Repository
+
+↓
+
+Repository Context Resolution
+
+↓
+
+Engineering, Research, or Operational Work
+
+↓
+
+Governance Enforcement
+
+↓
+
+Commit
+
+Before beginning repository changes, run:
+
+```bash
+python3 scripts/platform/repository_context.py
+```
+
+Before committing governed changes, stage the intended files and run:
+
+```bash
+python3 scripts/governance/governance_engine.py --staged
+```
+
+Protected changes require an approved Architecture Change Proposal (ACP) or Operational Change Proposal (OCP) whose declared scope covers the changed files.
+
+Repository Context Resolution provides applicable context.
+
+Governance Enforcement applies deterministic, machine-verifiable policy.
+
+Neither capability replaces architectural judgment or human decision-making.
+
+Canonical procedure:
+
+`docs/operations/REPOSITORY-CHANGE-WORKFLOW.md`

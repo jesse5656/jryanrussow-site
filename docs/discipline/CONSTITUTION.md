@@ -157,6 +157,25 @@ The objective is durable capability rather than individual importance.
 
 ------------------------------------------------------------------------------
 
+# Article X — Repository Context and Governance Stability
+
+Implementation shall be informed by the applicable repository context.
+
+Architectural judgment remains a human responsibility.
+
+Governance should evolve primarily through classification rather than
+restructuring.
+
+Existing documentation should be classified within the appropriate
+governance layer whenever practical.
+
+Documentation should be relocated only when a demonstrated maintenance,
+usability, or architectural benefit justifies the change.
+
+Preference shall be given to the smallest architectural change necessary.
+
+------------------------------------------------------------------------------
+
 # Closing Statement
 
 This Constitution governs the development of the Systems Architect Discipline.
@@ -164,4 +183,3 @@ This Constitution governs the development of the Systems Architect Discipline.
 It should change rarely.
 
 When it changes, it should become stronger, clearer, and more faithful to reality.
-

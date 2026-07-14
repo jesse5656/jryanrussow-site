@@ -29,6 +29,36 @@ The objective is to make architecture changes intentional rather than accidental
 
 ------------------------------------------------------------------------------
 
+# Governance Classification
+
+Repository governance uses the following document classification:
+
+1. Constitution
+2. Engineering Standards
+3. Operational Procedures
+4. Implementation Guides
+5. AI Collaboration Standards
+
+Engineering policy belongs in Engineering Standards.
+
+Repeatable engineering, research, and business workflows belong in
+Operational Procedures.
+
+Repository-specific technical choices belong in Implementation Guides.
+
+AI assistant expectations belong in AI Collaboration Standards.
+
+AI Collaboration Standards are implementation guidance. They shall neither
+establish nor modify constitutional governance, Engineering Standards, or
+Operational Procedures.
+
+Existing documents should be classified before they are relocated.
+
+Relocation requires a demonstrated maintenance, usability, or architectural
+benefit.
+
+------------------------------------------------------------------------------
+
 # Protected Repository Assets
 
 The following files and folders are considered governance assets.
@@ -122,4 +152,3 @@ START-HERE.md
 docs/discipline/OPERATING-PLAN.md
 
 docs/handbook/RESEARCHER-HANDBOOK.md
-

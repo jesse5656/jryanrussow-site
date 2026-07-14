@@ -107,7 +107,49 @@ All publications derive from higher levels.
 
 ------------------------------------------------------------------------------
 
+Repository Governance Classification
+
+The existing hierarchy in this document defines knowledge authority.
+
+Repository governance uses a separate classification model for governance
+documents:
+
+1. Constitution
+2. Engineering Standards
+3. Operational Procedures
+4. Implementation Guides
+5. AI Collaboration Standards
+
+This classification augments rather than replaces the knowledge-authority
+hierarchy.
+
+The Constitution defines enduring organizational principles.
+
+Engineering Standards define engineering policy applicable to all
+contributors.
+
+Operational Procedures define repeatable engineering, research, and
+business workflows.
+
+Implementation Guides define current repository-specific technical
+implementation decisions.
+
+AI Collaboration Standards define expectations for AI assistants operating
+within established repository governance.
+
+Governance Precedence
+
+Higher governance layers are authoritative.
+
+Lower governance layers may refine, extend, or implement higher-layer
+requirements but shall not contradict, weaken, or supersede them.
+
+When a lower-layer document cannot satisfy a higher-layer requirement, the
+conflict shall be resolved by modifying the lower-layer document or through
+the established governance process for revising the higher layer.
+
+------------------------------------------------------------------------------
+
 Rule
 
 Nothing may contradict a higher level without revising the higher level first.
-
