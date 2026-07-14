@@ -5,13 +5,47 @@ Version: 1.1.0
 Status:
 Active
 
-------------------------------------------------------------------------------
+---
 
 ## Purpose
 
 This document defines current execution for the Systems Architect Discipline.
 
-------------------------------------------------------------------------------
+---
+
+# Engineering Execution Rules
+
+These rules apply to every engineering objective unless explicitly overridden.
+
+1. Repository First
+   - The repository is the source of truth.
+   - Do not rely on chat history to determine implementation state.
+
+2. Pre-Implementation Audit (Required)
+   - Before generating implementation code, audit the repository to determine whether the requested capability:
+     - already exists,
+     - is partially implemented, or
+     - is missing.
+   - Do not implement a capability that already exists.
+   - If partially implemented, extend the existing implementation instead of creating a duplicate.
+
+3. Single Implementation Block
+   - Generate implementation as one copy/paste-safe bash block.
+   - Use Python file writers when creating or modifying files.
+   - Avoid nested heredocs.
+   - Validate the implementation before generating any commit commands.
+
+4. Validation
+   - Execute targeted validation first.
+   - Execute the full test suite after targeted validation succeeds.
+   - Do not generate commit commands until all validation passes.
+
+5. Architecture Stability
+   - Existing architecture is assumed correct.
+   - Do not redesign architecture unless the Current Objective explicitly requires it.
+   - Architectural changes require an approved Architecture Change Proposal (ACP) or Operational Change Proposal (OCP).
+
+---
 
 # Current Objective
 
@@ -28,6 +62,7 @@ Objective:
 Advance Research Program 001 by extracting evidence, strengthening the NASA Challenger case study, and revising the Institutional Memory paper.
 
 Scope:
+
 - Rogers Commission evidence extraction
 - NASA Challenger case study development
 - Institutional Memory paper revision
@@ -35,6 +70,7 @@ Scope:
 - Primary source workflow validation
 
 Success Criteria:
+
 - Evidence extracted from at least one primary source
 - Case study updated with evidence
 - Institutional Memory paper improved
@@ -48,7 +84,7 @@ Definition of Done:
 □ OPERATING-PLAN.md updated
 □ Git commit completed if repository changes occurred
 
-------------------------------------------------------------------------------
+---
 
 # Priority Queue
 
@@ -58,7 +94,7 @@ Definition of Done:
 4. Validate Primary Source workflow with Vocalinux narratives
 5. Review North Star candidates after evidence development
 
-------------------------------------------------------------------------------
+---
 
 # Session Management
 
