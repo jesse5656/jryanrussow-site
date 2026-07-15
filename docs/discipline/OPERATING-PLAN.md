@@ -45,7 +45,13 @@ These rules apply to every engineering objective unless explicitly overridden.
    - Do not redesign architecture unless the Current Objective explicitly requires it.
    - Architectural changes require an approved Architecture Change Proposal (ACP) or Operational Change Proposal (OCP).
 
----
+6. Shell Safety
+   - Never enable `set -e`, `set -u`, or equivalent strict shell options directly in an interactive terminal session.
+   - If strict shell behavior is required, isolate it inside a subshell or standalone script.
+   - Engineering command blocks shall leave the user's interactive shell in its normal operating state.
+   - Diagnostic commands that may legitimately return a nonzero result shall report their exit code without terminating the interactive shell.
+
+------------------------------------------------------------------------------
 
 # Current Objective
 
