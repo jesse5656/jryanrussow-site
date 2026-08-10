@@ -9,6 +9,27 @@ Active Reference
 
 This handbook is the central reference for recurring commands, aliases, prompts, shortcuts, tools, and daily workflows used across the Russow Institute projects.
 
+## Daily Orientation
+
+When the larger purpose or structure of the work becomes unclear, review:
+
+`docs/institute/INSTITUTE-ARCHITECTURE.md`
+
+Use the Master Institute Map to answer:
+
+- What are we building?
+- How does research become mature knowledge?
+- Where does the Canon fit?
+- Where do curriculum and teaching fit?
+- How do applied laboratories contribute?
+- How does application feed new observations back into research?
+
+The Institute Architecture provides strategic orientation.
+
+The Operating Plan remains authoritative for the work that is active now.
+
+------------------------------------------------------------------------------
+
 ## Folder Boundary
 
 docs/operations/ = repository and project maintenance.

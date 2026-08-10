@@ -15,6 +15,71 @@ organizations that support and apply the discipline.
 
 ------------------------------------------------------------------------------
 
+## Master Institute Map
+
+Use this map when orientation to the larger system is needed.
+
+It summarizes the relationship between knowledge development, the Canon,
+curriculum and teaching, application, and feedback.
+
+It does not replace the detailed Institute Architecture, Knowledge Lifecycle,
+Knowledge Lineage, Canon Structure, Phases, or Roadmap.
+
+```text
+                              RUSSOW INSTITUTE
+                         Steward of the Discipline
+                                  │
+                                  ▼
+                      SYSTEMS ARCHITECT DISCIPLINE
+                                  │
+                                  ▼
+                         KNOWLEDGE DEVELOPMENT
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+              ▼                   ▼                   ▼
+           Research            Evidence          Case Studies
+              │                   │                   │
+              └───────────────────┼───────────────────┘
+                                  ▼
+                              Frameworks
+                                  │
+                                  ▼
+                               THE CANON
+                      Current Best Understanding
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+              ▼                   ▼                   ▼
+         Publications        Curriculum /       Implementation
+                               Teaching
+              │                   │                   │
+              └───────────────────┼───────────────────┘
+                                  ▼
+                         APPLIED LABORATORIES
+                                  │
+                 ┌────────────────┼────────────────┐
+                 │                │                │
+                 ▼                ▼                ▼
+           MIDWESTGuard      Midwest24 Core    Future Ventures
+                 │                │                │
+                 └────────────────┼────────────────┘
+                                  ▼
+                              NEW REALITY
+                                  │
+                                  ▼
+                       Observation / Feedback
+                                  │
+                                  └──────────────► Research
+
+Related authoritative documents:
+
+KNOWLEDGE-LIFECYCLE.md — how ideas mature.
+KNOWLEDGE-LINEAGE.md — how knowledge remains traceable.
+../canon/CANON-STRUCTURE.md — how mature knowledge is organized.
+../strategy/PHASES.md — the development sequence.
+../strategy/ROADMAP.md — current strategic priorities.
+
 Guiding Principle
 
 The purpose of the organizations is not to create the discipline.

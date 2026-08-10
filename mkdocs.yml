@@ -85,6 +85,8 @@ nav:
 
   - Institute:
       - Institute Overview: institute/README.md
+      - Institute Architecture: institute/INSTITUTE-ARCHITECTURE.md
+      - Knowledge Lifecycle: institute/KNOWLEDGE-LIFECYCLE.md
       - Traceability Standard: institute/TRACEABILITY-STANDARD.md
       - Primary Source Standard: institute/PRIMARY-SOURCE-STANDARD.md
       - Knowledge Lineage: institute/KNOWLEDGE-LINEAGE.md
