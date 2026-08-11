@@ -1,5 +1,9 @@
 # Website QA Checklist
 
+Version: 1.0.0
+
+Status: Active
+
 ## Content
 
 [ ] H1 present (one only)
@@ -46,3 +50,18 @@
 [ ] Git pushed
 [ ] Site deployed
 [ ] Search Console indexing requested
+
+## Russow Institute Production Verification
+
+- [ ] mkdocs build completed successfully
+- [ ] site/index.html exists
+- [ ] Generated site synchronized to /mnt/FastPool/RussowInstituteWiki/
+- [ ] Production homepage returns HTTP 200
+- [ ] Production page identity verified
+- [ ] CSS loads successfully
+- [ ] JavaScript loads successfully
+- [ ] Images load successfully
+- [ ] Representative internal links return HTTP 200
+- [ ] Missing-page test returns HTTP 404
+- [ ] HTTP redirects to HTTPS
+- [ ] Substantial diagnostic output written to output/ when useful

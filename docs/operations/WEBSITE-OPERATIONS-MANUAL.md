@@ -1,5 +1,6 @@
 # J Ryan Russow Website Operations Manual
 Version: 1.0
+Status: Active
 Last Updated: 2026-07-05
 
 =====================================================================
@@ -126,3 +127,102 @@ Improve cornerstone pages
 
 Refresh metadata
 
+
+------------------------------------------------------------------------------
+
+## Russow Institute Deployment
+
+The Systems Architect Discipline / Russow Institute documentation site is generated from repository Markdown using MkDocs Material.
+
+The production flow is:
+
+    Repository docs/
+        ↓
+    mkdocs build
+        ↓
+    site/
+        ↓
+    rsync
+        ↓
+    /mnt/FastPool/RussowInstituteWiki/
+        ↓
+    Cloudflare
+        ↓
+    https://institute.midwest24.com/
+
+### Build
+
+Run from:
+
+    cd ~/Documents/Projects/jryanrussow-site
+
+Build:
+
+    mkdocs build
+
+Verify:
+
+    test -f site/index.html
+
+### Publish
+
+Publish generated output only:
+
+    rsync -av --delete site/ truenas_admin@truenas:/mnt/FastPool/RussowInstituteWiki/
+
+The --delete option intentionally makes the production directory mirror the generated MkDocs site.
+
+Never use the repository root as the rsync source.
+
+### Remote Verification
+
+Verify the production homepage exists on TrueNAS:
+
+    ssh truenas_admin@truenas 'test -f /mnt/FastPool/RussowInstituteWiki/index.html'
+
+### Public Verification
+
+Production URL:
+
+    https://institute.midwest24.com/
+
+Verify:
+
+- homepage returns HTTP 200;
+- page identity is correct;
+- CSS, JavaScript, and image assets load;
+- representative internal links return HTTP 200;
+- nonexistent pages return HTTP 404;
+- HTTP redirects to HTTPS;
+- Cloudflare serves the public endpoint.
+
+### Local Operational Output
+
+Repository-local diagnostic output belongs in:
+
+    output/
+
+Examples include:
+
+- deployment verification;
+- repository inspections;
+- governance diagnostics;
+- troubleshooting output;
+- audits;
+- substantial AI-session command output.
+
+The directory is Git-ignored.
+
+These files are temporary operational artifacts, not institutional memory.
+
+Anything deserving permanent preservation must be distilled into the appropriate governed repository documentation.
+
+For substantial output:
+
+    mkdir -p output
+    OUTPUT="output/<purpose>-$(date +%Y%m%d-%H%M%S).txt"
+    {
+        commands
+    } > "$OUTPUT" 2>&1
+    echo "OUTPUT FILE: $OUTPUT"
+    ls -lh "$OUTPUT"

@@ -1,5 +1,9 @@
 # Website Release Checklist
 
+Version: 1.0.0
+
+Status: Active
+
 Before every production release:
 
 [ ] Git status clean
@@ -44,3 +48,17 @@ After release:
 
 [ ] Monitor Search Console
 
+
+## Russow Institute Deployment
+
+- [ ] Repository context resolved
+- [ ] MkDocs build successful
+- [ ] Generated site/ verified
+- [ ] site/ synchronized to TrueNAS production directory
+- [ ] Remote index.html verified
+- [ ] Public HTTPS endpoint verified
+- [ ] Representative assets verified
+- [ ] Representative internal links verified
+- [ ] 404 behavior verified
+- [ ] HTTP-to-HTTPS redirect verified
+- [ ] Substantial verification output stored under output/ when useful

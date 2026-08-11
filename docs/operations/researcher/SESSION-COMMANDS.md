@@ -1,5 +1,9 @@
 # Session Commands
 
+Version: 1.0.0
+
+Status: Active
+
 ## Repository Verification
 
 cd ~/Documents/Projects/jryanrussow-site
@@ -55,3 +59,57 @@ Current Objective
 Next Concrete Step
 
 Deferred
+
+------------------------------------------------------------------------------
+
+## Repository-Local Operational Output
+
+Temporary diagnostic, inspection, validation, audit, and verification output belongs in:
+
+    output/
+
+The directory is Git-ignored and is not institutional memory.
+
+Preferred pattern:
+
+    mkdir -p output
+    OUTPUT="output/<purpose>-$(date +%Y%m%d-%H%M%S).txt"
+    {
+        commands
+    } > "$OUTPUT" 2>&1
+    echo "OUTPUT FILE: $OUTPUT"
+    ls -lh "$OUTPUT"
+
+For substantial diagnostic, inspection, validation, audit, deployment, or verification output, generated commands shall create `output/` if necessary, create a timestamped output file, capture stdout and stderr, and print the file path when complete.
+
+Do not create output files for trivial terminal output.
+
+Information requiring permanent preservation belongs in governed repository documentation, not output/.
+
+------------------------------------------------------------------------------
+
+## Russow Institute Build and Publish
+
+Run from:
+
+    cd ~/Documents/Projects/jryanrussow-site
+
+Build:
+
+    mkdocs build
+
+Verify generated homepage:
+
+    test -f site/index.html
+
+Publish:
+
+    rsync -av --delete site/ truenas_admin@truenas:/mnt/FastPool/RussowInstituteWiki/
+
+Verify remote homepage:
+
+    ssh truenas_admin@truenas 'test -f /mnt/FastPool/RussowInstituteWiki/index.html'
+
+Verify production endpoint:
+
+    curl -sS -o /dev/null -w 'HTTP: %{http_code}\nFinal URL: %{url_effective}\n' https://institute.midwest24.com/
