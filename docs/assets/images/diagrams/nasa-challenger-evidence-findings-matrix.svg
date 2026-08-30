@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1500 760"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">NASA Challenger Evidence and Findings Matrix — Research Instrument</title>
+
+  <desc id="desc">
+    A research matrix containing candidate propositions and columns for primary
+    source evidence, corroboration, contradictory evidence, confidence,
+    disposition, and Canon eligibility. All entries are currently not evaluated.
+  </desc>
+
+  <style>
+    .title { font: 700 24px Arial, sans-serif; fill: #123b69; }
+    .subtitle { font: 14px Arial, sans-serif; fill: #66788a; }
+    .head { fill: #123b69; }
+    .headText { font: 700 12px Arial, sans-serif; fill: #ffffff; }
+    .rowA { fill: #ffffff; }
+    .rowB { fill: #f7f9fb; }
+    .cell { stroke: #c9d3dd; stroke-width: 1; }
+    .text { font: 13px Arial, sans-serif; fill: #334155; }
+    .candidate { font: 600 13px Arial, sans-serif; fill: #123b69; }
+    .pending { font: 700 12px Arial, sans-serif; fill: #9a7017; }
+    .foot { font: 13px Arial, sans-serif; fill: #66788a; }
+  </style>
+
+  <text x="55" y="50" class="title">Evidence / Findings Matrix</text>
+  <text x="55" y="78" class="subtitle">
+    Research instrument · candidate propositions shown below are not findings
+  </text>
+
+  <rect x="55" y="115" width="1390" height="55" class="head cell"/>
+
+  <text x="75" y="148" class="headText">CANDIDATE PROPOSITION</text>
+  <text x="480" y="141" class="headText">PRIMARY SOURCE</text>
+  <text x="480" y="157" class="headText">EVIDENCE</text>
+  <text x="690" y="141" class="headText">CORROBORATING</text>
+  <text x="690" y="157" class="headText">EVIDENCE</text>
+  <text x="890" y="141" class="headText">CONTRADICTORY</text>
+  <text x="890" y="157" class="headText">EVIDENCE</text>
+  <text x="1085" y="148" class="headText">CONFIDENCE</text>
+  <text x="1210" y="148" class="headText">DISPOSITION</text>
+  <text x="1345" y="141" class="headText">CANON</text>
+  <text x="1345" y="157" class="headText">ELIGIBILITY</text>
+
+  <rect x="55" y="170" width="1390" height="88" class="rowA cell"/>
+  <text x="75" y="205" class="candidate">Technical knowledge existed before launch</text>
+  <text x="480" y="215" class="pending">NOT EVALUATED</text>
+  <text x="690" y="215" class="pending">NOT EVALUATED</text>
+  <text x="890" y="215" class="pending">NOT EVALUATED</text>
+  <text x="1085" y="215" class="pending">PENDING</text>
+  <text x="1210" y="215" class="pending">OPEN</text>
+  <text x="1345" y="215" class="pending">NO</text>
+
+  <rect x="55" y="258" width="1390" height="88" class="rowB cell"/>
+  <text x="75" y="293" class="candidate">Critical knowledge failed to reach decision authority</text>
+  <text x="480" y="303" class="pending">NOT EVALUATED</text>
+  <text x="690" y="303" class="pending">NOT EVALUATED</text>
+  <text x="890" y="303" class="pending">NOT EVALUATED</text>
+  <text x="1085" y="303" class="pending">PENDING</text>
+  <text x="1210" y="303" class="pending">OPEN</text>
+  <text x="1345" y="303" class="pending">NO</text>
+
+  <rect x="55" y="346" width="1390" height="88" class="rowA cell"/>
+  <text x="75" y="381" class="candidate">Organizational pressure affected decision quality</text>
+  <text x="480" y="391" class="pending">NOT EVALUATED</text>
+  <text x="690" y="391" class="pending">NOT EVALUATED</text>
+  <text x="890" y="391" class="pending">NOT EVALUATED</text>
+  <text x="1085" y="391" class="pending">PENDING</text>
+  <text x="1210" y="391" class="pending">OPEN</text>
+  <text x="1345" y="391" class="pending">NO</text>
+
+  <rect x="55" y="434" width="1390" height="88" class="rowB cell"/>
+  <text x="75" y="469" class="candidate">Repeated anomalies altered perceived risk</text>
+  <text x="480" y="479" class="pending">NOT EVALUATED</text>
+  <text x="690" y="479" class="pending">NOT EVALUATED</text>
+  <text x="890" y="479" class="pending">NOT EVALUATED</text>
+  <text x="1085" y="479" class="pending">PENDING</text>
+  <text x="1210" y="479" class="pending">OPEN</text>
+  <text x="1345" y="479" class="pending">NO</text>
+
+  <rect x="55" y="522" width="1390" height="88" class="rowA cell"/>
+  <text x="75" y="557" class="candidate">Post-accident lessons were incompletely preserved</text>
+  <text x="480" y="567" class="pending">NOT EVALUATED</text>
+  <text x="690" y="567" class="pending">NOT EVALUATED</text>
+  <text x="890" y="567" class="pending">NOT EVALUATED</text>
+  <text x="1085" y="567" class="pending">PENDING</text>
+  <text x="1210" y="567" class="pending">OPEN</text>
+  <text x="1345" y="567" class="pending">NO</text>
+
+  <text x="55" y="660" class="foot">
+    Each candidate proposition must be supported, modified, rejected, or left unresolved based on the research record.
+  </text>
+
+  <text x="55" y="690" class="foot">
+    Canon eligibility remains NO until evidence, findings, replication or comparison, and maturity requirements are satisfied.
+  </text>
+
+  <text x="55" y="725" class="subtitle">
+    STATUS: RESEARCH INSTRUMENT — ALL PROPOSITIONS ARE UNEVALUATED.
+  </text>
+
+</svg>

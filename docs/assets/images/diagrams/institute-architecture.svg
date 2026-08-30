@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1400 1420"
+     role="img"
+     aria-labelledby="title desc">
+  <title id="title">Russow Institute Master Institute Map</title>
+  <desc id="desc">
+    A system architecture diagram showing the Russow Institute stewarding the
+    Systems Architect Discipline; knowledge development through research,
+    evidence, case studies, frameworks, and the Canon; publication, curriculum,
+    implementation, applied laboratories, new reality, observation and feedback;
+    and a feedback loop returning to research.
+  </desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10"
+            refX="9" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0A2E5A"/>
+    </marker>
+
+    <marker id="arrowGold" viewBox="0 0 10 10"
+            refX="9" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#B8942F"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5"
+                    flood-color="#0A2E5A" flood-opacity="0.09"/>
+    </filter>
+
+    <style>
+      .bg { fill: #FFFFFF; }
+      .band { fill: #F5F7FA; stroke: #D9E0E7; stroke-width: 1.5; }
+      .major { fill: #FFFFFF; stroke: #0A2E5A; stroke-width: 2.5; }
+      .canon { fill: #0A2E5A; stroke: #0A2E5A; stroke-width: 2.5; }
+      .node { fill: #FFFFFF; stroke: #AAB6C2; stroke-width: 1.6; }
+      .lab { fill: #FBF8EF; stroke: #B8942F; stroke-width: 1.8; }
+      .reality { fill: #F7F9FB; stroke: #0A2E5A; stroke-width: 2; }
+      .line { fill: none; stroke: #8797A7; stroke-width: 2; }
+      .lineMajor { fill: none; stroke: #0A2E5A; stroke-width: 2.5; }
+      .feedback { fill: none; stroke: #B8942F; stroke-width: 3;
+                  stroke-dasharray: 10 8; }
+      .title { font-family: Inter, Arial, sans-serif; font-size: 28px;
+               font-weight: 700; fill: #0A2E5A; text-anchor: middle; }
+      .majorText { font-family: Inter, Arial, sans-serif; font-size: 22px;
+                   font-weight: 700; fill: #0A2E5A; text-anchor: middle; }
+      .canonText { font-family: Inter, Arial, sans-serif; font-size: 23px;
+                   font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+      .canonSub { font-family: Inter, Arial, sans-serif; font-size: 14px;
+                  fill: #DDE8F2; text-anchor: middle; letter-spacing: .8px; }
+      .nodeText { font-family: Inter, Arial, sans-serif; font-size: 18px;
+                  font-weight: 600; fill: #263544; text-anchor: middle; }
+      .subText { font-family: Inter, Arial, sans-serif; font-size: 14px;
+                 fill: #667789; text-anchor: middle; }
+      .stage { font-family: Inter, Arial, sans-serif; font-size: 12px;
+               font-weight: 700; fill: #7B8794; letter-spacing: 1.8px;
+               text-anchor: middle; }
+      .feedbackText { font-family: Inter, Arial, sans-serif; font-size: 14px;
+                      font-weight: 700; fill: #9B7A1E; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="1420"/>
+
+  <text class="stage" x="700" y="42">STEWARDSHIP</text>
+
+  <rect class="major" filter="url(#shadow)"
+        x="470" y="65" rx="8" width="460" height="82"/>
+  <text class="title" x="700" y="103">RUSSOW INSTITUTE</text>
+  <text class="subText" x="700" y="128">Steward of the Discipline</text>
+
+  <path class="lineMajor" marker-end="url(#arrow)"
+        d="M700 147 L700 192"/>
+
+  <rect class="major" x="485" y="195" rx="8" width="430" height="70"/>
+  <text class="majorText" x="700" y="237">SYSTEMS ARCHITECT DISCIPLINE</text>
+
+  <path class="lineMajor" marker-end="url(#arrow)"
+        d="M700 265 L700 310"/>
+
+  <text class="stage" x="700" y="340">KNOWLEDGE DEVELOPMENT</text>
+
+  <rect class="band" x="130" y="360" rx="12" width="1140" height="156"/>
+
+  <path class="line" d="M700 360 L700 386"/>
+  <path class="line" d="M310 386 L1090 386"/>
+  <path class="line" marker-end="url(#arrow)" d="M310 386 L310 417"/>
+  <path class="line" marker-end="url(#arrow)" d="M700 386 L700 417"/>
+  <path class="line" marker-end="url(#arrow)" d="M1090 386 L1090 417"/>
+
+  <rect class="node" x="190" y="420" rx="7" width="240" height="66"/>
+  <rect class="node" x="580" y="420" rx="7" width="240" height="66"/>
+  <rect class="node" x="970" y="420" rx="7" width="240" height="66"/>
+
+  <text class="nodeText" x="310" y="460">Research</text>
+  <text class="nodeText" x="700" y="460">Evidence</text>
+  <text class="nodeText" x="1090" y="460">Case Studies</text>
+
+  <path class="line" d="M310 486 L310 500 L1090 500"/>
+  <path class="line" d="M700 486 L700 500"/>
+  <path class="line" d="M1090 486 L1090 500"/>
+  <path class="lineMajor" marker-end="url(#arrow)"
+        d="M700 500 L700 548"/>
+
+  <rect class="node" x="535" y="550" rx="7" width="330" height="66"/>
+  <text class="nodeText" x="700" y="590">Frameworks</text>
+
+  <path class="lineMajor" marker-end="url(#arrow)"
+        d="M700 616 L700 660"/>
+
+  <text class="stage" x="700" y="688">CURRENT BEST UNDERSTANDING</text>
+
+  <rect class="canon" filter="url(#shadow)"
+        x="470" y="705" rx="8" width="460" height="94"/>
+  <text class="canonText" x="700" y="746">THE CANON</text>
+  <text class="canonSub" x="700" y="772">CURRENT BEST UNDERSTANDING</text>
+
+  <path class="lineMajor" marker-end="url(#arrow)"
+        d="M700 799 L700 842"/>
+
+  <rect class="band" x="130" y="845" rx="12" width="1140" height="158"/>
+
+  <path class="line" d="M700 845 L700 872"/>
+  <path class="line" d="M310 872 L1090 872"/>
+  <path class="line" marker-end="url(#arrow)" d="M310 872 L310 903"/>
+  <path class="line" marker-end="url(#arrow)" d="M700 872 L700 903"/>
+  <path class="line" marker-end="url(#arrow)" d="M1090 872 L1090 903"/>
+
+  <rect class="node" x="190" y="906" rx="7" width="240" height="66"/>
+  <rect class="node" x="580" y="906" rx="7" width="240" height="66"/>
+  <rect class="node" x="970" y="906" rx="7" width="240" height="66"/>
+
+  <text class="nodeText" x="310" y="946">Publications</text>
+  <text class="nodeText" x="700" y="938">Curriculum /</text>
+  <text class="nodeText" x="700" y="960">Teaching</text>
+  <text class="nodeText" x="1090" y="946">Implementation</text>
+
+  <path class="line" d="M310 972 L310 986 L1090 986"/>
+  <path class="line" d="M700 972 L700 986"/>
+  <path class="line" d="M1090 972 L1090 986"/>
+  <path class="lineMajor" marker-end="url(#arrow)"
+        d="M700 986 L700 1032"/>
+
+  <text class="stage" x="700" y="1060">APPLIED LABORATORIES</text>
+
+  <path class="line" d="M700 1076 L700 1096"/>
+  <path class="line" d="M310 1096 L1090 1096"/>
+  <path class="line" marker-end="url(#arrow)" d="M310 1096 L310 1127"/>
+  <path class="line" marker-end="url(#arrow)" d="M700 1096 L700 1127"/>
+  <path class="line" marker-end="url(#arrow)" d="M1090 1096 L1090 1127"/>
+
+  <rect class="lab" x="175" y="1130" rx="7" width="270" height="72"/>
+  <rect class="lab" x="565" y="1130" rx="7" width="270" height="72"/>
+  <rect class="lab" x="955" y="1130" rx="7" width="270" height="72"/>
+
+  <text class="nodeText" x="310" y="1173">MIDWESTGuard</text>
+  <text class="nodeText" x="700" y="1173">Midwest24 Core</text>
+  <text class="nodeText" x="1090" y="1173">Future Ventures</text>
+
+  <path class="line" d="M310 1202 L310 1219 L1090 1219"/>
+  <path class="line" d="M700 1202 L700 1219"/>
+  <path class="line" d="M1090 1202 L1090 1219"/>
+  <path class="lineMajor" marker-end="url(#arrow)"
+        d="M700 1219 L700 1254"/>
+
+  <rect class="reality" x="510" y="1257" rx="7" width="380" height="68"/>
+  <text class="majorText" x="700" y="1299">NEW REALITY</text>
+
+  <path class="lineMajor" marker-end="url(#arrow)"
+        d="M700 1325 L700 1350"/>
+
+  <rect class="node" x="510" y="1352" rx="7" width="380" height="52"/>
+  <text class="nodeText" x="700" y="1385">Observation / Feedback</text>
+
+  <path class="feedback" marker-end="url(#arrowGold)"
+        d="M510 1378
+           C340 1378 85 1325 85 1070
+           L85 525
+           C85 455 120 453 185 453"/>
+
+  <text class="feedbackText" x="102" y="1324">FEEDBACK TO RESEARCH</text>
+</svg>

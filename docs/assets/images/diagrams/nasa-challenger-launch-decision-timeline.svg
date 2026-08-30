@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1280 720"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">NASA Challenger Launch Decision Timeline — Working Research Model</title>
+
+  <desc id="desc">
+    A working research model organizing evidence questions around technical
+    knowledge, communication, decision authority, launch decision, accident,
+    investigation, and later institutional learning. This diagram does not
+    represent established findings.
+  </desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10"
+            refX="8" refY="5"
+            markerWidth="6" markerHeight="6"
+            orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#123b69"/>
+    </marker>
+
+    <style>
+      .title { font: 700 24px Arial, sans-serif; fill: #123b69; }
+      .subtitle { font: 14px Arial, sans-serif; fill: #66788a; }
+      .stage { font: 700 12px Arial, sans-serif; letter-spacing: 1.4px; fill: #7a8795; }
+      .nodeTitle { font: 700 16px Arial, sans-serif; fill: #123b69; }
+      .body { font: 14px Arial, sans-serif; fill: #394b5d; }
+      .small { font: 12px Arial, sans-serif; fill: #718096; }
+      .box { fill: #ffffff; stroke: #aebdcb; stroke-width: 1.5; rx: 6; }
+      .pending { fill: #fffaf0; stroke: #c48a18; stroke-width: 1.5; stroke-dasharray: 7 5; rx: 6; }
+      .line { fill: none; stroke: #123b69; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <text x="70" y="55" class="title">Launch Decision Timeline</text>
+  <text x="70" y="82" class="subtitle">Working research model · chronology and relationships require evidence validation</text>
+
+  <text x="70" y="135" class="stage">PRE-LAUNCH KNOWLEDGE</text>
+
+  <rect x="70" y="160" width="310" height="110" class="pending"/>
+  <text x="95" y="195" class="nodeTitle">Technical Risk Knowledge</text>
+  <text x="95" y="222" class="body">What was known?</text>
+  <text x="95" y="245" class="small">Evidence required: engineering records, testimony, internal communications</text>
+
+  <path d="M380 215 L445 215" class="line"/>
+
+  <rect x="445" y="160" width="310" height="110" class="pending"/>
+  <text x="470" y="195" class="nodeTitle">Communication</text>
+  <text x="470" y="222" class="body">How was knowledge transmitted?</text>
+  <text x="470" y="245" class="small">Evidence required: meetings, memoranda, management channels</text>
+
+  <path d="M755 215 L820 215" class="line"/>
+
+  <rect x="820" y="160" width="310" height="110" class="pending"/>
+  <text x="845" y="195" class="nodeTitle">Decision Authority</text>
+  <text x="845" y="222" class="body">Who had authority and what did they receive?</text>
+  <text x="845" y="245" class="small">Evidence required: decision structure, testimony, launch recommendation records</text>
+
+  <path d="M975 270 L975 330" class="line"/>
+
+  <text x="70" y="335" class="stage">DECISION / EVENT</text>
+
+  <rect x="820" y="355" width="310" height="100" class="pending"/>
+  <text x="845" y="390" class="nodeTitle">Launch Decision</text>
+  <text x="845" y="417" class="body">Decision process under investigation</text>
+  <text x="845" y="440" class="small">Do not infer cause from placement in this model</text>
+
+  <path d="M820 405 L755 405" class="line"/>
+
+  <rect x="445" y="355" width="310" height="100" class="box"/>
+  <text x="470" y="390" class="nodeTitle">Challenger Accident</text>
+  <text x="470" y="417" class="body">Historical event</text>
+  <text x="470" y="440" class="small">Event is established; causal interpretation remains separate</text>
+
+  <path d="M445 405 L380 405" class="line"/>
+
+  <rect x="70" y="355" width="310" height="100" class="box"/>
+  <text x="95" y="390" class="nodeTitle">Rogers Commission</text>
+  <text x="95" y="417" class="body">Primary source acquired</text>
+  <text x="95" y="440" class="small">Evidence extraction pending</text>
+
+  <path d="M225 455 L225 515" class="line"/>
+
+  <text x="70" y="520" class="stage">INSTITUTIONAL LEARNING</text>
+
+  <rect x="70" y="545" width="1060" height="105" class="pending"/>
+  <text x="95" y="580" class="nodeTitle">Lessons Preserved, Transferred, Lost, or Repeated</text>
+  <text x="95" y="607" class="body">Research questions include what was learned, what persisted, and what later failures may reveal.</text>
+  <text x="95" y="632" class="small">Evidence required: post-accident reforms, later organizational records, Columbia comparisons</text>
+
+  <text x="70" y="690" class="subtitle">
+    STATUS: RESEARCH MODEL — chronology, relationships, and causal meaning remain subject to source validation.
+  </text>
+
+</svg>

@@ -54,3 +54,36 @@ This program is complete when it has produced:
 - Canon-ready principles
 - Practical applications validated in real organizations
 
+# Initial Empirical Research Sprint Closeout
+
+The initial empirical sprint for Research Program 001 is complete.
+
+Completed research architecture:
+
+- NASA Challenger — 8 established case findings;
+- BP Texas City — 10 established and adversarially validated case findings;
+- Challenger / BP cross-case synthesis — 6 established cross-case findings.
+
+Framework state:
+
+- Candidate Institutional Memory framework — READY FOR APPLIED TESTING;
+- Selective Conversion Failure — SUPPORTED HYPOTHESIS;
+- Established framework propositions — 0;
+- Canon propositions — 0.
+
+Historical case extraction is no longer the default next action.
+
+Additional major case studies require a defined framework, diagnostic,
+falsification, or commercial requirement.
+
+Authoritative closeout:
+
+[`014-INSTITUTIONAL-MEMORY-FRAMEWORK-READINESS-SYNTHESIS.md`](evidence/014-INSTITUTIONAL-MEMORY-FRAMEWORK-READINESS-SYNTHESIS.md)
+
+Commercial destination:
+
+[`COMMERCIALIZATION-THESIS.md`](COMMERCIALIZATION-THESIS.md)
+
+## Next Objective
+
+**Institutional Memory Diagnostic specification and pilot architecture.**

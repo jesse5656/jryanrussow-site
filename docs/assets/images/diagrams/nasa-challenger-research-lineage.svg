@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 560"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">NASA Challenger Research Lineage</title>
+  <desc id="desc">
+    Research lineage showing Research Program 001 leading to the NASA Challenger
+    case study, the acquired Rogers Commission primary source, pending evidence
+    extraction, findings not yet established, and future relationship to the
+    Institutional Memory framework and Canon.
+  </desc>
+
+  <defs>
+    <marker id="arrow"
+            viewBox="0 0 10 10"
+            refX="8"
+            refY="5"
+            markerWidth="6"
+            markerHeight="6"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#123b69"/>
+    </marker>
+
+    <style>
+      .label {
+        font: 600 13px Arial, sans-serif;
+        letter-spacing: 1.5px;
+        fill: #65758a;
+      }
+
+      .title {
+        font: 700 19px Arial, sans-serif;
+        fill: #123b69;
+      }
+
+      .body {
+        font: 14px Arial, sans-serif;
+        fill: #334155;
+      }
+
+      .small {
+        font: 13px Arial, sans-serif;
+        fill: #64748b;
+      }
+
+      .box {
+        fill: #ffffff;
+        stroke: #a9b9ca;
+        stroke-width: 1.5;
+        rx: 5;
+      }
+
+      .active {
+        fill: #f3f6f9;
+        stroke: #123b69;
+        stroke-width: 2;
+        rx: 5;
+      }
+
+      .pending {
+        fill: #fffaf0;
+        stroke: #c48a18;
+        stroke-width: 1.5;
+        stroke-dasharray: 7 5;
+        rx: 5;
+      }
+
+      .future {
+        fill: #fafafa;
+        stroke: #a9b9ca;
+        stroke-width: 1.5;
+        stroke-dasharray: 7 5;
+        rx: 5;
+      }
+
+      .line {
+        fill: none;
+        stroke: #123b69;
+        stroke-width: 1.7;
+        marker-end: url(#arrow);
+      }
+
+      .future-line {
+        fill: none;
+        stroke: #8998a8;
+        stroke-width: 1.5;
+        stroke-dasharray: 7 5;
+        marker-end: url(#arrow);
+      }
+    </style>
+  </defs>
+
+  <text x="600" y="32" text-anchor="middle" class="label">
+    CURRENT RESEARCH LINEAGE
+  </text>
+
+  <rect x="390" y="55" width="420" height="64" class="box"/>
+  <text x="600" y="81" text-anchor="middle" class="title">
+    RESEARCH PROGRAM 001
+  </text>
+  <text x="600" y="103" text-anchor="middle" class="body">
+    Institutional Memory
+  </text>
+
+  <path d="M600 119 L600 153" class="line"/>
+
+  <rect x="390" y="154" width="420" height="72" class="active"/>
+  <text x="600" y="181" text-anchor="middle" class="title">
+    CASE STUDY 001 — NASA CHALLENGER
+  </text>
+  <text x="600" y="205" text-anchor="middle" class="body">
+    Research Draft · Question Established
+  </text>
+
+  <path d="M600 226 L600 260" class="line"/>
+
+  <rect x="390" y="261" width="420" height="72" class="active"/>
+  <text x="600" y="288" text-anchor="middle" class="title">
+    PRIMARY SOURCE ACQUIRED
+  </text>
+  <text x="600" y="312" text-anchor="middle" class="body">
+    Rogers Commission Report
+  </text>
+
+  <path d="M600 333 L600 367" class="line"/>
+
+  <rect x="390" y="368" width="420" height="72" class="pending"/>
+  <text x="600" y="395" text-anchor="middle" class="title">
+    EVIDENCE EXTRACTION
+  </text>
+  <text x="600" y="419" text-anchor="middle" class="body">
+    Pending · No reviewed evidence recorded
+  </text>
+
+  <path d="M390 404 L254 404 L254 480" class="future-line"/>
+  <path d="M810 404 L946 404 L946 480" class="future-line"/>
+
+  <rect x="74" y="480" width="360" height="62" class="future"/>
+  <text x="254" y="505" text-anchor="middle" class="title">
+    FINDINGS
+  </text>
+  <text x="254" y="528" text-anchor="middle" class="small">
+    Not yet established
+  </text>
+
+  <rect x="766" y="480" width="360" height="62" class="future"/>
+  <text x="946" y="505" text-anchor="middle" class="title">
+    FRAMEWORK / CANON
+  </text>
+  <text x="946" y="528" text-anchor="middle" class="small">
+    Future relationship · not determined
+  </text>
+
+</svg>

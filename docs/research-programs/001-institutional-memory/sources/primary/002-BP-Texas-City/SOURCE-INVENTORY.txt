@@ -1,0 +1,189 @@
+BP TEXAS CITY — CSB LANDING-PAGE SOURCE INVENTORY
+Generated from preserved official CSB investigation page.
+
+001. Skip to main content
+     https://www.csb.gov/bp-america-texas-city-refinery-explosion/#maincontent
+002. A
+     https://www.csb.gov/bp-america-texas-city-refinery-explosion/#nogo
+003. En Español
+     https://www.csb.gov/bp-america-texas-city-refinery-explosion/
+004. CSB Business Meetings
+     https://www.csb.gov/about-the-csb/business-meeting-votes-/
+005. Performance and Accountability Report
+     https://www.csb.gov/csb-performance-and-accountability-reports-/
+006. Data Quality
+     https://www.csb.gov/investigations/data-quality-/
+007. Investigations
+     https://www.csb.gov/investigations/
+008. Current Investigations
+     https://www.csb.gov/investigations/current-investigations/?Type=1
+009. Completed Investigations
+     https://www.csb.gov/investigations/completed-investigations/?Type=2
+010. Incident Reporting Rule
+     https://www.csb.gov/news/incident-report-rule-form-/
+011. Recommendations
+     https://www.csb.gov/recommendations/
+012. Recent Recommendation Status Updates
+     https://www.csb.gov/recent-recommendation-status-updates-/
+013. Frequently Asked Questions
+     https://www.csb.gov/recommendations/faq/
+014. Recommendations Statistics
+     https://www.csb.gov/recommendations/statistics/
+015. Drivers of Critical Chemical Safety Change
+     https://www.csb.gov/news/cdl-being-updated-/
+016. CSB Process Safety Training Application
+     https://www.csb.gov/news/csb-process-safety-training-application-/
+017. Print
+     https://www.csb.gov/bp-america-texas-city-refinery-explosion/?print=y
+018. FINAL REPORT: Final Investigation Report
+     https://www.csb.gov/file.aspx?DocumentId=5596
+019. FINAL REPORT: Management of Change
+     https://www.csb.gov/file.aspx?DocumentId=5612
+020. FINAL REPORT: Safety Bulletin: Positive Material Verification
+     https://www.csb.gov/file.aspx?DocumentId=5613
+021. Closed - Acceptable Action
+     https://www.csb.gov/recommendations/faq/#5
+022. Recommendations Status Change Summary
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary__API_(BP_TXC_R4)__C-AA.pdf
+023. Recommendation Status Change Summary
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary_API_(BP_TXC_R6a)_C-AAA.pdf
+024. Recommendation Status Change
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary_API_and_USW_(BP_Texas_City_R7a_and_R7b)_C-AA.pdf
+025. Recommendations Status Change Summary
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary__BP_BOD_(BP_TXC_R11)__C-AAA.pdf
+026. Download
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary__BP_BOD__BP_TXC_R13___C-AA.pdf
+027. Download
+     https://www.csb.gov/assets/recommendation/API_R2_Text_of_Recommendation.pdf
+028. Recommendation Status Change Summary
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary__OSHA_(BP_TXC_R5)_C-AA.pdf
+029. Recommendation Status Change Summary
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary__OSHA_(BP_TXC_R8)_C-AAA.pdf
+030. Download
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary__OSHA__BP_TXC_R9___O-UR.pdf
+031. Recommendation Status Change Summary
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary_USW_(BP_TXC_R6b)_C-AA.pdf
+032. Recommendation Status Change
+     https://www.csb.gov/assets/recommendation/Status_Change_Summary_API_and_USW_(BP_Texas_City_R7a_and_R7b)_C-AA1.pdf
+033. View All
+     https://www.csb.gov/recommendations/?F_InvestigationId=3515
+034. [no link text]
+     https://www.csb.gov/bp-texas-city-investigative-photos/
+035. U.S. Chemical Safety Board Releases New Report 3/24/2025
+     https://www.csb.gov/us-chemical-safety-board-releases-new-report-/
+036. CSB Issues New Safety Alert Focused on the Potential Hazards of Emergency Discharges from Pressure Release Valves 3/6/2023
+     https://www.csb.gov/csb-issues-new-safety-alert-focused-on-the-potential-hazards-of-emergency-discharges-from-pressure-release-valves/
+037. CSB Releases New Free Online Safety Training Application for Hazardous Chemicals 8/1/2022
+     https://www.csb.gov/csb-releases-new-free-online-safety-training-application-for-hazardous-chemicals/
+038. CSB Releases New BP Texas City Animation 3/23/2020
+     https://www.csb.gov/csb-releases-new-bp-texas-city-animation-/
+039. Statement of Chairperson Vanessa Allen Sutherland on the 12th Anniversary of the BP Texas City Refinery Disaster 3/23/2017
+     https://www.csb.gov/statement-of-chairperson-vanessa-allen-sutherland-on-the-12th-anniversary-of-the-bp-texas-city-refinery-disaster/
+040. CSB Board Votes on Status of Sixteen Safety Recommendations; Agency Launches New Recommendations Website Feature 4/20/2015
+     https://www.csb.gov/csb-board-votes-on-status-of-sixteen-safety-recommendations-agency-launches-new-recommendations-website-feature/
+041. On Tenth Anniversary of Tragic Explosion and Fire at BP Texas City Refinery, CSB Chairman Releases Safety Message Calling Attention to the Continued Need for Safety Improvements 3/23/2015
+     https://www.csb.gov/on-tenth-anniversary-of-tragic-explosion-and-fire-at-bp-texas-city-refinery-csb-chairman-releases-safety-message-calling-attention-to-the-continued-need-for-safety-improvements-/
+042. Statement from CSB Chairperson Rafael Moure-Eraso on the Passing of Noted Chemical Process Safety Expert Professor Trevor Kletz 11/5/2013
+     https://www.csb.gov/statement-from-csb-chairperson-rafael-moure-eraso-on-the-passing-of-noted-chemical-process-safety-expert-professor-trevor-kletz/
+043. U.S. Chemical Safety Board Determines OSHA Response to Seven Open CSB Recommendations on Dust, Fuel Gas, and Process Safety Management to be “Unacceptable;” Board Votes to Designate a Combustible Dust Standard as “Most Wanted” 7/25/2013
+     https://www.csb.gov/us-chemical-safety-board-determines-osha-response-to-seven-open-csb-recommendations-on-dust-fuel-gas-and-process-safety-management-to-be-unacceptable/
+044. CSB Announces Public Meeting in Washington to Vote on Key Safety Recommendations and Initiate the CSB Most Wanted Program 7/15/2013
+     https://www.csb.gov/csb-announces-public-meeting-in-washington-to-vote-on-key-safety-recommendations-and-initiate-the-csb-most-wanted-program/
+045. CSB Postpones April 24 Public Meeting in Washington on Fatigue and CSB Recommendations 4/18/2013
+     https://www.csb.gov/csb-postpones-april-24-public-meeting-in-washington-on-fatigue-and-csb-recommendations/
+046. Notice of Additional Information for Sunshine Act Meeting 3/29/2013
+     https://www.csb.gov/notice-of-additional-information-for-sunshine-act-meeting-/
+047. CSB Announces Availability of Draft Fatigue Evaluation for Public Comment, April 24 Public Meeting in Washington, DC 3/18/2013
+     https://www.csb.gov/csb-announces-availability-of-draft-fatigue-evaluation-for-public-comment-april-24-public-meeting-in-washington-dc-/
+048. CSB Investigation: At the Time of 2010 Gulf Blowout, Transocean, BP, Industry Associations, and Government Offshore Regulators Had Not Effectively Learned Critical Lessons from 2005 BP Refinery Explosion in Implementing Safety Performance Indicators 7/24/2012
+     https://www.csb.gov/csb-investigation-at-the-time-of-2010-gulf-blowout-transocean-bp-industry-associations-and-government-offshore-regulators-had-not-effectively-learned-critical-lessons-from-2005-bp-refinery-explosion-in-implementing-safety-performance-indicators/
+049. Board Concludes American Petroleum Institute Has Made “Acceptable” Progress on Recommendation to Develop Process Safety Indicators for Onshore Industries 7/23/2012
+     https://www.csb.gov/board-concludes-american-petroleum-institute-has-made-acceptable-progress-on-recommendation-to-develop-process-safety-indicators-for-onshore-industries/
+050. Better safety data could help prevent oil industry disasters - By Rafael Moure-Eraso 7/20/2012
+     https://www.csb.gov/better-safety-data-could-help-prevent-oil-industry-disasters-by-rafael-moure-eraso/
+051. CSB to Investigate Root Causes of BP Deepwater Horizon Blowout Accident: Announcement Made in Letter by Chairman John Bresland to U.S. House Committee on Energy and Commerce 6/21/2010
+     https://www.csb.gov/csb-to-investigate-root-causes-of-bp-deepwater-horizon-blowout-accident-announcement-made-in-letter-by-chairman-john-bresland-to-u-s-house-committee-on-energy-and-commerce/
+052. Statement from CSB Chairman John Bresland on 5th Anniversary of Fatal BP Texas City 2005 Explosion 3/23/2010
+     https://www.csb.gov/statement-from-csb-chairman-john-bresland-on-5th-anniversary-of-fatal-bp-texas-city-2005-explosion/
+053. The following statement from CSB Chairman John Bresland concerns OSHA’s announcement today of regulatory action against BP Products North America and its Texas City refinery 10/30/2009
+     https://www.csb.gov/the-following-statement-from-csb-chairman-john-bresland-concerns-osha-s-announcement-today-of-regulatory-action-against-bp-products-north-america-and-its-texas-city-refinery/
+054. CSB Chairman Merritt Describes the Lessons from Five Years of Board Investigations to Senate Committee, Urges Additional Resources and Clearer Authorities for Federal Safety Efforts 7/10/2007
+     https://www.csb.gov/csb-chairman-merritt-describes-the-lessons-from-five-years-of-board-investigations-to-senate-committee-urges-additional-resources-and-clearer-authorities-for-federal-safety-efforts/
+055. CSB Chairman Carolyn Merritt Tells House Subcommittee of "Striking Similarities" in Causes of BP Texas City Tragedy and Prudhoe Bay Pipeline Disaster 5/16/2007
+     https://www.csb.gov/csb-chairman-carolyn-merritt-tells-house-subcommittee-of-striking-similarities-in-causes-of-bp-texas-city-tragedy-and-prudhoe-bay-pipeline-disaster/
+056. CSB Posts Korean-Language Version of BP Refinery Explosion Animation 4/24/2007
+     https://www.csb.gov/csb-posts-korean-language-version-of-bp-refinery-explosion-animation/
+057. U.S. Chemical Safety Board Concludes "Organizational and Safety Deficiencies at All Levels of the BP Corporation" Caused March 2005 Texas City Disaster That Killed 15, Injured 180 3/20/2007
+     https://www.csb.gov/u-s-chemical-safety-board-concludes-organizational-and-safety-deficiencies-at-all-levels-of-the-bp-corporation-caused-march-2005-texas-city-disaster-that-killed-15-injured-180/
+058. Board to Convene March 20 Public Meeting in Texas City, Texas, to Release and Vote upon Final Report on BP Refinery Disaster 3/7/2007
+     https://www.csb.gov/board-to-convene-march-20-public-meeting-in-texas-city-texas-to-release-and-vote-upon-final-report-on-bp-refinery-disaster/
+059. Statement from Carolyn W. Merritt, Chairman and CEO, U.S. Chemical Safety Board, on the Release of the BP Refineries Independent Safety Review Panel Report 1/16/2007
+     https://www.csb.gov/statement-from-carolyn-w-merritt-chairman-and-ceo-u-s-chemical-safety-board-on-the-release-of-the-bp-refineries-independent-safety-review-panel-report/
+060. CSB Calls on Oil Industry to Eliminate Atmospheric Blowdown Drums Similar to Equipment at BP Texas City Refinery; Urges New OSHA "Emphasis Program" throughout U.S. 10/31/2006
+     https://www.csb.gov/csb-calls-on-oil-industry-to-eliminate-atmospheric-blowdown-drums-similar-to-equipment-at-bp-texas-city-refinery-urges-new-osha-emphasis-program-throughout-u-s/
+061. CSB Investigation of BP Texas City Refinery Disaster Continues as Organizational Issues Are Probed 10/30/2006
+     https://www.csb.gov/csb-investigation-of-bp-texas-city-refinery-disaster-continues-as-organizational-issues-are-probed/
+062. CSB Issues Safety Bulletin on BP Texas City Major Fire: Better Material Identification Needed, Errors During Systems Maintenance Cited; Fire Caused $30 Million in Property Damage 10/15/2006
+     https://www.csb.gov/csb-issues-safety-bulletin-on-bp-texas-city-major-fire-better-material-identification-needed-errors-during-systems-maintenance-cited-fire-caused-30-million-in-property-damage/
+063. German Translation of CSB Animation of the Explosion at BP Refinery, Texas City, Texas, Now Available 7/17/2006
+     https://www.csb.gov/german-translation-of-csb-animation-of-the-explosion-at-bp-refinery-texas-city-texas-now-available/
+064. CSB Releases Trailer Blast Damage Information from BP Texas City Accident 6/30/2006
+     https://www.csb.gov/csb-releases-trailer-blast-damage-information-from-bp-texas-city-accident/
+065. CSB Investigation Continues as Texas City Marks First Anniversary of BP Refinery Explosion 3/23/2006
+     https://www.csb.gov/csb-investigation-continues-as-texas-city-marks-first-anniversary-of-bp-refinery-explosion/
+066. CSB Issues Preliminary Findings in BP Texas City Refinery Accident; Investigators Present Data in Public Meeting 10/27/2005
+     https://www.csb.gov/csb-issues-preliminary-findings-in-bp-texas-city-refinery-accident-investigators-present-data-in-public-meeting/
+067. CSB Issues Urgent Recommendations to U.S. Petrochemical Industry, Calls for Safer Placement of Trailers for Workers in Wake of BP Tragedy 10/25/2005
+     https://www.csb.gov/csb-issues-urgent-recommendations-to-u-s-petrochemical-industry-calls-for-safer-placement-of-trailers-for-workers-in-wake-of-bp-tragedy/
+068. Board to Hold October 27 Community Meeting in Texas City, Texas, to Release Preliminary Findings and Hear Public Comments on BP America Texas City Refinery Investigation 10/12/2005
+     https://www.csb.gov/board-to-hold-october-27-community-meeting-in-texas-city-texas-to-release-preliminary-findings-and-hear-public-comments-on-bp-america-texas-city-refinery-investigation/
+069. CSB Issues Urgent Safety Recommendation to BP Global Board, Calls for Creation of Independent Panel to Examine Corporate Safety Management, Oversight, and Safety Culture 8/17/2005
+     https://www.csb.gov/csb-issues-urgent-safety-recommendation-to-bp-global-board-calls-for-creation-of-independent-panel-to-examine-corporate-safety-management-oversight-and-safety-culture/
+070. CSB Investigators Continue Assessment of July 28 Explosion and Fire at BP Texas City Refinery 7/30/2005
+     https://www.csb.gov/csb-investigators-continue-assessment-of-july-28-explosion-and-fire-at-bp-texas-city-refinery/
+071. Statement of Board Member John S. Bresland Updating the Status of the CSB's Investigation at the BP Texas City Refinery 4/28/2005
+     https://www.csb.gov/statement-of-board-member-john-s-bresland-updating-the-status-of-the-csb-s-investigation-at-the-bp-texas-city-refinery/
+072. CSB Investigators Enter Blast Site at BP America Texas City Refinery 4/1/2005
+     https://www.csb.gov/csb-investigators-enter-blast-site-at-bp-america-texas-city-refinery/
+073. CSB Investigation of BP America Texas City Tragedy Continues as Investigators Prepare to Enter Blast Site; Investigators Focusing on "Raffinate Splitter" within Refinery Isomerization Unit 3/26/2005
+     https://www.csb.gov/csb-investigation-of-bp-america-texas-city-tragedy-continues-as-investigators-prepare-to-enter-blast-site-investigators-focusing-on-raffinate-splitter-within-refinery-isomerization-unit/
+074. CSB Investigative Team Headed to BP America Explosion Site in Texas City 3/23/2005
+     https://www.csb.gov/csb-investigative-team-headed-to-bp-america-explosion-site-in-texas-city/
+075. CSB Public Meeting to Vote on Key Safety Recommendations and Initiate "Most Wanted" Program
+     https://www.csb.gov/events/csb-public-meeting-to-vote-on-key-safety-recommendations-and-initiate-most-wanted-program/
+076. Report of the BP Independent Refineries Safety Review Panel (Baker Panel Report)
+     https://www.csb.gov/assets/1/20/Baker_panel_report1.pdf?13842
+077. Final Investigation Report
+     https://www.csb.gov/assets/1/20/CSBFinalReportBP.pdf?13841
+078. Text of CSB's Urgent Safety Recommendation to BP America and BP Global Board of Directors
+     https://www.csb.gov/assets/1/20/BP_Recs.pdf?13851
+079. Text of CSB's Urgent Trailer Siting Recommendations to American Petroleum Institute and National Pet
+     https://www.csb.gov/assets/1/20/BP_Recs_2.pdf?13853
+080. Federal Register Notice for Board Community Meeting, Texas City, TX, October 27, 2005
+     https://www.csb.gov/assets/1/20/BP_Fed_Reg1.pdf?13846
+081. Transcript of Board Public Meeting, Texas City, TX, March 20, 2007
+     https://www.csb.gov/assets/1/20/BP_Transcript_1.pdf?13847
+082. Transcript of Board Community Meeting, Texas City, TX, October 27, 2005
+     https://www.csb.gov/assets/1/20/BP_Transcript_2.pdf?13848
+083. Text of CSB Recommendations to OSHA, American Petroleum Institute
+     https://www.csb.gov/assets/1/20/API-OSHA_Recommendation.pdf?13855
+084. Trailer Blast Damage Information Table
+     https://www.csb.gov/assets/1/20/CSB_BPTrailerData6-30_06.pdf?13840
+085. Browne: Take Action to Put Safety First
+     https://www.csb.gov/assets/1/20/Browne.pdf?13947
+086. Executive Summary of Report of Findings, January 21, 2005
+     https://www.csb.gov/assets/1/20/Executive_Summary_of_Report_of_Findings.pdf?13942
+087. What makes protection particularly difficult for BP Texas City?
+     https://www.csb.gov/assets/1/20/What_makes_protection_particularly_difficult_for_BP_Texas_City.pdf?13943
+088. BP OSHA Settlement Agreement
+     https://www.csb.gov/assets/1/20/BP_OSHA_Settlement_Agreement.pdf?13946
+089. Texas City Site (TCS) – Texas City Refinery and Texas City Chemicals Site gHSEr 2004 Assessment
+     https://www.csb.gov/assets/1/20/2004 TCS Assessment.pdf?13933
+090. Safety Bulletin: Positive Material Verification
+     https://www.csb.gov/assets/1/20/RHUBulletin.pdf?13839
+091. Statement of CSB Lead Investigator Don Holmstrom Updating the Status of the Board's BP Texas City Re
+     https://www.csb.gov/assets/1/20/Don_Statement.pdf?13849
+092. Statement of CSB Chairman Carolyn W. Merritt on the Board's Urgent Safety Recommendation to BP North
+     https://www.csb.gov/assets/1/20/Carolyn_Statement.pdf?13850
+093. Statement of CSB Chairman Merritt to BP Independent Refinery Safety Panel
+     https://www.csb.gov/assets/1/20/Carolyn_Statement_3.pdf?13854

@@ -171,3 +171,33 @@ Frameworks produce knowledge.
 
 Knowledge may eventually become canon.
 
+## Commercial Research Authorization Gate
+
+Research rigor does not authorize unlimited research.
+
+Once a research program has sufficient evidence to support framework and
+diagnostic development, additional major case-study work must answer a
+defined need.
+
+New major research should therefore identify at least one of the following
+before substantial execution begins:
+
+1. **Framework requirement** — a proposition requires additional independent
+   testing or boundary definition.
+2. **Diagnostic requirement** — the commercial methodology cannot yet assess
+   a required organizational condition.
+3. **Falsification requirement** — existing theory or findings require a case
+   capable of challenging them.
+4. **Commercial requirement** — a client, market, deliverable, or product
+   requirement requires additional evidence.
+
+Research should not continue solely because more cases are available.
+
+The governing strategic principle is:
+
+> **Research should serve the product. The product should not perpetually wait
+> for more research.**
+
+Authoritative strategic reference:
+
+[Institutional Memory — Commercialization Thesis](../../research-programs/001-institutional-memory/COMMERCIALIZATION-THESIS.md)

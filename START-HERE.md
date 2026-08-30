@@ -1,5 +1,24 @@
 # START HERE
 
+## Strategic Purpose — Why This Work Exists
+
+The Russow Institute research repository is not the final product.
+
+It is the evidence and intellectual-property infrastructure behind a
+proprietary methodology—and eventually technology—for detecting where
+organizations possess critical knowledge but fail to convert it into
+effective action before that failure becomes expensive or catastrophic.
+
+The intended progression is:
+
+**Research IP → Framework → Diagnostic Methodology → Client Deliverable →
+Commercial Validation → Repeatable Advisory → Technology**
+
+Research must serve this progression rather than become an end in itself.
+
+**Authoritative strategic reference:**
+[Institutional Memory — Commercialization Thesis](docs/research-programs/001-institutional-memory/COMMERCIALIZATION-THESIS.md)
+
 Version: 1.0.0
 
 Status:

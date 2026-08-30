@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1280 650"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">NASA Challenger Technical Knowledge to Decision Authority Chain</title>
+
+  <desc id="desc">
+    A candidate communication and decision chain showing technical knowledge,
+    engineering interpretation, communication channels, management interpretation,
+    decision authority, and launch action. All relationships remain under investigation.
+  </desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10"
+            refX="8" refY="5"
+            markerWidth="6" markerHeight="6"
+            orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#123b69"/>
+    </marker>
+
+    <style>
+      .title { font: 700 24px Arial, sans-serif; fill: #123b69; }
+      .subtitle { font: 14px Arial, sans-serif; fill: #66788a; }
+      .box { fill: #ffffff; stroke: #9fb0c0; stroke-width: 1.5; rx: 6; }
+      .question { fill: #fffaf0; stroke: #c48a18; stroke-width: 1.5; stroke-dasharray: 7 5; rx: 6; }
+      .nodeTitle { font: 700 16px Arial, sans-serif; fill: #123b69; }
+      .body { font: 13px Arial, sans-serif; fill: #405163; }
+      .label { font: 700 11px Arial, sans-serif; letter-spacing: 1.2px; fill: #8a6a16; }
+      .line { fill: none; stroke: #123b69; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <text x="65" y="55" class="title">Technical Knowledge → Decision Authority</text>
+  <text x="65" y="82" class="subtitle">
+    Candidate communication architecture · relationships under investigation
+  </text>
+
+  <rect x="70" y="155" width="185" height="115" class="box"/>
+  <text x="92" y="190" class="nodeTitle">Technical Knowledge</text>
+  <text x="92" y="218" class="body">Observed risk</text>
+  <text x="92" y="241" class="body">Engineering experience</text>
+
+  <path d="M255 212 L300 212" class="line"/>
+
+  <rect x="300" y="155" width="185" height="115" class="question"/>
+  <text x="322" y="181" class="label">UNDER INVESTIGATION</text>
+  <text x="322" y="210" class="nodeTitle">Engineering Interpretation</text>
+  <text x="322" y="238" class="body">How was risk evaluated?</text>
+
+  <path d="M485 212 L530 212" class="line"/>
+
+  <rect x="530" y="155" width="185" height="115" class="question"/>
+  <text x="552" y="181" class="label">UNDER INVESTIGATION</text>
+  <text x="552" y="210" class="nodeTitle">Communication Channel</text>
+  <text x="552" y="238" class="body">What moved upward?</text>
+
+  <path d="M715 212 L760 212" class="line"/>
+
+  <rect x="760" y="155" width="185" height="115" class="question"/>
+  <text x="782" y="181" class="label">UNDER INVESTIGATION</text>
+  <text x="782" y="210" class="nodeTitle">Management Interpretation</text>
+  <text x="782" y="238" class="body">How was knowledge reframed?</text>
+
+  <path d="M945 212 L990 212" class="line"/>
+
+  <rect x="990" y="155" width="185" height="115" class="question"/>
+  <text x="1012" y="181" class="label">UNDER INVESTIGATION</text>
+  <text x="1012" y="210" class="nodeTitle">Decision Authority</text>
+  <text x="1012" y="238" class="body">Who made the decision?</text>
+
+  <path d="M1082 270 L1082 335" class="line"/>
+
+  <rect x="890" y="360" width="385" height="105" class="question"/>
+  <text x="915" y="390" class="label">RESEARCH QUESTION</text>
+  <text x="915" y="420" class="nodeTitle">Launch Action</text>
+  <text x="915" y="447" class="body">How did knowledge, authority, and pressure interact?</text>
+
+  <rect x="70" y="345" width="700" height="170" class="box"/>
+  <text x="95" y="382" class="nodeTitle">Evidence Needed for Each Link</text>
+  <text x="95" y="415" class="body">• source of technical knowledge</text>
+  <text x="95" y="442" class="body">• exact communication path</text>
+  <text x="95" y="469" class="body">• participants and authority</text>
+  <text x="390" y="415" class="body">• changes in language or interpretation</text>
+  <text x="390" y="442" class="body">• contradictory evidence</text>
+  <text x="390" y="469" class="body">• contemporaneous records and testimony</text>
+
+  <text x="70" y="590" class="subtitle">
+    No connector in this model should be interpreted as an established causal or communication finding until supported by evidence.
+  </text>
+
+</svg>

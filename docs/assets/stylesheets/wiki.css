@@ -1,0 +1,642 @@
+/*
+ * Russow Institute Wiki Presentation Layer
+ * Scope: MkDocs Material only
+ *
+ * Presentation is intentionally restrained.
+ * Markdown remains authoritative.
+ */
+
+:root {
+  --ri-navy: #0a2e5a;
+  --ri-gold: #b8942f;
+  --ri-ink: #182230;
+  --ri-muted: #5e6b78;
+  --ri-border: #dfe5eb;
+  --ri-soft: #f7f9fb;
+  --ri-reading-width: 52rem;
+}
+
+.md-content__inner {
+  max-width: var(--ri-reading-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3rem;
+}
+
+.md-typeset {
+  color: var(--ri-ink);
+  font-size: 0.86rem;
+  line-height: 1.76;
+}
+
+.md-typeset p,
+.md-typeset li {
+  line-height: 1.76;
+}
+
+.md-typeset p {
+  margin-top: 0.8em;
+  margin-bottom: 1em;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  color: var(--ri-navy);
+  letter-spacing: -0.015em;
+}
+
+.md-typeset h1 {
+  margin-bottom: 0.45em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.md-typeset h1 + p,
+.md-typeset h1 + p + p {
+  color: var(--ri-muted);
+}
+
+.md-typeset h2 {
+  margin-top: 2.5em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--ri-border);
+  font-weight: 700;
+}
+
+.md-typeset h3 {
+  margin-top: 1.9em;
+  font-weight: 700;
+}
+
+.md-typeset h4 {
+  margin-top: 1.5em;
+  font-weight: 700;
+}
+
+.md-typeset hr {
+  margin: 2.6rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--ri-border);
+}
+
+.md-typeset blockquote {
+  margin: 1.7rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 0.25rem solid var(--ri-gold);
+  background: var(--ri-soft);
+  color: var(--ri-ink);
+}
+
+.md-typeset blockquote > :first-child {
+  margin-top: 0;
+}
+
+.md-typeset blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--ri-border);
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: #eef2f6;
+  color: var(--ri-navy);
+  font-weight: 700;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  margin: 1.6rem 0;
+  border-width: 0;
+  border-left: 0.25rem solid var(--ri-gold);
+  box-shadow: 0 0.1rem 0.35rem rgba(10, 46, 90, 0.08);
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-weight: 700;
+}
+
+.md-typeset ul,
+.md-typeset ol {
+  margin-top: 0.8em;
+  margin-bottom: 1.25em;
+}
+
+.md-typeset li + li {
+  margin-top: 0.35em;
+}
+
+.md-typeset a {
+  text-underline-offset: 0.16em;
+}
+
+.md-typeset pre {
+  margin-top: 1.4rem;
+  margin-bottom: 1.6rem;
+  border: 1px solid var(--ri-border);
+  box-shadow: none;
+}
+
+.md-typeset pre > code {
+  line-height: 1.55;
+}
+
+.md-typeset code {
+  border-radius: 0.2rem;
+}
+
+.md-typeset :target {
+  scroll-margin-top: 4rem;
+}
+
+@media screen and (max-width: 44.984375em) {
+  .md-content__inner {
+    max-width: 100%;
+  }
+
+  .md-typeset {
+    font-size: 0.83rem;
+    line-height: 1.7;
+  }
+
+  .md-typeset h2 {
+    margin-top: 2em;
+  }
+}
+
+/* RUSSOW INSTITUTE PRESENTATION PILOT V3 */
+
+.ri-document-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 1rem 0 2.2rem;
+  border-top: 2px solid var(--ri-navy);
+  border-bottom: 1px solid var(--ri-border);
+  background: var(--ri-soft);
+}
+
+.ri-document-meta > p {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  border-right: 1px solid var(--ri-border);
+  color: var(--ri-muted);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.ri-document-meta > p:last-child {
+  border-right: 0;
+}
+
+.ri-document-meta strong {
+  display: block;
+  margin-bottom: 0.18rem;
+  color: var(--ri-navy);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.ri-objective {
+  margin: 1rem 0 1.8rem;
+  padding: 1rem 1.2rem;
+  border-left: 0.25rem solid var(--ri-gold);
+  background: var(--ri-soft);
+}
+
+.ri-objective p {
+  margin: 0.35rem 0;
+}
+
+.ri-objective strong {
+  color: var(--ri-navy);
+}
+
+.ri-visualization-note {
+  margin: 1rem 0 1.5rem;
+  padding: 0.85rem 1rem;
+  border-top: 1px solid var(--ri-border);
+  border-bottom: 1px solid var(--ri-border);
+  color: var(--ri-muted);
+  font-size: 0.75rem;
+}
+
+.ri-visualization-note p {
+  margin: 0.25rem 0;
+}
+
+.ri-visualization-note strong {
+  color: var(--ri-navy);
+}
+
+.md-typeset .admonition.abstract {
+  border-left-color: var(--ri-gold);
+}
+
+.md-typeset .admonition.abstract > .admonition-title {
+  background: rgba(184, 148, 47, 0.10);
+}
+
+.md-typeset pre {
+  width: min(68rem, calc(100vw - 4rem));
+  max-width: none;
+}
+
+.md-typeset table:not([class]) {
+  width: max-content;
+  min-width: 100%;
+  max-width: min(68rem, calc(100vw - 4rem));
+}
+
+@media screen and (max-width: 59.984375em) {
+  .ri-document-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ri-document-meta > p:nth-child(2) {
+    border-right: 0;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .ri-document-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .ri-document-meta > p {
+    border-right: 0;
+    border-bottom: 1px solid var(--ri-border);
+  }
+
+  .ri-document-meta > p:last-child {
+    border-bottom: 0;
+  }
+
+  .md-typeset pre,
+  .md-typeset table:not([class]) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* RUSSOW INSTITUTE — NAVIGATION HIERARCHY */
+
+/*
+ * Navigation must communicate structure before the reader interprets labels.
+ *
+ * LEFT:
+ * institutional domain → nested group → document → active document
+ *
+ * RIGHT:
+ * page section → subsection → deeper subsection
+ */
+
+
+/* ==========================================================================
+   Shared navigation rhythm
+   ========================================================================== */
+
+.md-nav__link {
+  transition:
+    color 120ms ease,
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+
+/* ==========================================================================
+   LEFT NAVIGATION — repository / knowledge architecture
+   ========================================================================== */
+
+/*
+ * Major nested domains such as:
+ *
+ * Discipline
+ * Institute
+ * Canon
+ * Research Programs
+ * Field Research
+ *
+ * These must read as structural headings, not ordinary document links.
+ */
+
+.md-nav--primary
+> .md-nav__list
+> .md-nav__item--nested
+> .md-nav__link {
+  margin-top: 0.8rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.42rem;
+  border-top: 1px solid rgba(10, 46, 90, 0.14);
+  color: var(--ri-navy);
+  font-size: 0.69rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+
+/*
+ * Do not draw a divider before the first major navigation domain.
+ */
+
+.md-nav--primary
+> .md-nav__list
+> .md-nav__item--nested:first-child
+> .md-nav__link {
+  margin-top: 0;
+  border-top: 0;
+}
+
+
+/*
+ * Ordinary top-level documents.
+ */
+
+.md-nav--primary
+> .md-nav__list
+> .md-nav__item:not(.md-nav__item--nested)
+> .md-nav__link {
+  padding-top: 0.38rem;
+  padding-bottom: 0.38rem;
+  color: #425466;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+/*
+ * First nested document level.
+ *
+ * This produces a visible indentation beneath the structural domain.
+ */
+
+.md-nav--primary
+.md-nav
+.md-nav__list
+> .md-nav__item
+> .md-nav__link {
+  position: relative;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.8rem;
+  color: #566779;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.42;
+}
+
+
+/*
+ * Small guide line gives the eye a vertical hierarchy reference without
+ * turning the sidebar into a file tree.
+ */
+
+.md-nav--primary
+.md-nav
+.md-nav__list
+> .md-nav__item
+> .md-nav__link::before {
+  position: absolute;
+  top: 0.34rem;
+  bottom: 0.34rem;
+  left: 0;
+  width: 1px;
+  background: #dce3ea;
+  content: "";
+}
+
+
+/*
+ * Nested groups within a major domain receive stronger treatment than their
+ * child documents, but remain subordinate to the major domain label.
+ */
+
+.md-nav--primary
+.md-nav
+.md-nav__item--nested
+> .md-nav__link {
+  margin-top: 0.38rem;
+  color: #263d55;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Deeper document levels.
+ */
+
+.md-nav--primary
+.md-nav
+.md-nav
+.md-nav__link {
+  padding-left: 1.25rem;
+  color: #6a7888;
+  font-size: 0.71rem;
+}
+
+
+/*
+ * Active document.
+ *
+ * This must be substantially easier to find than surrounding navigation.
+ */
+
+.md-nav--primary .md-nav__link--active {
+  margin-top: 0.08rem;
+  margin-bottom: 0.08rem;
+  padding-top: 0.42rem;
+  padding-bottom: 0.42rem;
+  border-left: 3px solid var(--ri-gold);
+  border-radius: 0 3px 3px 0;
+  background: rgba(10, 46, 90, 0.055);
+  color: var(--ri-navy);
+  font-weight: 750;
+}
+
+
+/*
+ * Suppress the guide-line pseudo element on the active document because
+ * the gold active indicator replaces it.
+ */
+
+.md-nav--primary .md-nav__link--active::before {
+  display: none;
+}
+
+
+/*
+ * Hover remains restrained.
+ */
+
+.md-nav--primary .md-nav__link:hover {
+  color: var(--ri-navy);
+}
+
+
+/* ==========================================================================
+   RIGHT NAVIGATION — document table of contents
+   ========================================================================== */
+
+/*
+ * Table-of-contents heading.
+ */
+
+.md-sidebar--secondary .md-nav__title {
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid var(--ri-navy);
+  color: var(--ri-navy);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+
+/*
+ * H2-level page sections.
+ *
+ * These are the principal navigation anchors within the current publication.
+ */
+
+.md-nav--secondary
+> .md-nav__list
+> .md-nav__item
+> .md-nav__link {
+  margin-top: 0.22rem;
+  padding: 0.42rem 0 0.42rem 0.72rem;
+  border-left: 2px solid #d9e1e8;
+  color: #34495e;
+  font-size: 0.75rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+
+/*
+ * H3-level subsections.
+ */
+
+.md-nav--secondary
+.md-nav
+.md-nav__link {
+  margin-top: 0;
+  padding: 0.26rem 0 0.26rem 1rem;
+  border-left: 1px solid #e4e9ee;
+  color: #6b7886;
+  font-size: 0.69rem;
+  font-weight: 450;
+  line-height: 1.4;
+}
+
+
+/*
+ * H4 and deeper.
+ */
+
+.md-nav--secondary
+.md-nav
+.md-nav
+.md-nav__link {
+  padding-left: 1.35rem;
+  color: #84909b;
+  font-size: 0.66rem;
+}
+
+
+/*
+ * Current section.
+ *
+ * Gold marker is deliberately different from ordinary hierarchy lines.
+ */
+
+.md-nav--secondary .md-nav__link--active {
+  border-left-color: var(--ri-gold);
+  background: linear-gradient(
+    90deg,
+    rgba(184, 148, 47, 0.09),
+    rgba(184, 148, 47, 0)
+  );
+  color: var(--ri-navy);
+  font-weight: 750;
+}
+
+
+/*
+ * Current major section receives a slightly stronger indicator.
+ */
+
+.md-nav--secondary
+> .md-nav__list
+> .md-nav__item
+> .md-nav__link--active {
+  border-left-width: 3px;
+}
+
+
+/*
+ * Hover should help scanning without competing with active state.
+ */
+
+.md-nav--secondary .md-nav__link:hover {
+  color: var(--ri-navy);
+}
+
+
+/* ==========================================================================
+   Navigation density
+   ========================================================================== */
+
+.md-sidebar--primary .md-nav__list,
+.md-sidebar--secondary .md-nav__list {
+  line-height: 1.35;
+}
+
+
+/*
+ * Give major domain changes on the left enough air to be understood as
+ * structural changes.
+ */
+
+.md-sidebar--primary
+.md-nav--primary
+> .md-nav__list
+> .md-nav__item {
+  margin-bottom: 0.08rem;
+}
+
+
+/* ==========================================================================
+   Small screens
+   ========================================================================== */
+
+@media screen and (max-width: 76.234375em) {
+
+  /*
+   * On drawer-based navigation we keep hierarchy, but reduce decorative
+   * separators so the mobile menu remains compact.
+   */
+
+  .md-nav--primary
+  > .md-nav__list
+  > .md-nav__item--nested
+  > .md-nav__link {
+    margin-top: 0.55rem;
+    padding-top: 0.55rem;
+  }
+
+}
+
+
+/* END RUSSOW INSTITUTE — NAVIGATION HIERARCHY */

@@ -1,0 +1,9 @@
+3c2e135afe4b10e4c1c09445a73d364bd416321b498aab0aa801f3072acd3b98  package/imd-v1.1-regression-control-bundle.zip
+e3913020d42aa0f7e9a5548c03500af7b53f71da984cebb182118b56bf99254e  package/imd-v1.1-regression-evaluator-packet.zip
+6673e47fc9cc8bc25a4600ff0347f9ecf40912d39315e4b49642a1cec4ea3cce  package/imd-v1.1-regression-operator-packet.zip
+e961a678c4358d91a490a8f9a9b027f99584f99f438e93bd46c64999a76b9704  package/imd-v1.1-regression-package-hashes.txt
+ea37cfa3a2c056c530529c69c0dace267d3f46d5cbcee503ef6d4bcf7272b4cd  regression/imd-v1.1-independent-evaluator-report.md
+beac0b99698c93b3d33b0e231b605a6bb7153189e356dffadfdcbbbed34aa358  regression/imd-v1.1-regression-complete-run-bundle.zip
+bf3eab619f20c1a28653ca062dbebc91b7d18a515a602b42b7915604b9940e82  regression/imd-v1.1-regression-raw-operator-output.zip
+07c8c82623b8eec1701e40d976adbe808e836a9a672d7f63310fe13a48385a2c  regression/imd-v1.1-regression-report-hashes.txt
+3992fc5a874243e70ab300e592213658cf757c8891bca084b2ceeb9027e65a72  regression/imd-v1.1-regression-run-report.md

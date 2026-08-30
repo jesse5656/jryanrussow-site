@@ -1,9 +1,20 @@
 # Systems Architect Discipline Operating Plan
 
-Version: 1.1.0
+<div class="ri-document-meta" markdown>
 
-Status:
+**Document Type**
+Operating Plan
+
+**Status**
 Active
+
+**Version**
+1.1.0
+
+**Authority**
+Systems Architect Discipline
+
+</div>
 
 ---
 
@@ -13,7 +24,7 @@ This document defines current execution for the Systems Architect Discipline.
 
 ---
 
-# Engineering Execution Rules
+## Engineering Execution Rules
 
 These rules apply to every engineering objective unless explicitly overridden.
 
@@ -51,20 +62,23 @@ These rules apply to every engineering objective unless explicitly overridden.
    - Engineering command blocks shall leave the user's interactive shell in its normal operating state.
    - Diagnostic commands that may legitimately return a nonzero result shall report their exit code without terminating the interactive shell.
 
-------------------------------------------------------------------------------
+---
 
-# Current Objective
+## Current Objective
 
-Type:
+<div class="ri-objective" markdown>
+
+**Type**
 Research Program
 
-Name:
+**Objective**
 Institutional Memory Evidence Development
 
-Status:
+**Status**
 In Progress
 
-Objective:
+</div>
+
 Advance Research Program 001 by extracting evidence, strengthening the NASA Challenger case study, and revising the Institutional Memory paper.
 
 Scope:
@@ -82,17 +96,18 @@ Success Criteria:
 - Institutional Memory paper improved
 - Related documents linked where appropriate
 
-Definition of Done:
-□ Objective completed
-□ Validation completed
-□ Verification completed
-□ Documentation updated
-□ OPERATING-PLAN.md updated
-□ Git commit completed if repository changes occurred
+### Definition of Done
+
+- [ ] Objective completed
+- [ ] Validation completed
+- [ ] Verification completed
+- [ ] Documentation updated
+- [ ] OPERATING-PLAN.md updated
+- [ ] Git commit completed if repository changes occurred
 
 ---
 
-# Priority Queue
+## Priority Queue
 
 1. Complete Rogers Commission evidence extraction
 2. Complete NASA Challenger case study
@@ -102,7 +117,7 @@ Definition of Done:
 
 ---
 
-# Session Management
+## Session Management
 
 When Current Objective is complete:
 
@@ -111,3 +126,73 @@ When Current Objective is complete:
 3. Promote Priority Queue item #1 if appropriate.
 4. Commit changes.
 5. Stop.
+
+## Institutional Memory Commercialization Constraint
+
+The Institutional Memory research program must remain connected to a
+commercially useful outcome.
+
+Research is not authorized merely because another case is interesting or
+because additional evidence can be collected.
+
+Following completion of the current research sprint, additional major
+case-study research should require a defined:
+
+- framework requirement;
+- diagnostic requirement;
+- falsification requirement; or
+- commercial requirement.
+
+The immediate commercial milestone is:
+
+> **Can The Russow Institute sell and competently perform a $10,000
+> Institutional Memory Diagnostic using the intellectual property that exists
+> today?**
+
+The intended commercialization path is:
+
+**Research IP → Framework → Diagnostic Methodology → Client Deliverable →
+Pilot Engagement → Commercial Validation → Repeatable Delivery →
+Technology Requirements**
+
+Authoritative strategic reference:
+
+[Institutional Memory — Commercialization Thesis](../research-programs/001-institutional-memory/COMMERCIALIZATION-THESIS.md)
+
+## Institutional Memory Research Sprint Closeout
+
+Research Program 001 has completed its initial historical empirical sprint.
+
+Current state:
+
+- Challenger findings: 8;
+- BP findings: 10;
+- cross-case findings: 6;
+- established framework propositions: 0;
+- Canon propositions: 0;
+- candidate Institutional Memory framework: ready for applied testing;
+- Selective Conversion Failure: supported hypothesis.
+
+The next priority is not automatic expansion into another historical case.
+
+### Highest-Priority Objective
+
+**Develop the Institutional Memory Diagnostic specification and pilot
+architecture.**
+
+Immediate commercial test:
+
+> **Can The Russow Institute sell and competently perform a $10,000
+> Institutional Memory Diagnostic using the intellectual property that exists
+> today?**
+
+Historical research should resume when required by a defined framework,
+diagnostic, falsification, or commercial need.
+
+Research closeout:
+
+[Institutional Memory Framework-Readiness Synthesis](../research-programs/001-institutional-memory/evidence/014-INSTITUTIONAL-MEMORY-FRAMEWORK-READINESS-SYNTHESIS.md)
+
+Commercial strategy:
+
+[Institutional Memory — Commercialization Thesis](../research-programs/001-institutional-memory/COMMERCIALIZATION-THESIS.md)
