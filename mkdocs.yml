@@ -62,6 +62,13 @@ nav:
       - ChatGPT Workspace Standard: operations/workspace/CHATGPT-PROJECT-WORKSPACE-STANDARD.md
 
 
+  - Architecture:
+      - Site Architecture: architecture/SITE-ARCHITECTURE.md
+      - CRM / ERP Platform Evaluation: architecture/CRM-ERP-PLATFORM-EVALUATION.md
+      - Open-Source Platform Evaluation Skill: architecture/OPEN-SOURCE-PLATFORM-EVALUATION-SKILL-SPECIFICATION.md
+      - Platform Resilience Monitoring: architecture/PLATFORM-RESILIENCE-MONITORING.md
+
+
   - Standards:
       - Progressive Disclosure Standard: standards/PROGRESSIVE-DISCLOSURE-STANDARD.md
       - Knowledge Linking Standard: standards/KNOWLEDGE-LINKING-STANDARD.md
