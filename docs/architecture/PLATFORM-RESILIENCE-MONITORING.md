@@ -41,7 +41,7 @@ It monitors relevant CRM / ERP projects and credible replacements for material c
 
 This external task is useful operationally but is not the authoritative methodology.
 
-The authoritative monitoring model is this repository and the future `evaluate-open-source-platforms` skill.
+The authoritative monitoring model is this repository and the validated `evaluate-open-source-platforms` V1.1 methodology. Runtime installation remains a separate operational transaction.
 
 ---
 
@@ -203,7 +203,7 @@ Also perform deliberate architecture health review:
 
 ## Relationship to the Skill
 
-The future `evaluate-open-source-platforms` skill shall support:
+The validated `evaluate-open-source-platforms` V1.1 methodology supports:
 
 ### Candidate Evaluation
 

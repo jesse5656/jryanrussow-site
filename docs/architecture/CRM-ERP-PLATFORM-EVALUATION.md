@@ -55,6 +55,7 @@ No replacement platform is selected.
 | Axelor | Eliminated under current proprietary-tier rule |
 | xTuple/PostBooks | Eliminated as current foundation |
 | Platform monitoring | Active interim weekly condition watch |
+| Evaluation methodology | `evaluate-open-source-platforms` V1.1 validated; production candidate; runtime installation pending |
 
 ---
 
@@ -277,3 +278,28 @@ No platform may be selected solely from marketing, screenshots, feature lists, l
 Production selection requires the software-freedom gate, operational POC, backup/restore proof, exit proof, upgrade proof, and maintenance-burden assessment.
 
 No production migration is currently authorized.
+
+---
+
+## Evaluation Methodology State
+
+`evaluate-open-source-platforms` V1.1 is now the validated methodology baseline
+for the first-round platform evaluation.
+
+Validation result:
+
+- 15 / 15 fixtures PASS;
+- 7 / 7 critical fixtures PASS;
+- no remaining candidate-behavior defect.
+
+The next platform-selection work shall apply this methodology consistently to:
+
+1. Frappe CRM + ERPNext;
+2. Tryton;
+3. Apache OFBiz.
+
+The validated methodology does not itself select a winner.
+
+Each candidate must still complete the governed operational POC, backup/restore,
+exit-reconstruction, upgrade-survivability, maintenance-burden, and
+software-freedom gates before a production migration decision.

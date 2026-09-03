@@ -6,10 +6,10 @@
 Skill Specification
 
 **Status**
-Approved for Skill Development
+Validated Methodology — V1.1
 
 **Version**
-1.0.0
+1.1.0
 
 **Authority**
 Systems Architect Discipline
@@ -294,10 +294,108 @@ At minimum:
 
 ---
 
-## Initial Development Deliverable
+## Validated Decision Semantics
 
-Create a V1.0 development package for:
+### `ACCEPT_CANDIDATE`
 
-`evaluate-open-source-platforms`
+Use when the available evidence supports keeping the platform as an active
+candidate and no material unresolved gate prevents candidate-level acceptance.
+
+This is not final production adoption.
+
+### `CONDITIONAL`
+
+Use when the platform remains viable, but one or more material unresolved
+conditions must be satisfied before candidate acceptance or implementation.
+
+### `DEFER`
+
+Use when the available evidence is too incomplete for responsible
+candidate-level acceptance, but no hard failure is established.
+
+### `REJECT`
+
+Use when a hard failure or disqualifying condition is established for a
+candidate.
+
+### `REASSESS_CURRENT_PLATFORM`
+
+Use for an installed platform when material deterioration or a future-path
+failure requires deliberate reassessment, migration readiness, or replacement
+planning.
+
+`UNKNOWN` is not `PASS`.
+
+---
+
+## Validated Health-Severity Semantics
+
+### `INFO`
+
+No material platform-health problem or acceptance failure is established.
+
+### `WATCH`
+
+An early-warning signal exists, but no present required gate has failed and no
+immediate architecture action is required.
+
+### `REVIEW`
+
+A material future-path or architecture concern requires deliberate reassessment
+or planning, but the current operating state has not yet crossed a hard-failure
+boundary.
+
+### `CRITICAL`
+
+A present hard failure is established against a required acceptance gate, or
+there is an immediate material threat to software freedom, recoverability,
+security, or continued operation.
+
+---
+
+## Installed-Platform Forward-Deterioration Rule
+
+When an installed platform's exact current supported release still passes
+current gates but an announced future supported path moves required capability
+into an unacceptable proprietary dependency:
+
+1. preserve the exact current-release software-freedom result;
+2. classify the announced change as forward-path deterioration;
+3. return `REASSESS_CURRENT_PLATFORM`;
+4. use `REVIEW` while the current release still works and a bounded supported
+   action window remains;
+5. explicitly prepare migration and/or exit options while the current release
+   still works and before its support window closes;
+6. preserve and re-verify backups, exports, reconstruction procedures, custom
+   code, identifiers, relationships, documents, attachments, and integration
+   documentation during that window;
+7. escalate to `CRITICAL` if the current release itself crosses a hard-failure
+   boundary, the supported exit window is lost, or recoverability becomes
+   materially threatened.
+
+A response that merely says "reassess" is incomplete.
+
+---
+
+## Validated Implementation State
+
+`evaluate-open-source-platforms` V1.1 completed controlled validation.
+
+Final ECR1 result:
+
+- 15 / 15 fixtures PASS;
+- 7 / 7 critical fixtures PASS;
+- no remaining candidate-behavior defect;
+- no further operator-methodology revision required by the validated corpus.
+
+The validated runtime artifact is a production candidate.
+
+Runtime installation or registration remains a separate operational
+transaction.
+
+See:
+
+- `EVALUATE-OPEN-SOURCE-PLATFORMS-V1.1-VALIDATION-RECORD.md`;
+- `OPEN-SOURCE-PLATFORM-EVALUATION-PRODUCTION-BASELINE.md`.
 
 No implementation shall silently weaken this specification.

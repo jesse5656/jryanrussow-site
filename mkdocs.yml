@@ -66,6 +66,8 @@ nav:
       - Site Architecture: architecture/SITE-ARCHITECTURE.md
       - CRM / ERP Platform Evaluation: architecture/CRM-ERP-PLATFORM-EVALUATION.md
       - Open-Source Platform Evaluation Skill: architecture/OPEN-SOURCE-PLATFORM-EVALUATION-SKILL-SPECIFICATION.md
+      - Open-Source Platform Validation Record: architecture/EVALUATE-OPEN-SOURCE-PLATFORMS-V1.1-VALIDATION-RECORD.md
+      - Open-Source Platform Production Baseline: architecture/OPEN-SOURCE-PLATFORM-EVALUATION-PRODUCTION-BASELINE.md
       - Platform Resilience Monitoring: architecture/PLATFORM-RESILIENCE-MONITORING.md
 
 
