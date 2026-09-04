@@ -17,8 +17,20 @@ Proposed:
 Approved:
 2026-09-04
 
-Scope:
+Scope Summary:
 Governed ChatGPT workstream handoff, session continuation, repository-state reconciliation, deterministic context support, and reusable handoff-skill development
+
+---
+
+## Scope
+
+- `docs/architecture/ocp/OCP-008-GOVERNED-CHAT-HANDOFF-AND-RESUME.md`
+- `docs/operations/researcher/CHATGPT-WORKFLOW.md`
+- `docs/operations/researcher/DAILY-OPERATIONS.md`
+- `docs/operations/researcher/SESSION-COMMANDS.md`
+- `START-HERE.md`
+- `docs/architecture/GOVERNED-CHAT-HANDOFF-SKILL-SPECIFICATION.md`
+- `scripts/platform/repository_context.py`
 
 ---
 
