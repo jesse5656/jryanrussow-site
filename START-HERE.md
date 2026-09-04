@@ -108,12 +108,22 @@ ChatGPT conversations are temporary working sessions.
 
 The repository is the institutional memory.
 
-When a chat becomes long, slow, or reaches a natural milestone:
+When a chat becomes long, slow, reaches a natural milestone, or is being
+replaced:
 
-1. Commit all work.
-2. Update OPERATING-PLAN.md if priorities changed.
-3. Start a NEW ChatGPT conversation.
-4. Archive the previous chat.
+1. Commit repository work only when it is actually ready and the governed
+   change workflow permits the commit.
+2. Do not create a commit solely to make the chat transition appear clean.
+3. Generate a governed HANDOFF when another conversation will continue active
+   work.
+4. Start the replacement ChatGPT conversation.
+5. The replacement conversation shall use RESUME: resolve current repository
+   state, reconcile the handoff, and continue from the resolved state.
+6. Archive the previous chat.
+
+The authoritative procedure is:
+
+`docs/operations/researcher/CHATGPT-WORKFLOW.md`
 
 Archived chats shall use the following naming convention:
 
@@ -127,7 +137,9 @@ Examples:
 
 The active chat always retains the repository workstream name.
 
-The archived chat becomes part of the historical record.
+The archived chat remains historical working-session evidence.
+
+The repository remains authoritative institutional memory.
 
 
 

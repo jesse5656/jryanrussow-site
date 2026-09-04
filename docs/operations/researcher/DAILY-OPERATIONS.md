@@ -107,6 +107,8 @@ espanso path
 
 ## Standard Session Close
 
+For a completed session that does not require continuation:
+
 Completed
 
 Current Objective
@@ -114,6 +116,15 @@ Current Objective
 Next Concrete Step
 
 Deferred
+
+When another ChatGPT conversation will continue active work, use the governed
+HANDOFF and RESUME procedure in:
+
+`docs/operations/researcher/CHATGPT-WORKFLOW.md`
+
+Do not force unfinished repository work into a commit merely for chat
+transition. Preserve actual staged, unstaged, untracked, interrupted, blocked,
+and unresolved state when material.
 
 ------------------------------------------------------------------------------
 

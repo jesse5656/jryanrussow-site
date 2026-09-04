@@ -52,6 +52,8 @@ find docs/research-programs/001-institutional-memory -maxdepth 3 -type f | sort
 
 ## Session Close
 
+For a completed session that does not require continuation:
+
 Completed
 
 Current Objective
@@ -59,6 +61,13 @@ Current Objective
 Next Concrete Step
 
 Deferred
+
+For active work moving to another ChatGPT conversation, use:
+
+`docs/operations/researcher/CHATGPT-WORKFLOW.md`
+
+Do not create a commit solely for chat transition. Preserve material unfinished
+repository state accurately in the handoff.
 
 ------------------------------------------------------------------------------
 
