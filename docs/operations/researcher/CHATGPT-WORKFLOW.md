@@ -1,6 +1,6 @@
 # ChatGPT Workflow
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status:
 Active
@@ -90,6 +90,50 @@ python3 scripts/governance/governance_engine.py --staged
 ```
 
 A chat transition does not bypass this workflow.
+
+------------------------------------------------------------------------------
+
+## Automatic HANDOFF / RESUME Trigger
+
+For the three primary long-running ChatGPT workstreams defined by the ChatGPT
+Project Workspace Standard, activation is semantic and automatic.
+
+The user does **not** need to name `handoff-governed-work`, type `HANDOFF`, or
+remember a special command.
+
+Treat any clear user intent to move active governed work to another
+conversation as a HANDOFF trigger. Examples include, but are not limited to:
+
+- start a new chat;
+- move this to a new chat;
+- move this to a fresh chat;
+- hand this off;
+- continue this in another chat;
+- create a continuation prompt;
+- this chat is getting too long/slow and should be replaced.
+
+When triggered:
+
+1. automatically execute the governed HANDOFF procedure in this document;
+2. if the active runtime exposes the validated `handoff-governed-work` skill,
+   invoke its HANDOFF mode;
+3. otherwise perform the same governed HANDOFF behavior directly from this
+   procedure;
+4. do not require the user to repeat the request using a skill name or command.
+
+Treat receipt of a governed handoff, or a clear request to continue from one,
+as an automatic RESUME trigger.
+
+When RESUME is triggered:
+
+1. treat the handoff as continuation evidence, not authority;
+2. re-resolve current repository state;
+3. reconcile drift and conflicting evidence;
+4. determine the exact current next action;
+5. continue rather than restarting broad discovery.
+
+This trigger changes activation behavior only. It does not change the validated
+HANDOFF/RESUME methodology or production skill bytes.
 
 ------------------------------------------------------------------------------
 

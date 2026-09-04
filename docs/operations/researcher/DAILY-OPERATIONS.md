@@ -91,11 +91,24 @@ Expands to Operational Change Proposal instructions.
 
 Expands to the standard session close.
 
+## Automatic Handoff / Resume Trigger
+
+The three primary startup aliases (`:startjr`, `:startarchive`, and `:startops`)
+inject the automatic governed transition rule. Clear intent to replace the
+current chat triggers HANDOFF automatically; a governed handoff in the
+replacement chat triggers RESUME automatically.
+
+No special handoff command is required from the user.
+
 ## Configuration Location
 
-Espanso alias file:
+Repository source of truth:
 
-~/.config/espanso/match/russow-session-aliases.yml
+config/espanso/base.yml
+
+Live Espanso file:
+
+~/.config/espanso/match/base.yml
 
 ## Common Espanso Commands
 

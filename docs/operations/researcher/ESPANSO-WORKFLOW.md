@@ -1,6 +1,6 @@
 # Espanso Workflow
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status:
 Active
@@ -42,6 +42,24 @@ Creates an Operational Change Proposal prompt.
 :close
 
 Creates the standard session close prompt.
+
+## Automatic Governed Chat Transition
+
+`:startjr`, `:startarchive`, and `:startops` each inject the same automatic
+governed transition rule.
+
+Once the session starter is present in a chat:
+
+- clear semantic intent to move work to another chat automatically triggers
+  HANDOFF;
+- receipt of a governed handoff automatically triggers RESUME;
+- no explicit `$handoff-governed-work`, `HANDOFF`, or `RESUME` command is
+  required from the user;
+- if the runtime exposes the validated skill, it is invoked;
+- otherwise the assistant follows the governed procedure directly.
+
+This is intentionally embedded in each of the three primary startup prompts so
+the trigger travels with the working session.
 
 ## Deployment
 

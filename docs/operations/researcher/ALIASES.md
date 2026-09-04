@@ -1,6 +1,6 @@
 # Researcher Aliases
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status:
 Active
@@ -40,6 +40,25 @@ Operational Change Proposal.
 :close
 
 Standard session close.
+
+## Automatic Handoff / Resume Behavior
+
+The three primary session starters — `:startjr`, `:startarchive`, and
+`:startops` — inject the automatic governed session-transition rule into the
+chat.
+
+After one of those session starters is used:
+
+- clear intent to move active work to another chat automatically triggers
+  HANDOFF;
+- a governed handoff supplied to a replacement chat automatically triggers
+  RESUME;
+- the user does not need to remember or type the skill name;
+- the validated `handoff-governed-work` skill is used where the runtime exposes
+  it; otherwise the equivalent governed procedure is executed directly.
+
+`:close` remains the standard close for a session that is actually complete.
+If active work will continue in another chat, HANDOFF takes precedence.
 
 ## ChatGPT Shorthand
 

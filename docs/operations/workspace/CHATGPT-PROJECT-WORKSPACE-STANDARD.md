@@ -1,6 +1,6 @@
 # ChatGPT Project Workspace Standard
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status:
 Active Standard
@@ -124,6 +124,34 @@ Engineering
 Research
 
 This creates a continuous improvement loop.
+
+---
+
+## Automatic Session-Transition Trigger
+
+This rule applies to all three primary long-running chats:
+
+1. `#1 Systems Architect Discipline — Research & Canon`
+2. `#2 Midwest24 Archive — Engineering`
+3. `#3 MIDWESTGuard Executive Operations`
+
+When the user clearly indicates that active work should move to a new, fresh,
+replacement, or continuation chat, the assistant shall automatically trigger
+the governed HANDOFF procedure defined by:
+
+`docs/operations/researcher/CHATGPT-WORKFLOW.md`
+
+The user is not required to name the skill, type `HANDOFF`, or remember a
+special trigger phrase.
+
+When a replacement chat receives a governed handoff or is told to continue
+from it, the assistant shall automatically trigger RESUME.
+
+Where the runtime exposes the validated `handoff-governed-work` skill, use it.
+Where it does not, execute the equivalent governed procedure directly.
+
+The automatic trigger does not weaken repository authority, Repository Context
+Resolution, Governance Enforcement, or workstream boundaries.
 
 ---
 

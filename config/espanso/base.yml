@@ -22,6 +22,16 @@ matches:
 
       Do not redesign architecture unless I explicitly request an Architecture Change Proposal.
 
+      Automatic governed chat transition rule:
+
+      If I clearly indicate that this work should move to a new, fresh, replacement, or continuation chat, automatically execute the governed HANDOFF procedure. Do not require me to name a skill, type HANDOFF, or remember a special command.
+
+      Preserve the minimum sufficient continuation state: workstream identity, each material repository's current Git state, exact governance status, current work state, exact next action or UNRESOLVED, required artifacts, material conflicts, and security boundaries. Exclude secrets and unrelated history.
+
+      If this runtime exposes `handoff-governed-work`, invoke HANDOFF. Otherwise perform the equivalent governed HANDOFF behavior directly.
+
+      If this session receives a governed handoff or I clearly ask to continue from one, automatically execute RESUME: re-resolve current repository state, reconcile drift/conflicts, determine the exact current next action, and continue without broad rediscovery.
+
       End with:
       Completed
       Current Objective
@@ -53,6 +63,16 @@ matches:
 
       Do not redesign architecture unless I explicitly request an Architecture Change Proposal.
 
+      Automatic governed chat transition rule:
+
+      If I clearly indicate that this work should move to a new, fresh, replacement, or continuation chat, automatically execute the governed HANDOFF procedure. Do not require me to name a skill, type HANDOFF, or remember a special command.
+
+      Preserve the minimum sufficient continuation state: workstream identity, each material repository's current Git state, exact governance status, current work state, exact next action or UNRESOLVED, required artifacts, material conflicts, and security boundaries. Exclude secrets and unrelated history.
+
+      If this runtime exposes `handoff-governed-work`, invoke HANDOFF. Otherwise perform the equivalent governed HANDOFF behavior directly.
+
+      If this session receives a governed handoff or I clearly ask to continue from one, automatically execute RESUME: re-resolve current repository state, reconcile drift/conflicts, determine the exact current next action, and continue without broad rediscovery.
+
       End with:
       Completed
       Current Objective
@@ -81,6 +101,16 @@ matches:
       Execute the Operating Plan.
 
       Do not redesign operations unless I explicitly request an Operational Change Proposal.
+
+      Automatic governed chat transition rule:
+
+      If I clearly indicate that this work should move to a new, fresh, replacement, or continuation chat, automatically execute the governed HANDOFF procedure. Do not require me to name a skill, type HANDOFF, or remember a special command.
+
+      Preserve the minimum sufficient continuation state: workstream identity, each material repository's current Git state, exact governance status, current work state, exact next action or UNRESOLVED, required artifacts, material conflicts, and security boundaries. Exclude secrets and unrelated history.
+
+      If this runtime exposes `handoff-governed-work`, invoke HANDOFF. Otherwise perform the equivalent governed HANDOFF behavior directly.
+
+      If this session receives a governed handoff or I clearly ask to continue from one, automatically execute RESUME: re-resolve current repository state, reconcile drift/conflicts, determine the exact current next action, and continue without broad rediscovery.
 
       End with:
       Completed
