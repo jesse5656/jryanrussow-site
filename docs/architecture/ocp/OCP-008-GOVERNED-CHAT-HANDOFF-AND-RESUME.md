@@ -33,6 +33,7 @@ Governed ChatGPT workstream handoff, session continuation, repository-state reco
 - `docs/architecture/validation/handoff-governed-work/`
 - `docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-VALIDATION-RECORD.md`
 - `docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-PRODUCTION-BASELINE.md`
+- `docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-INSTALLATION-RECORD.md`
 - `scripts/platform/repository_context.py`
 
 ---

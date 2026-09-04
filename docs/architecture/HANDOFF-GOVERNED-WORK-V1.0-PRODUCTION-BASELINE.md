@@ -6,7 +6,7 @@
 Production Baseline
 
 **Status**
-Validated Production Candidate — Installation Pending
+Validated Production Candidate — Codex Local Installation Verified
 
 **Skill**
 `handoff-governed-work`
@@ -151,6 +151,21 @@ transaction and must use the supported mechanism for that runtime.
 
 A filesystem copy shall not be represented as an official ChatGPT skill
 installation unless the applicable runtime explicitly defines that mechanism.
+
+### Verified local installation
+
+The validated V1.0 package has been installed and byte-for-byte verified at:
+
+`/home/jesse/.agents/skills/handoff-governed-work`
+
+This is recorded as a **Codex/local Agent Skills installation** only.
+
+It does not represent ChatGPT web registration or OpenAI API Skills
+registration.
+
+Installation record:
+
+`docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-INSTALLATION-RECORD.md`
 
 ---
 
