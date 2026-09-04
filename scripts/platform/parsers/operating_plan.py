@@ -8,6 +8,7 @@ from typing import Any
 OBJECTIVE_SECTION_NAMES = {"current objective", "highest-priority objective"}
 HEADING = re.compile(r"^#{1,6}\s+(.+?)\s*$")
 FIELD = re.compile(r"^([A-Za-z][A-Za-z0-9 /&()\-]+):\s*(.*)$")
+BOLD_FIELD = re.compile(r"^\*\*([^*]+)\*\*\s*$")
 
 FIELD_MAP = {
     "type": "type",
@@ -16,6 +17,18 @@ FIELD_MAP = {
     "objective": "objective",
     "scope": "scope",
     "success criteria": "success_criteria",
+    "active sprint": "active_sprint",
+    "current sprint": "active_sprint",
+    "next concrete step": "next_concrete_step",
+}
+
+# In the current ri-objective metadata block, "Objective" is the objective name,
+# not the longer prose objective description used by the legacy field syntax.
+BOLD_FIELD_MAP = {
+    "type": "type",
+    "name": "name",
+    "objective": "name",
+    "status": "status",
     "active sprint": "active_sprint",
     "current sprint": "active_sprint",
     "next concrete step": "next_concrete_step",
@@ -60,6 +73,23 @@ def _parse_fields(
             flush()
             break
 
+        if stripped.startswith("<div"):
+            continue
+
+        if stripped.startswith("</div"):
+            flush()
+            continue
+
+        bold_field = BOLD_FIELD.match(stripped)
+        if bold_field:
+            mapped = BOLD_FIELD_MAP.get(
+                bold_field.group(1).strip().lower()
+            )
+            if mapped is not None:
+                flush()
+                current_key = mapped
+                continue
+
         field = FIELD.match(stripped)
         if field:
             mapped = mapping.get(field.group(1).strip().lower())
@@ -84,7 +114,11 @@ def _find_authoritative_objective_block(text: str) -> list[str]:
 
     for index, raw in enumerate(lines):
         heading = HEADING.match(raw.strip())
-        if heading and heading.group(1).strip().lower() in OBJECTIVE_SECTION_NAMES:
+        if (
+            heading
+            and heading.group(1).strip().lower()
+            in OBJECTIVE_SECTION_NAMES
+        ):
             start = index + 1
             break
 

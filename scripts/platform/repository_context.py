@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -16,11 +15,9 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
-
 from scripts.platform.parsers.operating_plan import parse_operating_plan
 
-
-SCHEMA_VERSION = "1.0.0"
+SCHEMA_VERSION = "1.1.0"
 
 
 def run_git(root: Path, *args: str) -> str:
@@ -95,6 +92,29 @@ def existing_paths(root: Path, values: list[str]) -> list[str]:
     ]
 
 
+def extract_proposal_status(text: str) -> str | None:
+    lines = text.splitlines()
+
+    for index, line in enumerate(lines):
+        stripped = line.strip()
+
+        if not stripped.lower().startswith("status:"):
+            continue
+
+        inline = stripped.split(":", 1)[1].strip()
+        if inline:
+            return inline
+
+        for following in lines[index + 1:]:
+            value = following.strip()
+            if value:
+                return value
+
+        return None
+
+    return None
+
+
 def discover_proposals(root: Path) -> list[dict[str, str]]:
     results: list[dict[str, str]] = []
 
@@ -108,24 +128,145 @@ def discover_proposals(root: Path) -> list[dict[str, str]]:
             continue
 
         text = path.read_text(errors="replace")
-
-        status_match = re.search(
-            r"(?im)^Status:\s*(?:\n\s*)?(.+?)\s*$",
-            text,
-        )
+        status = extract_proposal_status(text)
 
         results.append(
             {
                 "path": str(path.relative_to(root)),
-                "status": (
-                    status_match.group(1).strip()
-                    if status_match
-                    else "Unknown"
-                ),
+                "status": status if status is not None else "Unknown",
             }
         )
 
     return sorted(results, key=lambda item: item["path"])
+
+
+def parse_name_status(output: str) -> list[dict[str, str]]:
+    entries: list[dict[str, str]] = []
+
+    for line in output.splitlines():
+        if not line.strip():
+            continue
+
+        parts = line.split("\t")
+        status = parts[0].strip()
+        paths = [part for part in parts[1:] if part]
+
+        if not paths:
+            continue
+
+        entry = {
+            "status": status,
+            "path": paths[-1],
+        }
+
+        if len(paths) > 1:
+            entry["source_path"] = paths[0]
+
+        entries.append(entry)
+
+    return entries
+
+
+def synchronization_state(
+    upstream: str | None,
+    ahead: int | None,
+    behind: int | None,
+) -> str:
+    if not upstream:
+        return "UPSTREAM_UNAVAILABLE"
+
+    if ahead is None or behind is None:
+        return "UNRESOLVED"
+
+    if ahead == 0 and behind == 0:
+        return "SYNCHRONIZED"
+
+    if ahead > 0 and behind == 0:
+        return "LOCAL_AHEAD"
+
+    if ahead == 0 and behind > 0:
+        return "LOCAL_BEHIND"
+
+    if ahead > 0 and behind > 0:
+        return "DIVERGED"
+
+    return "UNRESOLVED"
+
+
+def resolve_git_state(root: Path) -> dict[str, Any]:
+    branch = run_git(root, "branch", "--show-current") or None
+    head_commit = run_git(root, "rev-parse", "HEAD") or None
+    upstream = (
+        run_git(
+            root,
+            "rev-parse",
+            "--abbrev-ref",
+            "--symbolic-full-name",
+            "@{upstream}",
+        )
+        or None
+    )
+
+    ahead: int | None = None
+    behind: int | None = None
+
+    if upstream:
+        counts = run_git(
+            root,
+            "rev-list",
+            "--left-right",
+            "--count",
+            f"HEAD...{upstream}",
+        )
+        parts = counts.replace("\t", " ").split()
+
+        if len(parts) == 2:
+            try:
+                ahead = int(parts[0])
+                behind = int(parts[1])
+            except ValueError:
+                ahead = None
+                behind = None
+
+    staged = parse_name_status(
+        run_git(root, "diff", "--cached", "--name-status")
+    )
+    unstaged = parse_name_status(
+        run_git(root, "diff", "--name-status")
+    )
+    untracked = [
+        line
+        for line in run_git(
+            root,
+            "ls-files",
+            "--others",
+            "--exclude-standard",
+        ).splitlines()
+        if line.strip()
+    ]
+
+    working_tree = {
+        "clean": not staged and not unstaged and not untracked,
+        "staged": staged,
+        "unstaged": unstaged,
+        "untracked": untracked,
+    }
+
+    return {
+        "branch": branch,
+        "head_commit": head_commit,
+        "upstream": upstream,
+        "ahead": ahead,
+        "behind": behind,
+        "synchronization_state": synchronization_state(
+            upstream,
+            ahead,
+            behind,
+        ),
+        "working_tree": working_tree,
+        # Compatibility field retained for existing consumers.
+        "working_tree_status": run_git(root, "status", "--short"),
+    }
 
 
 def build_context(root: Path) -> dict[str, Any]:
@@ -161,6 +302,8 @@ def build_context(root: Path) -> dict[str, Any]:
 
     governance = policy.get("governance", {})
     classification = policy.get("classification", {})
+    git_state = resolve_git_state(root)
+    proposals = discover_proposals(root)
 
     context = {
         "schema_version": SCHEMA_VERSION,
@@ -168,10 +311,17 @@ def build_context(root: Path) -> dict[str, Any]:
         "repository": {
             "root": str(root),
             "name": policy.get("repository", {}).get("name", root.name),
-            "branch": run_git(root, "branch", "--show-current"),
-            "head_commit": run_git(root, "rev-parse", "HEAD"),
-            "working_tree_status": run_git(root, "status", "--short"),
+            "branch": git_state["branch"],
+            "head_commit": git_state["head_commit"],
+            "upstream": git_state["upstream"],
+            "ahead": git_state["ahead"],
+            "behind": git_state["behind"],
+            "synchronization_state": git_state[
+                "synchronization_state"
+            ],
+            "working_tree_status": git_state["working_tree_status"],
         },
+        "working_tree": git_state["working_tree"],
         "operating_plan": operating_plan,
         "governance": {
             "normative_sources": existing_paths(
@@ -184,6 +334,7 @@ def build_context(root: Path) -> dict[str, Any]:
                 else None
             ),
             "policy_version": policy.get("policy_version"),
+            "proposals": proposals,
         },
         "engineering_standards": existing_paths(
             root,
@@ -210,7 +361,8 @@ def build_context(root: Path) -> dict[str, Any]:
                 "approvals",
                 {},
             ).get("proposal_patterns", []),
-            "active_proposals": discover_proposals(root),
+            # Compatibility key retained for existing consumers.
+            "active_proposals": proposals,
         },
         "warnings": [],
     }
@@ -219,10 +371,53 @@ def build_context(root: Path) -> dict[str, Any]:
         context["warnings"].append(
             "No Operating Plan was found using configured candidates."
         )
+    else:
+        unresolved_required = [
+            label
+            for label, value in (
+                (
+                    "Current Objective",
+                    operating_plan["current_objective"],
+                ),
+                (
+                    "Objective Type",
+                    operating_plan["objective_type"],
+                ),
+                ("Status", operating_plan["status"]),
+            )
+            if not value
+        ]
 
-    if context["repository"]["working_tree_status"]:
+        if unresolved_required:
+            context["warnings"].append(
+                "Operating Plan required fields are unresolved: "
+                + ", ".join(unresolved_required)
+            )
+
+    if not context["working_tree"]["clean"]:
         context["warnings"].append(
             "The repository contains uncommitted changes."
+        )
+
+    if not git_state["upstream"]:
+        context["warnings"].append(
+            "No configured Git upstream could be resolved."
+        )
+    elif git_state["synchronization_state"] == "UNRESOLVED":
+        context["warnings"].append(
+            "Git ahead/behind state could not be resolved."
+        )
+
+    unknown_proposals = [
+        proposal["path"]
+        for proposal in proposals
+        if proposal["status"] == "Unknown"
+    ]
+
+    if unknown_proposals:
+        context["warnings"].append(
+            "Proposal status could not be resolved: "
+            + ", ".join(unknown_proposals)
         )
 
     missing_normative = [
@@ -240,8 +435,30 @@ def build_context(root: Path) -> dict[str, Any]:
     return context
 
 
+def _render_change_entries(
+    entries: list[dict[str, str]],
+) -> list[str]:
+    if not entries:
+        return ["(none)"]
+
+    rendered: list[str] = []
+    for entry in entries:
+        if "source_path" in entry:
+            rendered.append(
+                f"{entry['status']}\t"
+                f"{entry['source_path']} -> {entry['path']}"
+            )
+        else:
+            rendered.append(
+                f"{entry['status']}\t{entry['path']}"
+            )
+
+    return rendered
+
+
 def render_text(context: dict[str, Any]) -> str:
     repository = context["repository"]
+    working_tree = context["working_tree"]
     operating = context["operating_plan"]
 
     lines = [
@@ -251,15 +468,38 @@ def render_text(context: dict[str, Any]) -> str:
         f"Root: {repository['root']}",
         f"Branch: {repository['branch'] or '(unknown)'}",
         f"HEAD: {repository['head_commit'] or '(unknown)'}",
+        f"Upstream: {repository['upstream'] or '(not resolved)'}",
+        (
+            "Ahead / Behind: "
+            f"{repository['ahead'] if repository['ahead'] is not None else '(unknown)'}"
+            " / "
+            f"{repository['behind'] if repository['behind'] is not None else '(unknown)'}"
+        ),
+        (
+            "Synchronization: "
+            f"{repository['synchronization_state']}"
+        ),
         "",
         "Operating Plan",
         "-" * 80,
         f"Path: {operating['path'] or '(not found)'}",
-        f"Current Objective: {operating['current_objective'] or '(not resolved)'}",
-        f"Objective Type: {operating['objective_type'] or '(not resolved)'}",
+        (
+            "Current Objective: "
+            f"{operating['current_objective'] or '(not resolved)'}"
+        ),
+        (
+            "Objective Type: "
+            f"{operating['objective_type'] or '(not resolved)'}"
+        ),
         f"Status: {operating['status'] or '(not resolved)'}",
-        f"Active Sprint: {operating['active_sprint'] or '(not resolved)'}",
-        f"Next Concrete Step: {operating['next_concrete_step'] or '(not resolved)'}",
+        (
+            "Active Sprint: "
+            f"{operating['active_sprint'] or '(not resolved)'}"
+        ),
+        (
+            "Next Concrete Step: "
+            f"{operating['next_concrete_step'] or '(not resolved)'}"
+        ),
         "",
         "Applicable Governance",
         "-" * 80,
@@ -317,7 +557,17 @@ def render_text(context: dict[str, Any]) -> str:
             "",
             "Working Tree",
             "-" * 80,
-            repository["working_tree_status"] or "(clean)",
+            f"Clean: {'yes' if working_tree['clean'] else 'no'}",
+            "Staged:",
+            *_render_change_entries(working_tree["staged"]),
+            "Unstaged:",
+            *_render_change_entries(working_tree["unstaged"]),
+            "Untracked:",
+            *(
+                working_tree["untracked"]
+                if working_tree["untracked"]
+                else ["(none)"]
+            ),
         ]
     )
 

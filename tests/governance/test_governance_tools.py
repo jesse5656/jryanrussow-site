@@ -91,6 +91,143 @@ Next Concrete Step:
             parsed["next_concrete_step"],
         )
 
+    def test_parse_rich_objective_metadata(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "OPERATING-PLAN.md"
+
+            path.write_text(
+                """# Operating Plan
+
+## Current Objective
+
+<div class="ri-objective" markdown>
+
+**Type**
+Research Program
+
+**Objective**
+Institutional Memory Evidence Development
+
+**Status**
+In Progress
+
+</div>
+
+Advance the research program.
+
+Scope:
+
+- Evidence extraction
+- Case study development
+
+Success Criteria:
+
+- Evidence extracted
+- Case study updated
+
+### Definition of Done
+
+- [ ] Complete
+""",
+                encoding="utf-8",
+            )
+
+            parsed = CONTEXT.parse_operating_plan(path)
+
+        self.assertEqual(parsed["type"], "Research Program")
+        self.assertEqual(
+            parsed["name"],
+            "Institutional Memory Evidence Development",
+        )
+        self.assertEqual(parsed["status"], "In Progress")
+        self.assertEqual(
+            parsed["scope"],
+            "Evidence extraction\nCase study development",
+        )
+        self.assertEqual(
+            parsed["success_criteria"],
+            "Evidence extracted\nCase study updated",
+        )
+        self.assertIsNone(parsed["active_sprint"])
+        self.assertIsNone(parsed["next_concrete_step"])
+
+    def test_extract_indented_proposal_status(self):
+        text = """# Proposal
+
+        Status:
+        Approved
+
+        Type:
+        Architecture Change Proposal
+"""
+
+        self.assertEqual(
+            CONTEXT.extract_proposal_status(text),
+            "Approved",
+        )
+
+    def test_synchronization_state(self):
+        self.assertEqual(
+            CONTEXT.synchronization_state(
+                "origin/main",
+                0,
+                0,
+            ),
+            "SYNCHRONIZED",
+        )
+        self.assertEqual(
+            CONTEXT.synchronization_state(
+                "origin/main",
+                1,
+                0,
+            ),
+            "LOCAL_AHEAD",
+        )
+        self.assertEqual(
+            CONTEXT.synchronization_state(
+                "origin/main",
+                0,
+                1,
+            ),
+            "LOCAL_BEHIND",
+        )
+        self.assertEqual(
+            CONTEXT.synchronization_state(
+                "origin/main",
+                1,
+                1,
+            ),
+            "DIVERGED",
+        )
+        self.assertEqual(
+            CONTEXT.synchronization_state(
+                None,
+                None,
+                None,
+            ),
+            "UPSTREAM_UNAVAILABLE",
+        )
+
+    def test_parse_name_status(self):
+        parsed = CONTEXT.parse_name_status(
+            "M\talpha.md\nR100\told.md\tnew.md\n"
+        )
+
+        self.assertEqual(
+            parsed,
+            [
+                {
+                    "status": "M",
+                    "path": "alpha.md",
+                },
+                {
+                    "status": "R100",
+                    "path": "new.md",
+                    "source_path": "old.md",
+                },
+            ],
+        )
+
     def test_policy_is_json_compatible_yaml(self):
         policy = json.loads(
             (ROOT / ".governance/policy.yaml").read_text()
