@@ -1,0 +1,327 @@
+{
+  "$id": "handoff-governed-work-v1-candidate-response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifacts": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "existence": {
+            "enum": [
+              "EXISTS",
+              "MISSING",
+              "INCOMPLETE",
+              "UNRESOLVED"
+            ]
+          },
+          "hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "path": {
+            "type": "string"
+          },
+          "required_for_continuation": {
+            "type": "boolean"
+          },
+          "validation_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "path",
+          "hash",
+          "existence",
+          "validation_status",
+          "required_for_continuation"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "conflicts": {
+      "type": "array"
+    },
+    "continuation_directive": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "governance": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "exact_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "material_reason": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "exact_status",
+          "material_reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "invariants": {
+      "type": "array"
+    },
+    "mode": {
+      "enum": [
+        "HANDOFF",
+        "RESUME"
+      ]
+    },
+    "next_action": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "enum": [
+            "REPOSITORY_DERIVED",
+            "IMPLEMENTATION_DERIVED",
+            "CHAT_DERIVED",
+            "UNRESOLVED"
+          ]
+        },
+        "status": {
+          "enum": [
+            "KNOWN",
+            "UNRESOLVED"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "action",
+        "source"
+      ],
+      "type": "object"
+    },
+    "reconciliation": {
+      "type": "array"
+    },
+    "repositories": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "ahead": {
+            "minimum": 0,
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "authority_role": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "behind": {
+            "minimum": 0,
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "branch": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "head_commit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "root": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "synchronization_state": {
+            "enum": [
+              "SYNCHRONIZED",
+              "LOCAL_AHEAD",
+              "LOCAL_BEHIND",
+              "DIVERGED",
+              "UPSTREAM_UNAVAILABLE",
+              "UNRESOLVED"
+            ]
+          },
+          "upstream": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "working_tree": {
+            "additionalProperties": false,
+            "properties": {
+              "clean": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "staged": {
+                "type": "array"
+              },
+              "unstaged": {
+                "type": "array"
+              },
+              "untracked": {
+                "type": "array"
+              }
+            },
+            "required": [
+              "clean",
+              "staged",
+              "unstaged",
+              "untracked"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "name",
+          "purpose",
+          "root",
+          "branch",
+          "head_commit",
+          "upstream",
+          "ahead",
+          "behind",
+          "synchronization_state",
+          "working_tree",
+          "authority_role"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "security": {
+      "additionalProperties": false,
+      "properties": {
+        "secret_values_included": {
+          "const": false
+        }
+      },
+      "required": [
+        "secret_values_included"
+      ],
+      "type": "object"
+    },
+    "work_items": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "source": {
+            "enum": [
+              "REPOSITORY_DERIVED",
+              "IMPLEMENTATION_DERIVED",
+              "CHAT_DERIVED",
+              "UNRESOLVED"
+            ]
+          },
+          "state": {
+            "enum": [
+              "COMPLETED",
+              "ACTIVE",
+              "BLOCKED",
+              "PENDING",
+              "UNRESOLVED",
+              "REJECTED",
+              "WATCH",
+              "INTERRUPTED"
+            ]
+          }
+        },
+        "required": [
+          "description",
+          "state",
+          "source"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "workstream": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "REPOSITORY_DERIVED",
+            "IMPLEMENTATION_DERIVED",
+            "CHAT_DERIVED",
+            "UNRESOLVED"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "purpose",
+        "source"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "mode",
+    "workstream",
+    "repositories",
+    "governance",
+    "work_items",
+    "next_action",
+    "invariants",
+    "artifacts",
+    "conflicts",
+    "reconciliation",
+    "security",
+    "continuation_directive"
+  ],
+  "title": "handoff-governed-work V1 Candidate Response",
+  "type": "object"
+}

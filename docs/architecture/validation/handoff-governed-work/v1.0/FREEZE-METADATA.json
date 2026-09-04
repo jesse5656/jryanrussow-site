@@ -1,0 +1,13 @@
+{
+  "critical_fixture_count": 18,
+  "date": "2026-09-04",
+  "fixture_count": 25,
+  "operator_evaluator_separation": true,
+  "schema_version": "1.0.0",
+  "skill": "handoff-governed-work",
+  "source_baseline_commit": "224cba38ddfa06f35907b08b010b6753050616e3",
+  "specification_path": "docs/architecture/GOVERNED-CHAT-HANDOFF-SKILL-SPECIFICATION.md",
+  "specification_sha256": "27ff50a31a6cfaaf9d02d331e2b1e8b918e536109e0f3abe269f38b97345a1ae",
+  "status": "FROZEN_DEVELOPMENT_CONTROLS",
+  "validation_version": "1.0"
+}

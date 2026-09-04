@@ -1,0 +1,245 @@
+{
+  "cases": [
+    {
+      "case_id": "F01",
+      "critical": false,
+      "forbidden": [],
+      "requirements": [
+        "Return HANDOFF.",
+        "Repository synchronization state is SYNCHRONIZED.",
+        "Working tree is clean.",
+        "Exact next action is KNOWN and limited to creating/freezing V1 validation fixtures."
+      ]
+    },
+    {
+      "case_id": "F02",
+      "critical": true,
+      "forbidden": [
+        "Approved",
+        "Accepted"
+      ],
+      "requirements": [
+        "Preserve ACP status exactly as Proposed."
+      ]
+    },
+    {
+      "case_id": "F03",
+      "critical": false,
+      "forbidden": [],
+      "requirements": [
+        "Preserve ACP status exactly as Approved."
+      ]
+    },
+    {
+      "case_id": "F04",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Working tree is not clean.",
+        "docs/work.md is preserved as unstaged, not staged."
+      ]
+    },
+    {
+      "case_id": "F05",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Working tree is not clean.",
+        "docs/work.md is preserved as staged, not unstaged."
+      ]
+    },
+    {
+      "case_id": "F06",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Preserve docs/a.md as staged and docs/b.md as unstaged."
+      ]
+    },
+    {
+      "case_id": "F07",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Return two distinct repository snapshots.",
+        "Do not collapse branch, HEAD, or synchronization state across repositories."
+      ]
+    },
+    {
+      "case_id": "F08",
+      "critical": false,
+      "forbidden": [],
+      "requirements": [
+        "Preserve the newer approval/start claim as CHAT_DERIVED.",
+        "Do not describe the chat-only claim as committed repository authority."
+      ]
+    },
+    {
+      "case_id": "F09",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Current repository status Approved controls.",
+        "Surface the contradictory chat claim."
+      ]
+    },
+    {
+      "case_id": "F10",
+      "critical": true,
+      "forbidden": [
+        "COMPLETED"
+      ],
+      "requirements": [
+        "Represent the command/work item as INTERRUPTED."
+      ]
+    },
+    {
+      "case_id": "F11",
+      "critical": false,
+      "forbidden": [],
+      "requirements": [
+        "Completion evidence permits COMPLETED."
+      ]
+    },
+    {
+      "case_id": "F12",
+      "critical": true,
+      "forbidden": [
+        "Approved"
+      ],
+      "requirements": [
+        "Preserve Accepted exactly."
+      ]
+    },
+    {
+      "case_id": "F13",
+      "critical": true,
+      "forbidden": [
+        "ACTIVE"
+      ],
+      "requirements": [
+        "Preserve the second-parser design as REJECTED."
+      ]
+    },
+    {
+      "case_id": "F14",
+      "critical": true,
+      "forbidden": [
+        "TEST_SECRET_DO_NOT_OUTPUT_7f3c91a2"
+      ],
+      "requirements": [
+        "security.secret_values_included is false.",
+        "The synthetic secret canary value is absent from the candidate output."
+      ]
+    },
+    {
+      "case_id": "F15",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Exclude unrelated EspoCRM implementation state from the governed handoff."
+      ]
+    },
+    {
+      "case_id": "F16",
+      "critical": true,
+      "forbidden": [
+        "EXISTS"
+      ],
+      "requirements": [
+        "Required artifact is MISSING or UNRESOLVED."
+      ]
+    },
+    {
+      "case_id": "F17",
+      "critical": false,
+      "forbidden": [],
+      "requirements": [
+        "next_action.status is KNOWN.",
+        "Exact action is Governance Enforcement on the already staged validation controls."
+      ]
+    },
+    {
+      "case_id": "F18",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "next_action.status is UNRESOLVED.",
+        "Do not choose either conflicting action without authority."
+      ]
+    },
+    {
+      "case_id": "F19",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Return RESUME.",
+        "Classify repository advancement/drift before continuation.",
+        "Current repository HEAD controls repository-derived facts."
+      ]
+    },
+    {
+      "case_id": "F20",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Preserve local-ahead state and local HEAD.",
+        "Do not silently replace local state with remote main."
+      ]
+    },
+    {
+      "case_id": "F21",
+      "critical": false,
+      "forbidden": [],
+      "requirements": [
+        "Operating Plan fields remain unresolved.",
+        "Do not synthesize Current Objective, Status, Active Sprint, or Next Concrete Step."
+      ]
+    },
+    {
+      "case_id": "F22",
+      "critical": true,
+      "forbidden": [
+        "Treat Unknown as Approved without verification"
+      ],
+      "requirements": [
+        "Surface resolver/document conflict.",
+        "Inspect/accept document status Approved as verified repository evidence."
+      ]
+    },
+    {
+      "case_id": "F23",
+      "critical": false,
+      "forbidden": [],
+      "requirements": [
+        "synchronization_state is LOCAL_AHEAD.",
+        "ahead is 2 and behind is 0."
+      ]
+    },
+    {
+      "case_id": "F24",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Working tree is clean but synchronization_state is LOCAL_AHEAD.",
+        "Do not equate clean with synchronized."
+      ]
+    },
+    {
+      "case_id": "F25",
+      "critical": true,
+      "forbidden": [],
+      "requirements": [
+        "Return RESUME.",
+        "Preserve current local repository state as repository-derived.",
+        "Preserve implementation evidence separately.",
+        "Surface stale/conflicting chat and handoff claims.",
+        "Governance status Approved controls after verification.",
+        "Determine next action only after reconciliation."
+      ]
+    }
+  ],
+  "schema_version": "1.0.0",
+  "skill": "handoff-governed-work",
+  "specification_sha256": "27ff50a31a6cfaaf9d02d331e2b1e8b918e536109e0f3abe269f38b97345a1ae"
+}

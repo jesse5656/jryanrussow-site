@@ -1,0 +1,50 @@
+{
+  "artifacts": [],
+  "case_id": "F07",
+  "chat_evidence": [],
+  "governance": [],
+  "handoff_snapshot": null,
+  "implementation_evidence": [],
+  "mode": "HANDOFF",
+  "operating_plan": null,
+  "repositories": [
+    {
+      "ahead": 0,
+      "behind": 0,
+      "branch": "main",
+      "head_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "name": "Systems Architect Discipline",
+      "purpose": "Governed architecture and institutional memory",
+      "root": "/repo/jryanrussow-site",
+      "upstream": "origin/main",
+      "working_tree": {
+        "staged": [],
+        "unstaged": [],
+        "untracked": []
+      }
+    },
+    {
+      "ahead": 1,
+      "behind": 0,
+      "branch": "feature/contact",
+      "head_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "name": "MIDWESTGuard Executive Operations",
+      "purpose": "Operations manual",
+      "root": "/repo/mwg-ops-manual",
+      "upstream": "origin/main",
+      "working_tree": {
+        "staged": [],
+        "unstaged": [],
+        "untracked": []
+      }
+    }
+  ],
+  "requested_continuation": "Continue work requiring both repositories.",
+  "title": "Multiple repositories",
+  "work_items": [],
+  "workstream": {
+    "name": "Systems Architect Discipline \u2014 Research & Canon",
+    "purpose": "Governed handoff/resume validation",
+    "scope_boundary": "Only the governed handoff workstream is in scope."
+  }
+}

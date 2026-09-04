@@ -1,0 +1,43 @@
+{
+  "artifacts": [],
+  "case_id": "F21",
+  "chat_evidence": [],
+  "governance": [],
+  "handoff_snapshot": null,
+  "implementation_evidence": [],
+  "mode": "HANDOFF",
+  "operating_plan": {
+    "active_sprint": null,
+    "current_objective": null,
+    "next_concrete_step": null,
+    "objective_type": null,
+    "path": "docs/discipline/OPERATING-PLAN.md",
+    "resolver_warning": "Operating Plan required fields are unresolved.",
+    "status": null
+  },
+  "repositories": [
+    {
+      "ahead": 0,
+      "behind": 0,
+      "branch": "main",
+      "head_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "name": "Systems Architect Discipline",
+      "purpose": "Governed architecture and institutional memory",
+      "root": "/repo/jryanrussow-site",
+      "upstream": "origin/main",
+      "working_tree": {
+        "staged": [],
+        "unstaged": [],
+        "untracked": []
+      }
+    }
+  ],
+  "requested_continuation": "Continue the governed handoff workstream.",
+  "title": "Operating Plan parser partial failure",
+  "work_items": [],
+  "workstream": {
+    "name": "Systems Architect Discipline \u2014 Research & Canon",
+    "purpose": "Governed handoff/resume validation",
+    "scope_boundary": "Only the governed handoff workstream is in scope."
+  }
+}

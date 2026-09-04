@@ -30,6 +30,7 @@ Governed ChatGPT workstream handoff, session continuation, repository-state reco
 - `docs/operations/researcher/SESSION-COMMANDS.md`
 - `START-HERE.md`
 - `docs/architecture/GOVERNED-CHAT-HANDOFF-SKILL-SPECIFICATION.md`
+- `docs/architecture/validation/handoff-governed-work/`
 - `scripts/platform/repository_context.py`
 
 ---

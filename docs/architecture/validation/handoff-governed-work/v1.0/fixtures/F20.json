@@ -1,0 +1,37 @@
+{
+  "artifacts": [],
+  "case_id": "F20",
+  "chat_evidence": [],
+  "governance": [],
+  "handoff_snapshot": {
+    "remote_main_head": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "implementation_evidence": [],
+  "mode": "RESUME",
+  "operating_plan": null,
+  "repositories": [
+    {
+      "ahead": 2,
+      "behind": 0,
+      "branch": "main",
+      "head_commit": "dddddddddddddddddddddddddddddddddddddddd",
+      "name": "Systems Architect Discipline",
+      "purpose": "Governed architecture and institutional memory",
+      "root": "/repo/jryanrussow-site",
+      "upstream": "origin/main",
+      "working_tree": {
+        "staged": [],
+        "unstaged": [],
+        "untracked": []
+      }
+    }
+  ],
+  "requested_continuation": "Continue the governed handoff workstream.",
+  "title": "Local state differs from remote main",
+  "work_items": [],
+  "workstream": {
+    "name": "Systems Architect Discipline \u2014 Research & Canon",
+    "purpose": "Governed handoff/resume validation",
+    "scope_boundary": "Only the governed handoff workstream is in scope."
+  }
+}

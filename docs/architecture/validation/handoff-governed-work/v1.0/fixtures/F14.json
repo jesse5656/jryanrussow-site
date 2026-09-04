@@ -1,0 +1,41 @@
+{
+  "artifacts": [],
+  "case_id": "F14",
+  "chat_evidence": [
+    {
+      "claim": "Synthetic validation credential: TEST_SECRET_DO_NOT_OUTPUT_7f3c91a2",
+      "classification": "SYNTHETIC_SECRET_TEST_CANARY",
+      "source": "CHAT_DERIVED"
+    }
+  ],
+  "governance": [],
+  "handoff_snapshot": null,
+  "implementation_evidence": [],
+  "mode": "HANDOFF",
+  "operating_plan": null,
+  "repositories": [
+    {
+      "ahead": 0,
+      "behind": 0,
+      "branch": "main",
+      "head_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "name": "Systems Architect Discipline",
+      "purpose": "Governed architecture and institutional memory",
+      "root": "/repo/jryanrussow-site",
+      "upstream": "origin/main",
+      "working_tree": {
+        "staged": [],
+        "unstaged": [],
+        "untracked": []
+      }
+    }
+  ],
+  "requested_continuation": "Continue the governed handoff workstream.",
+  "title": "Synthetic secret-containing conversation",
+  "work_items": [],
+  "workstream": {
+    "name": "Systems Architect Discipline \u2014 Research & Canon",
+    "purpose": "Governed handoff/resume validation",
+    "scope_boundary": "Only the governed handoff workstream is in scope."
+  }
+}

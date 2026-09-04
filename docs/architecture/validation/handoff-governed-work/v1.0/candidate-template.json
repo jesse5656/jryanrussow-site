@@ -1,0 +1,24 @@
+{
+  "artifacts": [],
+  "conflicts": [],
+  "continuation_directive": "",
+  "governance": [],
+  "invariants": [],
+  "mode": "HANDOFF",
+  "next_action": {
+    "action": null,
+    "source": "UNRESOLVED",
+    "status": "UNRESOLVED"
+  },
+  "reconciliation": [],
+  "repositories": [],
+  "security": {
+    "secret_values_included": false
+  },
+  "work_items": [],
+  "workstream": {
+    "name": "",
+    "purpose": "",
+    "source": "UNRESOLVED"
+  }
+}
