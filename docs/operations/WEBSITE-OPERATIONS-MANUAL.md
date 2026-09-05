@@ -226,3 +226,23 @@ For substantial output:
     } > "$OUTPUT" 2>&1
     echo "OUTPUT FILE: $OUTPUT"
     ls -lh "$OUTPUT"
+
+
+------------------------------------------------------------------------------
+
+## Architecture and Credential Boundaries
+
+This manual governs website and Institute publication operations. Canonical
+infrastructure and access status belongs in
+`docs/architecture/INFRASTRUCTURE-ACCESS-AND-REQUEST-FLOWS.md`. Credential
+handling is governed by
+`docs/standards/CREDENTIAL-AND-TOKEN-HANDLING-STANDARD.md`.
+
+This manual does not authorize repository storage of credential values or
+representation of planned services as current implementation.
+
+## Continue Reading
+
+- [Infrastructure, Access, and Request Flows](../architecture/INFRASTRUCTURE-ACCESS-AND-REQUEST-FLOWS.md)
+- [Credential and Token Handling Standard](../standards/CREDENTIAL-AND-TOKEN-HANDLING-STANDARD.md)
+- [Repository Change Workflow](REPOSITORY-CHANGE-WORKFLOW.md)

@@ -63,7 +63,8 @@ nav:
 
 
   - Architecture:
-      - Site Architecture: architecture/SITE-ARCHITECTURE.md
+      - Infrastructure, Access, and Request Flows: architecture/INFRASTRUCTURE-ACCESS-AND-REQUEST-FLOWS.md
+      - Site Information Architecture: architecture/SITE-ARCHITECTURE.md
       - CRM / ERP Platform Evaluation: architecture/CRM-ERP-PLATFORM-EVALUATION.md
       - Open-Source Platform Evaluation Skill: architecture/OPEN-SOURCE-PLATFORM-EVALUATION-SKILL-SPECIFICATION.md
       - Open-Source Platform Validation Record: architecture/EVALUATE-OPEN-SOURCE-PLATFORMS-V1.1-VALIDATION-RECORD.md
@@ -72,6 +73,7 @@ nav:
 
 
   - Standards:
+      - Credential and Token Handling Standard: standards/CREDENTIAL-AND-TOKEN-HANDLING-STANDARD.md
       - Progressive Disclosure Standard: standards/PROGRESSIVE-DISCLOSURE-STANDARD.md
       - Knowledge Linking Standard: standards/KNOWLEDGE-LINKING-STANDARD.md
       - Wiki Presentation Standard: standards/WIKI-PRESENTATION-STANDARD.md

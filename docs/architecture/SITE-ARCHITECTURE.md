@@ -1,93 +1,51 @@
-# J Ryan Russow Website Architecture
-Last Updated: 2026-07-05
+# J Ryan Russow Website Information Architecture
 
-------------------------------------------------------------
+Version: 1.0.0
 
-HOME
+Status:
+Active Architecture
 
-↓
+Last Updated:
+2026-09-05
 
-ABOUT
+---
 
-↓
+## Purpose
 
-THE THREE-PILLAR METHOD
+This document defines public website information and navigation architecture.
+It does not define infrastructure, authentication, credentials, deployment, or
+backend services. Those belong to [Infrastructure, Access, and Request
+Flows](INFRASTRUCTURE-ACCESS-AND-REQUEST-FLOWS.md).
 
-├── BODY CODE
-├── MIND FORGE
-├── WEALTH ENGINE (Future)
+## Primary Journey
 
-↓
+Home → About → Three-Pillar Method → Compound Performance Circle → Blog → Contact
 
-COMPOUND PERFORMANCE CIRCLE
+The Three-Pillar Method includes Body Code, Mind Forge, and the future Wealth
+Engine.
 
-↓
+## Navigation Priority
 
-BLOG
+1. Home
+2. About
+3. Three-Pillar Method
+4. Blog
+5. Compound Performance Circle
+6. Contact
 
-↓
+## Linking Requirements
 
-CONTACT
+Every page should link to About, Three-Pillar Method, Blog, and Contact. Every
+blog article should also link to Mind Forge, Body Code, Compound Performance
+Circle, and a related article.
 
-------------------------------------------------------------
+## Future Sections
 
-Navigation Priority
+Resources, Books, Speaking, Podcast, Newsletter, Case Studies, and Media are
+planned information architecture, not current implementation.
 
-Home
+## Continue Reading
 
-About
-
-Three-Pillar Method
-
-Blog
-
-Compound Circle
-
-Contact
-
-------------------------------------------------------------
-
-Every Page Should Link To
-
-✓ About
-
-✓ Three-Pillar Method
-
-✓ Blog
-
-✓ Contact
-
-------------------------------------------------------------
-
-Every Blog Article Should Link To
-
-✓ About
-
-✓ Three-Pillar Method
-
-✓ Mind Forge
-
-✓ Body Code
-
-✓ Compound Circle
-
-✓ Related Article
-
-------------------------------------------------------------
-
-Future Sections
-
-Resources
-
-Books
-
-Speaking
-
-Podcast
-
-Newsletter
-
-Case Studies
-
-Media
-
+- [Infrastructure, Access, and Request Flows](INFRASTRUCTURE-ACCESS-AND-REQUEST-FLOWS.md)
+- [Credential and Token Handling Standard](../standards/CREDENTIAL-AND-TOKEN-HANDLING-STANDARD.md)
+- [Website Operations Manual](../operations/WEBSITE-OPERATIONS-MANUAL.md)

@@ -5,3 +5,17 @@ __pycache__/
 
 # Local diagnostic and session output
 output/
+
+# Local environment and credential material
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Generated provider and authentication caches
+.wrangler/

@@ -69,51 +69,47 @@ These rules apply to every engineering objective unless explicitly overridden.
 <div class="ri-objective" markdown>
 
 **Type**
-Research Program
+Architecture Documentation
 
 **Objective**
-Institutional Memory Evidence Development
+Infrastructure, Access, and Credential Documentation Correction
 
 **Status**
 In Progress
 
 </div>
 
-Advance Research Program 001 by extracting evidence, strengthening the NASA Challenger case study, and revising the Institutional Memory paper.
-
-Scope:
-
-- Rogers Commission evidence extraction
-- NASA Challenger case study development
-- Institutional Memory paper revision
-- Knowledge lineage validation
-- Primary source workflow validation
+Implement approved ACP-006 as a bounded documentation and repository-hygiene
+correction without changing runtime infrastructure or website implementation.
 
 Success Criteria:
 
-- Evidence extracted from at least one primary source
-- Case study updated with evidence
-- Institutional Memory paper improved
-- Related documents linked where appropriate
+- canonical infrastructure and credential documents created;
+- obsolete material disposition completed;
+- current claims remain evidence-based;
+- no secret values enter the repository;
+- MkDocs, tests, and governance validation pass;
+- Institutional Memory Diagnostic remains the next strategic priority.
 
 ### Definition of Done
 
-- [ ] Objective completed
-- [ ] Validation completed
-- [ ] Verification completed
-- [ ] Documentation updated
-- [ ] OPERATING-PLAN.md updated
-- [ ] Git commit completed if repository changes occurred
+- [ ] ACP-006 marked Approved
+- [ ] Canonical documents completed
+- [ ] Obsolete material removed
+- [ ] MkDocs navigation updated
+- [ ] Tests and validation passed
+- [ ] Scoped diff reviewed
+- [ ] Operating Plan closeout completed
+- [ ] Commit completed after separate approval
 
 ---
 
 ## Priority Queue
 
-1. Complete Rogers Commission evidence extraction
-2. Complete NASA Challenger case study
-3. Revise Institutional Memory paper
-4. Validate Primary Source workflow with Vocalinux narratives
-5. Review North Star candidates after evidence development
+1. Complete ACP-006 documentation correction
+2. Develop the Institutional Memory Diagnostic specification and pilot architecture
+3. Resume historical research only for a defined diagnostic, framework,
+   falsification, or commercial requirement
 
 ---
 
