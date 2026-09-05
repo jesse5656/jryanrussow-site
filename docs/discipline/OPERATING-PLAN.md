@@ -69,45 +69,75 @@ These rules apply to every engineering objective unless explicitly overridden.
 <div class="ri-objective" markdown>
 
 **Type**
-Architecture Documentation
+Diagnostic Product Development
 
 **Objective**
-Infrastructure, Access, and Credential Documentation Correction
+Institutional Memory Diagnostic Specification and Pilot Architecture
 
 **Status**
 In Progress
 
 </div>
 
-Implement approved ACP-006 as a bounded documentation and repository-hygiene
-correction without changing runtime infrastructure or website implementation.
+Develop the Institutional Memory Diagnostic specification and pilot
+architecture as the next commercially useful application of the completed
+Institutional Memory research program.
+
+Immediate commercial test:
+
+> **Can The Russow Institute sell and competently perform a $10,000
+> Institutional Memory Diagnostic using the intellectual property that exists
+> today?**
 
 Success Criteria:
 
-- canonical infrastructure and credential documents created;
-- obsolete material disposition completed;
-- current claims remain evidence-based;
-- no secret values enter the repository;
-- MkDocs, tests, and governance validation pass;
-- Institutional Memory Diagnostic remains the next strategic priority.
+- define the bounded diagnostic purpose, buyer, inputs, method, outputs, and
+  exclusions;
+- distinguish diagnostic evidence from unsupported organizational diagnosis;
+- define a pilot architecture that can be delivered without premature custom
+  software;
+- establish validation and falsification requirements;
+- preserve the commercialization sequence from research IP through commercial
+  validation.
 
 ### Definition of Done
 
-- [ ] ACP-006 marked Approved
-- [ ] Canonical documents completed
-- [ ] Obsolete material removed
-- [ ] MkDocs navigation updated
-- [ ] Tests and validation passed
+- [ ] Diagnostic specification completed
+- [ ] Pilot engagement architecture completed
+- [ ] Evidence and provenance requirements defined
+- [ ] Client deliverable boundaries defined
+- [ ] Validation and falsification gates defined
+- [ ] Repository governance validation passed
 - [ ] Scoped diff reviewed
-- [ ] Operating Plan closeout completed
 - [ ] Commit completed after separate approval
+
+### Previous Objective Closeout — ACP-006
+
+**Completed:** 2026-09-05
+
+The Infrastructure, Access, and Credential Documentation Correction was
+completed under approved ACP-006.
+
+Closeout evidence:
+
+- ACP-006 marked Approved;
+- canonical infrastructure and credential documents created;
+- obsolete material removed;
+- MkDocs navigation updated;
+- MkDocs build passed;
+- Governance Enforcement passed;
+- scoped diff reviewed;
+- implementation committed as `379e08f`;
+- implementation pushed to `origin/main`.
+
+No deployed infrastructure or website implementation was changed.
 
 ---
 
 ## Priority Queue
 
-1. Complete ACP-006 documentation correction
-2. Develop the Institutional Memory Diagnostic specification and pilot architecture
+1. Develop the Institutional Memory Diagnostic specification and pilot architecture
+2. Define the first bounded pilot-engagement package
 3. Resume historical research only for a defined diagnostic, framework,
    falsification, or commercial requirement
 
