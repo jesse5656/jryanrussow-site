@@ -1,7 +1,6 @@
 # Researcher Aliases
 
-Version: 1.1.0
-
+Version: 1.1.1
 Status:
 Active
 
@@ -43,17 +42,21 @@ Standard session close.
 
 ## Automatic Handoff / Resume Behavior
 
-The three primary session starters — `:startjr`, `:startarchive`, and
-`:startops` — inject the automatic governed session-transition rule into the
-chat.
+Automatic HANDOFF/RESUME authority comes from each primary workstream's
+`START-HERE.md` and the governed ChatGPT workflow. It does **not** depend on an
+Espanso alias being used.
 
-After one of those session starters is used:
+`:startjr`, `:startarchive`, and `:startops` may repeat the rule as convenient
+session-start reminders, but they are not required to activate it.
+
+For #1, #2, and #3:
 
 - clear intent to move active work to another chat automatically triggers
   HANDOFF;
 - a governed handoff supplied to a replacement chat automatically triggers
   RESUME;
-- the user does not need to remember or type the skill name;
+- the user does not need to remember or type a skill name, alias, `HANDOFF`, or
+  `RESUME`;
 - the validated `handoff-governed-work` skill is used where the runtime exposes
   it; otherwise the equivalent governed procedure is executed directly.
 

@@ -19,8 +19,7 @@ Strategic reference:
 
 [Institutional Memory — Commercialization Thesis](../../research-programs/001-institutional-memory/COMMERCIALIZATION-THESIS.md)
 
-Version: 0.1.0
-
+Version: 0.1.1
 Status:
 Active Reference
 
@@ -93,12 +92,16 @@ Expands to the standard session close.
 
 ## Automatic Handoff / Resume Trigger
 
-The three primary startup aliases (`:startjr`, `:startarchive`, and `:startops`)
-inject the automatic governed transition rule. Clear intent to replace the
-current chat triggers HANDOFF automatically; a governed handoff in the
-replacement chat triggers RESUME automatically.
+The mandatory automatic transition rule lives in each primary workstream's
+`START-HERE.md` and the governed ChatGPT workflow.
 
-No special handoff command is required from the user.
+It does **not** depend on `:startjr`, `:startarchive`, or `:startops`. Those
+aliases are optional conveniences only.
+
+Clear intent to replace or move the current chat triggers HANDOFF
+automatically; a governed handoff in the replacement chat triggers RESUME
+automatically. No special handoff command, skill name, or alias is required
+from the user.
 
 ## Configuration Location
 

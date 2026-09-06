@@ -22,7 +22,7 @@ matches:
 
       Do not redesign architecture unless I explicitly request an Architecture Change Proposal.
 
-      Automatic governed chat transition rule:
+      Reminder — automatic governed chat transition rule (authority: repository START-HERE.md):
 
       If I clearly indicate that this work should move to a new, fresh, replacement, or continuation chat, automatically execute the governed HANDOFF procedure. Do not require me to name a skill, type HANDOFF, or remember a special command.
 
@@ -63,7 +63,7 @@ matches:
 
       Do not redesign architecture unless I explicitly request an Architecture Change Proposal.
 
-      Automatic governed chat transition rule:
+      Reminder — automatic governed chat transition rule (authority: repository START-HERE.md):
 
       If I clearly indicate that this work should move to a new, fresh, replacement, or continuation chat, automatically execute the governed HANDOFF procedure. Do not require me to name a skill, type HANDOFF, or remember a special command.
 
@@ -102,7 +102,7 @@ matches:
 
       Do not redesign operations unless I explicitly request an Operational Change Proposal.
 
-      Automatic governed chat transition rule:
+      Reminder — automatic governed chat transition rule (authority: repository START-HERE.md):
 
       If I clearly indicate that this work should move to a new, fresh, replacement, or continuation chat, automatically execute the governed HANDOFF procedure. Do not require me to name a skill, type HANDOFF, or remember a special command.
 
