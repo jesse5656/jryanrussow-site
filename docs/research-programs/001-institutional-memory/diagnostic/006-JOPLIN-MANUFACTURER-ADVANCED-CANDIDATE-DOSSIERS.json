@@ -1,0 +1,2313 @@
+{
+  "schema_version": "IMD-Prospect-Intelligence-V1.1-live-dossier",
+  "title": "Joplin Manufacturer Advanced Candidate Dossiers",
+  "as_of_date": "2026-09-06",
+  "governing_discovery_record": "005-JOPLIN-MANUFACTURER-PROSPECT-DISCOVERY.md",
+  "method": "identify-imd-prospects V1.1",
+  "universe_note": "These dossiers apply only to the three candidates advanced by the governed 10-organization Joplin-region discovery run. They do not reopen or broaden the prospect universe.",
+  "candidates": [
+    {
+      "candidate_id": "JMP-PS",
+      "organization": {
+        "legal_name": "Protein Solutions LLC",
+        "public_name": "Protein Solutions",
+        "parent_or_owner": "not established in this dossier",
+        "relevant_entity_site_unit": "3800 E 32nd Street Joplin manufacturing plant",
+        "geography": "Joplin, Missouri",
+        "sector": "animal/pet-food ingredient manufacturing"
+      },
+      "research": {
+        "as_of_date": "2026-09-06",
+        "researcher": "OpenAI assistant for The Russow Institute",
+        "scope": "public records only; bounded dossier development from governed Joplin manufacturer discovery",
+        "lookback": "2016-09-06 to 2026-09-06",
+        "source_preservation_note": "Web-mediated source text was reviewed. Source bytes were not locally frozen; local_filename and sha256 are null and this limitation is explicit in every source record."
+      },
+      "candidate_summary": {
+        "completion_status": "complete",
+        "tier": "moderate",
+        "tier_rationale": "A long-running odor-related prospect signal, company awareness, stated odor-control measures, and later official odor concerns are supported, but later concerns do not establish a regulatory violation or prove failure of the stated controls. Corrective-action history and post-correction recurrence therefore remain partial rather than Strong-gate complete.",
+        "tier_rationale_claim_ids": [
+          "P-C1",
+          "P-C2",
+          "P-C3",
+          "P-C4",
+          "P-C5",
+          "P-C6",
+          "P-C7",
+          "P-C10"
+        ],
+        "disclaimer": "This profile identifies signals for human qualification; it does not diagnose an Institutional Memory failure, establish root cause, or attribute any reported odor to Protein Solutions beyond what a cited source states."
+      },
+      "proposed_pilot_boundary": {
+        "principal_problem": "odor-control complaint response, corrective-action verification, and learning at the current Joplin plant",
+        "system_site_unit_process": "3800 E 32nd Street production facility and its odor-mitigation / complaint-response controls",
+        "why_meaningful": "The same current plant has a documented history of odor-related public concern and a company-stated odor-mitigation system, creating a bounded process that could be tested with internal complaint, maintenance, control, and verification records.",
+        "fit_status": "partial",
+        "current_boundary": {
+          "status": "pass",
+          "as_of_date": "2026-09-06",
+          "rationale": "Current company-controlled information and a 2026 OSHA inspection identify active operations at the same Joplin address.",
+          "supporting_claim_ids": [
+            "P-C1",
+            "P-C11"
+          ],
+          "contradictory_claim_ids": [],
+          "tier_effect": "PASS permits consideration above Weak, but does not satisfy the missing Strong gates concerning verified corrective action and publicly supported post-correction recurrence."
+        }
+      },
+      "core_pattern": {
+        "problem": {
+          "status": "supported",
+          "statement": "Public records support a material historical odor-related problem signal around the Joplin plant, including prior DNR violations described in an official city study, litigation/settlement allegations, and later DNR odor concerns.",
+          "claim_ids": [
+            "P-C3",
+            "P-C4",
+            "P-C5",
+            "P-C6"
+          ]
+        },
+        "awareness": {
+          "status": "supported",
+          "statement": "Protein Solutions publicly acknowledged odor accusations in 2018 and stated that it used odor-mitigation equipment and best practices.",
+          "claim_ids": [
+            "P-C2"
+          ]
+        },
+        "corrective_action": {
+          "status": "partial",
+          "statement": "The company states that it uses state-of-the-art odor-mitigation equipment and best practices, but the public record reviewed does not independently establish a specific completed corrective-action program tied to the historical complaint lineage.",
+          "claim_ids": [
+            "P-C2",
+            "P-C10"
+          ]
+        },
+        "recurrence_or_persistence_after_action": {
+          "status": "partial",
+          "statement": "Official DNR odor concerns occurred in 2024 and 2025 after the company's 2018 mitigation statement, but a 2025 investigation observed no odor-regulation violation and the public evidence does not establish that later concerns were verified recurrence caused by the plant.",
+          "claim_ids": [
+            "P-C4",
+            "P-C5",
+            "P-C7"
+          ]
+        }
+      },
+      "timeline": [
+        {
+          "date": "2018-08-23",
+          "event": "Company letter acknowledges odor accusations and states odor-mitigation equipment/best practices are used.",
+          "entity_boundary": "Joplin plant",
+          "claim_ids": [
+            "P-C2"
+          ]
+        },
+        {
+          "date": "2020",
+          "event": "Official city blight study states DNR had found Protein Solutions in violation of state odor regulations in the past, with last known violations in 2015.",
+          "entity_boundary": "Joplin plant",
+          "claim_ids": [
+            "P-C6"
+          ]
+        },
+        {
+          "date": "2020-09-07",
+          "event": "Secondary settlement report describes a $975,000 settlement resolving odor-related class claims; underlying allegations are not treated as adjudicated findings.",
+          "entity_boundary": "Joplin plant / surrounding residences",
+          "claim_ids": [
+            "P-C3"
+          ]
+        },
+        {
+          "date": "2024-02-20",
+          "event": "Missouri DNR investigated odor concern 56417 listing Protein Solutions as suspected source; final action recorded as Letter.",
+          "entity_boundary": "Joplin plant / local odor concern",
+          "claim_ids": [
+            "P-C4"
+          ]
+        },
+        {
+          "date": "2025-06-11",
+          "event": "Missouri DNR investigated odor concern 61898 listing Protein Solutions as suspected source and observed no violation of 10 CSR 10-6.165 at the time.",
+          "entity_boundary": "Joplin / Newton County concern",
+          "claim_ids": [
+            "P-C5"
+          ]
+        },
+        {
+          "date": "2026-08-18",
+          "event": "OSHA opened a heat-emphasis referral inspection at the same plant; it remains open and is unrelated to the odor pattern.",
+          "entity_boundary": "3800 E 32nd Street plant",
+          "claim_ids": [
+            "P-C11"
+          ]
+        }
+      ],
+      "qualification": {
+        "problem_fit": {
+          "status": "supported",
+          "rationale": "A repeated odor-related public/regulatory signal exists and can be bounded to a current plant.",
+          "claim_ids": [
+            "P-C3",
+            "P-C4",
+            "P-C5",
+            "P-C6"
+          ]
+        },
+        "recurrence": {
+          "status": "partial",
+          "rationale": "Later odor concerns exist, but later verified violation/causation is not established.",
+          "claim_ids": [
+            "P-C4",
+            "P-C5",
+            "P-C7"
+          ]
+        },
+        "prior_awareness": {
+          "status": "supported",
+          "rationale": "The company publicly acknowledged the odor accusations in 2018.",
+          "claim_ids": [
+            "P-C2"
+          ]
+        },
+        "corrective_action_history": {
+          "status": "partial",
+          "rationale": "Company-stated mitigation controls exist, but a completed independently documented corrective-action lineage is not public.",
+          "claim_ids": [
+            "P-C2",
+            "P-C10"
+          ]
+        },
+        "recurrence_after_correction": {
+          "status": "partial",
+          "rationale": "Later concerns followed the stated controls, but the 2025 DNR investigation found no violation and source attribution remains limited.",
+          "claim_ids": [
+            "P-C4",
+            "P-C5",
+            "P-C7"
+          ]
+        },
+        "evidence_richness": {
+          "status": "supported",
+          "rationale": "The dossier contains official DNR/city records, company-controlled records, an OSHA current-operation record, and a secondary settlement record."
+        },
+        "organizational_complexity": {
+          "status": "partial",
+          "rationale": "A current manufacturing plant with 125 stated local jobs is supported; internal organizational complexity is not public.",
+          "claim_ids": [
+            "P-C1"
+          ]
+        },
+        "boundability": {
+          "status": "supported",
+          "rationale": "One current plant and one odor-control / complaint-response process are identifiable."
+        },
+        "likely_internal_evidence": {
+          "status": "supported",
+          "rationale": "Complaint logs, odor-control maintenance, DNR correspondence, operating records, and verification records are plausible internal evidence categories.",
+          "classification": "hypothesis"
+        },
+        "economic_fit": {
+          "status": "partial",
+          "rationale": "A bounded approximately-$10,000 pilot is plausible for a current manufacturing operation, but budget and willingness are unknown.",
+          "classification": "hypothesis"
+        },
+        "buyer_or_sponsor": {
+          "status": "partial",
+          "role": "plant manager; environmental/EHS leader; operations leader",
+          "named_person": null,
+          "rationale": "Roles are plausible; actual authority and willingness are unknown."
+        },
+        "urgency_trigger": {
+          "status": "partial",
+          "rationale": "Official odor concerns in 2024 and 2025 are recent enough to justify qualification; the 2026 OSHA referral is unrelated and does not add odor urgency.",
+          "claim_ids": [
+            "P-C4",
+            "P-C5",
+            "P-C11"
+          ]
+        },
+        "follow_on_potential": {
+          "status": "unknown",
+          "rationale": "Any remediation opportunity depends on private evidence and diagnostic findings.",
+          "classification": "hypothesis"
+        }
+      },
+      "claims": [
+        {
+          "claim_id": "P-C1",
+          "classification": "public_fact",
+          "statement": "Protein Solutions currently presents itself as an active Joplin company at 3800 E 32nd Street and states it provides 125 Joplin-area jobs.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "P-S1"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": "P-L-CURRENT",
+          "locator": "company landing page"
+        },
+        {
+          "claim_id": "P-C2",
+          "classification": "public_fact",
+          "statement": "In a 2018 company letter, Protein Solutions acknowledged accusations of unpleasant smells and stated that it used state-of-the-art equipment to mitigate odor and best practices to keep the plant controlled.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "P-S2"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": "P-L-ACTION",
+          "locator": "2018 company letter"
+        },
+        {
+          "claim_id": "P-C3",
+          "classification": "public_fact",
+          "statement": "A 2020 secondary settlement report states that a $975,000 class settlement was reached to resolve odor-related claims concerning the Joplin plant; the underlying allegations are not treated here as adjudicated findings.",
+          "evidence_confidence": "moderate",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "P-S3"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant / surrounding residences",
+          "lineage_id": "P-L-LITIGATION",
+          "locator": "settlement report"
+        },
+        {
+          "claim_id": "P-C4",
+          "classification": "public_fact",
+          "statement": "Missouri DNR concern 56417 was received February 7, 2024 and investigated February 20, 2024, listed Protein Solutions as suspected source for an odor concern, and recorded final action as Letter.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "P-S4"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant / odor concern",
+          "lineage_id": "P-L-2024",
+          "locator": "concern 56417"
+        },
+        {
+          "claim_id": "P-C5",
+          "classification": "public_fact",
+          "statement": "Missouri DNR concern 61898 was investigated June 11, 2025, listed Protein Solutions as suspected source, and concluded that no violation of the Missouri odor rule was observed at the time of investigation.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "P-S5"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin/Newton odor concern",
+          "lineage_id": "P-L-2025",
+          "locator": "concern 61898"
+        },
+        {
+          "claim_id": "P-C6",
+          "classification": "public_fact",
+          "statement": "A 2020 City of Joplin blight study states that Missouri DNR had found Protein Solutions in violation of state odor regulations in the past and that the last known violations were in 2015.",
+          "evidence_confidence": "moderate",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "P-S6"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": "P-L-HISTORICAL",
+          "locator": "blight study odor paragraph"
+        },
+        {
+          "claim_id": "P-C7",
+          "classification": "reasonable_inference",
+          "statement": "The 2024 and 2025 official odor concerns show persistence of an odor-complaint signal after the company's 2018 mitigation statement, but they do not establish verified post-correction regulatory recurrence caused by Protein Solutions.",
+          "evidence_confidence": "moderate",
+          "predicate_claim_ids": [
+            "P-C2",
+            "P-C4",
+            "P-C5"
+          ],
+          "source_ids": [
+            "P-S2",
+            "P-S4",
+            "P-S5"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant / local concern pattern",
+          "lineage_id": "P-L-SYNTHESIS",
+          "locator": "cross-source chronology"
+        },
+        {
+          "claim_id": "P-C8",
+          "classification": "hypothesis",
+          "statement": "A bounded IMD pilot could test how odor complaints, control maintenance, corrective actions, and effectiveness verification are retained and reassessed at the current plant.",
+          "evidence_confidence": "moderate",
+          "predicate_claim_ids": [
+            "P-C1",
+            "P-C2",
+            "P-C4",
+            "P-C5"
+          ],
+          "source_ids": [],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": null,
+          "locator": "qualification hypothesis"
+        },
+        {
+          "claim_id": "P-C9",
+          "classification": "hypothesis",
+          "statement": "An approximately-$10,000 pilot and a plant/environmental sponsor role are commercially plausible, but budget, authority, evidence access, and willingness are unknown.",
+          "evidence_confidence": "low",
+          "predicate_claim_ids": [
+            "P-C1"
+          ],
+          "source_ids": [],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": null,
+          "locator": "commercial hypothesis"
+        },
+        {
+          "claim_id": "P-C10",
+          "classification": "unknown",
+          "statement": "The public record reviewed does not establish the exact corrective-action program, completion evidence, or effectiveness verification tied to the historical odor problem.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [],
+          "material": true,
+          "entity_site_unit": "Joplin plant odor controls",
+          "lineage_id": null,
+          "locator": "research gap"
+        },
+        {
+          "claim_id": "P-C11",
+          "classification": "public_fact",
+          "statement": "OSHA opened inspection 1912858.015 at the same 3800 E 32nd Street plant on August 18, 2026; the case is open and concerns a heat-emphasis referral, not the odor pattern.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "P-S7"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": "P-L-OSHA-2026",
+          "locator": "inspection header"
+        }
+      ],
+      "alternative_explanations": [
+        {
+          "explanation_id": "P-A1",
+          "classification": "reasonable_inference",
+          "statement": "Later community odor reports may reflect episodic conditions or other industrial sources rather than failure of Protein Solutions' stated odor controls.",
+          "affected_claim_ids": [
+            "P-C4",
+            "P-C5",
+            "P-C7"
+          ],
+          "resolution": "unresolved; the 2025 DNR investigation observed no violation and the complainant acknowledged other industrial sources."
+        },
+        {
+          "explanation_id": "P-A2",
+          "classification": "reasonable_inference",
+          "statement": "The company's mitigation controls may have been effective enough to prevent a regulatory violation even though odor concerns continued to be reported.",
+          "affected_claim_ids": [
+            "P-C2",
+            "P-C5",
+            "P-C7"
+          ],
+          "resolution": "supported as a plausible counterexplanation, not proven."
+        }
+      ],
+      "unknowns_and_human_questions": [
+        {
+          "question_id": "P-Q1",
+          "question": "What specific corrective actions, engineering changes, maintenance standards, and effectiveness checks followed the historical odor complaints and settlement?",
+          "affected_claim_ids": [
+            "P-C2",
+            "P-C7",
+            "P-C10"
+          ]
+        },
+        {
+          "question_id": "P-Q2",
+          "question": "Do internal complaint and monitoring records show comparable odor recurrence after those actions, and how was source attribution verified?",
+          "affected_claim_ids": [
+            "P-C4",
+            "P-C5",
+            "P-C7"
+          ]
+        },
+        {
+          "question_id": "P-Q3",
+          "question": "Can one current plant sponsor provide a bounded record set and interviews for the approximately-$10,000 pilot?",
+          "affected_claim_ids": [
+            "P-C8",
+            "P-C9"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "P-S1",
+          "status": "acquired_web",
+          "issuer": "Protein Solutions",
+          "title": "Protein Solutions — Joplin landing page",
+          "category": "company operations page",
+          "evidence_level": "E2",
+          "publication_date": null,
+          "event_date": "current as of 2026-09-06",
+          "canonical_url_or_record_id": "https://www.proteinsolutionsjoplin.com/",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "address, jobs, odor-mitigation statements",
+          "evidence_note": "current Joplin operation and company-stated controls",
+          "entity_site_unit": "3800 E 32nd Street Joplin plant",
+          "procedural_status": "company-controlled current statement",
+          "supports_claim_ids": [
+            "P-C1"
+          ],
+          "lineage": "P-L-CURRENT primary company",
+          "access_limitation": "publication date and preserved source-byte hash unavailable; web-mediated retrieval only"
+        },
+        {
+          "source_id": "P-S2",
+          "status": "acquired_web",
+          "issuer": "Protein Solutions",
+          "title": "Letter to friends, family and neighbors",
+          "category": "company statement PDF",
+          "evidence_level": "E2",
+          "publication_date": "2018-08-23",
+          "event_date": "2018",
+          "canonical_url_or_record_id": "https://www.proteinsolutionsjoplin.com/wp-content/uploads/2018/09/20180823_3DCS_Letter_To_The_City_R2.pdf",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "pdf",
+          "sha256": null,
+          "locator": "page 1 lines discussing odor accusations and mitigation equipment",
+          "evidence_note": "acknowledgement of accusations and company-stated odor controls",
+          "entity_site_unit": "Joplin plant",
+          "procedural_status": "company-controlled public statement",
+          "supports_claim_ids": [
+            "P-C2",
+            "P-C7"
+          ],
+          "lineage": "P-L-ACTION primary company",
+          "access_limitation": "source bytes were read through web interface but not preserved locally; hash unavailable"
+        },
+        {
+          "source_id": "P-S3",
+          "status": "acquired_web",
+          "issuer": "Top Class Actions",
+          "title": "Protein Solutions Industrial Plant Class Action Settlement",
+          "category": "secondary settlement report",
+          "evidence_level": "E3",
+          "publication_date": "2020-09-07",
+          "event_date": "2020",
+          "canonical_url_or_record_id": "https://topclassactions.com/lawsuit-settlements/closed-settlements/protein-solutions-industrial-plant-class-action-settlement/",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "settlement summary and case identification",
+          "evidence_note": "secondary report of settlement and allegations; not treated as adjudicated finding",
+          "entity_site_unit": "Joplin plant / surrounding residences",
+          "procedural_status": "secondary litigation/settlement reporting",
+          "supports_claim_ids": [
+            "P-C3"
+          ],
+          "lineage": "P-L-LITIGATION secondary",
+          "access_limitation": "primary court settlement packet not acquired in this dossier; web bytes not preserved"
+        },
+        {
+          "source_id": "P-S4",
+          "status": "acquired_web",
+          "issuer": "Missouri Department of Natural Resources",
+          "title": "Monthly Air Pollution Control Program Summary Report — Feb. 16 to Mar. 15, 2024",
+          "category": "official concern report",
+          "evidence_level": "E1",
+          "publication_date": "2024-04-25",
+          "event_date": "2024-02-20",
+          "canonical_url_or_record_id": "https://dnr.mo.gov/sites/dnr/files/vfc/2024/04/main/2024-04-25-mo-air-conservation-commission-concern-report.pdf",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "pdf",
+          "sha256": null,
+          "locator": "Concern 56417",
+          "evidence_note": "odor concern, suspected source Protein Solutions, final action Letter",
+          "entity_site_unit": "Joplin plant / concern 56417",
+          "procedural_status": "official concern investigation record",
+          "supports_claim_ids": [
+            "P-C4",
+            "P-C7"
+          ],
+          "lineage": "P-L-2024 primary regulator",
+          "access_limitation": "full underlying investigation/letter not acquired; source bytes not preserved"
+        },
+        {
+          "source_id": "P-S5",
+          "status": "acquired_web",
+          "issuer": "Missouri Department of Natural Resources",
+          "title": "Monthly Air Pollution Control Program Summary Report — concerns through June 15, 2025",
+          "category": "official concern report",
+          "evidence_level": "E1",
+          "publication_date": "2025-07-31",
+          "event_date": "2025-06-11",
+          "canonical_url_or_record_id": "https://oembed-dnr.mo.gov/sites/dnr/files/vfc/2025/07/main/2025-07-31-mo-air-conservation-commission-concern-report.pdf",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "pdf",
+          "sha256": null,
+          "locator": "Concern 61898",
+          "evidence_note": "suspected Protein Solutions odor concern; no violation observed at investigation",
+          "entity_site_unit": "Joplin/Newton concern 61898",
+          "procedural_status": "official concern investigation record",
+          "supports_claim_ids": [
+            "P-C5",
+            "P-C7"
+          ],
+          "lineage": "P-L-2025 primary regulator",
+          "access_limitation": "source bytes not preserved locally; hash unavailable"
+        },
+        {
+          "source_id": "P-S6",
+          "status": "acquired_web",
+          "issuer": "City of Joplin / redevelopment study record",
+          "title": "32nd Street Place Redevelopment Area Blight Study",
+          "category": "official city study",
+          "evidence_level": "E2",
+          "publication_date": "2020",
+          "event_date": "historical through 2020",
+          "canonical_url_or_record_id": "https://www.joplinmo.org/AgendaCenter/ViewFile/Item/6810?fileID=37787",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "pdf",
+          "sha256": null,
+          "locator": "paragraph discussing off-site odors and Protein Solutions",
+          "evidence_note": "states prior DNR odor violations, last known in 2015",
+          "entity_site_unit": "Joplin plant",
+          "procedural_status": "official local-government study statement",
+          "supports_claim_ids": [
+            "P-C6"
+          ],
+          "lineage": "P-L-HISTORICAL official secondary-to-DNR",
+          "access_limitation": "underlying DNR 2015 violation files not acquired; source bytes not preserved"
+        },
+        {
+          "source_id": "P-S7",
+          "status": "acquired_web",
+          "issuer": "U.S. Occupational Safety and Health Administration",
+          "title": "Inspection 1912858.015 — Protein Solutions",
+          "category": "official inspection record",
+          "evidence_level": "E1",
+          "publication_date": null,
+          "event_date": "2026-08-18",
+          "canonical_url_or_record_id": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1912858.015",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "inspection header/status/site address",
+          "evidence_note": "same-site current-operation evidence; open heat-emphasis referral unrelated to odor",
+          "entity_site_unit": "3800 E 32nd Street Joplin plant",
+          "procedural_status": "OPEN inspection; no adverse finding inferred",
+          "supports_claim_ids": [
+            "P-C11"
+          ],
+          "lineage": "P-L-OSHA-2026 independent current-operation lineage",
+          "access_limitation": "open inspection; source bytes not preserved"
+        }
+      ],
+      "contradiction_search": {
+        "status": "completed",
+        "exception_rationale": null,
+        "records": [
+          {
+            "query_id": "P-D1",
+            "candidate_id": "JMP-PS",
+            "executed_at": "2026-09-06T09:42:31-05:00",
+            "query_text": "\"Protein Solutions\" Joplin current operations 3800 E 32nd Street 2026",
+            "source_or_database": "OpenAI public web search; company/OSHA sources",
+            "disconfirmation_target": "current entity/site continuity",
+            "affected_claim_ids": [
+              "P-C1",
+              "P-C11"
+            ],
+            "result_summary": "Current company page and a 2026 OSHA inspection support continued operation at 3800 E 32nd Street; no closure/sale result located.",
+            "added_source_ids": [
+              "P-S1",
+              "P-S7"
+            ],
+            "added_source_hashes": [],
+            "resolution": "supports_claim",
+            "claim_changed": false,
+            "current_boundary_changed": false,
+            "tier_changed": false,
+            "tier_effect": "Current Meaningful Operating Boundary Gate remains PASS.",
+            "stopping_rationale": "Current operation is directly supported by two current sources; further continuity searching is unlikely to change the boundary within the timebox.",
+            "exception_basis": null
+          },
+          {
+            "query_id": "P-D2",
+            "candidate_id": "JMP-PS",
+            "executed_at": "2026-09-06T09:42:31-05:00",
+            "query_text": "\"Protein Solutions\" Joplin odor 2025 \"No violations\" 10 CSR 10-6.165",
+            "source_or_database": "OpenAI public web search; Missouri DNR",
+            "disconfirmation_target": "post-mitigation odor recurrence / successful control",
+            "affected_claim_ids": [
+              "P-C4",
+              "P-C5",
+              "P-C7"
+            ],
+            "result_summary": "Missouri DNR concern 61898 documents a 2025 odor complaint naming Protein Solutions as suspected source but states that no violation of the odor rule was observed at the investigation.",
+            "added_source_ids": [
+              "P-S5"
+            ],
+            "added_source_hashes": [],
+            "resolution": "narrows_claim",
+            "claim_changed": true,
+            "current_boundary_changed": false,
+            "tier_changed": false,
+            "tier_effect": "Prevents treating later complaint activity as verified Strong-gate recurrence; supports Moderate rather than Strong.",
+            "stopping_rationale": "The strongest available official counterevidence is mapped; remaining causation/effectiveness questions require underlying DNR files or private plant records.",
+            "exception_basis": null
+          }
+        ]
+      },
+      "limitations": [
+        {
+          "limitation_id": "P-LIM1",
+          "statement": "The primary court settlement packet and complete historical DNR violation files were not acquired.",
+          "affected_claim_ids": [
+            "P-C3",
+            "P-C6"
+          ],
+          "affected_decisions": [
+            "historical problem characterization",
+            "tier"
+          ],
+          "materiality_rationale": "Primary records could narrow allegation versus finding status and exact chronology.",
+          "qualification_or_mitigation": "Obtain court/DNR files before relying on any specific historical violation chronology in outreach or diagnosis."
+        },
+        {
+          "limitation_id": "P-LIM2",
+          "statement": "The 2018 company statement describes mitigation equipment/best practices but does not independently prove a completed corrective-action program or effectiveness verification.",
+          "affected_claim_ids": [
+            "P-C2",
+            "P-C7",
+            "P-C10"
+          ],
+          "affected_decisions": [
+            "corrective_action",
+            "recurrence_after_correction",
+            "tier"
+          ],
+          "materiality_rationale": "Strong requires documented corrective action and public post-correction recurrence.",
+          "qualification_or_mitigation": "Request plant odor-control change history, maintenance/monitoring records, DNR correspondence, and effectiveness reviews."
+        },
+        {
+          "limitation_id": "P-LIM3",
+          "statement": "Later odor concerns do not establish that Protein Solutions caused each reported odor; the 2025 complainant acknowledged other industrial sources and DNR observed no violation.",
+          "affected_claim_ids": [
+            "P-C4",
+            "P-C5",
+            "P-C7"
+          ],
+          "affected_decisions": [
+            "recurrence comparability",
+            "tier"
+          ],
+          "materiality_rationale": "Misattribution would create a false recurrence.",
+          "qualification_or_mitigation": "Require source-attribution evidence and event comparability before any stronger classification."
+        },
+        {
+          "limitation_id": "P-LIM4",
+          "statement": "Web source bytes were not preserved and therefore local filenames and SHA-256 values are unavailable.",
+          "affected_claim_ids": [
+            "P-C1",
+            "P-C2",
+            "P-C3",
+            "P-C4",
+            "P-C5",
+            "P-C6",
+            "P-C11"
+          ],
+          "affected_decisions": [
+            "byte-level reproducibility"
+          ],
+          "materiality_rationale": "Later page changes cannot be detected by byte comparison.",
+          "qualification_or_mitigation": "URLs, issuers, event dates, locators, procedural status, and reciprocal claim mappings are retained; freeze source bytes in a later governed preservation step if required."
+        }
+      ],
+      "human_review": {
+        "required": false,
+        "triggers": [
+          "Human qualification is mandatory before selecting or contacting any pilot prospect."
+        ],
+        "reviewer": "pending",
+        "decision": "pending",
+        "decision_rationale": "Moderate analytical tier can be assigned from the completed public dossier, but selection/outreach remains human-gated."
+      },
+      "completion_gate": {
+        "passed": true,
+        "failed_rules": []
+      }
+    },
+    {
+      "candidate_id": "JMP-NMG",
+      "organization": {
+        "legal_name": "National Manufacturing Group / Able Composites LLC",
+        "public_name": "National Manufacturing Group — Joplin operation",
+        "parent_or_owner": "National Manufacturing Group / National Composites",
+        "relevant_entity_site_unit": "1000 South Schifferdecker Avenue Joplin manufacturing plant",
+        "geography": "Joplin, Missouri",
+        "sector": "composites, fabricated metal, assembly and related OEM manufacturing"
+      },
+      "research": {
+        "as_of_date": "2026-09-06",
+        "researcher": "OpenAI assistant for The Russow Institute",
+        "scope": "public records only; bounded dossier development from governed Joplin manufacturer discovery",
+        "lookback": "2016-09-06 to 2026-09-06",
+        "source_preservation_note": "Web-mediated source text was reviewed. Source bytes were not locally frozen; local_filename and sha256 are null with explicit source-level explanations."
+      },
+      "candidate_summary": {
+        "completion_status": "complete",
+        "tier": "weak",
+        "tier_rationale": "The 2024 Able Composites inspection establishes material same-site LOTO deficiencies and OSHA records completed abatement in 2025. National Manufacturing Group continues operating the same Joplin site. Two 2026 complaint inspections are open, however, and the public records do not establish comparable post-abatement LOTO recurrence. Inspection volume cannot substitute for recurrence.",
+        "tier_rationale_claim_ids": [
+          "N-C1",
+          "N-C2",
+          "N-C3",
+          "N-C4",
+          "N-C5",
+          "N-C6",
+          "N-C7",
+          "N-C8"
+        ],
+        "disclaimer": "This profile identifies signals for human qualification; it does not diagnose an Institutional Memory failure, establish root cause, or treat an open OSHA inspection/complaint as a violation."
+      },
+      "proposed_pilot_boundary": {
+        "principal_problem": "hazardous-energy-control (lockout/tagout) procedure, periodic review, corrective-action verification, and learning at the Joplin plant",
+        "system_site_unit_process": "1000 South Schifferdecker manufacturing operation and its LOTO/energy-control program",
+        "why_meaningful": "The 2024 OSHA record identifies specific same-site LOTO program deficiencies and documented abatement, creating a discrete safety-management process that could be tested for implementation and verification.",
+        "fit_status": "partial",
+        "current_boundary": {
+          "status": "pass",
+          "as_of_date": "2026-09-06",
+          "rationale": "National Manufacturing Group currently lists Joplin production capabilities, and OSHA opened two 2026 inspections at the same 1000 South Schifferdecker address.",
+          "supporting_claim_ids": [
+            "N-C1",
+            "N-C2",
+            "N-C6"
+          ],
+          "contradictory_claim_ids": [],
+          "tier_effect": "PASS preserves current prospect eligibility but cannot compensate for absent comparable post-abatement recurrence."
+        }
+      },
+      "core_pattern": {
+        "problem": {
+          "status": "supported",
+          "statement": "OSHA's closed 2024 Able Composites inspection documented four current serious violations, including machine-specific and periodic-review LOTO deficiencies at the Joplin site.",
+          "claim_ids": [
+            "N-C3",
+            "N-C4",
+            "N-C5"
+          ]
+        },
+        "awareness": {
+          "status": "supported",
+          "statement": "OSHA citations, informal settlement/final order, and abatement records establish organizational notice of the cited LOTO deficiencies.",
+          "claim_ids": [
+            "N-C4",
+            "N-C5"
+          ]
+        },
+        "corrective_action": {
+          "status": "supported",
+          "statement": "OSHA records abatement completed on February 18, 2025 for the two cited LOTO items.",
+          "claim_ids": [
+            "N-C4",
+            "N-C5"
+          ]
+        },
+        "recurrence_or_persistence_after_action": {
+          "status": "not_supported",
+          "statement": "Two 2026 OSHA complaint inspections exist at the same site, but both remain open and the public records reviewed do not establish LOTO citations or hazard comparability with the 2024 deficiencies.",
+          "claim_ids": [
+            "N-C6",
+            "N-C7",
+            "N-C8"
+          ]
+        }
+      },
+      "timeline": [
+        {
+          "date": "2021-07-30",
+          "event": "National Composites announced acquisition of Able Manufacturing & Assembly in Joplin.",
+          "entity_boundary": "Joplin operation",
+          "claim_ids": [
+            "N-C1"
+          ]
+        },
+        {
+          "date": "2024-08-13",
+          "event": "OSHA opened inspection 1768493.015 for Able Composites at 1000 South Schifferdecker.",
+          "entity_boundary": "Joplin plant",
+          "claim_ids": [
+            "N-C3"
+          ]
+        },
+        {
+          "date": "2025-02-18",
+          "event": "OSHA records abatement completed for cited machine-specific LOTO procedure and annual periodic-inspection deficiencies.",
+          "entity_boundary": "Joplin plant LOTO program",
+          "claim_ids": [
+            "N-C4",
+            "N-C5"
+          ]
+        },
+        {
+          "date": "2026-01-23",
+          "event": "OSHA opened complaint inspection 1870763.015 for National Manufacturing Group at the same address; case remains open.",
+          "entity_boundary": "Joplin plant",
+          "claim_ids": [
+            "N-C6"
+          ]
+        },
+        {
+          "date": "2026-06-22",
+          "event": "OSHA opened complaint inspection 1901846.015 for National Manufacturing Group at the same address; case remains open.",
+          "entity_boundary": "Joplin plant",
+          "claim_ids": [
+            "N-C6"
+          ]
+        }
+      ],
+      "qualification": {
+        "problem_fit": {
+          "status": "supported",
+          "rationale": "A specific hazardous-energy-control program failure is documented at one current plant.",
+          "claim_ids": [
+            "N-C3",
+            "N-C4",
+            "N-C5"
+          ]
+        },
+        "recurrence": {
+          "status": "not_supported",
+          "rationale": "No comparable post-abatement LOTO recurrence is established publicly.",
+          "claim_ids": [
+            "N-C6",
+            "N-C7",
+            "N-C8"
+          ]
+        },
+        "prior_awareness": {
+          "status": "supported",
+          "rationale": "OSHA citations/final orders establish notice.",
+          "claim_ids": [
+            "N-C4",
+            "N-C5"
+          ]
+        },
+        "corrective_action_history": {
+          "status": "supported",
+          "rationale": "OSHA records completed abatement for the two LOTO items.",
+          "claim_ids": [
+            "N-C4",
+            "N-C5"
+          ]
+        },
+        "recurrence_after_correction": {
+          "status": "not_supported",
+          "rationale": "The 2026 inspections are open and do not establish the same hazard/program failure.",
+          "claim_ids": [
+            "N-C6",
+            "N-C7",
+            "N-C8"
+          ]
+        },
+        "evidence_richness": {
+          "status": "supported",
+          "rationale": "Primary OSHA citation/abatement records and current company operation records are available."
+        },
+        "organizational_complexity": {
+          "status": "supported",
+          "rationale": "The current Joplin operation performs multiple composites/metal/assembly processes within a multi-location manufacturing group.",
+          "claim_ids": [
+            "N-C1",
+            "N-C2"
+          ]
+        },
+        "boundability": {
+          "status": "supported",
+          "rationale": "One site and one LOTO/energy-control program can be formulated as a pilot boundary."
+        },
+        "likely_internal_evidence": {
+          "status": "supported",
+          "rationale": "Energy-control procedures, annual inspection records, training, machine-specific procedures, CAPA and audit records are plausibly available internally.",
+          "classification": "hypothesis"
+        },
+        "economic_fit": {
+          "status": "partial",
+          "rationale": "A bounded approximately-$10,000 pilot is plausible for the current operation; budget and willingness are unknown.",
+          "classification": "hypothesis"
+        },
+        "buyer_or_sponsor": {
+          "status": "partial",
+          "role": "plant EHS/safety leader; operations leader; plant manager",
+          "named_person": null,
+          "rationale": "Roles only; authority and willingness are unknown."
+        },
+        "urgency_trigger": {
+          "status": "partial",
+          "rationale": "Two 2026 OSHA complaint inspections are current attention signals, but their open status and unproven comparability prevent treating them as recurrence.",
+          "claim_ids": [
+            "N-C6",
+            "N-C8"
+          ]
+        },
+        "follow_on_potential": {
+          "status": "unknown",
+          "rationale": "Any remediation potential depends on private evidence and diagnostic findings.",
+          "classification": "hypothesis"
+        }
+      },
+      "claims": [
+        {
+          "claim_id": "N-C1",
+          "classification": "public_fact",
+          "statement": "National Composites announced its 2021 acquisition of Able Manufacturing & Assembly in Joplin, supporting organizational continuity into the current National Manufacturing Group operation.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "N-S1"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin operation",
+          "lineage_id": "N-L-CONTINUITY",
+          "locator": "acquisition announcement"
+        },
+        {
+          "claim_id": "N-C2",
+          "classification": "public_fact",
+          "statement": "National Manufacturing Group currently lists a Joplin operation performing open molding, RTM/LRTM, Class A paint, operator cab fabrication, metal fabrication, and assembly.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "N-S2"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin operation",
+          "lineage_id": "N-L-CURRENT",
+          "locator": "Joplin location section"
+        },
+        {
+          "claim_id": "N-C3",
+          "classification": "public_fact",
+          "statement": "OSHA inspection 1768493.015 at Able Composites, 1000 South Schifferdecker, opened August 13, 2024 and closed February 20, 2026 with four current serious violations and a current total penalty of $30,643.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "N-S3"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": "N-L-2024",
+          "locator": "inspection summary"
+        },
+        {
+          "claim_id": "N-C4",
+          "classification": "public_fact",
+          "statement": "OSHA citation 01002 found that machine-specific hazardous-energy-control procedures were not developed for an MVP sprayer and pump; OSHA records abatement completed and final order on February 18, 2025.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "N-S4"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant LOTO program",
+          "lineage_id": "N-L-2024",
+          "locator": "citation 01002"
+        },
+        {
+          "claim_id": "N-C5",
+          "classification": "public_fact",
+          "statement": "OSHA citation 01003 found that the employer had not conducted the required annual periodic inspection of the LOTO program/procedures; OSHA records abatement completed and final order on February 18, 2025.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "N-S5"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant LOTO program",
+          "lineage_id": "N-L-2024",
+          "locator": "citation 01003"
+        },
+        {
+          "claim_id": "N-C6",
+          "classification": "public_fact",
+          "statement": "OSHA opened National Manufacturing Group complaint inspections 1870763.015 on January 23, 2026 and 1901846.015 on June 22, 2026 at the same Joplin address; both records are OPEN and do not publish a comparable LOTO citation in the reviewed inspection pages.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "N-S6",
+            "N-S7"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": "N-L-2026",
+          "locator": "inspection headers/status"
+        },
+        {
+          "claim_id": "N-C7",
+          "classification": "unknown",
+          "statement": "No comparable post-February-2025 LOTO recurrence is publicly established in the sources reviewed.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [
+            "N-C4",
+            "N-C5",
+            "N-C6"
+          ],
+          "source_ids": [],
+          "material": true,
+          "entity_site_unit": "Joplin plant LOTO program",
+          "lineage_id": null,
+          "locator": "research gap"
+        },
+        {
+          "claim_id": "N-C8",
+          "classification": "reasonable_inference",
+          "statement": "The 2026 open inspections cannot responsibly be treated as recurrence of the 2024 LOTO deficiencies because their final citations and hazard comparability are not established.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [
+            "N-C6"
+          ],
+          "source_ids": [
+            "N-S6",
+            "N-S7"
+          ],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": "N-L-SYNTHESIS",
+          "locator": "procedural-status comparison"
+        },
+        {
+          "claim_id": "N-C9",
+          "classification": "hypothesis",
+          "statement": "A bounded IMD pilot could test whether the LOTO corrective actions were implemented, verified, retained, and generalized across relevant equipment/processes.",
+          "evidence_confidence": "moderate",
+          "predicate_claim_ids": [
+            "N-C2",
+            "N-C4",
+            "N-C5"
+          ],
+          "source_ids": [],
+          "material": true,
+          "entity_site_unit": "Joplin LOTO program",
+          "lineage_id": null,
+          "locator": "qualification hypothesis"
+        },
+        {
+          "claim_id": "N-C10",
+          "classification": "hypothesis",
+          "statement": "An approximately-$10,000 pilot and plant EHS/operations sponsor role are plausible; budget, authority, records access, and willingness are unknown.",
+          "evidence_confidence": "low",
+          "predicate_claim_ids": [
+            "N-C2"
+          ],
+          "source_ids": [],
+          "material": true,
+          "entity_site_unit": "Joplin plant",
+          "lineage_id": null,
+          "locator": "commercial hypothesis"
+        }
+      ],
+      "alternative_explanations": [
+        {
+          "explanation_id": "N-A1",
+          "classification": "reasonable_inference",
+          "statement": "The 2024 LOTO deficiencies may have been successfully corrected by the documented February 2025 abatements.",
+          "affected_claim_ids": [
+            "N-C4",
+            "N-C5",
+            "N-C7"
+          ],
+          "resolution": "public evidence supports abatement; effectiveness beyond the cited items is unknown."
+        },
+        {
+          "explanation_id": "N-A2",
+          "classification": "reasonable_inference",
+          "statement": "The 2026 OSHA complaints may concern different health/safety hazards and may be unrelated to the prior LOTO program.",
+          "affected_claim_ids": [
+            "N-C6",
+            "N-C8"
+          ],
+          "resolution": "unresolved while inspections remain open; current records do not establish comparability."
+        }
+      ],
+      "unknowns_and_human_questions": [
+        {
+          "question_id": "N-Q1",
+          "question": "What evidence verifies that the 2025 LOTO abatements were implemented and remained effective across the affected and comparable equipment?",
+          "affected_claim_ids": [
+            "N-C4",
+            "N-C5",
+            "N-C7"
+          ]
+        },
+        {
+          "question_id": "N-Q2",
+          "question": "Do either 2026 OSHA matters involve hazardous-energy control, or are they materially different lineages?",
+          "affected_claim_ids": [
+            "N-C6",
+            "N-C8"
+          ]
+        },
+        {
+          "question_id": "N-Q3",
+          "question": "Can the plant provide current LOTO procedures, annual periodic-inspection records, training, CAPA and audit records within a bounded pilot?",
+          "affected_claim_ids": [
+            "N-C9",
+            "N-C10"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "N-S1",
+          "status": "acquired_web",
+          "issuer": "National Manufacturing Group",
+          "title": "National Composites Acquires Able Manufacturing & Assembly, Joplin, MO",
+          "category": "company acquisition announcement",
+          "evidence_level": "E2",
+          "publication_date": "2021-07-30",
+          "event_date": "2021-07-30",
+          "canonical_url_or_record_id": "https://nationalmanufacturing.group/2021/07/30/national-composites-acquires-able-manufacturing-assembly-joplin-mo/",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "announcement body",
+          "evidence_note": "acquisition and continuity context",
+          "entity_site_unit": "Joplin Able operation",
+          "procedural_status": "company-controlled acquisition announcement",
+          "supports_claim_ids": [
+            "N-C1"
+          ],
+          "lineage": "N-L-CONTINUITY primary company",
+          "access_limitation": "source bytes not preserved; hash unavailable"
+        },
+        {
+          "source_id": "N-S2",
+          "status": "acquired_web",
+          "issuer": "National Manufacturing Group",
+          "title": "National Composites Locations — Joplin, MO",
+          "category": "company operations page",
+          "evidence_level": "E2",
+          "publication_date": null,
+          "event_date": "current as of 2026-09-06",
+          "canonical_url_or_record_id": "https://nationalmanufacturing.group/nc-locations/",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "Joplin location/capabilities",
+          "evidence_note": "current Joplin manufacturing capabilities",
+          "entity_site_unit": "Joplin operation",
+          "procedural_status": "company-controlled current statement",
+          "supports_claim_ids": [
+            "N-C2"
+          ],
+          "lineage": "N-L-CURRENT primary company",
+          "access_limitation": "publication date and source-byte hash unavailable"
+        },
+        {
+          "source_id": "N-S3",
+          "status": "acquired_web",
+          "issuer": "U.S. Occupational Safety and Health Administration",
+          "title": "Inspection 1768493.015 — Able Composites LLC",
+          "category": "official inspection record",
+          "evidence_level": "E1",
+          "publication_date": null,
+          "event_date": "2024-08-13 to 2026-02-20",
+          "canonical_url_or_record_id": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1768493.015",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "inspection summary and violation table",
+          "evidence_note": "four serious current violations at same Joplin address",
+          "entity_site_unit": "1000 South Schifferdecker Joplin plant",
+          "procedural_status": "CLOSED inspection; settled current violation data",
+          "supports_claim_ids": [
+            "N-C3"
+          ],
+          "lineage": "N-L-2024 primary OSHA",
+          "access_limitation": "source bytes not preserved"
+        },
+        {
+          "source_id": "N-S4",
+          "status": "acquired_web",
+          "issuer": "U.S. Occupational Safety and Health Administration",
+          "title": "Violation 01002 — Inspection 1768493.015",
+          "category": "official citation/abatement record",
+          "evidence_level": "E1",
+          "publication_date": "2025-01-22",
+          "event_date": "2025-02-18 abatement/final order",
+          "canonical_url_or_record_id": "https://www.osha.gov/ords/imis/establishment.violation_detail?citation_id=01002&id=1768493.015",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "1910.147(c)(4)(i) citation text and abatement status",
+          "evidence_note": "machine-specific energy-control procedure deficiency; abatement completed",
+          "entity_site_unit": "Joplin LOTO program",
+          "procedural_status": "Serious citation; informal settlement; final order; abatement completed",
+          "supports_claim_ids": [
+            "N-C4"
+          ],
+          "lineage": "N-L-2024 primary OSHA",
+          "access_limitation": "source bytes not preserved"
+        },
+        {
+          "source_id": "N-S5",
+          "status": "acquired_web",
+          "issuer": "U.S. Occupational Safety and Health Administration",
+          "title": "Violation 01003 — Inspection 1768493.015",
+          "category": "official citation/abatement record",
+          "evidence_level": "E1",
+          "publication_date": "2025-01-22",
+          "event_date": "2025-02-18 abatement/final order",
+          "canonical_url_or_record_id": "https://www.osha.gov/ords/imis/establishment.violation_detail?citation_id=01003&id=1768493.015",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "1910.147(c)(6)(i) citation text and abatement status",
+          "evidence_note": "annual periodic LOTO inspection deficiency; abatement completed",
+          "entity_site_unit": "Joplin LOTO program",
+          "procedural_status": "Serious citation; informal settlement; final order; abatement completed",
+          "supports_claim_ids": [
+            "N-C5"
+          ],
+          "lineage": "N-L-2024 primary OSHA",
+          "access_limitation": "source bytes not preserved"
+        },
+        {
+          "source_id": "N-S6",
+          "status": "acquired_web",
+          "issuer": "U.S. Occupational Safety and Health Administration",
+          "title": "Inspection 1870763.015 — National Manufacturing Group",
+          "category": "official inspection record",
+          "evidence_level": "E1",
+          "publication_date": null,
+          "event_date": "2026-01-23",
+          "canonical_url_or_record_id": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1870763.015",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "inspection header/status/related complaints",
+          "evidence_note": "same-site 2026 complaint inspection; open; chromium/primary-metals emphasis",
+          "entity_site_unit": "1000 South Schifferdecker Joplin plant",
+          "procedural_status": "OPEN inspection; no final finding inferred",
+          "supports_claim_ids": [
+            "N-C6",
+            "N-C8"
+          ],
+          "lineage": "N-L-2026A primary OSHA",
+          "access_limitation": "open inspection; citation outcome/comparability unavailable; source bytes not preserved"
+        },
+        {
+          "source_id": "N-S7",
+          "status": "acquired_web",
+          "issuer": "U.S. Occupational Safety and Health Administration",
+          "title": "Inspection 1901846.015 — National Manufacturing Group",
+          "category": "official inspection record",
+          "evidence_level": "E1",
+          "publication_date": null,
+          "event_date": "2026-06-22",
+          "canonical_url_or_record_id": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1901846.015",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "inspection header/status",
+          "evidence_note": "same-site 2026 complaint inspection; open",
+          "entity_site_unit": "1000 South Schifferdecker Joplin plant",
+          "procedural_status": "OPEN inspection; no final finding inferred",
+          "supports_claim_ids": [
+            "N-C6",
+            "N-C8"
+          ],
+          "lineage": "N-L-2026B primary OSHA",
+          "access_limitation": "open inspection; citation outcome/comparability unavailable; source bytes not preserved"
+        }
+      ],
+      "contradiction_search": {
+        "status": "completed",
+        "exception_rationale": null,
+        "records": [
+          {
+            "query_id": "N-D1",
+            "candidate_id": "JMP-NMG",
+            "executed_at": "2026-09-06T09:42:31-05:00",
+            "query_text": "\"National Manufacturing Group\" Joplin 1000 South Schifferdecker current 2026",
+            "source_or_database": "OpenAI public web search; company/OSHA",
+            "disconfirmation_target": "entity/site continuity after Able acquisition",
+            "affected_claim_ids": [
+              "N-C1",
+              "N-C2",
+              "N-C6"
+            ],
+            "result_summary": "Current company location information and 2026 OSHA records support continuing National Manufacturing Group operations at the Joplin site.",
+            "added_source_ids": [
+              "N-S1",
+              "N-S2",
+              "N-S6",
+              "N-S7"
+            ],
+            "added_source_hashes": [],
+            "resolution": "supports_claim",
+            "claim_changed": false,
+            "current_boundary_changed": false,
+            "tier_changed": false,
+            "tier_effect": "Current Meaningful Operating Boundary Gate remains PASS.",
+            "stopping_rationale": "Current operation and acquisition continuity are adequately supported; additional continuity searching is unlikely to change the gate.",
+            "exception_basis": null
+          },
+          {
+            "query_id": "N-D2",
+            "candidate_id": "JMP-NMG",
+            "executed_at": "2026-09-06T09:42:31-05:00",
+            "query_text": "\"National Manufacturing Group\" Joplin OSHA 1870763 1901846 lockout tagout citation",
+            "source_or_database": "OpenAI public web search; OSHA",
+            "disconfirmation_target": "post-abatement LOTO recurrence / hazard comparability",
+            "affected_claim_ids": [
+              "N-C4",
+              "N-C5",
+              "N-C6",
+              "N-C7",
+              "N-C8"
+            ],
+            "result_summary": "The 2026 records are open complaint inspections at the same address; the reviewed pages do not establish a repeat LOTO citation or comparable post-abatement hazardous-energy-control failure.",
+            "added_source_ids": [
+              "N-S6",
+              "N-S7"
+            ],
+            "added_source_hashes": [],
+            "resolution": "narrows_claim",
+            "claim_changed": true,
+            "current_boundary_changed": false,
+            "tier_changed": false,
+            "tier_effect": "Prevents treating the 2026 inspection count as recurrence; caps the dossier at Weak on current public evidence.",
+            "stopping_rationale": "The decisive public gap is final/comparable 2026 citation content; further searching before closure is unlikely to establish the missing Strong/Moderate recurrence gate.",
+            "exception_basis": null
+          }
+        ]
+      },
+      "limitations": [
+        {
+          "limitation_id": "N-LIM1",
+          "statement": "The 2026 OSHA inspections remain open and cannot be treated as violations or recurrence.",
+          "affected_claim_ids": [
+            "N-C6",
+            "N-C7",
+            "N-C8"
+          ],
+          "affected_decisions": [
+            "recurrence_after_correction",
+            "tier"
+          ],
+          "materiality_rationale": "A comparable final LOTO finding could materially change the tier; an unrelated or no-citation result would reinforce Weak.",
+          "qualification_or_mitigation": "Recheck when OSHA closes/posts citations or obtain allowed case records through human qualification."
+        },
+        {
+          "limitation_id": "N-LIM2",
+          "statement": "The public record establishes abatement status for cited LOTO items but not effectiveness verification across the broader current energy-control program.",
+          "affected_claim_ids": [
+            "N-C4",
+            "N-C5",
+            "N-C7",
+            "N-C9"
+          ],
+          "affected_decisions": [
+            "corrective_action_effectiveness",
+            "pilot fit"
+          ],
+          "materiality_rationale": "The IMD question concerns conversion and verification beyond administrative closure.",
+          "qualification_or_mitigation": "Request LOTO procedure revisions, periodic-review records, training, audits, and effectiveness evidence."
+        },
+        {
+          "limitation_id": "N-LIM3",
+          "statement": "Web source bytes were not preserved and therefore local filenames and SHA-256 values are unavailable.",
+          "affected_claim_ids": [
+            "N-C1",
+            "N-C2",
+            "N-C3",
+            "N-C4",
+            "N-C5",
+            "N-C6",
+            "N-C8"
+          ],
+          "affected_decisions": [
+            "byte-level reproducibility"
+          ],
+          "materiality_rationale": "Later page changes cannot be detected by byte comparison.",
+          "qualification_or_mitigation": "Canonical URLs, issuer, locator, dates, procedural status and reciprocal mappings are retained; preserve bytes later if governance requires."
+        }
+      ],
+      "human_review": {
+        "required": false,
+        "triggers": [
+          "Human qualification is mandatory before selecting or contacting any pilot prospect.",
+          "Re-review if either 2026 OSHA inspection later posts a comparable LOTO finding."
+        ],
+        "reviewer": "pending",
+        "decision": "pending",
+        "decision_rationale": "Weak analytical tier is complete on current public evidence; selection/outreach remains human-gated."
+      },
+      "completion_gate": {
+        "passed": true,
+        "failed_rules": []
+      }
+    },
+    {
+      "candidate_id": "JMP-DN",
+      "organization": {
+        "legal_name": "Dyno Nobel Inc.",
+        "public_name": "Dyno Nobel — Carthage Plant",
+        "parent_or_owner": "Dyno Nobel group",
+        "relevant_entity_site_unit": "Carthage, Missouri Initiating Systems manufacturing facility",
+        "geography": "Carthage, Jasper County, Missouri",
+        "sector": "explosives manufacturing"
+      },
+      "research": {
+        "as_of_date": "2026-09-06",
+        "researcher": "OpenAI assistant for The Russow Institute",
+        "scope": "public records only; bounded dossier development from governed Joplin manufacturer discovery",
+        "lookback": "2016-09-06 to 2026-09-06",
+        "source_preservation_note": "Web-mediated source text was reviewed. Source bytes were not locally frozen; local_filename and sha256 are null with explicit source-level explanations."
+      },
+      "candidate_summary": {
+        "completion_status": "complete",
+        "tier": "weak",
+        "tier_rationale": "The Carthage plant has rich public evidence of a material 2020 environmental problem, awareness, and extensive corrective obligations, but the strongest later evidence points toward successful correction and closure rather than comparable post-correction recurrence. Later OSHA events are separate occupational-safety lineages and cannot be used to manufacture environmental recurrence.",
+        "tier_rationale_claim_ids": [
+          "D-C1",
+          "D-C2",
+          "D-C3",
+          "D-C4",
+          "D-C5",
+          "D-C6",
+          "D-C7",
+          "D-C8",
+          "D-C9",
+          "D-C10"
+        ],
+        "disclaimer": "This profile identifies signals for human qualification; it does not diagnose an Institutional Memory failure, establish root cause, or combine distinct environmental and occupational-safety lineages as one recurring problem."
+      },
+      "proposed_pilot_boundary": {
+        "principal_problem": "historical wastewater/hazardous-waste corrective-action learning and verification at the Carthage manufacturing site",
+        "system_site_unit_process": "Carthage plant environmental management, wastewater, stormwater, hazardous-waste and related corrective-control systems",
+        "why_meaningful": "The 2020 federal settlement specified a bounded set of environmental controls at a plant that remains operating under a current wastewater permit, but public evidence presently indicates successful closure rather than an unresolved recurring problem.",
+        "fit_status": "partial",
+        "current_boundary": {
+          "status": "pass",
+          "as_of_date": "2026-09-06",
+          "rationale": "Missouri DNR lists the Dyno Nobel Carthage Plant under operating wastewater permit MO0002402 effective April 2026 through March 2031; company sustainability reporting also identifies the current Carthage Initiating Systems facility.",
+          "supporting_claim_ids": [
+            "D-C3",
+            "D-C6"
+          ],
+          "contradictory_claim_ids": [],
+          "tier_effect": "PASS preserves present-site continuity but cannot compensate for the absence of post-corrective environmental recurrence."
+        }
+      },
+      "core_pattern": {
+        "problem": {
+          "status": "supported",
+          "statement": "EPA's 2020 Missouri settlement records alleged material CWA/RCRA violations at the Carthage facility.",
+          "claim_ids": [
+            "D-C1"
+          ]
+        },
+        "awareness": {
+          "status": "supported",
+          "statement": "The federal settlement/consent decree and required injunctive relief establish formal organizational awareness of the alleged environmental deficiencies.",
+          "claim_ids": [
+            "D-C1",
+            "D-C2"
+          ]
+        },
+        "corrective_action": {
+          "status": "supported",
+          "statement": "The consent decree required substantial Carthage pollution-control changes, and company reports later state that remaining requirements were completed and the decree was resolved/terminated.",
+          "claim_ids": [
+            "D-C2",
+            "D-C4",
+            "D-C5"
+          ]
+        },
+        "recurrence_or_persistence_after_action": {
+          "status": "not_supported",
+          "statement": "No comparable post-correction Carthage CWA/RCRA recurrence was established in the reviewed public evidence; company reports instead cite ISO 14001 audit performance, completion of remaining decree requirements, and 2025 decree termination. Later OSHA matters concern separate occupational-safety lineages.",
+          "claim_ids": [
+            "D-C3",
+            "D-C5",
+            "D-C7",
+            "D-C8",
+            "D-C9",
+            "D-C10"
+          ]
+        }
+      },
+      "timeline": [
+        {
+          "date": "2020-02-27",
+          "event": "Federal settlement/consent decree addressed alleged CWA/RCRA violations at Carthage and Louisiana and specified extensive pollution-control injunctive relief.",
+          "entity_boundary": "Carthage environmental systems",
+          "claim_ids": [
+            "D-C1",
+            "D-C2"
+          ]
+        },
+        {
+          "date": "2020-01-28 to 2021-02-24",
+          "event": "Separate OSHA inspection at the Carthage site generated safety/PSM-related citations with abatements; this is a distinct lineage from the federal CWA/RCRA matter.",
+          "entity_boundary": "Carthage occupational safety/PSM systems",
+          "claim_ids": [
+            "D-C7"
+          ]
+        },
+        {
+          "date": "2021-10-19",
+          "event": "Separate occupational injury event caused partial finger amputation and later OSHA citation; not shown comparable to the environmental lineage.",
+          "entity_boundary": "Carthage occupational safety system",
+          "claim_ids": [
+            "D-C8"
+          ]
+        },
+        {
+          "date": "2022",
+          "event": "Company reports Carthage achieved ISO 14001 environmental-management certification.",
+          "entity_boundary": "Carthage environmental management system",
+          "claim_ids": [
+            "D-C3"
+          ]
+        },
+        {
+          "date": "2024",
+          "event": "Company reports successful ISO 14001 audit with zero nonconformances and completion of a remaining Carthage consent-decree requirement.",
+          "entity_boundary": "Carthage environmental management system",
+          "claim_ids": [
+            "D-C3",
+            "D-C4"
+          ]
+        },
+        {
+          "date": "2025-04-23",
+          "event": "Company FY2025 report states the 2020 consent decree was resolved; independent legal reporting states the federal court granted the joint motion to terminate after stipulated requirements and compliance reports were satisfied.",
+          "entity_boundary": "Carthage/Louisiana consent decree",
+          "claim_ids": [
+            "D-C5"
+          ]
+        },
+        {
+          "date": "2026-04-01",
+          "event": "Missouri DNR operating wastewater permit MO0002402 became effective for the Carthage Plant through March 31, 2031.",
+          "entity_boundary": "Carthage wastewater system",
+          "claim_ids": [
+            "D-C6"
+          ]
+        }
+      ],
+      "qualification": {
+        "problem_fit": {
+          "status": "supported",
+          "rationale": "The 2020 environmental matter was material and bounded to specific plant control systems.",
+          "claim_ids": [
+            "D-C1",
+            "D-C2"
+          ]
+        },
+        "recurrence": {
+          "status": "not_supported",
+          "rationale": "No comparable post-correction environmental recurrence was established; later safety events are separate lineages.",
+          "claim_ids": [
+            "D-C5",
+            "D-C7",
+            "D-C8",
+            "D-C9",
+            "D-C10"
+          ]
+        },
+        "prior_awareness": {
+          "status": "supported",
+          "rationale": "Federal enforcement/consent decree establishes formal awareness.",
+          "claim_ids": [
+            "D-C1",
+            "D-C2"
+          ]
+        },
+        "corrective_action_history": {
+          "status": "supported",
+          "rationale": "The decree specified concrete controls and later reports support completion/resolution.",
+          "claim_ids": [
+            "D-C2",
+            "D-C4",
+            "D-C5"
+          ]
+        },
+        "recurrence_after_correction": {
+          "status": "not_supported",
+          "rationale": "Available evidence instead supports successful environmental correction/closure.",
+          "claim_ids": [
+            "D-C3",
+            "D-C5",
+            "D-C9",
+            "D-C10"
+          ]
+        },
+        "evidence_richness": {
+          "status": "supported",
+          "rationale": "EPA, Missouri DNR, OSHA, company sustainability and annual-report records provide unusually rich public chronology."
+        },
+        "organizational_complexity": {
+          "status": "supported",
+          "rationale": "The plant is an explosives manufacturing operation subject to environmental and process/safety control systems.",
+          "claim_ids": [
+            "D-C1",
+            "D-C6",
+            "D-C7"
+          ]
+        },
+        "boundability": {
+          "status": "supported",
+          "rationale": "A single Carthage plant and a specific environmental-control system are identifiable, although present problem fit is weakened by apparent successful closure."
+        },
+        "likely_internal_evidence": {
+          "status": "supported",
+          "rationale": "Consent-decree compliance reports, wastewater monitoring, ISO 14001 audits, O&M/BMP records, CAPA and permit files are plausibly available internally.",
+          "classification": "hypothesis"
+        },
+        "economic_fit": {
+          "status": "partial",
+          "rationale": "The plant scale and regulatory complexity make a bounded pilot plausible, but budget/readiness are unknown.",
+          "classification": "hypothesis"
+        },
+        "buyer_or_sponsor": {
+          "status": "partial",
+          "role": "plant EHS/environmental leader; site manager; environmental compliance leader",
+          "named_person": null,
+          "rationale": "Roles only; authority/willingness unknown."
+        },
+        "urgency_trigger": {
+          "status": "not_supported",
+          "rationale": "The consent decree was terminated in 2025 and the current wastewater permit is operating; no current comparable environmental recurrence was identified.",
+          "claim_ids": [
+            "D-C5",
+            "D-C6",
+            "D-C10"
+          ]
+        },
+        "follow_on_potential": {
+          "status": "unknown",
+          "rationale": "Any remediation opportunity would require a newly identified current problem from human/private evidence.",
+          "classification": "hypothesis"
+        }
+      },
+      "claims": [
+        {
+          "claim_id": "D-C1",
+          "classification": "public_fact",
+          "statement": "EPA's 2020 Missouri settlement states that the United States alleged CWA and RCRA violations at Dyno Nobel's Carthage explosives manufacturing facility, including unauthorized wastewater pollutants and hazardous-waste violations.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "D-S1"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage environmental systems",
+          "lineage_id": "D-L-ENV-2020",
+          "locator": "EPA information sheet"
+        },
+        {
+          "claim_id": "D-C2",
+          "classification": "public_fact",
+          "statement": "The 2020 consent decree required Carthage measures including eliminating high-strength wastewater discharge, sewer-system survey/modification, BMP and O&M programs, soil sampling/cleanup, and enhanced effluent monitoring.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "D-S1"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage environmental systems",
+          "lineage_id": "D-L-ENV-2020",
+          "locator": "EPA injunctive-relief section"
+        },
+        {
+          "claim_id": "D-C3",
+          "classification": "public_fact",
+          "statement": "Dyno Nobel's 2024 sustainability report states that Carthage obtained ISO 14001 certification in 2022 and had a 2024 ISO 14001 audit with zero nonconformances while retaining certification.",
+          "evidence_confidence": "moderate",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "D-S2"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage environmental management system",
+          "lineage_id": "D-L-ENV-CORRECTION",
+          "locator": "2024 sustainability report environmental-risk section"
+        },
+        {
+          "claim_id": "D-C4",
+          "classification": "public_fact",
+          "statement": "Dyno Nobel's 2024 sustainability report states that one remaining requirement relating to the Carthage consent decree was completed during 2024.",
+          "evidence_confidence": "moderate",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "D-S2"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage consent-decree controls",
+          "lineage_id": "D-L-ENV-CORRECTION",
+          "locator": "2024 report regulatory infringements"
+        },
+        {
+          "claim_id": "D-C5",
+          "classification": "public_fact",
+          "statement": "Dyno Nobel's 2025 annual report states that the 2020 Carthage/Louisiana consent decree was resolved in April 2025 with EPA requesting termination; independent legal reporting states the federal court granted the joint motion on April 23, 2025 after stipulated requirements/compliance reports were satisfied.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "D-S3",
+            "D-S4"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage/Louisiana consent decree",
+          "lineage_id": "D-L-ENV-CLOSURE",
+          "locator": "2025 annual report environmental regulation section; legal enforcement roundup"
+        },
+        {
+          "claim_id": "D-C6",
+          "classification": "public_fact",
+          "statement": "Missouri DNR lists Dyno Nobel Inc.-Carthage Plant permit MO0002402 as an Operating site-specific wastewater permit effective April 1, 2026 through March 31, 2031.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "D-S5"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage wastewater system",
+          "lineage_id": "D-L-CURRENT",
+          "locator": "site-specific wastewater permit table"
+        },
+        {
+          "claim_id": "D-C7",
+          "classification": "public_fact",
+          "statement": "A separate 2020 OSHA inspection at the Carthage plant resulted in safety/PSM-related violations, including a PSM equipment/RAGAGEP citation recorded as abated February 24, 2021; this is not the same CWA/RCRA lineage.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "D-S6",
+            "D-S7"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage occupational safety/PSM systems",
+          "lineage_id": "D-L-OSHA-2020",
+          "locator": "inspection summary and PSM citation"
+        },
+        {
+          "claim_id": "D-C8",
+          "classification": "public_fact",
+          "statement": "OSHA's 2021 Carthage investigation records a partial finger amputation while troubleshooting a slide-gate operator and a resulting settled citation; it is an occupational-safety event not shown to be comparable to the environmental consent-decree problem.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [],
+          "source_ids": [
+            "D-S8"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage occupational safety system",
+          "lineage_id": "D-L-OSHA-2021",
+          "locator": "inspection/investigation summary"
+        },
+        {
+          "claim_id": "D-C9",
+          "classification": "reasonable_inference",
+          "statement": "The 2020/2021 OSHA lineages cannot be used as post-corrective recurrence of the CWA/RCRA environmental problem because the hazards, regulatory programs, and corrective-action pathways are materially different.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [
+            "D-C1",
+            "D-C2",
+            "D-C7",
+            "D-C8"
+          ],
+          "source_ids": [
+            "D-S1",
+            "D-S6",
+            "D-S7",
+            "D-S8"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage plant cross-lineage comparison",
+          "lineage_id": "D-L-SYNTHESIS",
+          "locator": "cross-source lineage analysis"
+        },
+        {
+          "claim_id": "D-C10",
+          "classification": "reasonable_inference",
+          "statement": "The strongest current public evidence favors successful correction/closure of the 2020 environmental matter rather than persistent post-correction environmental recurrence.",
+          "evidence_confidence": "high",
+          "predicate_claim_ids": [
+            "D-C3",
+            "D-C4",
+            "D-C5"
+          ],
+          "source_ids": [
+            "D-S2",
+            "D-S3",
+            "D-S4"
+          ],
+          "material": true,
+          "entity_site_unit": "Carthage environmental systems",
+          "lineage_id": "D-L-ENV-CLOSURE",
+          "locator": "2024-2025 correction/closure evidence"
+        },
+        {
+          "claim_id": "D-C11",
+          "classification": "hypothesis",
+          "statement": "A present IMD pilot would be justified only if human qualification identifies a current recurring environmental/process-learning problem not established in the public dossier.",
+          "evidence_confidence": "moderate",
+          "predicate_claim_ids": [
+            "D-C5",
+            "D-C6",
+            "D-C10"
+          ],
+          "source_ids": [],
+          "material": true,
+          "entity_site_unit": "Carthage plant",
+          "lineage_id": null,
+          "locator": "qualification hypothesis"
+        },
+        {
+          "claim_id": "D-C12",
+          "classification": "hypothesis",
+          "statement": "An approximately-$10,000 bounded pilot and plant EHS/environmental sponsor role are plausible; budget, authority, evidence access and willingness are unknown.",
+          "evidence_confidence": "low",
+          "predicate_claim_ids": [
+            "D-C6"
+          ],
+          "source_ids": [],
+          "material": true,
+          "entity_site_unit": "Carthage plant",
+          "lineage_id": null,
+          "locator": "commercial hypothesis"
+        }
+      ],
+      "alternative_explanations": [
+        {
+          "explanation_id": "D-A1",
+          "classification": "reasonable_inference",
+          "statement": "The 2020 environmental deficiencies may have been successfully corrected under the consent decree rather than persisting as an organizational learning failure.",
+          "affected_claim_ids": [
+            "D-C2",
+            "D-C3",
+            "D-C4",
+            "D-C5",
+            "D-C10"
+          ],
+          "resolution": "strongly supported by available correction/closure evidence; private effectiveness details remain outside the public dossier."
+        },
+        {
+          "explanation_id": "D-A2",
+          "classification": "reasonable_inference",
+          "statement": "Later OSHA events represent distinct occupational-safety lineages and do not establish recurrence of the environmental problem.",
+          "affected_claim_ids": [
+            "D-C7",
+            "D-C8",
+            "D-C9"
+          ],
+          "resolution": "supported; no public evidence establishes cross-lineage comparability."
+        }
+      ],
+      "unknowns_and_human_questions": [
+        {
+          "question_id": "D-Q1",
+          "question": "Is there a current recurring environmental, process-safety, audit, or corrective-action problem at Carthage that survived or arose after the completed consent-decree controls?",
+          "affected_claim_ids": [
+            "D-C5",
+            "D-C10",
+            "D-C11"
+          ]
+        },
+        {
+          "question_id": "D-Q2",
+          "question": "What internal effectiveness reviews, recurrence histories, ISO audit records, CAPA records, and permit-monitoring exceptions exist after the decree closure?",
+          "affected_claim_ids": [
+            "D-C3",
+            "D-C4",
+            "D-C5",
+            "D-C10"
+          ]
+        },
+        {
+          "question_id": "D-Q3",
+          "question": "Can a current plant sponsor identify one bounded problem and provide the necessary records/interviews without turning the engagement into compliance certification?",
+          "affected_claim_ids": [
+            "D-C11",
+            "D-C12"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "D-S1",
+          "status": "acquired_web",
+          "issuer": "U.S. Environmental Protection Agency",
+          "title": "Dyno Nobel Inc. Missouri Information Sheet",
+          "category": "official federal enforcement/settlement record",
+          "evidence_level": "E1",
+          "publication_date": "2020-02-27",
+          "event_date": "2020",
+          "canonical_url_or_record_id": "https://www.epa.gov/enforcement/dyno-nobel-inc-missouri-information-sheet",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "allegations and Injunctive Relief sections",
+          "evidence_note": "CWA/RCRA allegations and required Carthage corrective measures",
+          "entity_site_unit": "Carthage environmental systems",
+          "procedural_status": "federal settlement information sheet; allegations and consent-decree obligations distinguished",
+          "supports_claim_ids": [
+            "D-C1",
+            "D-C2",
+            "D-C9"
+          ],
+          "lineage": "D-L-ENV-2020 primary EPA",
+          "access_limitation": "source bytes not preserved"
+        },
+        {
+          "source_id": "D-S2",
+          "status": "acquired_web",
+          "issuer": "Dyno Nobel / Incitec Pivot Limited",
+          "title": "2024 Sustainability Report",
+          "category": "filed/company sustainability report",
+          "evidence_level": "E2",
+          "publication_date": "2024",
+          "event_date": "2022-2024",
+          "canonical_url_or_record_id": "https://www.dynonobel.com/globalassets/corporate-shared-assets/sustainability/reports/sustainability-reports/2024-sustainability-reports/2024-ipl-sustainability-report.pdf",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "pdf",
+          "sha256": null,
+          "locator": "Monitoring our management of environmental risks / Regulatory Infringements",
+          "evidence_note": "ISO 14001 certification/audit and completion of remaining Carthage decree requirement",
+          "entity_site_unit": "Carthage environmental management system",
+          "procedural_status": "company-controlled sustainability disclosure",
+          "supports_claim_ids": [
+            "D-C3",
+            "D-C4",
+            "D-C10"
+          ],
+          "lineage": "D-L-ENV-CORRECTION primary company",
+          "access_limitation": "company-controlled evidence; source bytes not preserved"
+        },
+        {
+          "source_id": "D-S3",
+          "status": "acquired_web",
+          "issuer": "Dyno Nobel",
+          "title": "Annual Report 2025",
+          "category": "company annual report",
+          "evidence_level": "E2",
+          "publication_date": "2025",
+          "event_date": "2025-04",
+          "canonical_url_or_record_id": "https://investors.dynonobel.com.au/static-files/cb193974-5ca9-4872-a684-1200bab031ef",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "pdf/html rendition",
+          "sha256": null,
+          "locator": "Environmental regulation and performance",
+          "evidence_note": "reports decree resolved and EPA termination request; reports no FY25 environmental noncompliance fines/penalties",
+          "entity_site_unit": "Carthage/Louisiana decree",
+          "procedural_status": "company annual-report disclosure",
+          "supports_claim_ids": [
+            "D-C5",
+            "D-C10"
+          ],
+          "lineage": "D-L-ENV-CLOSURE primary company",
+          "access_limitation": "source bytes not preserved"
+        },
+        {
+          "source_id": "D-S4",
+          "status": "acquired_web",
+          "issuer": "Vinson & Elkins LLP via JD Supra",
+          "title": "Government Enforcement Semi-annual Roundup — September 2025",
+          "category": "legal secondary report",
+          "evidence_level": "E3",
+          "publication_date": "2025-09",
+          "event_date": "2025-04-23",
+          "canonical_url_or_record_id": "https://www.jdsupra.com/legalnews/government-enforcement-semi-annual-9865426/",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "Dyno Nobel enforcement entry",
+          "evidence_note": "independent report that court granted joint termination motion after requirements/compliance reports satisfied",
+          "entity_site_unit": "Carthage/Louisiana decree",
+          "procedural_status": "secondary legal reporting of court action",
+          "supports_claim_ids": [
+            "D-C5",
+            "D-C10"
+          ],
+          "lineage": "D-L-ENV-CLOSURE independent secondary",
+          "access_limitation": "underlying court termination order not directly acquired; source bytes not preserved"
+        },
+        {
+          "source_id": "D-S5",
+          "status": "acquired_web",
+          "issuer": "Missouri Department of Natural Resources",
+          "title": "Site-specific Wastewater Permits — Dyno Nobel Inc.-Carthage Plant",
+          "category": "official permit registry",
+          "evidence_level": "E1",
+          "publication_date": null,
+          "event_date": "2026-04-01 to 2031-03-31",
+          "canonical_url_or_record_id": "https://dnr.mo.gov/water/business-industry-other-entities/permits-certifications/issued/site-specific-wastewater",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "MO0002402 Dyno Nobel Inc.-Carthage Plant row",
+          "evidence_note": "current operating wastewater permit",
+          "entity_site_unit": "Carthage wastewater system",
+          "procedural_status": "Operating permit registry",
+          "supports_claim_ids": [
+            "D-C6"
+          ],
+          "lineage": "D-L-CURRENT primary regulator",
+          "access_limitation": "dynamic registry; source bytes not preserved"
+        },
+        {
+          "source_id": "D-S6",
+          "status": "acquired_web",
+          "issuer": "U.S. Occupational Safety and Health Administration",
+          "title": "Inspection 1459787.015 — Dyno Nobel Inc.",
+          "category": "official inspection record",
+          "evidence_level": "E1",
+          "publication_date": null,
+          "event_date": "2020-01-28 to 2020-09-29",
+          "canonical_url_or_record_id": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1459787.015",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "inspection summary",
+          "evidence_note": "separate same-site OSHA safety/health lineage",
+          "entity_site_unit": "Carthage occupational safety/PSM systems",
+          "procedural_status": "CLOSED inspection",
+          "supports_claim_ids": [
+            "D-C7",
+            "D-C9"
+          ],
+          "lineage": "D-L-OSHA-2020 primary OSHA",
+          "access_limitation": "source bytes not preserved"
+        },
+        {
+          "source_id": "D-S7",
+          "status": "acquired_web",
+          "issuer": "U.S. Occupational Safety and Health Administration",
+          "title": "Violation 01002 — Inspection 1459787.015",
+          "category": "official citation/abatement record",
+          "evidence_level": "E1",
+          "publication_date": "2020-07-22",
+          "event_date": "2021-02-24 abatement",
+          "canonical_url_or_record_id": "https://www.osha.gov/ords/imis/establishment.violation_detail?citation_id=01002&id=1459787.015",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "1910.119(d)(3)(ii) PSM citation",
+          "evidence_note": "separate PSM/RAGAGEP deficiency with completed abatement",
+          "entity_site_unit": "Carthage PSM system",
+          "procedural_status": "settled OSHA citation; abatement completed",
+          "supports_claim_ids": [
+            "D-C7",
+            "D-C9"
+          ],
+          "lineage": "D-L-OSHA-2020 primary OSHA",
+          "access_limitation": "source bytes not preserved"
+        },
+        {
+          "source_id": "D-S8",
+          "status": "acquired_web",
+          "issuer": "U.S. Occupational Safety and Health Administration",
+          "title": "Inspection 1560853.015 — Dyno Nobel Inc.",
+          "category": "official inspection/injury record",
+          "evidence_level": "E1",
+          "publication_date": null,
+          "event_date": "2021-10-19 to 2022-03-21",
+          "canonical_url_or_record_id": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1560853.015",
+          "retrieval_datetime": "2026-09-06",
+          "local_filename": null,
+          "file_format": "html",
+          "sha256": null,
+          "locator": "investigation summary and violation table",
+          "evidence_note": "partial finger amputation / occupational-safety lineage",
+          "entity_site_unit": "Carthage occupational safety system",
+          "procedural_status": "CLOSED inspection; informal settlement",
+          "supports_claim_ids": [
+            "D-C8",
+            "D-C9"
+          ],
+          "lineage": "D-L-OSHA-2021 primary OSHA",
+          "access_limitation": "source bytes not preserved"
+        }
+      ],
+      "contradiction_search": {
+        "status": "completed",
+        "exception_rationale": null,
+        "records": [
+          {
+            "query_id": "D-D1",
+            "candidate_id": "JMP-DN",
+            "executed_at": "2026-09-06T09:42:31-05:00",
+            "query_text": "\"Dyno Nobel\" Carthage Missouri MO0002402 permit 2026",
+            "source_or_database": "OpenAI public web search; Missouri DNR",
+            "disconfirmation_target": "current Carthage operating-boundary continuity",
+            "affected_claim_ids": [
+              "D-C3",
+              "D-C6"
+            ],
+            "result_summary": "Missouri DNR lists operating wastewater permit MO0002402 for the Carthage Plant effective April 1, 2026 through March 31, 2031.",
+            "added_source_ids": [
+              "D-S5"
+            ],
+            "added_source_hashes": [],
+            "resolution": "supports_claim",
+            "claim_changed": false,
+            "current_boundary_changed": false,
+            "tier_changed": false,
+            "tier_effect": "Current Meaningful Operating Boundary Gate remains PASS.",
+            "stopping_rationale": "Current facility/process continuity is directly supported by an official operating permit; further continuity searching is unlikely to change the gate.",
+            "exception_basis": null
+          },
+          {
+            "query_id": "D-D2",
+            "candidate_id": "JMP-DN",
+            "executed_at": "2026-09-06T09:42:31-05:00",
+            "query_text": "\"Dyno Nobel\" Carthage consent decree terminated resolved 2025 2026",
+            "source_or_database": "OpenAI public web search; company annual report / legal reporting / EPA",
+            "disconfirmation_target": "environmental post-correction persistence and successful closure",
+            "affected_claim_ids": [
+              "D-C2",
+              "D-C3",
+              "D-C4",
+              "D-C5",
+              "D-C10"
+            ],
+            "result_summary": "Company reports show completion of the remaining Carthage decree requirement, ISO 14001 audit performance, and April 2025 resolution; independent legal reporting states the court granted termination after stipulated requirements/compliance reports were satisfied.",
+            "added_source_ids": [
+              "D-S2",
+              "D-S3",
+              "D-S4"
+            ],
+            "added_source_hashes": [],
+            "resolution": "defeats_claim",
+            "claim_changed": true,
+            "current_boundary_changed": false,
+            "tier_changed": true,
+            "tier_effect": "Counterevidence defeats a persistence-based environmental Strong/Moderate theory on current public evidence and supports Weak.",
+            "stopping_rationale": "The strongest located evidence supports successful correction/closure; additional public search is unlikely to establish a contrary comparable post-correction environmental recurrence within the timebox.",
+            "exception_basis": null
+          }
+        ]
+      },
+      "limitations": [
+        {
+          "limitation_id": "D-LIM1",
+          "statement": "The 2025 company report and independent legal reporting support consent-decree termination, but the underlying court termination order was not directly acquired in this dossier.",
+          "affected_claim_ids": [
+            "D-C5",
+            "D-C10"
+          ],
+          "affected_decisions": [
+            "closure strength",
+            "tier"
+          ],
+          "materiality_rationale": "A primary court order would improve procedural certainty.",
+          "qualification_or_mitigation": "Acquire the April 23, 2025 termination order/stipulation before making any legal or compliance representation."
+        },
+        {
+          "limitation_id": "D-LIM2",
+          "statement": "Company sustainability/ISO evidence is company-controlled and does not prove absence of every environmental issue.",
+          "affected_claim_ids": [
+            "D-C3",
+            "D-C4",
+            "D-C10"
+          ],
+          "affected_decisions": [
+            "recurrence_after_correction",
+            "tier"
+          ],
+          "materiality_rationale": "Independent regulatory evidence could alter the current fit judgment.",
+          "qualification_or_mitigation": "Check permit-monitoring/enforcement records and request internal ISO/CAPA/effectiveness records during human qualification."
+        },
+        {
+          "limitation_id": "D-LIM3",
+          "statement": "The later OSHA events are different regulatory/hazard lineages and cannot be assumed to share a cause or learning failure with the 2020 environmental matter.",
+          "affected_claim_ids": [
+            "D-C7",
+            "D-C8",
+            "D-C9"
+          ],
+          "affected_decisions": [
+            "recurrence comparability",
+            "tier"
+          ],
+          "materiality_rationale": "Combining unrelated events would create false recurrence.",
+          "qualification_or_mitigation": "Keep environmental and occupational-safety traces separate unless internal evidence establishes a defensible common system boundary."
+        },
+        {
+          "limitation_id": "D-LIM4",
+          "statement": "Web source bytes were not preserved and therefore local filenames and SHA-256 values are unavailable.",
+          "affected_claim_ids": [
+            "D-C1",
+            "D-C2",
+            "D-C3",
+            "D-C4",
+            "D-C5",
+            "D-C6",
+            "D-C7",
+            "D-C8",
+            "D-C9",
+            "D-C10"
+          ],
+          "affected_decisions": [
+            "byte-level reproducibility"
+          ],
+          "materiality_rationale": "Later page changes cannot be detected by byte comparison.",
+          "qualification_or_mitigation": "URLs, issuers, locators, procedural status and reciprocal mappings are retained; freeze source bytes later if governance requires."
+        }
+      ],
+      "human_review": {
+        "required": false,
+        "triggers": [
+          "Human qualification is mandatory before selecting or contacting any pilot prospect.",
+          "Reconsider only if new current evidence identifies a comparable post-correction problem."
+        ],
+        "reviewer": "pending",
+        "decision": "pending",
+        "decision_rationale": "Weak analytical tier is complete on current public evidence; selection/outreach remains human-gated."
+      },
+      "completion_gate": {
+        "passed": true,
+        "failed_rules": []
+      }
+    }
+  ],
+  "comparative_ranking_status": "NOT YET EXECUTED — complete dossiers first, then run the separate comparative-ranking gate.",
+  "selection_status": "HUMAN REVIEW PENDING — no organization selected or authorized for contact."
+}
