@@ -3,7 +3,7 @@
 Version: 1.0.0
 
 Status:
-Proposed
+Approved
 
 Type:
 Architecture Change Proposal
@@ -12,6 +12,9 @@ Authority:
 Systems Architect Discipline
 
 Proposed:
+2026-09-06
+
+Approved:
 2026-09-06
 
 Scope:
