@@ -9,7 +9,7 @@ Operating Plan
 Active
 
 **Version**
-1.1.1
+1.1.2
 
 **Authority**
 Systems Architect Discipline
@@ -132,21 +132,32 @@ Success Criteria:
 - [006 — Advanced Candidate Dossiers](../research-programs/001-institutional-memory/diagnostic/006-JOPLIN-MANUFACTURER-ADVANCED-CANDIDATE-DOSSIERS.md)
 - [007 — Comparative Ranking](../research-programs/001-institutional-memory/diagnostic/007-JOPLIN-MANUFACTURER-COMPARATIVE-RANKING.md)
 - [008 — Human Qualification Review](../research-programs/001-institutional-memory/diagnostic/008-JOPLIN-MANUFACTURER-HUMAN-QUALIFICATION-REVIEW.md)
+- [009 — Protein Solutions Pre-Contact Qualification Brief](../research-programs/001-institutional-memory/diagnostic/009-PROTEIN-SOLUTIONS-PRE-CONTACT-QUALIFICATION-BRIEF.md)
+- [010 — Protein Solutions Qualification Contact Authorization](../research-programs/001-institutional-memory/diagnostic/010-PROTEIN-SOLUTIONS-QUALIFICATION-CONTACT-AUTHORIZATION.md)
+
+**Contact decision completed:** 2026-09-06
+
+**Current contact state:**
+
+Protein Solutions is authorized for **bounded organization-level qualification
+contact only**. The contact is limited to resolving the qualification
+dimensions established in the committed pre-contact brief.
 
 **Selection boundary:**
 
-Protein Solutions is the priority candidate for pre-contact qualification only.
-No pilot prospect has been finally selected and no outreach is authorized.
+No pilot prospect has been finally selected. The Institutional Memory Diagnostic
+is not authorized. Named-person enrichment and outreach automation remain
+unauthorized.
 
 **Exact next action:**
 
-Create a bounded Protein Solutions Pre-Contact Qualification Brief from the
-existing Pilot Authorization Package and committed public-evidence dossier.
-Populate supported facts, preserve material unknowns, and define only the
-minimum later human-contact questions required to resolve client suitability,
-evidence access, personnel availability, sponsor authority, willingness, scope,
-exclusions, and economics. Do not perform named-person enrichment and do not
-send outreach.
+Prepare the Protein Solutions Qualification Contact Package: identify one
+current organization-level public contact channel, draft one neutral initial
+qualification message, and map the twelve qualification dimensions into a
+concise conversation guide. Preserve the approximately-$10,000 / 75-record /
+8-interview / 3–4-week / 70-hour boundaries. Do not perform named-person
+enrichment. Present the exact channel and message for human review before
+transmission.
 
 ### Previous Objective Closeout — ACP-006
 
