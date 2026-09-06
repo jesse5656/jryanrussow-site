@@ -1,6 +1,6 @@
 # AI Collaboration Standard
 
-Version: 1.1.0
+Version: 1.2.0
 
 Status:
 Active
@@ -81,6 +81,38 @@ AI assistants shall:
 Repository-first placement governs artifact location. It does not require every
 generated file to be committed, and it does not override higher governance,
 security, privacy, retention, or evidence-handling requirements.
+
+
+------------------------------------------------------------------------------
+## Automatic Command Output Handoff
+
+For nontrivial repository-associated command blocks whose output is material to
+subsequent analysis, validation, troubleshooting, or continuation, AI assistants
+shall prefer automatic command-output handoff over manual terminal transcription.
+
+When the configured handoff transport is available:
+
+- command blocks shall capture material stdout and stderr to a timestamped
+  transient artifact;
+- the command block shall transfer that artifact automatically through the
+  configured handoff transport;
+- operators shall not be asked to manually paste command output;
+- operators shall not be asked to manually upload an artifact already
+  transferred through the configured transport;
+- after the operator instructs the assistant to continue, the assistant shall
+  retrieve the latest handoff artifact directly and continue from it;
+- existing adequate output artifacts shall be reused rather than rerunning work
+  solely to reproduce evidence;
+- command-output capture shall exclude passwords, tokens, private keys,
+  recovery codes, authentication material, and equivalent secrets; and
+- durable evidence shall subsequently be placed in the repository that owns it
+  under Repository-First Output Placement.
+
+Manual paste or manual upload is a fallback only when automatic handoff is
+unavailable or has failed.
+
+The current transport implementation belongs in implementation guidance and may
+change independently of this collaboration requirement.
 
 ------------------------------------------------------------------------------
 
