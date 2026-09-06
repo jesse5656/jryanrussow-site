@@ -1,7 +1,6 @@
 # Researcher Operations
 
-Version: 1.0.0
-
+Version: 1.0.1
 Status:
 Active
 
@@ -45,6 +44,25 @@ Research Standards
 
 Researcher Handbook
     Daily operational practice.
+
+## Automatic HANDOFF / RESUME
+
+Governed chat transitions are automatic for the three primary long-running
+Russow Institute workstreams.
+
+The mandatory trigger authority is each workstream's `START-HERE.md`. The
+detailed procedure is defined in [ChatGPT Workflow](CHATGPT-WORKFLOW.md).
+
+The user does **not** need to remember or type an Espanso alias, skill name,
+`HANDOFF`, `RESUME`, or another special command.
+
+Clear intent to move active work to a new, fresh, replacement, or continuation
+chat automatically triggers HANDOFF. A replacement chat that receives the
+governed handoff, or is clearly told to continue from it, automatically
+triggers RESUME.
+
+Espanso session aliases are convenience reminders only. They are not required
+for this behavior to apply.
 
 ## Primary Daily Reference
 

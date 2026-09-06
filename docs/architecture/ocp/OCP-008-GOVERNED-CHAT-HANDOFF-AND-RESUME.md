@@ -26,6 +26,7 @@ Governed ChatGPT workstream handoff, session continuation, repository-state reco
 
 - `docs/architecture/ocp/OCP-008-GOVERNED-CHAT-HANDOFF-AND-RESUME.md`
 - `docs/operations/researcher/CHATGPT-WORKFLOW.md`
+- `docs/operations/researcher/README.md`
 - `docs/operations/workspace/CHATGPT-PROJECT-WORKSPACE-STANDARD.md`
 - `docs/operations/researcher/ALIASES.md`
 - `docs/operations/researcher/ESPANSO-WORKFLOW.md`
