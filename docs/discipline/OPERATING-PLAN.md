@@ -69,44 +69,49 @@ These rules apply to every engineering objective unless explicitly overridden.
 <div class="ri-objective" markdown>
 
 **Type**
-Diagnostic Product Development
+Commercial Pilot Development
 
 **Objective**
-Institutional Memory Diagnostic Specification and Pilot Architecture
+Institutional Memory Diagnostic Pilot Prospect Qualification
 
 **Status**
 In Progress
 
 </div>
 
-Develop the Institutional Memory Diagnostic specification and pilot
-architecture as the next commercially useful application of the completed
-Institutional Memory research program.
+Identify and qualify a bounded set of organizations for the first approximately
+$10,000 Institutional Memory Diagnostic pilot using the approved Version 1.1
+prospect-identification method and the existing diagnostic authorization
+package.
 
-Immediate commercial test:
-
-> **Can The Russow Institute sell and competently perform a $10,000
-> Institutional Memory Diagnostic using the intellectual property that exists
-> today?**
+This objective does not authorize organizational diagnosis, named-person
+contact enrichment, outreach automation, broad production prospecting,
+numerical scoring, or additional methodology development without a demonstrated
+deficiency.
 
 Success Criteria:
 
-- define the bounded diagnostic purpose, buyer, inputs, method, outputs, and
-  exclusions;
-- distinguish diagnostic evidence from unsupported organizational diagnosis;
-- define a pilot architecture that can be delivered without premature custom
-  software;
-- establish validation and falsification requirements;
-- preserve the commercialization sequence from research IP through commercial
-  validation.
+- define the bounded universe, sector or geography, lookback, timebox, and
+  exclusions before research;
+- identify candidates using public evidence;
+- evaluate the noncompensatory Problem → Awareness → Corrective Action →
+  Recurrence or Persistence pattern;
+- apply the Current Meaningful Operating Boundary Gate;
+- perform independent contradiction searches;
+- preserve provenance and distinguish fact, inference, hypothesis, and unknown;
+- produce governed candidate dossiers and a comparative ranked list;
+- obtain human review before selecting or contacting a pilot prospect.
 
 ### Definition of Done
 
-- [ ] Diagnostic specification completed
-- [ ] Pilot engagement architecture completed
-- [ ] Evidence and provenance requirements defined
-- [ ] Client deliverable boundaries defined
-- [ ] Validation and falsification gates defined
+- [ ] Bounded prospect universe approved
+- [ ] Candidate discovery completed
+- [ ] Advanced-candidate dossiers completed
+- [ ] Contradiction searches completed
+- [ ] Comparative ranked list completed
+- [ ] Human qualification review completed
+- [ ] One pilot prospect selected or the evidence-based no-selection result recorded
+- [ ] Next commercial action established
 - [ ] Repository governance validation passed
 - [ ] Scoped diff reviewed
 - [ ] Commit completed after separate approval
@@ -120,26 +125,29 @@ completed under approved ACP-006.
 
 Closeout evidence:
 
-- ACP-006 marked Approved;
-- canonical infrastructure and credential documents created;
-- obsolete material removed;
-- MkDocs navigation updated;
-- MkDocs build passed;
-- Governance Enforcement passed;
-- scoped diff reviewed;
 - implementation committed as `379e08f`;
-- implementation pushed to `origin/main`.
+- Operating Plan closeout committed as `0fef74c`;
+- both commits pushed to `origin/main`;
+- MkDocs and Governance Enforcement passed;
+- no deployed infrastructure or website implementation was changed.
 
-No deployed infrastructure or website implementation was changed.
+### Pre-Implementation Audit Finding
+
+The Diagnostic specification, D1–D12 instrument, pilot-engagement architecture,
+and pilot-authorization package already exist. The authorization package states
+that the next commercial gate is real-prospect identification and
+qualification. Additional methodology creation is therefore not the current
+objective unless a specific operational deficiency is demonstrated.
 
 ---
 
 ## Priority Queue
 
-1. Develop the Institutional Memory Diagnostic specification and pilot architecture
-2. Define the first bounded pilot-engagement package
-3. Resume historical research only for a defined diagnostic, framework,
-   falsification, or commercial requirement
+1. Identify and qualify candidates for the first bounded IMD pilot
+2. Select one qualified pilot prospect and complete its authorization package
+3. Define commercial terms and begin the controlled pilot
+4. Resume methodology development or historical research only for a defined
+   diagnostic, falsification, operational, or commercial requirement
 
 ---
 
