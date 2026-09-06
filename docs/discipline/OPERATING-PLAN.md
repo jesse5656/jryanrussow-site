@@ -9,7 +9,7 @@ Operating Plan
 Active
 
 **Version**
-1.1.0
+1.1.1
 
 **Authority**
 Systems Architect Discipline
@@ -104,17 +104,49 @@ Success Criteria:
 
 ### Definition of Done
 
-- [ ] Bounded prospect universe approved
-- [ ] Candidate discovery completed
-- [ ] Advanced-candidate dossiers completed
-- [ ] Contradiction searches completed
-- [ ] Comparative ranked list completed
-- [ ] Human qualification review completed
+- [x] Bounded prospect universe approved
+- [x] Candidate discovery completed
+- [x] Advanced-candidate dossiers completed
+- [x] Contradiction searches completed
+- [x] Comparative ranked list completed
+- [x] Human qualification review completed
 - [ ] One pilot prospect selected or the evidence-based no-selection result recorded
 - [ ] Next commercial action established
 - [ ] Repository governance validation passed
 - [ ] Scoped diff reviewed
 - [ ] Commit completed after separate approval
+
+### Prospect Qualification Execution Record
+
+**Human review completed:** 2026-09-06
+
+**Current disposition:**
+
+- Protein Solutions — **ADVANCE — PRE-CONTACT QUALIFICATION**
+- National Manufacturing Group / Able Composites — **HOLD — CONDITIONAL BACKUP**
+- Dyno Nobel — **HOLD — DO NOT PRIORITIZE ON CURRENT PUBLIC EVIDENCE**
+
+**Governing records:**
+
+- [005 — Joplin Manufacturer Prospect Discovery](../research-programs/001-institutional-memory/diagnostic/005-JOPLIN-MANUFACTURER-PROSPECT-DISCOVERY.md)
+- [006 — Advanced Candidate Dossiers](../research-programs/001-institutional-memory/diagnostic/006-JOPLIN-MANUFACTURER-ADVANCED-CANDIDATE-DOSSIERS.md)
+- [007 — Comparative Ranking](../research-programs/001-institutional-memory/diagnostic/007-JOPLIN-MANUFACTURER-COMPARATIVE-RANKING.md)
+- [008 — Human Qualification Review](../research-programs/001-institutional-memory/diagnostic/008-JOPLIN-MANUFACTURER-HUMAN-QUALIFICATION-REVIEW.md)
+
+**Selection boundary:**
+
+Protein Solutions is the priority candidate for pre-contact qualification only.
+No pilot prospect has been finally selected and no outreach is authorized.
+
+**Exact next action:**
+
+Create a bounded Protein Solutions Pre-Contact Qualification Brief from the
+existing Pilot Authorization Package and committed public-evidence dossier.
+Populate supported facts, preserve material unknowns, and define only the
+minimum later human-contact questions required to resolve client suitability,
+evidence access, personnel availability, sponsor authority, willingness, scope,
+exclusions, and economics. Do not perform named-person enrichment and do not
+send outreach.
 
 ### Previous Objective Closeout — ACP-006
 
