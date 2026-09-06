@@ -1,0 +1,196 @@
+{
+  "schema_version": "IMD-Prospect-Intelligence-V1.1-ranked-list",
+  "list_metadata": {
+    "title": "Joplin Manufacturer IMD Comparative Ranked List",
+    "as_of_date": "2026-09-06",
+    "scope": "Comparative ranking of only the three candidates whose Version 1.1 dossiers were completed and committed after the governed 10-organization Joplin-region discovery run.",
+    "sectors": [
+      "manufacturing"
+    ],
+    "geography": "Joplin-region manufacturing operations",
+    "lookback": "10 years, inherited from the governed discovery run",
+    "discovery_method": "identify-imd-prospects Version 1.1",
+    "exclusions": [
+      "No reopening or broadening of the 10-organization discovery universe",
+      "No named-person research or contact enrichment",
+      "No outreach",
+      "No numerical scoring",
+      "No new evidence admitted during comparative ranking"
+    ],
+    "limitations": [
+      "Ranking compares only the three completed dossiers; it is not an absolute market score.",
+      "Public evidence may omit private corrective actions, controls, recurrence, evidence access, sponsor authority, budget, and willingness.",
+      "Protein Solutions has only partial public support for corrective action and post-action recurrence.",
+      "National Manufacturing Group's 2026 OSHA inspections remain open and cannot be treated as repeat LOTO findings.",
+      "Dyno Nobel's strongest later evidence favors successful correction/closure of the 2020 environmental matter."
+    ],
+    "version": "1.0.0",
+    "governing_discovery_record": "005-JOPLIN-MANUFACTURER-PROSPECT-DISCOVERY.md",
+    "governing_dossier_record": "006-JOPLIN-MANUFACTURER-ADVANCED-CANDIDATE-DOSSIERS.json"
+  },
+  "tiering_method": {
+    "strong_gates": [
+      "Material comparable recurring/persistent problem supported",
+      "Prior awareness supported",
+      "Response/corrective action supported",
+      "Later recurrence/persistence after response supported",
+      "Current Meaningful Operating Boundary Gate = PASS",
+      "Public evidence rich enough for defensible chronology",
+      "Economic fit and sponsor role at least plausible",
+      "No unresolved contradiction defeats the core pattern"
+    ],
+    "within_tier_tiebreakers": [
+      "Completeness of P-A-C-R pattern",
+      "Evidence quality and independence",
+      "Boundability",
+      "Urgency",
+      "Sponsor identifiability",
+      "Economic fit",
+      "Likely evidence access",
+      "Follow-on potential"
+    ],
+    "disclaimer": "Ranks compare only candidates within this fixed research universe and date. They are not absolute market scores, diagnoses, accusations, or outreach authorization."
+  },
+  "prospects": [
+    {
+      "rank": 1,
+      "candidate_id": "JMP-PS",
+      "organization": "Protein Solutions",
+      "relevant_boundary": "3800 E 32nd Street Joplin production facility and odor-mitigation / complaint-response controls",
+      "candidate_problem": "odor-control complaint response, corrective-action verification, and learning",
+      "tier": "moderate",
+      "core_pattern": {
+        "problem": "supported",
+        "awareness": "supported",
+        "corrective_action": "partial",
+        "recurrence_after_action": "partial"
+      },
+      "current_boundary": "pass",
+      "strongest_public_signal": "Company acknowledgment and stated odor controls are followed by official Missouri DNR odor concerns in 2024 and 2025 at a currently operating Joplin boundary.",
+      "strongest_counterevidence": "The 2025 DNR investigation observed no odor-rule violation, and later odor concerns do not establish verified plant-caused post-correction recurrence.",
+      "evidence_richness": "supported",
+      "boundability": "supported",
+      "economic_fit": "partial hypothesis",
+      "sponsor_role": "partial; plant manager, environmental/EHS leader, or operations leader role only; no named person",
+      "urgency_trigger": "partial; recent official odor concerns, but no verified post-correction violation",
+      "decisive_unknowns": [
+        "Exact corrective actions and engineering/maintenance changes tied to the historical odor lineage",
+        "Effectiveness-verification records",
+        "Whether internal complaint/monitoring records show comparable recurrence after those actions",
+        "Sponsor authority, evidence access, budget, and willingness"
+      ],
+      "why_ranked_here": "Only candidate in the completed set with a Moderate tier. It has the most complete public P-A-C-R signal and a supported current boundary, while still preserving material counterevidence and uncertainty.",
+      "dossier_reference": "006-JOPLIN-MANUFACTURER-ADVANCED-CANDIDATE-DOSSIERS.json#JMP-PS",
+      "human_review_status": "required before selection or contact; pending"
+    },
+    {
+      "rank": 2,
+      "candidate_id": "JMP-NMG",
+      "organization": "National Manufacturing Group / Able Composites",
+      "relevant_boundary": "1000 South Schifferdecker Joplin manufacturing operation and LOTO/energy-control program",
+      "candidate_problem": "hazardous-energy-control procedure, periodic review, corrective-action verification, and learning",
+      "tier": "weak",
+      "core_pattern": {
+        "problem": "supported",
+        "awareness": "supported",
+        "corrective_action": "supported",
+        "recurrence_after_action": "not_supported"
+      },
+      "current_boundary": "pass",
+      "strongest_public_signal": "Primary OSHA records document specific serious LOTO deficiencies and completed February 2025 abatements at a current same-site manufacturing boundary.",
+      "strongest_counterevidence": "The two 2026 same-site OSHA complaint inspections remain open and do not establish comparable post-abatement LOTO recurrence.",
+      "evidence_richness": "supported",
+      "boundability": "supported",
+      "economic_fit": "partial hypothesis",
+      "sponsor_role": "partial; plant EHS/safety leader, operations leader, or plant manager role only; no named person",
+      "urgency_trigger": "partial; two current 2026 OSHA complaint inspections, without proven hazard comparability",
+      "decisive_unknowns": [
+        "Whether either 2026 OSHA matter involves hazardous-energy control",
+        "Effectiveness of the 2025 LOTO abatements across affected/comparable equipment",
+        "Current LOTO procedure, periodic-inspection, training, CAPA and audit records",
+        "Sponsor authority, evidence access, budget, and willingness"
+      ],
+      "why_ranked_here": "Ranks above Dyno Nobel within Weak because it has a discrete current LOTO boundary, primary-source corrective-action evidence, and a more current unresolved attention signal. The absence of supported post-abatement recurrence prevents Moderate or Strong.",
+      "dossier_reference": "006-JOPLIN-MANUFACTURER-ADVANCED-CANDIDATE-DOSSIERS.json#JMP-NMG",
+      "human_review_status": "conditional backup qualification; pending"
+    },
+    {
+      "rank": 3,
+      "candidate_id": "JMP-DN",
+      "organization": "Dyno Nobel — Carthage Plant",
+      "relevant_boundary": "Carthage plant environmental management, wastewater, stormwater, hazardous-waste and corrective-control systems",
+      "candidate_problem": "historical environmental corrective-action learning and verification",
+      "tier": "weak",
+      "core_pattern": {
+        "problem": "supported",
+        "awareness": "supported",
+        "corrective_action": "supported",
+        "recurrence_after_action": "not_supported"
+      },
+      "current_boundary": "pass",
+      "strongest_public_signal": "EPA and other public records provide a rich chronology of the 2020 environmental matter and extensive required corrective measures at a currently operating Carthage plant.",
+      "strongest_counterevidence": "Later evidence favors successful correction and closure: completion of remaining consent-decree requirements, ISO 14001 audit performance, and 2025 consent-decree termination; later OSHA events are separate lineages.",
+      "evidence_richness": "supported",
+      "boundability": "supported",
+      "economic_fit": "partial hypothesis",
+      "sponsor_role": "partial; plant EHS/environmental leader, site manager, or environmental compliance leader role only; no named person",
+      "urgency_trigger": "not_supported on the environmental lineage",
+      "decisive_unknowns": [
+        "Whether a different current recurring environmental/process-learning problem exists after decree closure",
+        "Post-closure internal ISO/CAPA/effectiveness and permit-monitoring evidence",
+        "Sponsor authority, evidence access, budget, and willingness"
+      ],
+      "why_ranked_here": "Ranks third because the strongest disconfirming evidence supports successful correction/closure of the candidate environmental problem and no current comparable recurrence was established. Rich evidence and a current boundary cannot compensate for that missing recurrence/urgency.",
+      "dossier_reference": "006-JOPLIN-MANUFACTURER-ADVANCED-CANDIDATE-DOSSIERS.json#JMP-DN",
+      "human_review_status": "do not prioritize absent new current problem evidence; pending"
+    }
+  ],
+  "research_coverage": {
+    "organizations_screened": 10,
+    "dossiers_completed": 3,
+    "source_categories_not_available": [
+      "Private corrective-action and effectiveness records",
+      "Private complaint/near-miss/audit/CAPA records",
+      "Named sponsor authority or budget evidence",
+      "For open 2026 OSHA matters, final citation/disposition evidence"
+    ],
+    "unresolved_entity_matches": []
+  },
+  "comparative_decision": {
+    "ranking_complete": true,
+    "strong_candidates": 0,
+    "moderate_candidates": 1,
+    "weak_candidates": 2,
+    "insufficient_evidence_candidates": 0,
+    "priority_for_human_qualification": "Protein Solutions",
+    "backup_for_human_qualification": "National Manufacturing Group / Able Composites",
+    "lowest_priority": "Dyno Nobel — Carthage Plant",
+    "selection_status": "No pilot prospect selected. Human qualification review is required before selection or contact."
+  },
+  "next_actions": {
+    "qualification_priority": [
+      "Human-review Protein Solutions first against the decisive unknowns in dossier JMP-PS.",
+      "If Protein Solutions fails human qualification, consider National Manufacturing Group / Able Composites as a conditional backup, especially if comparable 2026 OSHA information becomes available."
+    ],
+    "additional_research": [
+      "Do not reopen broad public prospecting.",
+      "Only obtain evidence necessary to resolve decisive human-qualification questions for the ranked candidates."
+    ],
+    "do_not_advance": [
+      "Do not select or contact Dyno Nobel from the current public dossier unless new current problem evidence materially changes the Weak classification.",
+      "Do not treat open OSHA inspections as violations or recurrence.",
+      "Do not convert these rankings into numerical scores."
+    ]
+  },
+  "human_review": {
+    "required": true,
+    "reviewer": "pending",
+    "decision": "pending",
+    "decision_options": [
+      "select Protein Solutions for authorization-package completion",
+      "downgrade/hold Protein Solutions and review National Manufacturing Group as backup",
+      "record evidence-based no-selection result"
+    ],
+    "decision_rationale": null
+  }
+}
