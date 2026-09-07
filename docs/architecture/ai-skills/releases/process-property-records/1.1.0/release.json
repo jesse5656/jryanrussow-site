@@ -1,0 +1,59 @@
+{
+  "schema_name": "governed-ai-skill-release",
+  "schema_version": "1.0.0",
+  "release_id": "process-property-records@1.1.0",
+  "skill_name": "process-property-records",
+  "version": "1.1.0",
+  "owning_repository": {
+    "repository_id": "jesse5656/mwg-ops-manual",
+    "repository_name": "jesse5656/mwg-ops-manual",
+    "commit": "8ed05fe89fcd7270812274a7f89d9d1212d6bb6d"
+  },
+  "production_status": "VALIDATED_PRODUCTION",
+  "runtime_artifact": {
+    "storage_mode": "REPOSITORY_FILE",
+    "location": "artifacts/ai-skills/process-property-records/1.1.0/process-property-records-v1.1.0.zip",
+    "sha256": "769752ef857cd048fa2a7cb0f3c95c29995abf897adba8f00f88d591404b1052",
+    "byte_size": 54954,
+    "format": "zip"
+  },
+  "runtime_source_path": "skills/process-property-records",
+  "runtime_file_count": 12,
+  "validation": {
+    "status": "VALIDATED_PRODUCTION",
+    "decision_reference": "docs/operations/property-records-skill/process-property-records-v1.1-regression-decision.md",
+    "result": "PASS",
+    "validation_run_id": null
+  },
+  "production_baseline_reference": "artifacts/ai-skills/process-property-records/1.1.0/evidence/PRODUCTION-BASELINE.md",
+  "supported_runtimes": [
+    {
+      "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
+      "support_status": "PLANNED",
+      "adapter_id": null
+    },
+    {
+      "runtime_class": "AI_WORKER_NODE",
+      "support_status": "PLANNED",
+      "adapter_id": null
+    },
+    {
+      "runtime_class": "API_ORCHESTRATION",
+      "support_status": "PLANNED",
+      "adapter_id": null
+    },
+    {
+      "runtime_class": "CHATGPT_SKILLS",
+      "support_status": "UNKNOWN",
+      "adapter_id": null
+    },
+    {
+      "runtime_class": "OTHER_GOVERNED_RUNTIME",
+      "support_status": "UNKNOWN",
+      "adapter_id": null
+    }
+  ],
+  "dependencies": [],
+  "rollback_predecessor": null,
+  "created_at": "2026-09-07T13:22:51-05:00"
+}

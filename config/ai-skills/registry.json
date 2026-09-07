@@ -1,7 +1,7 @@
 {
   "schema_name": "governed-ai-skill-registry",
   "schema_version": "1.0.0",
-  "registry_version": 2,
+  "registry_version": 3,
   "entries": [
     {
       "entry_id": "govern-ai-skill-packaging-and-deployment@1.0.0",
@@ -78,6 +78,59 @@
         "reference": "02-Operations/Business-Capability-Catalog/governance/ai-skills/evaluate-business-capability-architecture/1.0.0/RUNTIME-VALIDATION-DECISION-V1.md"
       },
       "production_baseline_reference": "02-Operations/Business-Capability-Catalog/governance/ai-skills/evaluate-business-capability-architecture/1.0.0/PRODUCTION-BASELINE.md",
+      "supported_runtimes": [
+        {
+          "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "AI_WORKER_NODE",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "API_ORCHESTRATION",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "CHATGPT_SKILLS",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "OTHER_GOVERNED_RUNTIME",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        }
+      ],
+      "dependencies": [],
+      "deployment_targets": [],
+      "rollback_predecessor": null
+    },
+    {
+      "entry_id": "process-property-records@1.1.0",
+      "skill_name": "process-property-records",
+      "version": "1.1.0",
+      "owning_repository": {
+        "repository_id": "jesse5656/mwg-ops-manual",
+        "repository_name": "jesse5656/mwg-ops-manual",
+        "commit": "8ed05fe89fcd7270812274a7f89d9d1212d6bb6d"
+      },
+      "release_reference": "docs/architecture/ai-skills/releases/process-property-records/1.1.0/release.json",
+      "artifact": {
+        "storage_mode": "REPOSITORY_FILE",
+        "location": "artifacts/ai-skills/process-property-records/1.1.0/process-property-records-v1.1.0.zip",
+        "sha256": "769752ef857cd048fa2a7cb0f3c95c29995abf897adba8f00f88d591404b1052",
+        "byte_size": 54954,
+        "format": "zip"
+      },
+      "validation": {
+        "status": "VALIDATED_PRODUCTION",
+        "reference": "docs/operations/property-records-skill/process-property-records-v1.1-regression-decision.md"
+      },
+      "production_baseline_reference": "artifacts/ai-skills/process-property-records/1.1.0/evidence/PRODUCTION-BASELINE.md",
       "supported_runtimes": [
         {
           "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
