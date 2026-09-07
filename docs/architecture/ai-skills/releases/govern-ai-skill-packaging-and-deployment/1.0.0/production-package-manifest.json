@@ -1,0 +1,39 @@
+{
+  "record_type": "validated-production-package-baseline",
+  "record_version": "1.0.0",
+  "skill_name": "govern-ai-skill-packaging-and-deployment",
+  "skill_version": "1.0.0",
+  "production_status": "VALIDATED_PRODUCTION",
+  "authoritative_repository": "jesse5656/jryanrussow-site",
+  "authoritative_runtime_path": "skills/govern-ai-skill-packaging-and-deployment",
+  "authoritative_runtime_commit": "77d2fb7bd4dc8371f96c44ad47cd7d00e3a02635",
+  "source_candidate": "runtime-candidate-run-01",
+  "source_candidate_manifest_sha256": "85799171c02dc1398e9196cf11c8ba44a3c1c2f4a7ca80b24473b1644a4e20ae",
+  "skill_specification_sha256": "8c82c1c61be13792343f0ac182180872aa10ecbc11cd4828ef866c3f6c4e4ec0",
+  "contract_freeze_sha256": "c44c2e6f8f592722d195011940f47b2d6ef6a4daa1e9aaab9ccb6435f6f9676b",
+  "validation_controls_freeze_sha256": "67d96bfe764edee15025000b0ccd2b7be16f87cb2e5b9efc74c39d8fc270921b",
+  "independent_evaluation_result": "PASS",
+  "independent_evaluation_zip_sha256": "ad219818e3742e890aa33431cb0f0c0f53606e70b797e77974d097fe0635bff6",
+  "critical_fixture_result": "12/12 PASS",
+  "noncritical_fixture_result": "8/8 PASS",
+  "evaluator_human_review_count": 0,
+  "candidate_behavior_defect_count": 0,
+  "methodology_control_defect_count": 0,
+  "production_artifact": {
+    "path": "artifacts/ai-skills/govern-ai-skill-packaging-and-deployment/1.0.0/govern-ai-skill-packaging-and-deployment-v1.0.0.zip",
+    "sha256": "795af431af4f08c850a2bf38ee88b0e999959d09596bda4a417be7902c969e46",
+    "deployable_file_count": 10
+  },
+  "runtime_files": {
+    "SKILL.md": "7d7738f219f4c749c641f780b55fecb34d0e23de361f09e9de198a6197512118",
+    "agents/openai.yaml": "c595babe8db035a6d53d854cd827d1b24923fd3e9a05c2322ff45b4750d5c3d5",
+    "references/contract-freeze.json": "c44c2e6f8f592722d195011940f47b2d6ef6a4daa1e9aaab9ccb6435f6f9676b",
+    "references/contract-invariants.md": "253d0943e7eeb2ae03517aebd53b3464942de74ef09e4a002074278a08ee06b3",
+    "references/deployment-record-schema.json": "cdb5ebfeb72f7a7ceac1987d71ac35e33c77e31e26ae01b6204ed2babc238588",
+    "references/deterministic-validator.py": "bbfa0036dceb8c8691fa80752f2edfee7afe8d491a9131480bf0289fb3c67993",
+    "references/registry-schema.json": "e531533287d1c20c80f3fac8b04206294cf1ef540e4ec37702ea99c5f5b04b07",
+    "references/release-schema.json": "c1d9820ce064b6c998aec3ff9c19873428d09fd7b7b2d990e4cc3548e925b067",
+    "references/skill-specification.md": "8c82c1c61be13792343f0ac182180872aa10ecbc11cd4828ef866c3f6c4e4ec0",
+    "references/vocabulary.json": "cd399ca156f8c6475e31d92165fb3289ca1fbdc206de75535802bc014d977c5f"
+  }
+}
