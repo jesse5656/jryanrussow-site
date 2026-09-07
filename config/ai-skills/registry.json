@@ -1,7 +1,7 @@
 {
   "schema_name": "governed-ai-skill-registry",
   "schema_version": "1.0.0",
-  "registry_version": 5,
+  "registry_version": 6,
   "entries": [
     {
       "entry_id": "govern-ai-skill-packaging-and-deployment@1.0.0",
@@ -237,6 +237,59 @@
         "reference": "docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-VALIDATION-RECORD.md"
       },
       "production_baseline_reference": "docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-PRODUCTION-BASELINE.md",
+      "supported_runtimes": [
+        {
+          "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "AI_WORKER_NODE",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "API_ORCHESTRATION",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "CHATGPT_SKILLS",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "OTHER_GOVERNED_RUNTIME",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        }
+      ],
+      "dependencies": [],
+      "deployment_targets": [],
+      "rollback_predecessor": null
+    },
+    {
+      "entry_id": "evaluate-open-source-platforms@1.1.0",
+      "skill_name": "evaluate-open-source-platforms",
+      "version": "1.1.0",
+      "owning_repository": {
+        "repository_id": "jesse5656/jryanrussow-site",
+        "repository_name": "jesse5656/jryanrussow-site",
+        "commit": "6f62940718fe41ff51783791730320ca44b94e55"
+      },
+      "release_reference": "docs/architecture/ai-skills/releases/evaluate-open-source-platforms/1.1.0/release.json",
+      "artifact": {
+        "storage_mode": "REPOSITORY_FILE",
+        "location": "artifacts/ai-skills/evaluate-open-source-platforms/1.1.0/evaluate-open-source-platforms-v1.1.0.zip",
+        "sha256": "b19b2b976f0e14cf8224b36204dfd14088669a1df0feea20598d8b6aeeb1f9f7",
+        "byte_size": 16874,
+        "format": "zip"
+      },
+      "validation": {
+        "status": "VALIDATED_PRODUCTION",
+        "reference": "docs/architecture/EVALUATE-OPEN-SOURCE-PLATFORMS-V1.1-VALIDATION-RECORD.md"
+      },
+      "production_baseline_reference": "docs/architecture/OPEN-SOURCE-PLATFORM-EVALUATION-PRODUCTION-BASELINE.md",
       "supported_runtimes": [
         {
           "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
