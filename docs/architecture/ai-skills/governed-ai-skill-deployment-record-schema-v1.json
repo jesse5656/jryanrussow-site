@@ -3,7 +3,7 @@
   "$id": "urn:russow-institute:ai-skills:deployment-record:v1",
   "title": "Governed AI Skill Deployment Record V1",
   "description": "Record of one governed Skill deployment, verification, rollback, uninstall, or audit transaction.",
-  "$comment": "Contract candidate 0.1.0; status DRAFT.",
+  "$comment": "Frozen V1 contract under ACP-008. Transaction result and resulting deployment state are distinct. Additional semantic invariants are defined by GOVERNED-AI-SKILL-CONTRACT-INVARIANTS-V1.md.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -14,7 +14,6 @@
     "version",
     "release_id",
     "action",
-    "status",
     "source",
     "target",
     "adapter",
@@ -24,7 +23,9 @@
     "predecessor",
     "rollback",
     "drift",
-    "authorization_reference"
+    "authorization_reference",
+    "transaction_result",
+    "resulting_deployment_status"
   ],
   "properties": {
     "schema_name": {
@@ -57,19 +58,6 @@
         "ROLLBACK",
         "UNINSTALL",
         "AUDIT"
-      ]
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "NOT_DEPLOYED",
-        "DEPLOYED_VERIFIED",
-        "DEPLOYED_UNVERIFIED",
-        "BLOCKED",
-        "DRIFT_DETECTED",
-        "ROLLED_BACK",
-        "RETIRED",
-        "UNKNOWN"
       ]
     },
     "source": {
@@ -312,6 +300,155 @@
         "string",
         "null"
       ]
+    },
+    "transaction_result": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED_MISSING_AUTHORITY",
+        "BLOCKED_MISSING_ARTIFACT",
+        "BLOCKED_HASH_MISMATCH",
+        "BLOCKED_UNSUPPORTED_RUNTIME",
+        "BLOCKED_DEPENDENCY",
+        "BLOCKED_GOVERNANCE",
+        "DRIFT_DETECTED",
+        "ROLLBACK_REQUIRED",
+        "HUMAN_REVIEW",
+        "UNKNOWN"
+      ]
+    },
+    "resulting_deployment_status": {
+      "type": "string",
+      "enum": [
+        "NOT_DEPLOYED",
+        "DEPLOYED_VERIFIED",
+        "DEPLOYED_UNVERIFIED",
+        "BLOCKED",
+        "DRIFT_DETECTED",
+        "ROLLED_BACK",
+        "RETIRED",
+        "UNKNOWN"
+      ]
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "transaction_result": {
+            "enum": [
+              "BLOCKED_MISSING_AUTHORITY",
+              "BLOCKED_MISSING_ARTIFACT",
+              "BLOCKED_HASH_MISMATCH",
+              "BLOCKED_UNSUPPORTED_RUNTIME",
+              "BLOCKED_DEPENDENCY",
+              "BLOCKED_GOVERNANCE"
+            ]
+          }
+        },
+        "required": [
+          "transaction_result"
+        ]
+      },
+      "then": {
+        "properties": {
+          "resulting_deployment_status": {
+            "const": "BLOCKED"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "transaction_result": {
+            "const": "DRIFT_DETECTED"
+          }
+        },
+        "required": [
+          "transaction_result"
+        ]
+      },
+      "then": {
+        "properties": {
+          "resulting_deployment_status": {
+            "const": "DRIFT_DETECTED"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "ROLLBACK"
+          },
+          "transaction_result": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "action",
+          "transaction_result"
+        ]
+      },
+      "then": {
+        "properties": {
+          "resulting_deployment_status": {
+            "const": "ROLLED_BACK"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "UNINSTALL"
+          },
+          "transaction_result": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "action",
+          "transaction_result"
+        ]
+      },
+      "then": {
+        "properties": {
+          "resulting_deployment_status": {
+            "const": "NOT_DEPLOYED"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "DEPLOY"
+          },
+          "transaction_result": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "action",
+          "transaction_result"
+        ]
+      },
+      "then": {
+        "properties": {
+          "resulting_deployment_status": {
+            "enum": [
+              "DEPLOYED_VERIFIED",
+              "DEPLOYED_UNVERIFIED"
+            ]
+          }
+        }
+      }
+    }
+  ]
 }

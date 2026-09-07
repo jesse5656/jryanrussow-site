@@ -1,8 +1,8 @@
 {
   "contract_name": "governed-ai-skill-vocabulary",
-  "contract_version": "0.1.0",
+  "contract_version": "1.0.0",
   "schema_version": "1.0.0",
-  "status": "DRAFT",
+  "status": "FROZEN",
   "runtime_classes": [
     "CODEX_LOCAL_AGENT_SKILLS",
     "AI_WORKER_NODE",
@@ -62,8 +62,15 @@
     "NOT_APPLICABLE",
     "UNKNOWN"
   ],
-  "skill_result_statuses": [
+  "identity_rules": {
+    "skill_name_pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+    "semantic_version_pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$",
+    "git_commit_pattern": "^[a-f0-9]{40}$",
+    "sha256_pattern": "^[a-f0-9]{64}$"
+  },
+  "transaction_result_statuses": [
     "PASS",
+    "FAIL",
     "BLOCKED_MISSING_AUTHORITY",
     "BLOCKED_MISSING_ARTIFACT",
     "BLOCKED_HASH_MISMATCH",
@@ -74,11 +81,5 @@
     "ROLLBACK_REQUIRED",
     "HUMAN_REVIEW",
     "UNKNOWN"
-  ],
-  "identity_rules": {
-    "skill_name_pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-    "semantic_version_pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$",
-    "git_commit_pattern": "^[a-f0-9]{40}$",
-    "sha256_pattern": "^[a-f0-9]{64}$"
-  }
+  ]
 }

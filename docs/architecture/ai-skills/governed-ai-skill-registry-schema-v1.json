@@ -3,7 +3,7 @@
   "$id": "urn:russow-institute:ai-skills:registry:v1",
   "title": "Governed AI Skill Registry V1",
   "description": "Enterprise index of version-specific governed AI Skill releases.",
-  "$comment": "Contract candidate 0.1.0; status DRAFT.",
+  "$comment": "Frozen V1 contract under ACP-008. Cross-record semantic invariants are defined by GOVERNED-AI-SKILL-CONTRACT-INVARIANTS-V1.md.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -128,13 +128,7 @@
             ],
             "properties": {
               "status": {
-                "type": "string",
-                "enum": [
-                  "VALIDATED_PRODUCTION",
-                  "VALIDATED_WITH_LIMITATIONS",
-                  "NOT_VALIDATED",
-                  "UNKNOWN"
-                ]
+                "const": "VALIDATED_PRODUCTION"
               },
               "reference": {
                 "type": "string",
@@ -183,7 +177,9 @@
                   ]
                 }
               }
-            }
+            },
+            "minItems": 1,
+            "uniqueItems": true
           },
           "dependencies": {
             "type": "array",
@@ -208,7 +204,8 @@
                   "type": "boolean"
                 }
               }
-            }
+            },
+            "uniqueItems": true
           },
           "deployment_targets": {
             "type": "array",
@@ -256,7 +253,8 @@
                   ]
                 }
               }
-            }
+            },
+            "uniqueItems": true
           },
           "rollback_predecessor": {
             "oneOf": [
@@ -289,7 +287,8 @@
             ]
           }
         }
-      }
+      },
+      "uniqueItems": true
     }
   }
 }

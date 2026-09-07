@@ -3,7 +3,7 @@
   "$id": "urn:russow-institute:ai-skills:release:v1",
   "title": "Governed AI Skill Release V1",
   "description": "Immutable release identity for one governed AI Skill version.",
-  "$comment": "Contract candidate 0.1.0; status DRAFT.",
+  "$comment": "Frozen V1 contract under ACP-008. Cross-record semantic invariants are defined by GOVERNED-AI-SKILL-CONTRACT-INVARIANTS-V1.md.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -182,7 +182,9 @@
             ]
           }
         }
-      }
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "dependencies": {
       "type": "array",
@@ -207,7 +209,8 @@
             "type": "boolean"
           }
         }
-      }
+      },
+      "uniqueItems": true
     },
     "rollback_predecessor": {
       "oneOf": [

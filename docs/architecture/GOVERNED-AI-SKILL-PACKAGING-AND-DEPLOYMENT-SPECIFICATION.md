@@ -1,6 +1,6 @@
 # Governed AI Skill Packaging and Deployment — Skill Specification
 
-Version: 0.2.0
+Version: 0.3.0
 
 Status:
 Draft
@@ -226,6 +226,7 @@ being invented.
 
 DEPLOY requires all of:
 
+- a distinct transaction result and resulting deployment state;
 - validated production state;
 - known artifact identity;
 - matching checksum;
@@ -339,6 +340,7 @@ Historical validation remains immutable.
 At minimum:
 
 - PASS
+- FAIL
 - BLOCKED_MISSING_AUTHORITY
 - BLOCKED_MISSING_ARTIFACT
 - BLOCKED_HASH_MISMATCH
