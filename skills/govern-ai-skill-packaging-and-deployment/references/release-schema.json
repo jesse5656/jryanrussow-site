@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:russow-institute:ai-skills:release:v1",
+  "title": "Governed AI Skill Release V1",
+  "description": "Immutable release identity for one governed AI Skill version.",
+  "$comment": "Frozen V1 contract under ACP-008. Cross-record semantic invariants are defined by GOVERNED-AI-SKILL-CONTRACT-INVARIANTS-V1.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_name",
+    "schema_version",
+    "release_id",
+    "skill_name",
+    "version",
+    "owning_repository",
+    "production_status",
+    "runtime_artifact",
+    "runtime_source_path",
+    "runtime_file_count",
+    "validation",
+    "production_baseline_reference",
+    "supported_runtimes",
+    "dependencies",
+    "rollback_predecessor",
+    "created_at"
+  ],
+  "properties": {
+    "schema_name": {
+      "const": "governed-ai-skill-release"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "release_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "skill_name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "owning_repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_id",
+        "repository_name",
+        "commit"
+      ],
+      "properties": {
+        "repository_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    "production_status": {
+      "const": "VALIDATED_PRODUCTION"
+    },
+    "runtime_artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "storage_mode",
+        "location",
+        "sha256",
+        "byte_size"
+      ],
+      "properties": {
+        "storage_mode": {
+          "type": "string",
+          "enum": [
+            "REPOSITORY_FILE",
+            "GOVERNED_EXTERNAL_ARTIFACT"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "byte_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "format": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "runtime_source_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_file_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "decision_reference",
+        "result"
+      ],
+      "properties": {
+        "status": {
+          "const": "VALIDATED_PRODUCTION"
+        },
+        "decision_reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result": {
+          "const": "PASS"
+        },
+        "validation_run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "production_baseline_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supported_runtimes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "runtime_class",
+          "support_status",
+          "adapter_id"
+        ],
+        "properties": {
+          "runtime_class": {
+            "type": "string",
+            "enum": [
+              "CODEX_LOCAL_AGENT_SKILLS",
+              "AI_WORKER_NODE",
+              "API_ORCHESTRATION",
+              "CHATGPT_SKILLS",
+              "OTHER_GOVERNED_RUNTIME"
+            ]
+          },
+          "support_status": {
+            "type": "string",
+            "enum": [
+              "SUPPORTED",
+              "PLANNED",
+              "UNSUPPORTED",
+              "UNKNOWN"
+            ]
+          },
+          "adapter_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dependency_id",
+          "requirement",
+          "required"
+        ],
+        "properties": {
+          "dependency_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requirement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required": {
+            "type": "boolean"
+          }
+        }
+      },
+      "uniqueItems": true
+    },
+    "rollback_predecessor": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "version",
+            "repository_commit",
+            "artifact_sha256"
+          ],
+          "properties": {
+            "version": {
+              "type": "string",
+              "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+            },
+            "repository_commit": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "artifact_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          }
+        }
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

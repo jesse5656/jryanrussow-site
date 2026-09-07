@@ -1,0 +1,4 @@
+interface:
+  display_name: "Govern AI Skill Packaging & Deployment"
+  short_description: "Govern repository-first AI Skill releases and deployments"
+  default_prompt: "Use $govern-ai-skill-packaging-and-deployment to resolve repository authority, production identity, packaging, registration, deployment, verification, rollback, or audit without inventing missing authority or reporting false success."

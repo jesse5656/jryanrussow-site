@@ -1,0 +1,20 @@
+{
+  "contract_set": "governed-ai-skill-packaging-registry-and-deployment",
+  "contract_version": "1.0.0",
+  "status": "FROZEN",
+  "authority": "Systems Architect Discipline",
+  "governing_architecture": "ACP-008",
+  "governing_architecture_path": "docs/architecture/acp/ACP-008-GOVERNED-AI-SKILL-PACKAGING-REGISTRY-AND-DEPLOYMENT.md",
+  "frozen_on": "2026-09-07",
+  "contracts": {
+    "governed-ai-skill-vocabulary-v1.json": "cd399ca156f8c6475e31d92165fb3289ca1fbdc206de75535802bc014d977c5f",
+    "governed-ai-skill-registry-schema-v1.json": "e531533287d1c20c80f3fac8b04206294cf1ef540e4ec37702ea99c5f5b04b07",
+    "governed-ai-skill-release-schema-v1.json": "c1d9820ce064b6c998aec3ff9c19873428d09fd7b7b2d990e4cc3548e925b067",
+    "governed-ai-skill-deployment-record-schema-v1.json": "cdb5ebfeb72f7a7ceac1987d71ac35e33c77e31e26ae01b6204ed2babc238588",
+    "GOVERNED-AI-SKILL-CONTRACT-INVARIANTS-V1.md": "253d0943e7eeb2ae03517aebd53b3464942de74ef09e4a002074278a08ee06b3"
+  },
+  "deterministic_validator": {
+    "path": "scripts/platform/validate_ai_skill_contracts.py",
+    "sha256": "bbfa0036dceb8c8691fa80752f2edfee7afe8d491a9131480bf0289fb3c67993"
+  }
+}
