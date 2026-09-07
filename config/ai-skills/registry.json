@@ -63,7 +63,7 @@
       "owning_repository": {
         "repository_id": "jesse5656/mwg-ops-manual",
         "repository_name": "jesse5656/mwg-ops-manual",
-        "commit": "0a7bbd8dc8e65f7ef2cf2b117aa177322f2f16c5"
+        "commit": "53c67a91d5c50600efca71d59da5e21a5cc2cf91"
       },
       "release_reference": "docs/architecture/ai-skills/releases/evaluate-business-capability-architecture/1.0.0/release.json",
       "artifact": {
@@ -116,7 +116,7 @@
       "owning_repository": {
         "repository_id": "jesse5656/mwg-ops-manual",
         "repository_name": "jesse5656/mwg-ops-manual",
-        "commit": "8ed05fe89fcd7270812274a7f89d9d1212d6bb6d"
+        "commit": "376d0ba760dee00179f7467f8aadf191caa11151"
       },
       "release_reference": "docs/architecture/ai-skills/releases/process-property-records/1.1.0/release.json",
       "artifact": {
