@@ -1,0 +1,36 @@
+{
+  "record_type": "governed-ai-skill-acp008-backfill",
+  "record_version": "1.0.0",
+  "skill_name": "handoff-governed-work",
+  "skill_version": "1.0.0",
+  "production_status": "VALIDATED_PRODUCTION",
+  "authoritative_repository": "jesse5656/jryanrussow-site",
+  "authoritative_runtime_path": "skills/handoff-governed-work",
+  "historical_validation_reference": "docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-VALIDATION-RECORD.md",
+  "production_baseline_reference": "docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-PRODUCTION-BASELINE.md",
+  "historical_installation_reference": "docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-INSTALLATION-RECORD.md",
+  "historical_validated_install_zip_sha256": "77495774c0b2888ef4e3aa047454aff03f358cf37a93fe4ab97e0eee07dec99d",
+  "runtime_file_count": 8,
+  "runtime_files": {
+    "SKILL.md": "e00b94da13b83c403729fbfbc196c81a9700d5f8214a70cce111dccca0851fe8",
+    "agents/openai.yaml": "fab387b831d60abe8649ca071e9ecd68d8fd3fe641a1f06de40daf18c4a9a242",
+    "references/handoff-template.md": "90fad390dc73f6b1be32309d6ed322db5ff8896c70ed8aa12b090b49fbb83b9c",
+    "references/methodology.md": "dd89806ec26755e1f7c0992ee865287825c98b73ef0fc9eedb7c7569a9150603",
+    "references/repository-context.md": "8befbdf73ede0f27642761193cc49d007ab3faa6323dae2914be3af857698e63",
+    "references/resume-protocol.md": "b0208616fe58fac19f80171c895cbb2e9c436da31069abe6fff7a9a33b1c4dda",
+    "references/security-artifacts.md": "c147c46be06f4c810221c917b9767bb73f654f2caacd770df29dd567bf908da6",
+    "references/source-state-vocabulary.md": "10684235a1173bb941b969a50249b13accc19374cd32afebef742ad4d0723c63"
+  },
+  "production_artifact": {
+    "storage_mode": "REPOSITORY_FILE",
+    "location": "artifacts/ai-skills/handoff-governed-work/1.0.0/handoff-governed-work-v1.0.0.zip",
+    "sha256": "77495774c0b2888ef4e3aa047454aff03f358cf37a93fe4ab97e0eee07dec99d",
+    "byte_size": 7023,
+    "format": "zip",
+    "file_count": 8,
+    "historical_validated_package_preserved": true
+  },
+  "backfill_behavior_change": false,
+  "revalidation_performed": false,
+  "deployment_performed": false
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: Governed Work Handoff
+  short_description: Handoff and resume governed repository work safely.
+  default_prompt: Use handoff-governed-work to preserve or resume the minimum sufficient governed continuation state without treating chat as authoritative.
