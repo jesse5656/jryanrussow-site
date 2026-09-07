@@ -1,6 +1,6 @@
 # Governed AI Skill Packaging and Deployment — Skill Specification
 
-Version: 0.1.0
+Version: 0.2.0
 
 Status:
 Draft
@@ -27,6 +27,33 @@ is explicitly frozen.
 
 No executable runtime Skill shall be represented as validated production based
 on this draft.
+
+---
+
+## Deterministic Contract Dependencies
+
+Before this specification can be frozen, its registry, release, deployment,
+and controlled-vocabulary semantics must be frozen by deterministic contracts.
+
+Current Draft contract candidates:
+
+- `docs/architecture/ai-skills/governed-ai-skill-vocabulary-v1.json`;
+- `docs/architecture/ai-skills/governed-ai-skill-registry-schema-v1.json`;
+- `docs/architecture/ai-skills/governed-ai-skill-release-schema-v1.json`;
+- `docs/architecture/ai-skills/governed-ai-skill-deployment-record-schema-v1.json`.
+
+These contract candidates are not yet frozen merely because they exist.
+
+The executable `SKILL.md` shall not be constructed until:
+
+1. the contract candidates pass deterministic validation;
+2. their vocabulary and identity rules are reconciled;
+3. the contracts are explicitly frozen;
+4. this Skill Specification is updated to the frozen contract identities and
+   itself frozen.
+
+The central registry implementation shall conform to the frozen registry
+contract but shall not become a second source of Skill behavior.
 
 ---
 

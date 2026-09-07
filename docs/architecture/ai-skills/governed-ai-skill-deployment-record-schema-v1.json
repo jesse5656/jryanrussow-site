@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:russow-institute:ai-skills:deployment-record:v1",
+  "title": "Governed AI Skill Deployment Record V1",
+  "description": "Record of one governed Skill deployment, verification, rollback, uninstall, or audit transaction.",
+  "$comment": "Contract candidate 0.1.0; status DRAFT.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_name",
+    "schema_version",
+    "deployment_id",
+    "skill_name",
+    "version",
+    "release_id",
+    "action",
+    "status",
+    "source",
+    "target",
+    "adapter",
+    "started_at",
+    "completed_at",
+    "verification",
+    "predecessor",
+    "rollback",
+    "drift",
+    "authorization_reference"
+  ],
+  "properties": {
+    "schema_name": {
+      "const": "governed-ai-skill-deployment-record"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "deployment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "skill_name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "release_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "DEPLOY",
+        "VERIFY",
+        "ROLLBACK",
+        "UNINSTALL",
+        "AUDIT"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "NOT_DEPLOYED",
+        "DEPLOYED_VERIFIED",
+        "DEPLOYED_UNVERIFIED",
+        "BLOCKED",
+        "DRIFT_DETECTED",
+        "ROLLED_BACK",
+        "RETIRED",
+        "UNKNOWN"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_id",
+        "repository_commit",
+        "artifact_sha256"
+      ],
+      "properties": {
+        "repository_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository_commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "artifact_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_id",
+        "runtime_class",
+        "host",
+        "installation_location"
+      ],
+      "properties": {
+        "target_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runtime_class": {
+          "type": "string",
+          "enum": [
+            "CODEX_LOCAL_AGENT_SKILLS",
+            "AI_WORKER_NODE",
+            "API_ORCHESTRATION",
+            "CHATGPT_SKILLS",
+            "OTHER_GOVERNED_RUNTIME"
+          ]
+        },
+        "host": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "installation_location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "adapter_id",
+        "adapter_version"
+      ],
+      "properties": {
+        "adapter_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adapter_version": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+        }
+      }
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inventory",
+        "hash",
+        "registration",
+        "dependencies",
+        "smoke_test"
+      ],
+      "properties": {
+        "inventory": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN",
+            "NOT_APPLICABLE",
+            "UNKNOWN"
+          ]
+        },
+        "hash": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN",
+            "NOT_APPLICABLE",
+            "UNKNOWN"
+          ]
+        },
+        "registration": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN",
+            "NOT_APPLICABLE",
+            "UNKNOWN"
+          ]
+        },
+        "dependencies": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN",
+            "NOT_APPLICABLE",
+            "UNKNOWN"
+          ]
+        },
+        "smoke_test": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN",
+            "NOT_APPLICABLE",
+            "UNKNOWN"
+          ]
+        }
+      }
+    },
+    "predecessor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "release_id"
+      ],
+      "properties": {
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+        },
+        "release_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "rollback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "availability",
+        "target_version",
+        "target_release_id"
+      ],
+      "properties": {
+        "availability": {
+          "type": "string",
+          "enum": [
+            "AVAILABLE",
+            "UNAVAILABLE",
+            "NOT_APPLICABLE",
+            "UNKNOWN"
+          ]
+        },
+        "target_version": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+        },
+        "target_release_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "drift": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "detected_at"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "NO_DRIFT",
+            "DRIFT_DETECTED",
+            "NOT_CHECKED",
+            "UNKNOWN"
+          ]
+        },
+        "detected_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "authorization_reference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

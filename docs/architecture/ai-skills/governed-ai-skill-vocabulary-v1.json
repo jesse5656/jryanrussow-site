@@ -1,0 +1,84 @@
+{
+  "contract_name": "governed-ai-skill-vocabulary",
+  "contract_version": "0.1.0",
+  "schema_version": "1.0.0",
+  "status": "DRAFT",
+  "runtime_classes": [
+    "CODEX_LOCAL_AGENT_SKILLS",
+    "AI_WORKER_NODE",
+    "API_ORCHESTRATION",
+    "CHATGPT_SKILLS",
+    "OTHER_GOVERNED_RUNTIME"
+  ],
+  "runtime_support_statuses": [
+    "SUPPORTED",
+    "PLANNED",
+    "UNSUPPORTED",
+    "UNKNOWN"
+  ],
+  "validation_statuses": [
+    "VALIDATED_PRODUCTION",
+    "VALIDATED_WITH_LIMITATIONS",
+    "NOT_VALIDATED",
+    "UNKNOWN"
+  ],
+  "deployment_statuses": [
+    "NOT_DEPLOYED",
+    "DEPLOYED_VERIFIED",
+    "DEPLOYED_UNVERIFIED",
+    "BLOCKED",
+    "DRIFT_DETECTED",
+    "ROLLED_BACK",
+    "RETIRED",
+    "UNKNOWN"
+  ],
+  "verification_statuses": [
+    "PASS",
+    "FAIL",
+    "NOT_RUN",
+    "NOT_APPLICABLE",
+    "UNKNOWN"
+  ],
+  "artifact_storage_modes": [
+    "REPOSITORY_FILE",
+    "GOVERNED_EXTERNAL_ARTIFACT"
+  ],
+  "deployment_actions": [
+    "DEPLOY",
+    "VERIFY",
+    "ROLLBACK",
+    "UNINSTALL",
+    "AUDIT"
+  ],
+  "drift_statuses": [
+    "NO_DRIFT",
+    "DRIFT_DETECTED",
+    "NOT_CHECKED",
+    "UNKNOWN"
+  ],
+  "rollback_availability": [
+    "AVAILABLE",
+    "UNAVAILABLE",
+    "NOT_APPLICABLE",
+    "UNKNOWN"
+  ],
+  "skill_result_statuses": [
+    "PASS",
+    "BLOCKED_MISSING_AUTHORITY",
+    "BLOCKED_MISSING_ARTIFACT",
+    "BLOCKED_HASH_MISMATCH",
+    "BLOCKED_UNSUPPORTED_RUNTIME",
+    "BLOCKED_DEPENDENCY",
+    "BLOCKED_GOVERNANCE",
+    "DRIFT_DETECTED",
+    "ROLLBACK_REQUIRED",
+    "HUMAN_REVIEW",
+    "UNKNOWN"
+  ],
+  "identity_rules": {
+    "skill_name_pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+    "semantic_version_pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$",
+    "git_commit_pattern": "^[a-f0-9]{40}$",
+    "sha256_pattern": "^[a-f0-9]{64}$"
+  }
+}

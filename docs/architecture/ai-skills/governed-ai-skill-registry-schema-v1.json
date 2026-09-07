@@ -1,0 +1,295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:russow-institute:ai-skills:registry:v1",
+  "title": "Governed AI Skill Registry V1",
+  "description": "Enterprise index of version-specific governed AI Skill releases.",
+  "$comment": "Contract candidate 0.1.0; status DRAFT.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_name",
+    "schema_version",
+    "registry_version",
+    "entries"
+  ],
+  "properties": {
+    "schema_name": {
+      "const": "governed-ai-skill-registry"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "registry_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "entry_id",
+          "skill_name",
+          "version",
+          "owning_repository",
+          "release_reference",
+          "artifact",
+          "validation",
+          "production_baseline_reference",
+          "supported_runtimes",
+          "dependencies",
+          "deployment_targets",
+          "rollback_predecessor"
+        ],
+        "properties": {
+          "entry_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "skill_name": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+          },
+          "owning_repository": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "repository_id",
+              "repository_name",
+              "commit"
+            ],
+            "properties": {
+              "repository_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "repository_name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "commit": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{40}$"
+              }
+            }
+          },
+          "release_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "storage_mode",
+              "location",
+              "sha256",
+              "byte_size"
+            ],
+            "properties": {
+              "storage_mode": {
+                "type": "string",
+                "enum": [
+                  "REPOSITORY_FILE",
+                  "GOVERNED_EXTERNAL_ARTIFACT"
+                ]
+              },
+              "location": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "byte_size": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "format": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "validation": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "reference"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "VALIDATED_PRODUCTION",
+                  "VALIDATED_WITH_LIMITATIONS",
+                  "NOT_VALIDATED",
+                  "UNKNOWN"
+                ]
+              },
+              "reference": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "production_baseline_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supported_runtimes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "runtime_class",
+                "support_status",
+                "adapter_id"
+              ],
+              "properties": {
+                "runtime_class": {
+                  "type": "string",
+                  "enum": [
+                    "CODEX_LOCAL_AGENT_SKILLS",
+                    "AI_WORKER_NODE",
+                    "API_ORCHESTRATION",
+                    "CHATGPT_SKILLS",
+                    "OTHER_GOVERNED_RUNTIME"
+                  ]
+                },
+                "support_status": {
+                  "type": "string",
+                  "enum": [
+                    "SUPPORTED",
+                    "PLANNED",
+                    "UNSUPPORTED",
+                    "UNKNOWN"
+                  ]
+                },
+                "adapter_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "dependency_id",
+                "requirement",
+                "required"
+              ],
+              "properties": {
+                "dependency_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "requirement": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "required": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "deployment_targets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "target_id",
+                "runtime_class",
+                "deployment_status",
+                "deployment_record_reference"
+              ],
+              "properties": {
+                "target_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "runtime_class": {
+                  "type": "string",
+                  "enum": [
+                    "CODEX_LOCAL_AGENT_SKILLS",
+                    "AI_WORKER_NODE",
+                    "API_ORCHESTRATION",
+                    "CHATGPT_SKILLS",
+                    "OTHER_GOVERNED_RUNTIME"
+                  ]
+                },
+                "deployment_status": {
+                  "type": "string",
+                  "enum": [
+                    "NOT_DEPLOYED",
+                    "DEPLOYED_VERIFIED",
+                    "DEPLOYED_UNVERIFIED",
+                    "BLOCKED",
+                    "DRIFT_DETECTED",
+                    "ROLLED_BACK",
+                    "RETIRED",
+                    "UNKNOWN"
+                  ]
+                },
+                "deployment_record_reference": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "rollback_predecessor": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "version",
+                  "repository_commit",
+                  "artifact_sha256"
+                ],
+                "properties": {
+                  "version": {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+                  },
+                  "repository_commit": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{40}$"
+                  },
+                  "artifact_sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
