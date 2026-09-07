@@ -1,17 +1,20 @@
 # Governed AI Skill Packaging and Deployment — Skill Specification
 
-Version: 0.3.0
+Version: 1.0.0
 
 Status:
-Draft
+Approved Methodology — V1.0
+
+Approved:
+2026-09-07
 
 Authority:
 Systems Architect Discipline
 
-Governing Proposal:
+Governing Architecture:
 ACP-008
 
-Working Runtime Name:
+Canonical Skill Name:
 `govern-ai-skill-packaging-and-deployment`
 
 ---
@@ -30,6 +33,32 @@ on this draft.
 
 ---
 
+---
+
+## Frozen Contract Identities
+
+The following V1 identities are normative for this Skill Specification.
+
+- `governed-ai-skill-vocabulary-v1.json`
+  - SHA-256: `cd399ca156f8c6475e31d92165fb3289ca1fbdc206de75535802bc014d977c5f`
+- `governed-ai-skill-registry-schema-v1.json`
+  - SHA-256: `e531533287d1c20c80f3fac8b04206294cf1ef540e4ec37702ea99c5f5b04b07`
+- `governed-ai-skill-release-schema-v1.json`
+  - SHA-256: `c1d9820ce064b6c998aec3ff9c19873428d09fd7b7b2d990e4cc3548e925b067`
+- `governed-ai-skill-deployment-record-schema-v1.json`
+  - SHA-256: `cdb5ebfeb72f7a7ceac1987d71ac35e33c77e31e26ae01b6204ed2babc238588`
+- `GOVERNED-AI-SKILL-CONTRACT-INVARIANTS-V1.md`
+  - SHA-256: `253d0943e7eeb2ae03517aebd53b3464942de74ef09e4a002074278a08ee06b3`
+- deterministic validator
+  - Path: `scripts/platform/validate_ai_skill_contracts.py`
+  - SHA-256: `bbfa0036dceb8c8691fa80752f2edfee7afe8d491a9131480bf0289fb3c67993`
+- `governed-ai-skill-contract-freeze-v1.json`
+  - SHA-256: `c44c2e6f8f592722d195011940f47b2d6ef6a4daa1e9aaab9ccb6435f6f9676b`
+
+The executable runtime shall reproduce these contract semantics without
+silently introducing alternate vocabulary, authority, identity,
+transaction-result, deployment-state, or rollback semantics.
+
 ## Deterministic Contract Dependencies
 
 Before this specification can be frozen, its registry, release, deployment,
@@ -42,15 +71,14 @@ Current Draft contract candidates:
 - `docs/architecture/ai-skills/governed-ai-skill-release-schema-v1.json`;
 - `docs/architecture/ai-skills/governed-ai-skill-deployment-record-schema-v1.json`.
 
-These contract candidates are not yet frozen merely because they exist.
+The V1 deterministic contract set is frozen by the referenced freeze
+manifest.
 
-The executable `SKILL.md` shall not be constructed until:
+The executable `SKILL.md` may be constructed only from this approved
+specification and the exact frozen V1 identities above.
 
-1. the contract candidates pass deterministic validation;
-2. their vocabulary and identity rules are reconciled;
-3. the contracts are explicitly frozen;
-4. this Skill Specification is updated to the frozen contract identities and
-   itself frozen.
+A material contract change requires a new governed version and appropriate
+regression validation.
 
 The central registry implementation shall conform to the frozen registry
 contract but shall not become a second source of Skill behavior.
