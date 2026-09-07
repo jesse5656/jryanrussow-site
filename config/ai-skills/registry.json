@@ -1,7 +1,7 @@
 {
   "schema_name": "governed-ai-skill-registry",
   "schema_version": "1.0.0",
-  "registry_version": 3,
+  "registry_version": 4,
   "entries": [
     {
       "entry_id": "govern-ai-skill-packaging-and-deployment@1.0.0",
@@ -131,6 +131,59 @@
         "reference": "docs/operations/property-records-skill/process-property-records-v1.1-regression-decision.md"
       },
       "production_baseline_reference": "artifacts/ai-skills/process-property-records/1.1.0/evidence/PRODUCTION-BASELINE.md",
+      "supported_runtimes": [
+        {
+          "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "AI_WORKER_NODE",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "API_ORCHESTRATION",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "CHATGPT_SKILLS",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "OTHER_GOVERNED_RUNTIME",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        }
+      ],
+      "dependencies": [],
+      "deployment_targets": [],
+      "rollback_predecessor": null
+    },
+    {
+      "entry_id": "write-midwestguard-blog-post@1.0.0",
+      "skill_name": "write-midwestguard-blog-post",
+      "version": "1.0.0",
+      "owning_repository": {
+        "repository_id": "jesse5656/mwg-ops-manual",
+        "repository_name": "jesse5656/mwg-ops-manual",
+        "commit": "9b3fee26baaad1a8788e8ad1e34c6d38c8ad5b09"
+      },
+      "release_reference": "docs/architecture/ai-skills/releases/write-midwestguard-blog-post/1.0.0/release.json",
+      "artifact": {
+        "storage_mode": "REPOSITORY_FILE",
+        "location": "artifacts/ai-skills/write-midwestguard-blog-post/1.0.0/write-midwestguard-blog-post-v1.0.0.zip",
+        "sha256": "c14cec6ca4e4757f5e881bfb5362660adcf7fb5f66759a18ace42f5a2e0b9e68",
+        "byte_size": 18409,
+        "format": "zip"
+      },
+      "validation": {
+        "status": "VALIDATED_PRODUCTION",
+        "reference": "artifacts/ai-skills/write-midwestguard-blog-post/1.0.0/evidence/VALIDATION-RECORD.md"
+      },
+      "production_baseline_reference": "artifacts/ai-skills/write-midwestguard-blog-post/1.0.0/evidence/PRODUCTION-BASELINE.md",
       "supported_runtimes": [
         {
           "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
