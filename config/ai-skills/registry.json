@@ -1,7 +1,7 @@
 {
   "schema_name": "governed-ai-skill-registry",
   "schema_version": "1.0.0",
-  "registry_version": 4,
+  "registry_version": 5,
   "entries": [
     {
       "entry_id": "govern-ai-skill-packaging-and-deployment@1.0.0",
@@ -184,6 +184,59 @@
         "reference": "artifacts/ai-skills/write-midwestguard-blog-post/1.0.0/evidence/VALIDATION-RECORD.md"
       },
       "production_baseline_reference": "artifacts/ai-skills/write-midwestguard-blog-post/1.0.0/evidence/PRODUCTION-BASELINE.md",
+      "supported_runtimes": [
+        {
+          "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "AI_WORKER_NODE",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "API_ORCHESTRATION",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "CHATGPT_SKILLS",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "OTHER_GOVERNED_RUNTIME",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        }
+      ],
+      "dependencies": [],
+      "deployment_targets": [],
+      "rollback_predecessor": null
+    },
+    {
+      "entry_id": "handoff-governed-work@1.0.0",
+      "skill_name": "handoff-governed-work",
+      "version": "1.0.0",
+      "owning_repository": {
+        "repository_id": "jesse5656/jryanrussow-site",
+        "repository_name": "jesse5656/jryanrussow-site",
+        "commit": "36025587a4bc847054ff39c3d1c2b742f8d70e43"
+      },
+      "release_reference": "docs/architecture/ai-skills/releases/handoff-governed-work/1.0.0/release.json",
+      "artifact": {
+        "storage_mode": "REPOSITORY_FILE",
+        "location": "artifacts/ai-skills/handoff-governed-work/1.0.0/handoff-governed-work-v1.0.0.zip",
+        "sha256": "77495774c0b2888ef4e3aa047454aff03f358cf37a93fe4ab97e0eee07dec99d",
+        "byte_size": 7023,
+        "format": "zip"
+      },
+      "validation": {
+        "status": "VALIDATED_PRODUCTION",
+        "reference": "docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-VALIDATION-RECORD.md"
+      },
+      "production_baseline_reference": "docs/architecture/HANDOFF-GOVERNED-WORK-V1.0-PRODUCTION-BASELINE.md",
       "supported_runtimes": [
         {
           "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
