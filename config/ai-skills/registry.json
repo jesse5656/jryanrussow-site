@@ -1,0 +1,60 @@
+{
+  "schema_name": "governed-ai-skill-registry",
+  "schema_version": "1.0.0",
+  "registry_version": 1,
+  "entries": [
+    {
+      "entry_id": "govern-ai-skill-packaging-and-deployment@1.0.0",
+      "skill_name": "govern-ai-skill-packaging-and-deployment",
+      "version": "1.0.0",
+      "owning_repository": {
+        "repository_id": "jesse5656/jryanrussow-site",
+        "repository_name": "jesse5656/jryanrussow-site",
+        "commit": "77d2fb7bd4dc8371f96c44ad47cd7d00e3a02635"
+      },
+      "release_reference": "docs/architecture/ai-skills/releases/govern-ai-skill-packaging-and-deployment/1.0.0/release.json",
+      "artifact": {
+        "storage_mode": "REPOSITORY_FILE",
+        "location": "artifacts/ai-skills/govern-ai-skill-packaging-and-deployment/1.0.0/govern-ai-skill-packaging-and-deployment-v1.0.0.zip",
+        "sha256": "795af431af4f08c850a2bf38ee88b0e999959d09596bda4a417be7902c969e46",
+        "byte_size": 24024,
+        "format": "zip"
+      },
+      "validation": {
+        "status": "VALIDATED_PRODUCTION",
+        "reference": "docs/architecture/ai-skills/releases/govern-ai-skill-packaging-and-deployment/1.0.0/evidence/run-01/evaluator-report.json"
+      },
+      "production_baseline_reference": "docs/architecture/ai-skills/releases/govern-ai-skill-packaging-and-deployment/1.0.0/PRODUCTION-BASELINE.md",
+      "supported_runtimes": [
+        {
+          "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "AI_WORKER_NODE",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "API_ORCHESTRATION",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "CHATGPT_SKILLS",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "OTHER_GOVERNED_RUNTIME",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        }
+      ],
+      "dependencies": [],
+      "deployment_targets": [],
+      "rollback_predecessor": null
+    }
+  ]
+}
