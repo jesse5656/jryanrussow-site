@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Open Source Platform Evaluation Record V1.0",
+  "type": "object",
+  "required": [
+    "platform",
+    "evaluation_date",
+    "mode",
+    "decision",
+    "health_severity",
+    "software_freedom",
+    "portability",
+    "backup_restore",
+    "maintenance",
+    "hard_failures",
+    "unknowns",
+    "rationale"
+  ],
+  "properties": {
+    "platform": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluation_date": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "CANDIDATE_EVALUATION",
+        "INSTALLED_PLATFORM_REASSESSMENT"
+      ]
+    },
+    "decision": {
+      "enum": [
+        "ACCEPT_CANDIDATE",
+        "CONDITIONAL",
+        "DEFER",
+        "REJECT",
+        "REASSESS_CURRENT_PLATFORM"
+      ]
+    },
+    "health_severity": {
+      "enum": [
+        "INFO",
+        "WATCH",
+        "REVIEW",
+        "CRITICAL"
+      ]
+    },
+    "software_freedom": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN"
+      ]
+    },
+    "portability": {
+      "enum": [
+        "PORTABLE_NATIVE",
+        "PORTABLE_WITH_TRANSFORM",
+        "DATABASE_RECOVERABLE",
+        "PARTIAL_EXPORT",
+        "PROPRIETARY_FORMAT",
+        "UNKNOWN"
+      ]
+    },
+    "backup_restore": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN"
+      ]
+    },
+    "maintenance": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN"
+      ]
+    },
+    "hard_failures": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rationale": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

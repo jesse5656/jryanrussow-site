@@ -1,0 +1,50 @@
+{
+  "record_type": "governed-ai-skill-acp008-runtime-promotion",
+  "record_version": "1.0.0",
+  "skill_name": "evaluate-open-source-platforms",
+  "skill_version": "1.1.0",
+  "production_status": "VALIDATED_PRODUCTION",
+  "authoritative_repository": "jesse5656/jryanrussow-site",
+  "authoritative_runtime_path": "skills/evaluate-open-source-platforms",
+  "validated_methodology_reference": "docs/architecture/OPEN-SOURCE-PLATFORM-EVALUATION-SKILL-SPECIFICATION.md",
+  "validation_reference": "docs/architecture/EVALUATE-OPEN-SOURCE-PLATFORMS-V1.1-VALIDATION-RECORD.md",
+  "production_baseline_reference": "docs/architecture/OPEN-SOURCE-PLATFORM-EVALUATION-PRODUCTION-BASELINE.md",
+  "source_operator_package": {
+    "filename": "evaluate-open-source-platforms-v1.1-blind-operator.zip",
+    "sha256": "5ee93cd7925a1363c4b5ab43a6505991d1465d889c8b73efb48492c3226163a1"
+  },
+  "source_ecr1_package": {
+    "filename": "evaluate-open-source-platforms-v1.1-evaluator-control-remediation-ecr1.zip",
+    "sha256": "e9f76192e9327ccffcebcd218c4f8776ffe867b7bb5fff31c270644b6830fec4"
+  },
+  "validated_candidate_sha256": "1f07ea25cd14b7717adaf342ab737c2bafece1c5e661ddd180e674429407b9bf",
+  "validation_result": {
+    "result": "PASS",
+    "fixtures": "15/15 PASS",
+    "critical_fixtures": "7/7 PASS",
+    "historical_original_run_preserved": "11/15 PASS-state historical run remains unchanged"
+  },
+  "runtime_file_count": 7,
+  "runtime_files": {
+    "SKILL.md": "8bfafe47d22c34552707f4185053c8c4053b60ef5b795a34779cfa8539e7657b",
+    "references/classifications.md": "d5e90edd8c0ffdb049773bf31d6360d750cae4b1ff6508163b863a5e20bc1bf5",
+    "references/exit-test.md": "ed3d2e0672559c68d24568a04d5b68c131debcdd0038a7bb64f08bb68bb2f219",
+    "references/maintenance-and-health.md": "31c2cd5d03a6f6c161530514fcbd27c43636204e036513d270a09c670514ef7b",
+    "references/methodology.md": "80913124a082397efb92455feb63938565763d7882aaba0a6f8ff635a5dfd2db",
+    "references/source-protocol.md": "fcff061b54bd65d45e685505a4680e1ccfd8b57db4a025dfc4f1603783fb8b15",
+    "schemas/evaluation-record.schema.json": "2c2b3c91c1f612d303ae9c70b15ac5661d2be86295c7f5300118447163a6b569"
+  },
+  "production_artifact": {
+    "storage_mode": "REPOSITORY_FILE",
+    "location": "artifacts/ai-skills/evaluate-open-source-platforms/1.1.0/evaluate-open-source-platforms-v1.1.0.zip",
+    "sha256": "b19b2b976f0e14cf8224b36204dfd14088669a1df0feea20598d8b6aeeb1f9f7",
+    "byte_size": 16874,
+    "format": "zip",
+    "file_count": 7,
+    "deterministic_packaging": true
+  },
+  "behavior_bytes_modified": false,
+  "behavioral_revalidation_performed": false,
+  "evaluator_or_fixture_truth_in_runtime": false,
+  "deployment_performed": false
+}
