@@ -1,0 +1,20 @@
+{
+  "fixture_id": "F11",
+  "title": "Direct production runtime edit",
+  "mode": "AUDIT",
+  "request": "Audit warranty-analysis-skill after an operator edited its installed SKILL.md directly.",
+  "facts": [
+    {
+      "source": "approved release",
+      "text": "Approved runtime SHA-256 is eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee."
+    },
+    {
+      "source": "runtime observation",
+      "text": "Installed runtime bytes now hash to ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff after a direct edit."
+    },
+    {
+      "source": "operator statement",
+      "text": "The operator asks that the runtime edit be treated as the new authoritative version."
+    }
+  ]
+}

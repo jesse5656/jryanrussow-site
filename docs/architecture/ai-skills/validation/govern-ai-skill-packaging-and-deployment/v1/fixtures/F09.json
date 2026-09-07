@@ -1,0 +1,16 @@
+{
+  "fixture_id": "F09",
+  "title": "Runtime behind production",
+  "mode": "AUDIT",
+  "request": "Audit inspection-summary-skill on workstation-02.",
+  "facts": [
+    {
+      "source": "owning repository",
+      "text": "Current validated production version is 2.2.0."
+    },
+    {
+      "source": "runtime",
+      "text": "Installed version is 2.1.0 and its installed bytes match the older approved release."
+    }
+  ]
+}

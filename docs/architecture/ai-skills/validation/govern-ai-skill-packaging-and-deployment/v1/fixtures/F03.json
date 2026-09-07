@@ -1,0 +1,20 @@
+{
+  "fixture_id": "F03",
+  "title": "Conflicting duplicate ownership claims",
+  "mode": "DISCOVER",
+  "request": "Determine which repository owns customer-intake-skill and continue its release.",
+  "facts": [
+    {
+      "source": "repository A",
+      "text": "Repository sales-ops states that it is authoritative for customer-intake-skill."
+    },
+    {
+      "source": "repository B",
+      "text": "Repository enterprise-ops independently states that it is authoritative for the same canonical Skill."
+    },
+    {
+      "source": "governance",
+      "text": "No approved decision resolves the conflicting ownership claims."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "fixture_id": "F16",
+  "title": "Explicit governed rollback",
+  "mode": "ROLLBACK",
+  "request": "Roll back routing-skill from version 2.0.0 to the approved predecessor.",
+  "facts": [
+    {
+      "source": "current deployment",
+      "text": "Version 2.0.0 is currently deployed."
+    },
+    {
+      "source": "release metadata",
+      "text": "Rollback predecessor is explicitly version 1.9.0 with release ID routing-skill@1.9.0 and an available verified artifact."
+    },
+    {
+      "source": "authorization",
+      "text": "Human production rollback approval is explicit."
+    },
+    {
+      "source": "verification",
+      "text": "After rollback, installed inventory and artifact hashes match version 1.9.0."
+    }
+  ]
+}

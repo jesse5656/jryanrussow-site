@@ -1,0 +1,20 @@
+{
+  "fixture_id": "F05",
+  "title": "Production artifact hash mismatch",
+  "mode": "PACKAGE",
+  "request": "Package and register estimate-audit-skill version 1.0.0.",
+  "facts": [
+    {
+      "source": "production baseline",
+      "text": "Expected package SHA-256 is cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc."
+    },
+    {
+      "source": "observed package",
+      "text": "Actual package SHA-256 is dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd."
+    },
+    {
+      "source": "validation",
+      "text": "The original validation decision is PASS."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "fixture_id": "F08",
+  "title": "Runtime already matches production",
+  "mode": "VERIFY",
+  "request": "Verify contract-review-skill on workstation-01 and determine whether redeployment is required.",
+  "facts": [
+    {
+      "source": "registry",
+      "text": "Production version is 3.1.0."
+    },
+    {
+      "source": "runtime",
+      "text": "Installed version is 3.1.0 and installed-file hashes match the approved release."
+    },
+    {
+      "source": "dependency check",
+      "text": "Required dependencies are satisfied."
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:russow-institute:ai-skills:validation:evaluator-report:v1",
+  "title": "Governed AI Skill Packaging and Deployment Evaluator Report V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "methodology",
+    "methodology_version",
+    "validation_version",
+    "candidate_id",
+    "fixture_results",
+    "corpus_result"
+  ],
+  "properties": {
+    "methodology": {
+      "const": "govern-ai-skill-packaging-and-deployment"
+    },
+    "methodology_version": {
+      "const": "1.0.0"
+    },
+    "validation_version": {
+      "const": "1.0.0"
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fixture_results": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "fixture_id",
+          "critical",
+          "result",
+          "criteria",
+          "findings",
+          "candidate_behavior_defects",
+          "methodology_or_control_defects"
+        ],
+        "properties": {
+          "fixture_id": {
+            "type": "string",
+            "pattern": "^F(?:0[1-9]|1[0-9]|20)$"
+          },
+          "critical": {
+            "type": "boolean"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "PASS",
+              "FAIL",
+              "HUMAN_REVIEW"
+            ]
+          },
+          "criteria": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "E1",
+              "E2",
+              "E3",
+              "E4",
+              "E5",
+              "E6",
+              "E7",
+              "E8",
+              "E9",
+              "E10"
+            ],
+            "properties": {
+              "E1": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "E2": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "E3": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "E4": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "E5": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "E6": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "E7": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "E8": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "E9": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "E10": {
+                "type": "string",
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "NOT_APPLICABLE"
+                ]
+              }
+            }
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "candidate_behavior_defects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "methodology_or_control_defects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "corpus_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result",
+        "critical_pass_count",
+        "critical_total",
+        "noncritical_pass_count",
+        "noncritical_total",
+        "critical_failures",
+        "noncritical_failures",
+        "human_review_fixtures",
+        "candidate_behavior_defects",
+        "methodology_or_control_defects",
+        "exact_next_action"
+      ],
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "HUMAN_REVIEW"
+          ]
+        },
+        "critical_pass_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "critical_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "noncritical_pass_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "noncritical_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "critical_failures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "noncritical_failures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "human_review_fixtures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "candidate_behavior_defects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "methodology_or_control_defects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exact_next_action": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

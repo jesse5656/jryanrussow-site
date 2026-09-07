@@ -1,0 +1,20 @@
+{
+  "fixture_id": "F04",
+  "title": "Valid deterministic production package",
+  "mode": "PACKAGE",
+  "request": "Verify whether the validated source may be packaged as release document-routing-skill version 2.0.0.",
+  "facts": [
+    {
+      "source": "owning repository",
+      "text": "The approved production source is committed and the validation decision is PASS."
+    },
+    {
+      "source": "deterministic inventory",
+      "text": "The runtime package contains SKILL.md, agents/openai.yaml, and four approved runtime references only."
+    },
+    {
+      "source": "checksum verification",
+      "text": "All source files match the production baseline and checksum manifest."
+    }
+  ]
+}

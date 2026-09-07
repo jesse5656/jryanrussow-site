@@ -1,0 +1,16 @@
+{
+  "fixture_id": "F02",
+  "title": "Missing authoritative owning repository",
+  "mode": "DISCOVER",
+  "request": "Locate and prepare maintenance-triage-skill for governed release.",
+  "facts": [
+    {
+      "source": "runtime observation",
+      "text": "A directory named maintenance-triage-skill exists under /home/operator/.agents/skills."
+    },
+    {
+      "source": "repository search",
+      "text": "No governed repository currently establishes ownership or a production release for this Skill."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "fixture_id": "F06",
+  "title": "Missing production validation authority",
+  "mode": "REGISTER",
+  "request": "Register scheduling-assistant-skill version 0.9.0 as production.",
+  "facts": [
+    {
+      "source": "repository",
+      "text": "The Skill source and package exist."
+    },
+    {
+      "source": "validation search",
+      "text": "No approved production validation decision or equivalent production authority can be found."
+    }
+  ]
+}

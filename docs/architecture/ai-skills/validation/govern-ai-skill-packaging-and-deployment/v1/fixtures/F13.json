@@ -1,0 +1,16 @@
+{
+  "fixture_id": "F13",
+  "title": "Required dependency failure",
+  "mode": "DEPLOY",
+  "request": "Deploy evidence-index-skill to a supported local Agent Skills runtime.",
+  "facts": [
+    {
+      "source": "release metadata",
+      "text": "CODEX_LOCAL_AGENT_SKILLS is SUPPORTED with an approved adapter."
+    },
+    {
+      "source": "dependency check",
+      "text": "Required executable evidence-indexer version >=2.0 is not installed."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "fixture_id": "F01",
+  "title": "Valid repository-owned production Skill discovery",
+  "mode": "DISCOVER",
+  "request": "Determine the authoritative production identity and current deployment evidence for invoice-review-skill.",
+  "facts": [
+    {
+      "source": "approved owning repository",
+      "text": "Repository alpha-ops declares invoice-review-skill version 1.2.0 as its production Skill."
+    },
+    {
+      "source": "production baseline",
+      "text": "Version 1.2.0 is VALIDATED_PRODUCTION and binds commit aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa."
+    },
+    {
+      "source": "release artifact",
+      "text": "Artifact SHA-256 is bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb."
+    },
+    {
+      "source": "local runtime observation",
+      "text": "A local Agent Skills installation reports version 1.2.0 with matching bytes."
+    }
+  ]
+}

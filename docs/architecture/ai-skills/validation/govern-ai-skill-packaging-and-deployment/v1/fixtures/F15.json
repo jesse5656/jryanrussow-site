@@ -1,0 +1,24 @@
+{
+  "fixture_id": "F15",
+  "title": "Failed install must not become false success",
+  "mode": "DEPLOY",
+  "request": "Deploy production-planning-skill and record the result.",
+  "facts": [
+    {
+      "source": "release",
+      "text": "The release is VALIDATED_PRODUCTION."
+    },
+    {
+      "source": "runtime adapter",
+      "text": "The target runtime and adapter are supported."
+    },
+    {
+      "source": "installation transaction",
+      "text": "The installation command exits nonzero after writing only part of the runtime package."
+    },
+    {
+      "source": "verification",
+      "text": "Installed inventory verification fails."
+    }
+  ]
+}

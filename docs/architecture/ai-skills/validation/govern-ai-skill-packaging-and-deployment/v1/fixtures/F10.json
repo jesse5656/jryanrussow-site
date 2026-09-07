@@ -1,0 +1,20 @@
+{
+  "fixture_id": "F10",
+  "title": "Unregistered runtime installation",
+  "mode": "AUDIT",
+  "request": "Audit field-photo-classifier-skill on workstation-03.",
+  "facts": [
+    {
+      "source": "runtime",
+      "text": "A Skill installation exists and appears operational."
+    },
+    {
+      "source": "enterprise registry",
+      "text": "No deployment target or deployment record exists for this installation."
+    },
+    {
+      "source": "owning repository",
+      "text": "A validated production release exists, but no evidence establishes that the runtime copy came from it."
+    }
+  ]
+}

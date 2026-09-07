@@ -1,0 +1,20 @@
+{
+  "fixture_id": "F07",
+  "title": "Stale registry version",
+  "mode": "REGISTER",
+  "request": "Register the current validated production release of job-handoff-skill.",
+  "facts": [
+    {
+      "source": "enterprise registry",
+      "text": "Registry contains job-handoff-skill version 1.0.0."
+    },
+    {
+      "source": "owning repository",
+      "text": "Version 1.1.0 is now VALIDATED_PRODUCTION with a new immutable release identity."
+    },
+    {
+      "source": "registry rule",
+      "text": "Older version identities remain historical records and must not be silently rewritten."
+    }
+  ]
+}

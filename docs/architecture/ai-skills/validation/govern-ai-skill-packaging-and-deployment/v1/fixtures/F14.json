@@ -1,0 +1,28 @@
+{
+  "fixture_id": "F14",
+  "title": "Successful local Agent Skills deployment",
+  "mode": "DEPLOY",
+  "request": "Deploy compliance-check-skill to the supported local Agent Skills runtime.",
+  "facts": [
+    {
+      "source": "release",
+      "text": "Version 1.0.0 is VALIDATED_PRODUCTION and artifact hash verification passes."
+    },
+    {
+      "source": "runtime adapter",
+      "text": "CODEX_LOCAL_AGENT_SKILLS is SUPPORTED by adapter codex-local-agent-skills-v1 version 1.0.0."
+    },
+    {
+      "source": "dependencies",
+      "text": "All required dependencies pass."
+    },
+    {
+      "source": "installation verification",
+      "text": "Installed inventory and hashes match; filesystem installation is the supported registration mechanism."
+    },
+    {
+      "source": "smoke test",
+      "text": "Smoke test passes."
+    }
+  ]
+}

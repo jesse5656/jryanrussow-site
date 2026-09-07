@@ -1,0 +1,20 @@
+{
+  "fixture_id": "F17",
+  "title": "Rollback target artifact unavailable",
+  "mode": "ROLLBACK",
+  "request": "Immediately roll back payroll-export-skill to its predecessor.",
+  "facts": [
+    {
+      "source": "current deployment",
+      "text": "Version 1.4.0 is deployed."
+    },
+    {
+      "source": "release metadata",
+      "text": "The predecessor identity says version 1.3.0, but the approved predecessor artifact cannot be retrieved."
+    },
+    {
+      "source": "operator request",
+      "text": "The operator suggests rebuilding a similar package from memory and calling it version 1.3.0."
+    }
+  ]
+}

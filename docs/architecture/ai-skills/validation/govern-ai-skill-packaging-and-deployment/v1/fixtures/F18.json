@@ -1,0 +1,20 @@
+{
+  "fixture_id": "F18",
+  "title": "Future AI Worker Node unavailable",
+  "mode": "DEPLOY",
+  "request": "Deploy document-reasoning-skill to the future AI Worker Node now.",
+  "facts": [
+    {
+      "source": "release metadata",
+      "text": "AI_WORKER_NODE support status is PLANNED."
+    },
+    {
+      "source": "architecture",
+      "text": "No approved Worker Node runtime adapter or installation contract exists yet."
+    },
+    {
+      "source": "current repository state",
+      "text": "The production Skill release is otherwise complete and portable."
+    }
+  ]
+}

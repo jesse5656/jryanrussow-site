@@ -1,0 +1,16 @@
+{
+  "fixture_id": "F12",
+  "title": "Unsupported runtime deployment request",
+  "mode": "DEPLOY",
+  "request": "Deploy proposal-review-skill to runtime class OTHER_GOVERNED_RUNTIME.",
+  "facts": [
+    {
+      "source": "release metadata",
+      "text": "OTHER_GOVERNED_RUNTIME is marked UNSUPPORTED and has no approved adapter."
+    },
+    {
+      "source": "release",
+      "text": "The Skill itself is VALIDATED_PRODUCTION."
+    }
+  ]
+}

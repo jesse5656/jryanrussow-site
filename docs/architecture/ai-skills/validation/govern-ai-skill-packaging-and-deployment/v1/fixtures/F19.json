@@ -1,0 +1,24 @@
+{
+  "fixture_id": "F19",
+  "title": "Multiple repositories with distinct Skill ownership",
+  "mode": "DISCOVER",
+  "request": "Inventory three validated Skills across the enterprise without moving their authority into the central registry.",
+  "facts": [
+    {
+      "source": "repository roofing-ops",
+      "text": "Owns roof-damage-skill version 1.0.0."
+    },
+    {
+      "source": "repository property-ops",
+      "text": "Owns lease-review-skill version 2.0.0."
+    },
+    {
+      "source": "repository systems-architect",
+      "text": "Owns governed-handoff-skill version 1.1.0."
+    },
+    {
+      "source": "enterprise registry",
+      "text": "The registry is an index and deployment-control surface, not the source of Skill behavior."
+    }
+  ]
+}
