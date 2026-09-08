@@ -1,0 +1,43 @@
+{
+  "record_type": "governed-ai-skill-acp008-runtime-promotion",
+  "record_version": "1.0.0",
+  "skill_name": "identify-imd-prospects",
+  "skill_version": "1.1.0",
+  "runtime_declared_version": "1.1",
+  "production_status": "VALIDATED_PRODUCTION",
+  "authoritative_repository": "jesse5656/jryanrussow-site",
+  "authoritative_runtime_path": "skills/identify-imd-prospects",
+  "validation_reference": "docs/research-programs/001-institutional-memory/diagnostic/validation/identify-imd-prospects/v1.1/VALIDATION-RECORD.md",
+  "frozen_regression_reference": "docs/research-programs/001-institutional-memory/diagnostic/validation/identify-imd-prospects/v1.1/imd-v1.1-regression-run-report.md",
+  "frozen_evidence_package_sha256": "14fc95cbf134f0497d5a793839a37a9d7ea930c7dd27ad746375f878f437804d",
+  "operator_packet_sha256": "6673e47fc9cc8bc25a4600ff0347f9ecf40912d39315e4b49642a1cec4ea3cce",
+  "architecture_source": "/home/jesse/Downloads/imd-prospect-intelligence-skill-architecture.md",
+  "architecture_sha256": "4d800d6271d65285bf4195475bd175cfcb9bbd3b9b42647cd1ecb1427f36f853",
+  "runtime_file_count": 9,
+  "runtime_files": {
+    "SKILL.md": "1dddf898755ecfd7c6ef6002c44241720f805d101346ca4bf3d17da2d0c0ce08",
+    "agents/openai.yaml": "c15efede1cb79b1e08d5102dc745e697920a56a3cbccc121e0c7d34bdad0061c",
+    "references/candidate-dossier-template.yaml": "c876c367bd68c3e697835b6d697784cf521a785aef7dfb712241774822c14c77",
+    "references/contradiction-search-log-template.csv": "9f46ed61da26765d28865b7e1b1a098938fecbb341fda97645176d5969339987",
+    "references/methodology-v1-architecture.md": "4d800d6271d65285bf4195475bd175cfcb9bbd3b9b42647cd1ecb1427f36f853",
+    "references/ranked-prospect-list-schema.yaml": "b8cc501c55b2d4b67696d55f2a0518fa9701bf9fa540bf316ed3a852ef102626",
+    "references/source-protocol.md": "b73b36a3da6bf21f5111dc76803c519d797a8a2ffc997f4f8e13304b45806643",
+    "references/v1.1-method-addendum.md": "7832265e4ac86b7a5da8ab6aa0428ab1b0cad9190a850f59aba98eb302cab208",
+    "references/validation-design.md": "2a896b9619ef179612ecc018090ef2b84bd61f2255b61df0830214f2e5c2ac30"
+  },
+  "production_artifact": {
+    "storage_mode": "REPOSITORY_FILE",
+    "location": "artifacts/ai-skills/identify-imd-prospects/1.1.0/identify-imd-prospects-v1.1.0.zip",
+    "sha256": "194aa7fc05c206e5a68bb891e3ab40ef1399ec9095e7633d6b73d39cad1764c8",
+    "byte_size": 66393,
+    "format": "zip",
+    "file_count": 9,
+    "deterministic_packaging": true
+  },
+  "frozen_regression_result": "PASS",
+  "behavioral_revalidation_performed": false,
+  "fixture_truth_in_runtime": false,
+  "evaluator_truth_in_runtime": false,
+  "behavior_expansion": false,
+  "deployment_performed": false
+}

@@ -1,0 +1,47 @@
+list_metadata:
+  title:
+  as_of_date:
+  scope:
+  sectors: []
+  geography:
+  lookback:
+  discovery_method:
+  exclusions: []
+  limitations: []
+  version:
+tiering_method:
+  strong_gates:
+  within_tier_tiebreakers:
+  disclaimer:
+prospects:
+  - rank:
+    candidate_id:
+    organization:
+    relevant_boundary:
+    candidate_problem:
+    tier: strong|moderate|weak|insufficient_evidence
+    core_pattern:
+      problem:
+      awareness:
+      corrective_action:
+      recurrence_after_action:
+    strongest_public_signal:
+    strongest_counterevidence:
+    evidence_richness:
+    boundability:
+    economic_fit:
+    sponsor_role:
+    urgency_trigger:
+    decisive_unknowns: []
+    why_ranked_here:
+    dossier_reference:
+    human_review_status:
+research_coverage:
+  organizations_screened:
+  dossiers_completed:
+  source_categories_not_available: []
+  unresolved_entity_matches: []
+next_actions:
+  qualification_priority: []
+  additional_research: []
+  do_not_advance: []

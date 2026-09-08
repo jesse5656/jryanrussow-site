@@ -1,0 +1,2 @@
+query_id,candidate_id,executed_at,query_text,source_or_database,disconfirmation_target,affected_claim_ids,result_summary,added_source_ids,added_source_hashes,resolution,claim_changed,current_boundary_changed,tier_changed,tier_effect,stopping_rationale,exception_basis
+

@@ -1,0 +1,70 @@
+candidate_id:
+organization:
+  legal_name:
+  public_name:
+  parent_or_owner:
+  relevant_entity_site_unit:
+  geography:
+  sector:
+research:
+  as_of_date:
+  researcher:
+  scope:
+  lookback:
+candidate_summary:
+  completion_status: incomplete
+  tier: null
+  tier_rationale:
+  tier_rationale_claim_ids: []
+  disclaimer: "This profile identifies signals for human qualification; it does not diagnose an Institutional Memory failure or establish root cause."
+proposed_pilot_boundary:
+  principal_problem:
+  system_site_unit_process:
+  why_meaningful:
+  fit_status: unknown
+  current_boundary:
+    status: unknown
+    as_of_date:
+    rationale:
+    supporting_claim_ids: []
+    contradictory_claim_ids: []
+    tier_effect:
+core_pattern:
+  problem: {status: unknown, statement: null, claim_ids: []}
+  awareness: {status: unknown, statement: null, claim_ids: []}
+  corrective_action: {status: unknown, statement: null, claim_ids: []}
+  recurrence_or_persistence_after_action: {status: unknown, statement: null, claim_ids: []}
+timeline: []
+qualification:
+  problem_fit: {status: unknown, rationale: null, claim_ids: []}
+  recurrence: {status: unknown, rationale: null, claim_ids: []}
+  prior_awareness: {status: unknown, rationale: null, claim_ids: []}
+  corrective_action_history: {status: unknown, rationale: null, claim_ids: []}
+  recurrence_after_correction: {status: unknown, rationale: null, claim_ids: []}
+  evidence_richness: {status: unknown, rationale: null}
+  organizational_complexity: {status: unknown, rationale: null, claim_ids: []}
+  boundability: {status: unknown, rationale: null, claim_ids: []}
+  likely_internal_evidence: {status: unknown, rationale: null, classification: hypothesis}
+  economic_fit: {status: unknown, rationale: null, classification: hypothesis}
+  buyer_or_sponsor: {status: unknown, role: null, named_person: null, rationale: null}
+  urgency_trigger: {status: unknown, rationale: null, claim_ids: []}
+  follow_on_potential: {status: unknown, rationale: null, classification: hypothesis}
+claims: []
+alternative_explanations: []
+unknowns_and_human_questions: []
+sources: []
+contradiction_search:
+  status: incomplete
+  exception_rationale:
+  records: []
+limitations: []
+human_review:
+  required: false
+  triggers: []
+  reviewer:
+  decision: pending
+  decision_rationale:
+completion_gate:
+  passed: false
+  failed_rules: []
+
