@@ -1,7 +1,7 @@
 {
   "schema_name": "governed-ai-skill-registry",
   "schema_version": "1.0.0",
-  "registry_version": 6,
+  "registry_version": 7,
   "entries": [
     {
       "entry_id": "govern-ai-skill-packaging-and-deployment@1.0.0",
@@ -290,6 +290,59 @@
         "reference": "docs/architecture/EVALUATE-OPEN-SOURCE-PLATFORMS-V1.1-VALIDATION-RECORD.md"
       },
       "production_baseline_reference": "docs/architecture/OPEN-SOURCE-PLATFORM-EVALUATION-PRODUCTION-BASELINE.md",
+      "supported_runtimes": [
+        {
+          "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "AI_WORKER_NODE",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "API_ORCHESTRATION",
+          "support_status": "PLANNED",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "CHATGPT_SKILLS",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        },
+        {
+          "runtime_class": "OTHER_GOVERNED_RUNTIME",
+          "support_status": "UNKNOWN",
+          "adapter_id": null
+        }
+      ],
+      "dependencies": [],
+      "deployment_targets": [],
+      "rollback_predecessor": null
+    },
+    {
+      "entry_id": "identify-imd-prospects@1.1.0",
+      "skill_name": "identify-imd-prospects",
+      "version": "1.1.0",
+      "owning_repository": {
+        "repository_id": "jesse5656/jryanrussow-site",
+        "repository_name": "jesse5656/jryanrussow-site",
+        "commit": "b6614c2a05368f30baa9ff9de59d3338e549e061"
+      },
+      "release_reference": "docs/architecture/ai-skills/releases/identify-imd-prospects/1.1.0/release.json",
+      "artifact": {
+        "storage_mode": "REPOSITORY_FILE",
+        "location": "artifacts/ai-skills/identify-imd-prospects/1.1.0/identify-imd-prospects-v1.1.0.zip",
+        "sha256": "194aa7fc05c206e5a68bb891e3ab40ef1399ec9095e7633d6b73d39cad1764c8",
+        "byte_size": 66393,
+        "format": "zip"
+      },
+      "validation": {
+        "status": "VALIDATED_PRODUCTION",
+        "reference": "artifacts/ai-skills/identify-imd-prospects/1.1.0/evidence/VALIDATION-RECORD.md"
+      },
+      "production_baseline_reference": "artifacts/ai-skills/identify-imd-prospects/1.1.0/evidence/PRODUCTION-BASELINE.md",
       "supported_runtimes": [
         {
           "runtime_class": "CODEX_LOCAL_AGENT_SKILLS",
