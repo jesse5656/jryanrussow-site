@@ -174,6 +174,32 @@ Closeout evidence:
 - MkDocs and Governance Enforcement passed;
 - no deployed infrastructure or website implementation was changed.
 
+### Bounded Architecture Closeout — ACP-009
+
+**Approved and completed:** 2026-09-09
+
+ACP-009 — MIDWESTGuard Public Intake and Asynchronous Delivery Architecture
+was approved by the governing Systems Architect Discipline session.
+
+This bounded governance transaction:
+
+- establishes Cloudflare-native D1, R2, and Queue-based durable public intake
+  and asynchronous delivery as Approved target architecture;
+- preserves the current `automation.midwestguard.net` submission path as
+  current legacy implementation pending separately governed replacement;
+- removes n8n from the approved target architecture without disabling or
+  rewriting functioning legacy callers or historical evidence;
+- preserves EspoCRM as the current bounded operational delivery adapter under
+  ACP-005;
+- updates the canonical infrastructure architecture to distinguish Current,
+  Approved target, Unknown, and Historical state;
+- makes no website runtime, DNS, Worker-route, n8n, EspoCRM, Odoo, or production
+  infrastructure change.
+
+The active Institutional Memory Diagnostic objective and its current
+qualification/contact work remain unchanged by this bounded architecture
+transaction.
+
 ### Pre-Implementation Audit Finding
 
 The Diagnostic specification, D1–D12 instrument, pilot-engagement architecture,

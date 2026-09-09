@@ -61,11 +61,15 @@ and reverse-proxy responsibilities remain Unknown until separately verified.
 | MkDocs Material | Institute wiki build | Current | `mkdocs.yml`, OCP-005 |
 | TrueNAS | Institute generated-file publication target | Current | OCP-005 |
 | Cloudflare | Public website and Institute delivery | Current | Worker configuration, OCP-005 |
+| Cloudflare D1 | Durable public-submission ledger | Approved | ACP-009 |
+| Cloudflare R2 | Uploaded application-object storage | Approved | ACP-009 |
+| Cloudflare Queues | Asynchronous public-submission delivery boundary | Approved | ACP-009 |
+| Delivery consumer | Server-side deterministic delivery and destination-adapter boundary | Approved | ACP-009 |
 | EspoCRM | Bounded interim CRM bridge | Approved/current bridge | ACP-005 |
 | JobNimbus | Historical operational evidence | Historical | ACP-005 |
 | Odoo business platform | Not a current system of record | Obsolete claim | ACP-004, ACP-005 |
 | Odoo website builder | Owner-stated role not verified here | Unknown | Implementation evidence required |
-| n8n | Endpoint hostname suggests automation; topology unverified | Unknown | Website source only |
+| n8n | Possible current legacy webhook consumer; topology remains unverified and n8n is excluded from the ACP-009 approved target architecture | Unknown | Website source, ACP-009 |
 | Authentik | No verified repository evidence | Unknown | None identified |
 | Cloudflare Access | No verified repository evidence | Unknown | None identified |
 | Cloudflare Tunnel | Described only in obsolete material | Unknown | Runtime evidence required |
@@ -102,17 +106,77 @@ flowchart LR
     C --> D[Static assets]
 ```
 
-### Public form submission
+### Public form submission — Current legacy implementation
 
 ```mermaid
 flowchart LR
-    A[Visitor browser] --> B[automation.midwestguard.net]
-    B --> C[Webhook consumer]
-    C --> D[Unverified downstream processing]
+    A[Visitor browser] --> B[Website Worker]
+    B --> C[automation.midwestguard.net]
+    C --> D[Webhook consumer]
+    D --> E[Unverified downstream processing]
 ```
 
-Only the browser-to-endpoint portion is Current. Hosting, tunnel, proxy,
-authentication, validation, workflow, and downstream actions are Unknown.
+The currently verified website implementation forwards public submissions to
+`automation.midwestguard.net`. The browser/website-to-endpoint path is Current.
+
+The webhook-consumer topology, whether n8n currently performs that role,
+authentication, validation, retry behavior, durable-acceptance semantics, and
+downstream delivery remain Unknown unless separately verified.
+
+ACP-009 does not disable this functioning legacy path merely because a new
+target architecture is approved.
+
+### Public form submission — Approved target architecture
+
+ACP-009 approves the following target architecture.
+
+`Approved` means authorized architecture. It shall not be represented as
+Current until implementation evidence supports that status.
+
+```mermaid
+flowchart LR
+    A[Visitor browser] --> B[Public Intake Worker]
+    B --> C[D1 durable submission ledger]
+    B --> D[R2 uploaded object]
+    B --> E[Cloudflare Queue]
+    E --> F[Delivery consumer]
+    F --> G[Current delivery adapter]
+    G --> H[EspoCRM bounded operational bridge]
+```
+
+The approved target preserves the existing same-origin public endpoints:
+
+- `POST /api/lead`
+- `POST /api/job-application`
+
+A successful public response means MIDWESTGuard-controlled infrastructure has
+durably accepted the submission. It does not mean downstream CRM delivery has
+already completed.
+
+The target requires:
+
+- validation, normalization, bounded request/file controls, and abuse controls;
+- one immutable submission identifier;
+- D1-backed durable submission state;
+- R2 object storage for uploaded résumé/application files where applicable;
+- queue messages containing bounded identifiers or metadata rather than binary
+  file content;
+- asynchronous delivery with deterministic state transitions;
+- idempotency before downstream mutation;
+- bounded retry and recovery;
+- persistent delivery-attempt and error evidence;
+- server-side protected credentials and least privilege;
+- no CRM credential or protected service secret in browser-delivered code.
+
+EspoCRM remains the current bounded operational delivery adapter under ACP-005.
+
+ACP-009 does not authorize production migration to the MIDWESTGuard-owned
+application platform.
+
+n8n is not part of the approved target public-intake architecture. Existing
+legacy callers or flows shall remain operational until their replacement path
+is implemented, validated, recoverable where required, and intentionally cut
+over.
 
 ### Russow Institute publication
 
@@ -184,11 +248,22 @@ Verification shall avoid retrieving secret values.
 
 ## Architecture Boundaries
 
-This document does not authorize runtime changes. Planned integrations are not
-current implementation. Implementation defects require separate authorization.
+This document does not authorize runtime changes.
+
+Planned or Approved integrations are not Current implementation until verified
+by implementation evidence. Implementation defects require separate
+authorization.
+
+ACP-009 establishes the Cloudflare-native D1 / R2 / Queue public-intake and
+asynchronous-delivery model as Approved target architecture only.
+
+Production website cutover, DNS or Worker-route changes, retirement of
+functioning legacy callers, and EspoCRM runtime changes require their separately
+governed implementation and production authorization.
 
 ## Related Standards
 
+- [ACP-009 — MIDWESTGuard Public Intake and Asynchronous Delivery Architecture](acp/ACP-009-MIDWESTGUARD-PUBLIC-INTAKE-AND-ASYNCHRONOUS-DELIVERY.md)
 - [Credential and Token Handling Standard](../standards/CREDENTIAL-AND-TOKEN-HANDLING-STANDARD.md)
 - [Wiki Presentation Standard](../standards/WIKI-PRESENTATION-STANDARD.md)
 - [Knowledge Linking Standard](../standards/KNOWLEDGE-LINKING-STANDARD.md)
