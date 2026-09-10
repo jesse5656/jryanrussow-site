@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "status": "Approved",
+  "governed_by": "docs/architecture/acp/ACP-010-REPOSITORY-ARTIFACT-ACCESS-AND-AUTHORITY-RESOLUTION.md",
+  "profile_schema": "docs/architecture/artifact-access/repository-authority-profile-schema-v1.json",
+  "repositories": [
+    {
+      "repository_id": "jryanrussow-site",
+      "github_full_name": "jesse5656/jryanrussow-site",
+      "repository_role": "ENTERPRISE_GOVERNANCE",
+      "owns": [
+        "enterprise governance",
+        "Systems Architect Discipline architecture",
+        "Institute research and institutional-memory authority",
+        "shared artifact authority contracts"
+      ],
+      "implements": [
+        "Repository Context Resolution",
+        "Governance Enforcement"
+      ],
+      "does_not_own": [
+        "MIDWESTGuard operational procedure execution",
+        "MIDWEST24 product implementation",
+        "MIDWESTGuard public website implementation"
+      ],
+      "governing_dependencies": [],
+      "native_authority_sources": [
+        "REPOSITORY-CONSTITUTION.md",
+        "docs/institute/",
+        "docs/discipline/",
+        "docs/standards/",
+        "docs/architecture/"
+      ],
+      "default_exposure": "INTERNAL"
+    },
+    {
+      "repository_id": "mwg-ops-manual",
+      "github_full_name": "jesse5656/mwg-ops-manual",
+      "repository_role": "DOMAIN_OPERATIONS",
+      "owns": [
+        "MIDWESTGuard operational procedures",
+        "MIDWESTGuard business-process authority"
+      ],
+      "implements": [],
+      "does_not_own": [
+        "enterprise constitutional governance",
+        "MIDWEST24 product engineering",
+        "public website implementation"
+      ],
+      "governing_dependencies": [
+        "jryanrussow-site"
+      ],
+      "native_authority_sources": [
+        "repository-native governance and operations documents"
+      ],
+      "default_exposure": "INTERNAL"
+    },
+    {
+      "repository_id": "midwest24-site",
+      "github_full_name": "jesse5656/midwest24-site",
+      "repository_role": "PRODUCT_ENGINEERING",
+      "owns": [
+        "MIDWEST24 product engineering"
+      ],
+      "implements": [
+        "governed product architecture"
+      ],
+      "does_not_own": [
+        "enterprise constitutional governance",
+        "MIDWESTGuard operating procedures"
+      ],
+      "governing_dependencies": [
+        "jryanrussow-site"
+      ],
+      "native_authority_sources": [
+        "repository-native product engineering documentation"
+      ],
+      "default_exposure": "INTERNAL"
+    },
+    {
+      "repository_id": "mwg-platform",
+      "github_full_name": "jesse5656/mwg-platform",
+      "repository_role": "PLATFORM_IMPLEMENTATION",
+      "owns": [
+        "MIDWESTGuard owned-platform implementation"
+      ],
+      "implements": [
+        "externally governed platform architecture"
+      ],
+      "does_not_own": [
+        "enterprise architecture governance",
+        "MIDWESTGuard operational policy"
+      ],
+      "governing_dependencies": [
+        "jryanrussow-site",
+        "mwg-ops-manual"
+      ],
+      "native_authority_sources": [
+        "repository-native implementation authority maps and technical records"
+      ],
+      "default_exposure": "INTERNAL"
+    },
+    {
+      "repository_id": "mwg-espocrm-customizations",
+      "github_full_name": "jesse5656/mwg-espocrm-customizations",
+      "repository_role": "INTERIM_IMPLEMENTATION",
+      "owns": [
+        "EspoCRM customization implementation"
+      ],
+      "implements": [
+        "governed interim CRM and integration contracts"
+      ],
+      "does_not_own": [
+        "enterprise architecture governance",
+        "MIDWESTGuard business policy",
+        "public website architecture"
+      ],
+      "governing_dependencies": [
+        "jryanrussow-site",
+        "mwg-ops-manual"
+      ],
+      "native_authority_sources": [
+        "repository-native manifests, implementation records, and validation evidence"
+      ],
+      "default_exposure": "INTERNAL"
+    },
+    {
+      "repository_id": "midwestguard-site",
+      "github_full_name": "jesse5656/midwestguard-site",
+      "repository_role": "PUBLIC_WEBSITE",
+      "owns": [
+        "MIDWESTGuard public website implementation"
+      ],
+      "implements": [
+        "externally governed website and public-intake architecture"
+      ],
+      "does_not_own": [
+        "enterprise architecture governance",
+        "CRM authority",
+        "MIDWESTGuard operational policy"
+      ],
+      "governing_dependencies": [
+        "jryanrussow-site",
+        "mwg-ops-manual"
+      ],
+      "native_authority_sources": [
+        "repository-native implementation documentation"
+      ],
+      "default_exposure": "INTERNAL"
+    }
+  ]
+}

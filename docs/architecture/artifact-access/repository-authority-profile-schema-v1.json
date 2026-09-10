@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:russow-institute:repository-authority-profile:v1",
+  "title": "Repository Authority Profile V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "repository_id",
+    "repository_role",
+    "owns",
+    "implements",
+    "does_not_own",
+    "governing_dependencies",
+    "native_authority_sources",
+    "default_exposure"
+  ],
+  "properties": {
+    "repository_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "github_full_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "repository_role": {
+      "enum": [
+        "ENTERPRISE_GOVERNANCE",
+        "DOMAIN_OPERATIONS",
+        "PRODUCT_ENGINEERING",
+        "PLATFORM_IMPLEMENTATION",
+        "INTERIM_IMPLEMENTATION",
+        "PUBLIC_WEBSITE",
+        "EXTERNAL_OR_UNCLASSIFIED"
+      ]
+    },
+    "owns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "implements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "does_not_own": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "governing_dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "native_authority_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "default_exposure": {
+      "enum": [
+        "PUBLIC",
+        "INTERNAL",
+        "RESTRICTED",
+        "NEVER_RENDER"
+      ]
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:russow-institute:artifact-metadata:v1",
+  "title": "Repository Artifact Metadata V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "artifact_id",
+    "repository_id",
+    "path",
+    "authority",
+    "lifecycle",
+    "artifact_role",
+    "exposure",
+    "reading_trust",
+    "editing_suitability",
+    "resolution"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "commit_sha": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{40,64}$"
+    },
+    "blob_sha": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{40,64}$"
+    },
+    "content_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "media_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "document_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority": {
+      "enum": [
+        "GOVERNING",
+        "AUTHORITATIVE",
+        "IMPLEMENTATION",
+        "EVIDENCE",
+        "EXTERNAL_SOURCE",
+        "UNKNOWN",
+        "AUTHORITY_CONFLICT"
+      ]
+    },
+    "lifecycle": {
+      "enum": [
+        "DRAFT",
+        "CANDIDATE",
+        "VALIDATED",
+        "RELEASE",
+        "ACTIVE",
+        "HISTORICAL",
+        "SUPERSEDED",
+        "RETIRED",
+        "UNKNOWN"
+      ]
+    },
+    "artifact_role": {
+      "enum": [
+        "SOURCE",
+        "GENERATED_COPY",
+        "VALIDATION_RUNTIME",
+        "RELEASE_PACKAGE",
+        "MANIFEST",
+        "REPORT",
+        "IMPLEMENTATION",
+        "DERIVED_PREVIEW",
+        "EXTERNAL_EVIDENCE",
+        "UNKNOWN"
+      ]
+    },
+    "exposure": {
+      "enum": [
+        "PUBLIC",
+        "INTERNAL",
+        "RESTRICTED",
+        "NEVER_RENDER"
+      ]
+    },
+    "reading_trust": {
+      "enum": [
+        "TRUSTED",
+        "LIMITED",
+        "UNKNOWN"
+      ]
+    },
+    "editing_suitability": {
+      "enum": [
+        "EDITABLE_AUTHORITY",
+        "NOT_EDITABLE",
+        "UNKNOWN"
+      ]
+    },
+    "governed_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "superseded_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "representations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "resolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "evidence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "AUTHORITATIVE_EDITABLE_SOURCE",
+            "GOVERNING_SOURCE",
+            "IMPLEMENTATION_OF_EXTERNAL_AUTHORITY",
+            "GENERATED_REPRESENTATION",
+            "IMMUTABLE_RELEASE",
+            "VALIDATION_EVIDENCE",
+            "HISTORICAL_SOURCE",
+            "SUPERSEDED_SOURCE",
+            "AUTHORITY_CONFLICT",
+            "UNKNOWN"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
