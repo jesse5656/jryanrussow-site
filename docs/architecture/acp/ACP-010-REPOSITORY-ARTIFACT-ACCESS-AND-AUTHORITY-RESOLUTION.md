@@ -1,6 +1,6 @@
 # ACP-010 — Repository Artifact Access and Authority Resolution Architecture
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status:
 Approved
@@ -249,7 +249,7 @@ jryanrussow-site.
 The application should live in a separate implementation repository.
 Working candidate name:
 russow-artifact-explorer
-Creation of that repository is not authorized by this proposal alone.
+Creation of that repository is authorized only by Amendment 1 below.
 ## Relationship to Existing Governance
 This proposal:
 - depends on ACP-002 for Repository Context Resolution and Governance Enforcement;
@@ -300,5 +300,69 @@ repository profiles have been prepared and reviewed under the approved
 architecture.
 ## Approval
 Approved by the governing Systems Architect Discipline session on 2026-09-10.
-No architecture approval, implementation authorization, repository creation,
-commit authorization, or deployment authorization is implied by this document.
+The original ACP-010 approval did not itself authorize implementation-repository
+creation. Amendment 1 below separately authorizes the bounded repository
+bootstrap while preserving the implementation gate.
+
+------------------------------------------------------------------------------
+
+## Amendment 1 — Implementation Repository Authorization
+
+Version: 1.0.0
+
+Status:
+Approved
+
+Approved:
+2026-09-10
+
+ACP-010 is amended to authorize creation and governance-only bootstrap of:
+
+`jesse5656/russow-artifact-explorer`
+
+The repository shall initially be:
+
+- GitHub visibility: Private;
+- institutional exposure: INTERNAL;
+- implementation-only;
+- read-only in V1 application behavior.
+
+The implementation repository may own:
+
+- Repository Artifact Explorer application implementation;
+- Artifact API implementation;
+- repository adapters;
+- rebuildable artifact-index implementation;
+- derived-preview implementation;
+- user-interface implementation;
+- implementation tests and validation.
+
+It shall not own or redefine:
+
+- enterprise governance;
+- Repository Context Resolution;
+- artifact authority rules;
+- authority vocabulary;
+- repository authority profiles;
+- source-repository authority;
+- ACP-010 contracts.
+
+The controlling ACP-010 contract revision for bootstrap is:
+
+`24b5d62afd45b92ccf965a888dc6ac0e67da7b1f`
+
+The implementation repository shall reference that immutable revision rather
+than copy the controlling contracts.
+
+This amendment authorizes repository creation and governance-only bootstrap.
+
+It does not yet authorize application implementation.
+
+Application implementation remains blocked until:
+
+1. the bootstrap repository is committed and published;
+2. the implementation repository is registered in the governing repository;
+3. cross-repository authority references are validated;
+4. a bounded first implementation objective is separately authorized.
+
+Approved by the governing Systems Architect Discipline session on 2026-09-10.
