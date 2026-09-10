@@ -147,6 +147,41 @@
         "repository-native implementation documentation"
       ],
       "default_exposure": "INTERNAL"
+    },
+    {
+      "repository_id": "russow-artifact-explorer",
+      "github_full_name": "jesse5656/russow-artifact-explorer",
+      "repository_role": "PLATFORM_IMPLEMENTATION",
+      "owns": [
+        "Repository Artifact Explorer application implementation",
+        "Artifact API implementation",
+        "repository adapters",
+        "rebuildable artifact-index implementation",
+        "derived-preview implementation",
+        "Explorer interface implementation",
+        "implementation tests and validation"
+      ],
+      "implements": [
+        "ACP-010 Repository Artifact Access architecture authorized at 7878637bd58c3766a2163c6096f07ac0774c5637",
+        "ACP-010 artifact authority contracts at 24b5d62afd45b92ccf965a888dc6ac0e67da7b1f"
+      ],
+      "does_not_own": [
+        "enterprise governance",
+        "Repository Context Resolution",
+        "artifact authority rules",
+        "authority vocabulary",
+        "repository authority profiles",
+        "source-repository artifacts",
+        "source-repository domain authority"
+      ],
+      "governing_dependencies": [
+        "jryanrussow-site"
+      ],
+      "native_authority_sources": [
+        "docs/architecture/AUTHORITY-MAP.md@39457f5d37bfebc9c059d655c19b088d1e4b1579",
+        "repository-bootstrap@39457f5d37bfebc9c059d655c19b088d1e4b1579"
+      ],
+      "default_exposure": "INTERNAL"
     }
   ]
 }
