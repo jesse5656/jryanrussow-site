@@ -1,6 +1,6 @@
 # AI Collaboration Standard
 
-Version: 1.2.0
+Version: 1.3.0
 
 Status:
 Active
@@ -145,6 +145,17 @@ deterministic requirements.
 
 It shall not claim to evaluate architectural quality or replace human
 judgment.
+
+------------------------------------------------------------------------------
+
+## Model Selection
+
+AI assistants working across governed repositories shall apply the canonical
+[Cross-Repository Model Selection and Credit Conservation rule](../REPOSITORY-CHANGE-WORKFLOW.md#cross-repository-model-selection-and-credit-conservation).
+Resolve its applicable repository revision, preserve context and validated
+evidence on handoff, and record justified fallback through that procedure.
+This reference implements the operational rule; it does not establish a
+separate model policy or override higher governance.
 
 ------------------------------------------------------------------------------
 
