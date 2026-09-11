@@ -92,6 +92,91 @@ MWG Job
     +-- other trade work
 ```
 
+## Front-Office Communications Architecture Target
+
+During the interim EspoCRM bridge, customer communications remain a bounded
+front-office responsibility rather than an ERP responsibility.
+
+The target ownership model is:
+
+```text
+MIDWESTGuard website / chatbot
+        |
+        v
+     EspoCRM
+Lead / Contact / communication context
+        |
+        +-- office follow-up and assignment
+        +-- human-requested chat handoff
+        +-- after-hours next-business-day queue
+        +-- call / voicemail / messaging history where validated
+        |
+        v
+    net2phone
+telephony and communications transport
+
+Qualified operational work
+        |
+        v
+future ERP / Apache OFBiz
+The governing ownership boundaries are:
+- net2phone — telephony and communications transport;
+- EspoCRM — Lead, Contact, customer communication context, front-office
+  ownership, assignment, follow-up, and human-handoff queue;
+- MIDWESTGuard website/chatbot — customer-facing intake and conversation
+  surface;
+- Apache OFBiz / future ERP — downstream job, work-order, procurement,
+  production, billing, and other operational execution, not live customer
+  communications.
+This target does not change the core ACP-005 decision that EspoCRM is a bounded
+interim operational bridge rather than MIDWESTGuard's strategic ERP platform.
+Human Handoff Target
+Future website-chat capability may support human assistance through EspoCRM.
+During business hours, a visitor requesting a person may be assigned or surfaced
+to an available office employee.
+After hours:
+- the chatbot must not imply that a human is currently available;
+- the session or bounded communication summary should be preserved;
+- the interaction should enter a next-business-day follow-up queue;
+- an office employee may resume contact or call the customer during the next
+  staffed business period.
+The exact EspoCRM entity, queue, assignment, transcript-retention, notification,
+and agent-presence design requires separate governed implementation approval.
+net2phone Integration Target
+MIDWESTGuard shall preserve net2phone as the planned communications transport
+unless a later technical assessment demonstrates a material blocker.
+Do not replace net2phone merely because another provider has a native EspoCRM
+connector.
+Before building a production integration, complete the governed
+Net2phone Capability & Integration Assessment defined by OCP-012.
+That assessment must validate the actual MIDWESTGuard account rather than infer
+availability from generic provider documentation, including:
+- API and authentication access;
+- telephone-number inventory;
+- call-event and call-history interfaces;
+- incoming, answered, completed, and missed-call events;
+- voicemail capability;
+- SMS or messaging capability where applicable;
+- click-to-call or outbound-call initiation;
+- call-routing and forwarding controls;
+- business-hours and after-hours behavior;
+- webhook availability;
+- rate limits, retention, privacy, and licensing boundaries.
+Potential integration capabilities remain uncommitted until that assessment
+distinguishes documented platform capability from capability actually enabled
+for MIDWESTGuard.
+Communications Implementation Sequence
+Communications work should proceed in this order:
+1. preserve and inventory the existing net2phone number portfolio and routing;
+2. perform the Net2phone Capability & Integration Assessment;
+3. define the minimum EspoCRM communication/session and follow-up model;
+4. add business-hours human-request handling;
+5. add after-hours next-business-day queueing;
+6. integrate validated call, voicemail, or messaging events where valuable;
+7. evaluate unified chat/phone/SMS response and conversion measurement only
+   after the prior phases demonstrate operating value.
+This communications work must not cause the EspoCRM bridge to absorb downstream
+ERP responsibilities.
 ## EspoCRM Stop Line
 
 Do not deeply build the following into EspoCRM unless separately approved:
@@ -276,6 +361,14 @@ production migration to an ERP candidate, destructive EspoCRM removal, a final
 orchestration platform, or treating historical JobNimbus mechanics as
 automatically current policy.
 
+## Relationship to OCP-012
+OCP-012 — MIDWESTGuard Communications Architecture governs the long-term
+communications ownership model and required net2phone capability research gate.
+ACP-005 governs how that architecture may be exercised during the bounded
+EspoCRM bridge period.
+The communications ownership boundary in OCP-012 does not convert EspoCRM into
+the strategic ERP platform and does not move live communications into Apache
+OFBiz.
 ## Relationship to ACP-004
 
 ACP-004 remains authoritative for durable platform-selection requirements.
