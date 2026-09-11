@@ -1,6 +1,6 @@
 # Infrastructure, Access, and Request Flows
 
-Version: 1.0.0
+Version: 1.0.1
 
 Status:
 Active Architecture
@@ -21,6 +21,22 @@ authentication boundaries, service access, and material request flows.
 The governing repository defines architecture. Application repositories and
 runtime systems provide implementation evidence but do not silently supersede
 this document.
+
+## Product Identity Terminology
+
+[ACP-011](acp/ACP-011-MIDWEST24-CORE-PRODUCT-IDENTITY-AND-SYSTEM-NAMING.md), approved 2026-09-11, supplies the durable product
+names used alongside implementation names in this architecture.
+
+| Product identity | Functional boundary | Implementation / adoption state | Hostname |
+| --- | --- | --- | --- |
+| Midwest24 Core Command | CRM and front office | EspoCRM; bounded by ACP-005 | `command.midwest24.com` |
+| Midwest24 Core Enterprise | ERP and enterprise execution | Apache OFBiz candidate; no final selection | `enterprise.midwest24.com` |
+| Midwest24 Core Nexus | Future Midwest24-owned custom platform | Reserved for future adoption; repository reconciliation required | `nexus.midwest24.com` |
+| Midwest24 Operations | Potential SOP, training, and operating knowledge | Reserved, not adopted | `operations.midwest24.com` |
+
+Technical references to EspoCRM and Apache OFBiz below remain valid. These names
+do not establish public availability, final ERP selection, or deployment approval.
+The existing `mwg-platform` and `mwg-ops-manual` repositories are not renamed.
 
 ## Status Vocabulary
 
@@ -65,7 +81,7 @@ and reverse-proxy responsibilities remain Unknown until separately verified.
 | Cloudflare R2 | Uploaded application-object storage | Approved | ACP-009 |
 | Cloudflare Queues | Asynchronous public-submission delivery boundary | Approved | ACP-009 |
 | Delivery consumer | Server-side deterministic delivery and destination-adapter boundary | Approved | ACP-009 |
-| EspoCRM | Bounded interim CRM bridge | Approved/current bridge | ACP-005 |
+| Midwest24 Core Command (EspoCRM) | Bounded interim CRM bridge | Approved/current bridge | ACP-005 |
 | JobNimbus | Historical operational evidence | Historical | ACP-005 |
 | Odoo business platform | Not a current system of record | Obsolete claim | ACP-004, ACP-005 |
 | Odoo website builder | Owner-stated role not verified here | Unknown | Implementation evidence required |

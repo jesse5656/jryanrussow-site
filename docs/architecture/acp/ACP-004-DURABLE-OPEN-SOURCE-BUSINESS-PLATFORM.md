@@ -258,3 +258,14 @@ This ACP does not approve:
 ## Completion Condition
 
 This architecture decision is implemented when the evaluation, skill specification, monitoring model, and POC protocol are preserved in the repository and published in the wiki without falsely representing a final platform selection.
+
+## Product Naming Cross-Reference
+
+Terminology supplement, 2026-09-11: [ACP-011](ACP-011-MIDWEST24-CORE-PRODUCT-IDENTITY-AND-SYSTEM-NAMING.md).
+
+Midwest24 Core Command names the CRM/front-office product currently implemented
+with EspoCRM. Midwest24 Core Enterprise names the ERP capability for which
+Apache OFBiz remains a candidate. The evaluation and preservation constraints
+in this decision remain unchanged.
+
+Implementation names and the original decision status remain unchanged.

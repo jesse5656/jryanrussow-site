@@ -695,3 +695,14 @@ Account / Contact → Property → Lead → Opportunity → MWG Job → MWG Work
 
 Do not expand beyond that vertical slice until the architecture has passed its
 first formal gate.
+
+## Product Naming Cross-Reference
+
+Terminology supplement, 2026-09-11: [ACP-011](ACP-011-MIDWEST24-CORE-PRODUCT-IDENTITY-AND-SYSTEM-NAMING.md).
+
+Midwest24 Core Nexus is reserved for the future Midwest24-owned custom
+application/platform. Existing prototypes, including `mwg-platform`, shall not
+automatically adopt the Nexus identity; their purpose must first be reconciled
+with governing architecture.
+
+Implementation names and the original decision status remain unchanged.

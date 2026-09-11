@@ -379,3 +379,14 @@ lines and migration controls.
 
 All ACP-004 software-freedom, portability, exit, maintenance, monitoring, and
 candidate-evaluation requirements remain in force.
+
+## Product Naming Cross-Reference
+
+Terminology supplement, 2026-09-11: [ACP-011](ACP-011-MIDWEST24-CORE-PRODUCT-IDENTITY-AND-SYSTEM-NAMING.md).
+
+Midwest24 Core Command is the CRM/front-office product implemented with the
+bounded EspoCRM bridge. Midwest24 Core Enterprise is the ERP/enterprise-execution
+product; Apache OFBiz remains an implementation candidate. This terminology
+does not expand the bridge or authorize ERP migration.
+
+Implementation names and the original decision status remain unchanged.

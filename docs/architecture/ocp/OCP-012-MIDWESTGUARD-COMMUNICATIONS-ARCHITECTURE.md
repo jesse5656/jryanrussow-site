@@ -280,3 +280,14 @@ Adopt the following long-term ownership model:
 
 Implementation remains gated by the Net2phone Capability & Integration Assessment
 and subsequent governed authorization.
+
+## Product Naming Cross-Reference
+
+Terminology supplement, 2026-09-11: [ACP-011](../acp/ACP-011-MIDWEST24-CORE-PRODUCT-IDENTITY-AND-SYSTEM-NAMING.md).
+
+Midwest24 Core Command names the CRM/front-office capability currently
+implemented with EspoCRM. Midwest24 Core Enterprise names the ERP capability,
+with Apache OFBiz as a candidate. This terminology does not approve the proposed
+communications direction or authorize connectors, automation, or deployment.
+
+Implementation names and the original decision status remain unchanged.
