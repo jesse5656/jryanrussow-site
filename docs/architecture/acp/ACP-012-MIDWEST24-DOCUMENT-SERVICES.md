@@ -1,6 +1,6 @@
 # ACP-012 — Midwest24 Document Services
 
-Version: 0.1.0
+Version: 0.3.0
 
 Status: Proposed
 
@@ -13,23 +13,48 @@ Proposed: 2026-09-12
 Scope: Shared document/PDF/e-signature architecture, ownership, contracts,
 security, recovery, and synthetic POC planning only.
 
-## Decision requested
+## Bounded governance approval — 2026-09-12
 
-Adopt **Midwest24 Document Services** as a shared Midwest24 capability with one
-Midwest24-owned API and durable domain model. Core Command, Core Enterprise,
-future Core Nexus applications, and other separately governed consumers use
-that boundary. Rendering and signing engines remain replaceable dependencies.
+The governing human explicitly approved `mwg-platform` as the implementation
+home for Midwest24 Document Services and the shared-service scope amendment
+recorded here. **Status remains Proposed by explicit instruction.** This is a
+bounded approval of repository assignment, ownership and planning constraints,
+not approval of the complete ACP or authorization to execute Phase 1.
 
-Recommend `mwg-platform` as the implementation home, with an independently
-deployable document-service module and database boundary. This requires an
-explicit addition to that repository's approved scope; its current CRM prototype
-authority does not already authorize this implementation. Do not create or
-rename a repository. Do not identify the service or `mwg-platform` as Nexus.
+The approved addition to `mwg-platform` scope is one Midwest24-owned shared
+Document Services capability, independent of its existing MIDWESTGuard CRM
+prototype. `services/document_services/` is the proposed isolated implementation
+boundary. It must have independent runtime, dependencies, database, migrations
+and credentials, with no CRM model imports. This governing amendment establishes
+the scope addition; propagation into candidate repository entry files is the
+next separately scoped governance step. No candidate files change now.
 
-Approval of this architecture would establish the target boundary and ownership
-recommendation only. Phase 1 implementation, runtime deployment, adapter work,
-production use, and commit/push remain separate decisions. This proposal has not
-been approved and does not supersede existing operational document authority.
+Command, Enterprise and future consumers use one shared Document Services
+contract. Nexus remains reserved as a future product/consumer; neither this
+service nor the repository is renamed or identified as Nexus.
+
+Midwest24 owns document identity, type and template identity/version, lifecycle,
+versions, business-record relationships, signer roles and signature-request
+state, initiating actor/system, provider mappings, original/completed hashes,
+immutable artifact references, audit and retention/disposition metadata.
+Provider-specific engines remain replaceable adapters.
+
+Python/Django, PostgreSQL and S3-compatible storage are the preferred stack.
+Gotenberg is the initial rendering adapter; Documenso is the preferred initial
+signing candidate, with OpenSign retained as an alternative. Exact releases,
+required-feature licensing and capability/security evidence remain gated.
+All exact Data Hypervisor placement, capacity, network, backup and recovery
+facts remain gated until verified; planning preferences are not deployment facts.
+
+All twelve synthetic POC acceptance gates P01–P12 remain **NOT RUN**. POC
+implementation, container deployment, integrations and production changes remain
+unauthorized. Phase 1 requires separate explicit approval after its scope and
+P01 admission prerequisites are resolved. Existing operational document authority
+and CRM work remain in force.
+
+This approval authorizes staging and committing only this ACP amendment and
+pushing it to `origin/main`. Unrelated Operating Plan/research work and the clean
+`mwg-platform` working tree must remain untouched. No new repository is created.
 
 ## Current state, evidence, and precedence
 
@@ -105,7 +130,7 @@ builder.
 
 | Location | Assessment |
 | --- | --- |
-| `mwg-platform` | Recommended after scope approval: already owns shared platform conventions and prototype document semantics; avoids another repository. Risk: CRM coupling and scope creep; mitigate with a separate module, own persistence and external record references, no imports of CRM models into its domain. |
+| `mwg-platform` | Approved implementation home under the bounded approval above: already owns shared platform conventions and prototype document semantics; avoids another repository. Risk: CRM coupling and scope creep; mitigate with a separate module, own persistence and external record references, no imports of CRM models into its domain. |
 | New dedicated implementation repository | Reasonable later if ownership, release/security isolation or maintenance evidence requires it. Deployment independence alone does not require a new repository. Not authorized or named here. |
 | Espo or OFBiz repository | Own only their adapters; neither owns the shared service or a second engine. |
 | `jryanrussow-site` | Owns cross-system architecture and this proposal, not service runtime source. |
@@ -116,6 +141,204 @@ Reuse the existing metadata concepts through a later explicit mapping; do not
 silently promote or relocate `mwg_crm.ManagedDocument`, change its IDs, or share
 its ORM tables with consumers. Initial service records are synthetic and new.
 Future governed adapters map existing identities without replacing records.
+
+## Implementation-home assessment — 2026-09-12
+
+**Assessment result: APPROVE `mwg-platform`.** The governing human accepted this
+recommendation through the bounded approval above. ACP-012 remains Proposed;
+ACP-007/ACP-008 alone do not authorize the new service. The shared-service scope
+addition preserves the CRM production-candidate workstream. Phase 1 execution
+still requires separate explicit approval and P01 admission evidence.
+
+Fresh local baseline: governing repository `main` at
+`24abd2b372fbd355616ff864ac2773d5dddfbdb3`; candidate `main` at
+`1f253f5022e085b5cfc7dbb3af5156b2e5206c95`. Both compare 0/0 with their local
+`origin/main` references; no fetch or remote freshness claim. Governing
+Operating Plan edits and untracked diagnostic records 011/012 predate this
+assessment and are preserved. Candidate working tree is clean.
+
+The governing repository has no root AGENTS.md; START-HERE and its context
+resolver establish entry authority. Its README describes the website, while
+REPOSITORY-CONSTITUTION establishes the broader discipline authority. Candidate
+AGENTS, START-HERE, README, Operating Plan, Authority Map, Prototype Scope and
+Gates were inspected. Its bootstrap commit is `603e40e`; latest commits record
+Gate 8, Gate 9 and ACP-008 Phase 1 semantic reconciliation. The README's Gate 2
+language is historical and does not describe current capability completeness.
+
+ACP-007's Prototype Repository and MWG Platform Core Boundary sections establish
+an owned application-platform prototype with a thin reusable core. This is
+application/domain source, tests, migrations and implementation evidence, not
+an infrastructure-only repository or an unrestricted shared-service catalog.
+Current top-level Python packages are `mwg_crm`, `platform_core` and
+`mwg_platform`; supporting paths are `tests`, `scripts/recovery`, and
+`docs/architecture`, `docs/domain`, `docs/operations`. There is local development
+Compose configuration but no tracked CI workflow or independent service release
+pipeline. Existing capabilities include CRM relationships, permission-checked
+Contact API, activities, metadata-only ManagedDocument, audit, deterministic
+automation, bounded AI proposals and recovery tooling. Gate 4 explicitly defers
+object storage; its audit protection is application-level. None proves this
+service's rendering, signing, binary recovery or stronger integrity gates.
+
+Document Services fits the thin owned application-layer purpose after a scoped
+extension: two named consuming systems provide concrete cross-application value.
+The `mwg` name and MIDWESTGuard-only mission create ownership ambiguity for a
+Midwest24 shared capability. Clarify the technical repository name and per-module
+ownership in existing entry files; retain the repository name and reserve Nexus.
+Do not turn the CRM prototype into the service or promote its ORM tables.
+
+| Criterion | A — `mwg-platform` | B — New dedicated repository | C — Existing consumer/governance repository |
+| --- | --- | --- | --- |
+| Architectural fit | Good after explicit ACP-012 scope addition; thin owned application code | Good after new governed mission/bootstrap | Espo/OFBiz appropriate for consuming adapters only; governing/site/ops repositories have different responsibilities |
+| Cohesion | Related owned capabilities; enforce independent module, no CRM domain imports | Strong single-service cohesion | Shared runtime would mix consumer or documentation responsibilities |
+| Deployment independence | Separate entrypoint, image, DB and migration command required | Natural separate build, still needs runtime isolation | Possible technically; encourages host-application coupling |
+| Ownership clarity | README must name Midwest24 service owner separately from MIDWESTGuard CRM | Clear service mission; accountable operator still must be assigned | Consumer ownership would misstate shared authority |
+| Command/Enterprise/future Nexus reuse | Same external contract; no consumer ORM dependency | Same external contract | Privileges one consumer; Nexus remains reserved |
+| CI/CD boundary | Add service-scoped build/tests and release approval; shared-library changes trigger all affected checks | Separate pipeline, additional bootstrap and maintenance | Consumer pipeline would become service release gate |
+| Secrets/config boundary | Dedicated service identities, environment and protected stores; no CRM credentials | Easier repository separation, still requires runtime least privilege | Risk of borrowing consumer credentials and privileges |
+| Upgrade/release independence | Own dependency lock, artifact/version, migrations and rollback; no CRM release prerequisite | Naturally separate cadence, duplicated tooling | Tends to follow consumer upgrades and release cadence |
+| Maintainability | Reuse language/tooling knowledge; police coupling and measure burden | Additional repository/dependency/CI administration; justified if isolation cannot be maintained | Highest conceptual coupling and divided authority |
+| Naming | Broad platform name fits technical role; Midwest24 ownership needs explicit text | Service-specific name clearer, but none proposed or created | Consumer/site/ops names misdescribe shared runtime |
+
+Option C uses the responsibility evidence already recorded above and ACP-007;
+no additional repository inspection was necessary. A preliminary discovery
+command listed AGENTS.md paths outside the two primary repositories before the
+attachment's restriction was applied; no unrelated file contents were opened.
+Subsequent inspection stayed within the two primary repositories. Choose B later
+if separate maintainers/access controls or observed release coupling demand it;
+repository separation alone does not establish data or deployment isolation.
+
+## Concrete Phase 1 plan supplement
+
+The existing domain table, API contract, infrastructure prerequisites and
+P01–P12 below remain controlling; this supplement makes their execution scope
+precise without authorizing implementation.
+
+Use one fixture set `synthetic-contract-001`: one marked test-only Contract
+HTML template `synthetic-mwg-contract` version `1`, one versioned input snapshot,
+one synthetic customer signer, one operator and distinct Command/Enterprise
+stub workload identities in one synthetic organization. Create fake Opportunity,
+Job and Work Order references as external identifiers; no CRM database or
+business conversion is invoked. One local email sink captures the invitation.
+
+Flow: create owned document → render PDF → store original and SHA-256 → create
+one owned signature request through the adapter → human completes test signing
+in the isolated provider UI → authenticate and durably record callback → fetch
+and verify completed PDF/evidence → store separately under immutable references
+and SHA-256 → commit completion/audit/outbox → relate the same document to the
+fake MWG Job and Work Order → both consumer stubs retrieve the same version/hash.
+The original bytes and Opportunity relationship survive every step.
+
+For deterministic POC identity, use UUIDv5 with a fixed, published synthetic
+namespace and an unambiguous canonical encoding of fixture organization,
+consumer instance, operation and idempotency key. Freeze that namespace and
+encoding in the approved fixture before implementation. Identical replay in a
+fresh environment produces the same document ID; changed payload with the same
+key returns conflict, and a new key creates a new identity. IDs contain no
+provider identifier, personal data or mutable document content. UUIDv5 is only
+an identifier mechanism; artifact integrity remains SHA-256. Production ID
+allocation is a later contract choice; opaque stable ownership is controlling.
+
+Minimum assertions map to the existing gates: P02 verifies durable document
+creation, deterministic fixture ID, template/version and original PDF/hash;
+P03 binds signer role, exact bytes and owned request; P04 authenticates ingress
+and stores completed bytes separately before announcing completion; P05 tests
+identity/idempotency conflict and recovery; P06 verifies both hashes and lifecycle
+reconstruction; P07 verifies relationships; P09/P10 perform actual independent
+restore; P11 isolates provider IDs in ProviderBinding and adapter records, and
+substitutes contract-test adapters. No minimum assertion replaces P01–P12, and
+no gate passes by documentation alone. Every gate needs recorded expected and
+actual results plus evidence references; any unmet requirement blocks POC
+acceptance. Gates are currently NOT RUN.
+
+### Candidate stack and repository layout
+
+Prefer Python/Django using the candidate's existing ordinary Django JSON-view
+approach, PostgreSQL and Psycopg, pytest/pytest-django and Ruff. Its checked-in
+baseline pins Django 5.2.17; this is repository evidence, not a new version or
+security approval. Validate supported releases and license/security manifests
+at P01. Do not introduce DRF, a new language, or a shared runtime dependency
+merely to make this service. A PostgreSQL-backed durable worker/inbox/outbox
+can avoid adding a broker for this one-workflow POC.
+
+Keep Gotenberg first for rendering and Documenso conditional first for signing;
+OpenSign is the fallback candidate subject to the same exact-release license,
+API, webhook, assurance and export gates. PostgreSQL owns metadata/audit and a
+separate S3-compatible adapter owns artifact access on verified Data Hypervisor
+storage. Provider state may need its own engine; never assume it shares the
+service database. These are replaceable candidates, not permanent architecture.
+
+Official documentation rechecked for this assessment: [Gotenberg routes](https://gotenberg.dev/docs/getting-started/routes),
+[Documenso verification](https://docs.documenso.com/docs/developers/webhooks/verification),
+and [OpenSign API](https://docs.opensignlabs.com/docs/API-docs/v1.2/opensign-api-v-1-2/).
+Documenso currently documents a shared-secret header, not a payload HMAC or
+signed timestamp. Require nonempty configured secret, constant-time comparison,
+TLS, durable deduplication and authenticated status/artifact reconciliation;
+do not copy its example's missing-secret bypass. Pin and verify actual release
+behavior at P01. A callback alone cannot establish completion or signer validity.
+
+Proposed paths follow the existing snake_case Python, Django migrations,
+pytest and recovery-script conventions while isolating service dependencies:
+
+```text
+services/document_services/
+  manage.py
+  requirements.in
+  requirements.lock
+  pyproject.toml
+  compose.yaml
+  config/                     # separate settings, URLs, process entrypoints
+  document_services/
+    api/
+    domain/
+    adapters/rendering/
+    adapters/signing/
+    adapters/storage/
+    persistence/              # Django app/models and migrations
+      migrations/
+    workers/                  # durable work, inbox and outbox processing
+  tests/
+  fixtures/
+  scripts/recovery/
+docs/architecture/            # existing location for future POC evidence
+```
+
+The `services` container is a proposed addition, not a current convention.
+The independently deployable subtree avoids changing the root CRM entrypoint,
+settings, dependency lock or migration graph. No import of `mwg_crm` models,
+no cross-database foreign keys and no shared tables. Reuse conventions before
+extracting shared libraries. A later service-scoped CI workflow must select this
+subtree explicitly; dependency locks, build contexts and recovery commands must
+prove that a service release does not require a CRM release. No paths above
+are created in this transaction.
+
+### Exact governance file boundary
+
+Only this ACP is modified now, as a Proposed amendment. No redundant plan/OCP
+is created and neither Operating Plan is activated or reprioritized.
+
+The bounded approval is recorded in this ACP. The remaining scope propagation
+requires a separate documentation transaction; the exact file boundary is:
+
+| Repository / exact path | Bounded change |
+| --- | --- |
+| `jryanrussow-site/docs/architecture/acp/ACP-012-MIDWEST24-DOCUMENT-SERVICES.md` | Completed here: record bounded approval, retain Proposed status, and exclude Phase 1 authorization |
+| `jryanrussow-site/docs/architecture/INFRASTRUCTURE-ACCESS-AND-REQUEST-FLOWS.md` | Add Approved target reference, preserving Unknown deployment facts |
+| `jryanrussow-site/docs/discipline/OPERATING-PLAN.md` | Concise bounded architecture closeout after approval; preserve unrelated local work and active objective |
+| `mwg-platform/README.md` | Name CRM and separately authorized Midwest24 shared-service responsibilities; clarify technical name; distinguish historical Gate 2 from present CRM state |
+| `mwg-platform/AGENTS.md` | Add ACP-012 authority, isolation and no-production constraints; reference central model-selection rule without duplicating it |
+| `mwg-platform/START-HERE.md` | Add ACP-012 and service-specific scope to applicable entry reads; preserve existing CRM entry sequence |
+| `mwg-platform/docs/architecture/AUTHORITY-MAP.md` | Distinguish ACP-007/008 CRM authority from the bounded ACP-012 shared-service approval and operational business authority |
+| `mwg-platform/OPERATING-PLAN.md` | Record approved home and separately gated P01–P12 work item without silently replacing CRM semantic reconciliation |
+
+Do not rewrite historical ACP-007, ACP-008 or PROTOTYPE-SCOPE/GATES into shared
+service authority. Reference ACP-012 instead. Before actual Command integration,
+`mwg-ops-manual/docs/OCP-006-ESPOCRM-DOCUMENT-JOB-FILE-ARCHITECTURE.md` needs a
+separately governed extension. Consumer implementation paths require later local
+context and are deliberately not invented here. No platform edits are needed
+for this bounded governing-repository transaction. The next governance step is
+to authorize and apply the five candidate entry/context amendments listed above,
+then resolve the P01 admission evidence and obtain separate explicit Phase 1
+execution approval. Do not interpret this commit as that approval.
 
 ## System boundary
 
@@ -486,13 +709,14 @@ purchase/procurement documents, rental/property documents, acknowledgments,
 insurance/claim-support documents. Map these to the existing governed category
 vocabulary; do not silently replace it or approve templates by listing them.
 
-**This transaction proposes one added file:**
+**Original 0.1.0 transaction proposed one added file; this 0.2.0 assessment
+and 0.3.0 bounded approval amend that same existing file:**
 
 `docs/architecture/acp/ACP-012-MIDWEST24-DOCUMENT-SERVICES.md`
 
-ACP inventory contains ACP-011 and no ACP-012 at the inspection baseline; verify
-again before applying. This single ACP contains the architecture, context and
-POC plan; a duplicate OCP or implementation-plan file is not needed now.
+ACP-012 was committed as `24abd2b` before this assessment. This single ACP
+contains the architecture, context and POC plan; a duplicate OCP or
+implementation-plan file is not needed now.
 
 The governing Operating Plan currently prioritizes Institutional Memory
 commercial qualification. START-HERE requires updating it when priorities
@@ -521,7 +745,8 @@ Proposed subsequent repository changes, each requiring its own scoped approval:
 - `midwest24-site`: optional product documentation propagation after adoption;
   no rename, new hostname, logo, DNS or site deployment is required for Phase 0.
 
-Open gates before Phase 1 execution: approve ownership/scope; verify exact pool
+Open gates before Phase 1 execution: propagate the approved repository scope;
+verify exact pool
 paths and capacity; select resource quotas, backup destination and recovery test
 window; verify identity/secret integration; approve synthetic template/signing
 policy; select exact dependency releases and required-feature license status;
@@ -545,14 +770,31 @@ creating an unrelated task or changing global settings.
 Acceptance for this transaction: the single proposal covers ownership, service
 contracts, infrastructure uncertainty, consumer boundaries and synthetic recovery
 gates; applicable documentation/governance checks run; exact diff reviewed;
-unrelated working files remain unchanged. Stop before commit/push and obtain
-explicit approval. Implementation is not part of this acceptance.
+unrelated working files remain unchanged. The 0.3.0 bounded approval authorizes
+this single-file commit/push; stop after that transaction. Implementation is not
+part of this acceptance.
 
 Validation results are supplied with the review diff. Deterministic governance
 checks cannot approve architectural judgment or convert Proposed to Approved.
 
+Assessment validation (2026-09-12): governance policy validation and all 14
+repository governance tests passed; MkDocs build to a disposable review directory
+passed; all relative links in this ACP resolve; P01–P12 and Proposed status are
+preserved; whitespace checks passed. The unchanged governance engine was invoked
+with the exact task file supplied as its review list because the real index was
+left untouched; its deterministic checks passed. This is not human approval.
+The existing Operating Plan diff and both untracked diagnostic file hashes were
+verified unchanged. Candidate repository remains clean. No runtime tests were
+needed for this documentation-only amendment; service gates remain NOT RUN.
+
 ## Revision history
 
+- 2026-09-12 — 0.3.0: governing human approved the implementation home and bounded
+  shared-service scope, authorized this single-file commit/push, and explicitly
+  retained Proposed status. P01–P12 remain NOT RUN; execution approval is separate.
+
+- 2026-09-12 — 0.2.0: assessed implementation home, compared repository boundaries,
+  specified isolated layout and deterministic POC identity; approval still pending.
 - 2026-09-12 — 0.1.0: proposed shared architecture and synthetic POC; no runtime
   or production changes.
 
