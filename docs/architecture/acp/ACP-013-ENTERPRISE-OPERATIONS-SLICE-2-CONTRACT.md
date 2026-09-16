@@ -1,6 +1,6 @@
 # ACP-013 Implementation Contract — Enterprise Operations Slice 2
 
-Version: 1.0.0
+Version: 1.0.1
 
 Status: Approved
 
@@ -9,6 +9,8 @@ Type: Implementation contract addendum
 Authority: Systems Architect Discipline
 
 Approved: 2026-09-15
+
+Amended: 2026-09-16 — coordinator authorization-lifecycle clarification
 
 Scope: The next bounded Midwest24 Core Enterprise productization slice after Enterprise Operations Slice 1. No production migration, record-authority transfer, CRM integration, procurement, billing, accounting, calendar dispatch, or Apache upstream change.
 
@@ -69,6 +71,20 @@ Siding: Ready → Scheduled → Installed → Done
 - `Scheduled` is a bounded operational readiness state in this slice, not a calendar appointment, customer promise, route optimization, or automated dispatch.
 - The disabled execution principal remains noninteractive and performs only the minimum native posting required by the owned transaction. The human initiator and effective executor remain separately recorded.
 
+## Coordinator authorization lifecycle
+
+`M24_JOB_VIEW` in a permission bundle is a capability prerequisite, not Job scope by itself. Current Job access requires a time-valid, active, Job-specific `M24ActionGrant`.
+
+Exactly one operational coordinator may hold a current `JOB_VIEW` grant for the governed Job at an instant. Multiple retained grant rows are permitted only when all but one are closed historical periods. This slice does not authorize shared simultaneous operational coordinators, global coordinator scope or a second current grant for convenience.
+
+The Slice 1 signed-contract handoff actor `M24P_JOB_COORDINATOR` remains the immutable handoff actor in the handoff receipt, contract reference, business event and historical authorization period. Its live `JOB_VIEW` remains unchanged until an explicit, authorized coordinator-transfer command succeeds. Bootstrap, deployment and an attempted or failed activation must not end it implicitly.
+
+For the retained Slice 1 Job, the first accepted Slice 2 activation is also the explicit transfer boundary from `M24P_JOB_COORDINATOR` to the authenticated `M24P_COORDINATOR`. At one transaction timestamp, the service must close the prior grant by setting its `thruDate` to the boundary and `active` to `N`, then create exactly one `M24P_COORDINATOR` `JOB_VIEW` grant with the same `fromDate`, `active=Y` and no `thruDate`. The activation status change, old-grant closure, new grant, attributable transfer event and idempotent receipt must commit or roll back together. If the transfer does not commit, the prior authorization remains unchanged.
+
+The transfer event and receipt must record the Job, prior and current coordinator identities, effective boundary, initiating human, execution principal, reason, request ID and canonical payload hash. Closing a grant never deletes or rewrites the prior grant, handoff receipt, contract reference or business-event attribution. Job completion does not automatically revoke current read access; a later transfer or revocation must use the same explicit effective-dated rule.
+
+`M24P_JOB_COORDINATOR` and `M24P_COORDINATOR` remain distinct synthetic identities because they prove different governed responsibilities: signed-contract handoff and operational lifecycle coordination. This slice must not rename, merge or backfill either identity merely to simplify validation.
+
 ## Data posture and flow
 
 All business writes use the retained Enterprise Operations Slice 1 synthetic Job graph in a private, isolated same-version OFBiz copy. No production Command/EspoCRM, website, Queue/D1, net2phone, Document Services, calendar, payroll, vendor, inventory, accounting or real customer data may be contacted.
@@ -85,27 +101,29 @@ The controlled LAN deployment may install owned application/configuration capabi
 
 1. Record private isolation, image/version, sources/hashes, mounts, ports, preflight state and rollback location.
 2. Use the exact existing synthetic Job with one Roof and one Siding child. Verify the native IDs, Customer, Contact, Facility Property, Opportunity and contract reference remain unchanged.
-3. A non-admin coordinator activates the Job, schedules each trade and creates exactly one time-valid native WorkEffort assignment and one scoped action grant per trade.
-4. Each assigned crew can log in separately, view only its own assigned trade at 390-pixel mobile and normal desktop widths, and record Installed once. No cost, customer communications, other trade data or administrative tools are exposed.
-5. The coordinator completes Roof through Checked and Done, completes Siding through Done, then completes the Job. The UI presents an authorized lifecycle summary and audit history without raw payloads or financial data.
-6. Each accepted command records its initiating human, execution principal, from/to state, reason, request ID, canonical payload hash, timestamps and native target IDs in immutable history.
-7. Identical sequential replay returns the original receipt and does not add assignment, grant, event or status effect. Two concurrent identical commands produce one effect and stable receipt.
-8. Inject a failure after the native status/assignment change boundary but before owned completion. Verify atomic rollback: no status change, assignment, grant, event, receipt or partial owned state remains; a clean retry succeeds once.
-9. Restart/recreate the isolated application and database services without reseeding. Verify the final graph, assignments, grants, status/event history and replay behavior persist.
-10. Export normalized native/owned records and independently reconstruct the Job/Work Order graph, assignments, lifecycle/event chronology and contract reference. Deliberate assignment/event or status tampering must be detected by the reconstruction check.
+3. Before activation, verify exactly one current `JOB_VIEW` grant for `M24P_JOB_COORDINATOR`. The authenticated `M24P_COORDINATOR` then explicitly activates the Job and atomically transfers current coordinator scope at one effective boundary: the prior grant closes, exactly one new current `JOB_VIEW` grant opens, and the attributable transfer event and receipt persist without changing Slice 1 attribution.
+4. The non-admin coordinator schedules each trade and creates exactly one time-valid native WorkEffort assignment and one scoped action grant per trade.
+5. Each assigned crew can log in separately, view only its own assigned trade at 390-pixel mobile and normal desktop widths, and record Installed once. No cost, customer communications, other trade data or administrative tools are exposed.
+6. The coordinator completes Roof through Checked and Done, completes Siding through Done, then completes the Job. The UI presents an authorized lifecycle summary and audit history without raw payloads or financial data.
+7. Each accepted command records its initiating human, execution principal, from/to state, reason, request ID, canonical payload hash, timestamps and native target IDs in immutable history.
+8. Identical sequential replay returns the original receipt and does not add assignment, grant, closure, transfer event or status effect. Two concurrent identical commands produce one effect and stable receipt.
+9. Inject a failure after the native status, assignment or coordinator-transfer boundary but before owned completion. Verify atomic rollback: no status change, grant closure, new grant, assignment, event, receipt or partial owned state remains; a clean retry succeeds once.
+10. Restart/recreate the isolated application and database services without reseeding. Verify the final graph, assignments, grants, coordinator history, status/event history and replay behavior persist.
+11. Export normalized native/owned records and independently reconstruct the Job/Work Order graph, current and historical coordinator scope, assignments, lifecycle/event chronology and contract reference. Deliberate grant, assignment, event or status tampering must be detected by the reconstruction check.
 
 ### Negative and authorization paths
 
 1. Reject invalid skips, reverse transitions, early Job completion, wrong trade/status pairing, missing reason, missing request ID and altered payload under an existing request ID with no effect.
 2. Reject an unassigned Roof/Siding crew, a crew attempting the other trade, a coordinator outside explicit Job scope, CRM-only coordinator, reviewer, finance user, disabled executor and unauthenticated caller.
-3. Reject guessed Job or Work Order IDs without disclosing whether the object exists.
-4. Reject direct native entity/admin, finance, inventory, document-byte, generic service and status-edit routes for the relevant non-admin roles.
-5. Reject reuse of a session after logout.
-6. Reject attempts to add another trade, alter Customer/Contact/Property/Opportunity/contract context, create a delayed automation, calendar event, customer notification or Command writeback.
+3. Reject activation or transfer when the prior current coordinator grant is missing, duplicated, already closed or belongs to an unexpected principal; when the target is not the authenticated approved coordinator; when the transfer is implicit or incomplete; or when a changed transfer payload reuses an accepted request ID. Every rejection leaves the prior authorization unchanged and creates no new grant, event, receipt or status effect.
+4. Reject guessed Job or Work Order IDs without disclosing whether the object exists.
+5. Reject direct native entity/admin, finance, inventory, document-byte, generic service and status-edit routes for the relevant non-admin roles.
+6. Reject reuse of a session after logout.
+7. Reject attempts to add another trade, alter Customer/Contact/Property/Opportunity/contract context, create a delayed automation, calendar event, customer notification or Command writeback.
 
 ## Replay, rollback and persistence rules
 
-Every mutable command uses an opaque request ID and canonical payload hash. The idempotency identity includes the Job, Work Order where applicable, action, actor, and exact payload. An identical command returns its prior receipt; changed content conflicts before mutation. A transaction failure rolls back both native and owned effects. Serialization must prevent two same-logical-operation requests from assigning or transitioning twice. Restart/recreation must preserve state and leave replay inert.
+Every mutable command uses an opaque request ID and canonical payload hash. The idempotency identity includes the Job, Work Order where applicable, action, actor, exact payload and coordinator-transfer principals where applicable. An identical command returns its prior receipt; changed content conflicts before mutation. A transaction failure rolls back both native and owned effects. Serialization must prevent two same-logical-operation requests from assigning, transitioning, closing or opening grants twice. Restart/recreation must preserve state and leave replay inert.
 
 ## User experience
 
@@ -128,14 +146,14 @@ A15 remains independently BLOCKED. A16 is COMPLETE. A17 remains NOT STARTED.
 
 ## Evidence, Git and deployment boundary
 
-Retain non-secret evidence in `mwg-ofbiz/docs/evidence/enterprise-operations-slice-2/`: source/image hashes, fixture IDs, normalized counts, state/assignment/event receipts, sequential/concurrent replay, rollback, denial outcomes, mobile/desktop evidence, restart/recreation, reconstruction/tamper checks, LAN pre/post zero-state proof, rollback location and exact commands. Never store secrets, cookies, session IDs, real customer data or protected configuration in Git.
+Retain non-secret evidence in `mwg-ofbiz/docs/evidence/enterprise-operations-slice-2/`: source/image hashes, fixture IDs, normalized counts, coordinator grant periods and transfer receipt, state/assignment/event receipts, sequential/concurrent replay, rollback, denial outcomes, mobile/desktop evidence, restart/recreation, reconstruction/tamper checks, LAN pre/post zero-state proof, rollback location and exact commands. Never store secrets, cookies, session IDs, real customer data or protected configuration in Git.
 
 Implementation remains in the owned Midwest24 Enterprise component. The governing repository records authority only; runtime backups, databases and secrets remain outside Git. Before any implementation commit or push, show the exact diff and validation results for separate approval.
 
 ## Stop conditions
 
-Stop and return to governance if the slice requires an ungoverned Job/Work Order status, production lifecycle decision, live Command/EspoCRM or other production integration, real data, calendar/dispatch semantics, payroll/subcontractor authority, document bytes/filing, procurement/inventory/accounting/billing, an Apache upstream modification/version change, broad native permission, ambiguous scope, non-atomic rollback, non-deterministic replay, or a LAN deployment that cannot remain empty of Slice 2 business records.
+Stop and return to governance if the slice requires an ungoverned Job/Work Order status, production lifecycle decision, live Command/EspoCRM or other production integration, real data, calendar/dispatch semantics, payroll/subcontractor authority, document bytes/filing, procurement/inventory/accounting/billing, an Apache upstream modification/version change, broad native permission, ambiguous scope, simultaneous current operational coordinators, deletion or rewriting of historical authorization/attribution, non-atomic rollback, non-deterministic replay, or a LAN deployment that cannot remain empty of Slice 2 business records.
 
 ## Resume gate and implementation handoff
 
-Deploy Apache OFBiz may implement this one slice after this contract is committed. It must re-resolve the governing and implementation repositories, audit the existing A04/A07/A08/A11/Enterprise Operations Slice 1 code, and execute private isolated validation before controlled empty-LAN deployment. It must not start A17, modify Command, promote Enterprise authority, or perform a version upgrade.
+Deploy Apache OFBiz may implement this one slice after this contract is committed. It must re-resolve the governing and implementation repositories, audit the existing A04/A07/A08/A11/Enterprise Operations Slice 1 code, and execute private isolated validation before controlled empty-LAN deployment. Before resuming Slice 2 validation, reconcile the retained Job through the atomic, explicit `M24P_JOB_COORDINATOR` to `M24P_COORDINATOR` authorization transfer governed above; prove one current grant, closed historical scope, immutable Slice 1 attribution, replay/concurrency, rollback and reconstruction. It must not start A17, modify Command, promote Enterprise authority, or perform a version upgrade.
