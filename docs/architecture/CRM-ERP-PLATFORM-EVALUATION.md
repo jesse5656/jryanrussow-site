@@ -6,10 +6,10 @@
 Architecture Evaluation
 
 **Status**
-Active Evaluation — No Platform Selected
+Active Validation — Strategic Target Approved; Production Cutover Not Approved
 
 **Version**
-1.0.0
+1.1.0
 
 **Authority**
 Systems Architect Discipline
@@ -18,7 +18,7 @@ Systems Architect Discipline
 2026-09-02
 
 **Governing Proposal**
-ACP-004
+ACP-004 and ACP-013
 
 </div>
 
@@ -30,9 +30,11 @@ MIDWESTGuard is rebuilding the business capability historically carried through 
 
 The objective is not a screen-for-screen JobNimbus clone. The objective is to preserve and improve the business capability while preventing another generation of data lock-in, format loss, licensing surprise, or repeated migration.
 
-> Preserve EspoCRM, stop substantial new Espo-specific implementation, and require a replacement candidate to prove long-term operational independence before migration.
+> Preserve EspoCRM as the current operational bridge while Midwest24 Core Enterprise / Apache OFBiz proves the complete CRM+ERP target and each capability passes a governed migration and cutover gate.
 
-No replacement platform is selected.
+ACP-013 selects Midwest24 Core Enterprise / Apache OFBiz as the strategic CRM+ERP
+target. Production adoption, live authority transfer and EspoCRM retirement remain
+unapproved until their explicit gates pass.
 
 ---
 
@@ -41,12 +43,13 @@ No replacement platform is selected.
 | Component | State |
 | --- | --- |
 | JobNimbus | Historical operational evidence only |
-| EspoCRM | Installed, healthy, preserved, substantial new development frozen |
-| Final CRM platform | Unresolved |
-| Final ERP platform | Unresolved |
-| Frappe CRM + ERPNext | First-round POC |
-| Tryton | First-round POC |
-| Apache OFBiz | First-round POC |
+| EspoCRM | Current operational CRM bridge; transitional and preserved until capability-specific cutover and retention gates pass |
+| Strategic CRM authority target | Midwest24 Core Enterprise / Apache OFBiz with governed owned extensions |
+| Strategic ERP authority target | Midwest24 Core Enterprise / Apache OFBiz with governed owned extensions |
+| Production CRM/ERP authority | Not transferred; current systems remain authoritative until explicit cutover |
+| Frappe CRM + ERPNext | Historical first-round comparison / fallback evidence |
+| Tryton | Historical first-round comparison / fallback evidence |
+| Apache OFBiz | Active strategic-target validation and productization |
 | ADempiere | Reserve / second-wave candidate |
 | Dolibarr | Secondary research |
 | SuiteCRM | CRM reference candidate, not first-round ERP |
@@ -56,6 +59,11 @@ No replacement platform is selected.
 | xTuple/PostBooks | Eliminated as current foundation |
 | Platform monitoring | Active interim weekly condition watch |
 | Evaluation methodology | `evaluate-open-source-platforms` V1.1 validated; production candidate; runtime installation pending |
+
+The target decision does not erase comparison evidence or waive the ACP-004
+software-freedom, maintenance, upgrade, backup/restore, exit and reconstruction
+requirements. A failed target gate may return the platform decision to governance;
+it does not preserve EspoCRM as the desired permanent architecture.
 
 ---
 
@@ -271,13 +279,15 @@ A large initial build is not automatically worse than a smaller initial build.
 
 ---
 
-## Decision Gate
+## Production Adoption and Cutover Gate
 
-No platform may be selected solely from marketing, screenshots, feature lists, license labels, reputation, or a successful installation.
+No production authority may transfer solely from target selection, marketing,
+screenshots, feature lists, license labels, reputation, installation or a
+successful synthetic slice.
 
 Production selection requires the software-freedom gate, operational POC, backup/restore proof, exit proof, upgrade proof, and maintenance-burden assessment.
 
-No production migration is currently authorized.
+No production migration, CRM cutover or EspoCRM retirement is currently authorized.
 
 ---
 
@@ -292,14 +302,9 @@ Validation result:
 - 7 / 7 critical fixtures PASS;
 - no remaining candidate-behavior defect.
 
-The next platform-selection work shall apply this methodology consistently to:
-
-1. Frappe CRM + ERPNext;
-2. Tryton;
-3. Apache OFBiz.
-
-The validated methodology does not itself select a winner.
-
-Each candidate must still complete the governed operational POC, backup/restore,
-exit-reconstruction, upgrade-survivability, maintenance-burden, and
-software-freedom gates before a production migration decision.
+The first-round Frappe/ERPNext, Tryton and OFBiz comparison remains historical
+evaluation evidence. ACP-013 now prioritizes Apache OFBiz as the strategic target.
+Continue the governed operational POC, CRM replacement slices, backup/restore,
+exit-reconstruction, upgrade-survivability, maintenance-burden and
+software-freedom gates against that target. Reopen candidate comparison only if a
+real stop condition or failed acceptance gate requires it.

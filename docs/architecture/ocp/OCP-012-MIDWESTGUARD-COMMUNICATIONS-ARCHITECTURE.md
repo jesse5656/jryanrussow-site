@@ -1,18 +1,22 @@
 # OCP-012 — MIDWESTGuard Communications Architecture
 
-## Status
+Version: 1.1.0
 
-Proposed long-term architecture direction.
+Status: Approved
 
-This record authorizes planning and bounded research only. It does not authorize
-deployment of a net2phone connector, live-agent chat, SMS automation, telephony
-automation, or Apache OFBiz communications functionality.
+Type: Operational Change Proposal
+
+Authority: Systems Architect Discipline
+
+Approved: 2026-09-15
+
+Scope: Communications ownership and migration-compatible CRM context. No connector deployment, provider migration, live CRM cutover or production-data migration.
 
 ## Purpose
 
-Define the long-term ownership boundaries for MIDWESTGuard customer communications,
-including website chat, telephone, future human handoff, after-hours follow-up, and
-CRM integration.
+Define the current and target ownership boundaries for MIDWESTGuard customer
+communications, including website chat, telephone, future human handoff,
+after-hours follow-up, CRM context and migration away from EspoCRM.
 
 The objective is to avoid creating competing customer-communication systems while
 preserving the existing net2phone telephone-number portfolio.
@@ -35,11 +39,13 @@ Expected responsibilities may include, subject to capability validation:
 
 net2phone is not the customer system of record.
 
-### EspoCRM
+### Midwest24 Core Command and CRM authority
 
-EspoCRM is the planned customer, Lead, Contact, and communications system of record.
+Midwest24 Core Command is the durable CRM-facing product surface. EspoCRM is its
+current implementation and operational CRM bridge, not the permanent CRM system
+of record.
 
-Expected responsibilities include:
+Until a capability-specific cutover, EspoCRM may remain authoritative for:
 
 - Lead and Contact identity;
 - communication history associated with customer records;
@@ -50,8 +56,9 @@ Expected responsibilities include:
 - sales qualification;
 - customer-facing communication context and summaries.
 
-Chat or telephone activity should reconcile to EspoCRM when technically and
-operationally appropriate.
+After a governed capability cutover, the same Command-facing functions use
+Midwest24 Core Enterprise as the authoritative CRM context. Channel and user
+interfaces must not require permanent EspoCRM dependency.
 
 ### MIDWESTGuard Website and Chat Assistant
 
@@ -70,11 +77,16 @@ They may:
 They must not create a second independent CRM or bypass the governed public-intake
 boundary.
 
-### Apache OFBiz
+### Midwest24 Core Enterprise / Apache OFBiz
 
-Apache OFBiz is reserved for downstream ERP and operational execution.
+Midwest24 Core Enterprise, implemented by Apache OFBiz and the governed
+Midwest24-owned extension, is the strategic target for authoritative CRM context
+and downstream ERP/operational execution.
 
-Expected domains include:
+Target domains include:
+
+- Leads, Customers, Contacts, Properties and Opportunities;
+- CRM activity, follow-up, lineage and communication context;
 
 - jobs and production;
 - work orders;
@@ -84,24 +96,32 @@ Expected domains include:
 - billing and operational accounting integrations;
 - other downstream business-process execution.
 
-Live customer chat, call routing, and front-office communication queues are not
-OFBiz responsibilities unless a future governed decision explicitly changes this
-boundary.
+net2phone remains call transport and channel routing. Website/chat, email and
+other providers remain their channel surfaces/transports. Enterprise stores the
+governed business context after cutover; it does not replace those transports.
 
 ## Human Handoff Model
 
-The target communications model is:
+The current bridge model is:
 
 Website visitor
 → chatbot
 → EspoCRM Lead / communication session
 → office employee when human assistance is requested.
 
+The approved target model after the applicable cutover is:
+
+Website / chat / email / net2phone event
+→ bounded channel adapter
+→ Enterprise authoritative Lead / Contact / activity / communication context
+→ Command-facing employee workspace.
+
 During business hours:
 
 - an available office employee may be notified or assigned;
 - the customer may request a call or future real-time handoff;
-- the session remains associated with the Lead or Contact.
+- the session remains associated with the authoritative Lead or Contact in the
+  current system during transition and in Enterprise after cutover.
 
 After hours:
 
@@ -127,8 +147,8 @@ A future implementation should evaluate states such as:
 - Follow-up Required
 - Closed
 
-The exact EspoCRM entity model is not authorized by this record and requires a
-separate implementation decision.
+The exact Enterprise activity/session model and each EspoCRM transition require
+separate bounded implementation and cutover contracts.
 
 ## Telephone Number Portfolio
 
@@ -150,7 +170,7 @@ ported, reassigned, or retired solely to simplify CRM integration.
 ## Provider-Preservation Rule
 
 MIDWESTGuard must not replace net2phone merely because another telephone provider
-has a native EspoCRM connector.
+has a native connector for EspoCRM, OFBiz or another CRM.
 
 A provider migration requires evidence of a material technical, operational,
 financial, reliability, or compliance blocker that cannot reasonably be solved by
@@ -158,8 +178,8 @@ a bounded net2phone integration.
 
 ## Integration Principle
 
-Prefer a bounded integration between net2phone and EspoCRM over a duplicate
-communications platform.
+Prefer bounded, replay-safe channel adapters that can serve the current EspoCRM
+bridge and then Enterprise CRM context without duplicating communications truth.
 
 Potential future integration capabilities include:
 
@@ -200,9 +220,9 @@ The assessment must determine:
 14. Business-hours and after-hours routing capability.
 15. Rate limits and reliability constraints.
 16. Data-retention and privacy boundaries.
-17. EspoCRM integration requirements.
-18. Whether a custom EspoCRM extension, middleware adapter, or another bounded
-    integration surface is the appropriate implementation mechanism.
+17. Current EspoCRM bridge requirements and transition constraints.
+18. Enterprise CRM-context contract and whether an owned adapter or another
+    bounded integration surface is appropriate.
 
 The assessment must distinguish:
 
@@ -221,9 +241,10 @@ The assessment must distinguish:
 - identify office-hours and after-hours behavior;
 - perform the Net2phone Capability & Integration Assessment.
 
-### Phase 2 — EspoCRM Communications Integration
+### Phase 2 — Current-Bridge Communications Integration
 
-Evaluate bounded integration for:
+Evaluate bounded integration against current EspoCRM operations while preserving
+an implementation-independent event contract for Enterprise migration:
 
 - caller matching;
 - call-history association;
@@ -232,6 +253,8 @@ Evaluate bounded integration for:
 - click-to-call;
 - employee assignment and notification.
 
+Do not create a new permanent dependency on EspoCRM.
+
 ### Phase 3 — Chat and Human Handoff
 
 Extend the website chatbot so:
@@ -239,7 +262,8 @@ Extend the website chatbot so:
 - a visitor can request a person;
 - business-hours availability is represented accurately;
 - after-hours sessions enter a next-business-day queue;
-- the Lead and chat/session context remain associated in EspoCRM.
+- the Lead and chat/session context remain associated with the current CRM
+  authority and can move to Enterprise through the governed migration contract.
 
 ### Phase 4 — Unified Communications
 
@@ -259,7 +283,8 @@ This architecture does not authorize:
 
 - replacing net2phone;
 - implementing a telephone provider migration;
-- building communications inside OFBiz;
+- reimplementing net2phone or another channel transport inside Enterprise;
+- transferring a communications capability before its migration/cutover gate;
 - deploying live-agent chat;
 - exposing CRM or telephony credentials in the browser;
 - storing unrestricted chat transcripts directly in Lead descriptions;
@@ -272,11 +297,13 @@ Adopt the following long-term ownership model:
 
 **net2phone = communications transport**
 
-**EspoCRM = customer and communications system of record**
+**Midwest24 Core Command = CRM-facing communications workspace**
 
 **MIDWESTGuard website/chatbot = customer-facing intake and conversation surface**
 
-**Apache OFBiz = downstream ERP and operational execution**
+**Midwest24 Core Enterprise / Apache OFBiz = target authoritative CRM context and downstream ERP/operational execution**
+
+**EspoCRM = current transitional CRM bridge until capability-specific cutover**
 
 Implementation remains gated by the Net2phone Capability & Integration Assessment
 and subsequent governed authorization.
@@ -285,9 +312,11 @@ and subsequent governed authorization.
 
 Terminology supplement, 2026-09-11: [ACP-011](../acp/ACP-011-MIDWEST24-CORE-PRODUCT-IDENTITY-AND-SYSTEM-NAMING.md).
 
-Midwest24 Core Command names the CRM/front-office capability currently
-implemented with EspoCRM. Midwest24 Core Enterprise names the ERP capability,
-with Apache OFBiz as a candidate. This terminology does not approve the proposed
-communications direction or authorize connectors, automation, or deployment.
+Midwest24 Core Command names the durable CRM/front-office product surface,
+currently implemented with EspoCRM. Midwest24 Core Enterprise names the unified
+target CRM/ERP authority, implemented by Apache OFBiz and the governed owned
+extension. After cutover, Command may remain the role-focused CRM surface backed
+by Enterprise authority. Product identity is independent of the software package.
 
-Implementation names and the original decision status remain unchanged.
+This decision does not authorize a connector, automation, production migration,
+provider change or capability cutover.
