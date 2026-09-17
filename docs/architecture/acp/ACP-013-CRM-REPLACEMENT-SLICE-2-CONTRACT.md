@@ -230,6 +230,14 @@ Before execution, create a recoverable isolated database/configuration checkpoin
 
 No live Lead cutover follows a passing rehearsal. A cutover proposal must separately establish live inventory, full status/reason and ownership mapping, source-history completeness, open-work/communications dependencies, user acceptance, reporting, monitored intake routing, write freeze, EspoCRM read-only retention and tested reversal.
 
+## Noninteractive machine authentication adapter
+
+`M24-ENTERPRISE-LEAD-READ-1.0.0` uses one private owned bearer-token adapter for its externally reachable machine boundary. The adapter is limited to the disabled `M24P_LEAD_AI` identity and does not change that UserLogin into an interactive account. `UserLogin.enabled=N` remains the identity and security anchor; normal browser login remains unavailable.
+
+The private bootstrap generates one high-entropy token in protected runtime secret storage. Only a salted verifier and non-secret token metadata may be persisted. The token is supplied only in the `Authorization: Bearer` request header to the owned Lead machine route; it must never appear in URLs, source control, logs, evidence, browser JavaScript, cursors, or model state. The route verifies the token, resolves exactly `M24P_LEAD_AI`, and then separately enforces `M24_LEAD_AI_READ` plus each effective `MACHINE_READ` object grant. The cursor is continuation state only and never authenticates or grants scope.
+
+The bootstrap/revocation owner may rotate or revoke the token by replacing or disabling its verifier record without changing Lead business data. Missing, invalid, expired, or revoked tokens return authentication denial; a valid token without permission or object scope returns authorization denial. The adapter grants no mutation, generic-service, native-administration, database, or export authority. Private validation must prove browser login denial, valid-token machine read, invalid/revoked-token denial, scope denial, and mutation denial through the external route.
+
 ## Targeted regressions
 
 Run only affected proofs:
