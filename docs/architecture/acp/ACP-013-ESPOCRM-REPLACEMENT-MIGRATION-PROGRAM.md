@@ -1,6 +1,6 @@
 # ACP-013 Addendum — EspoCRM Replacement and CRM Authority Migration Program
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status: Approved
 
@@ -10,9 +10,12 @@ Authority: Systems Architect Discipline
 
 Approved: 2026-09-15
 
+Amended: 2026-09-17 — Added the Enterprise machine-readable/AI Worker boundary and advanced the governed sequence to CRM Replacement Slice 2 after Slice 1 closed PASS.
+
 Scope:
 
 - `docs/architecture/acp/ACP-013-ESPOCRM-REPLACEMENT-MIGRATION-PROGRAM.md`
+- `docs/architecture/acp/ACP-013-CRM-REPLACEMENT-SLICE-2-CONTRACT.md`
 - `docs/architecture/ocp/OCP-012-MIDWESTGUARD-COMMUNICATIONS-ARCHITECTURE.md`
 - `docs/architecture/CRM-ERP-PLATFORM-EVALUATION.md`
 
@@ -46,6 +49,35 @@ The approved target foundation is:
 The target capability includes Leads, Customers, Contacts, Properties, Opportunities, CRM lineage, activities and follow-up, communication context, Job conversion, Jobs, Work Orders, operational scheduling, document/evidence relationships, governed accepted scope, materials/procurement, separately governed accounting integration or authority, warranty/callback operations, reporting, authorization, audit/history, and complete migration/export/reconstruction.
 
 This capability set does not require one monolithic interface. Midwest24 Core Command may remain the CRM-facing workspace while using Enterprise authority through bounded interfaces. Native OFBiz is preferred where it faithfully fits; governed owned extensions remain appropriate where native semantics or user experience do not.
+
+## AI Worker and machine-readable interface boundary
+
+Midwest24 Core Enterprise must expose governed business context through stable,
+versioned, machine-readable interfaces suitable for the dedicated AI Worker Node
+and other authorized integrations. AI compatibility does not mean crawling HTML,
+sharing administrator credentials, granting raw Entity Engine/JDBC access or
+copying the authoritative graph into model state.
+
+Each applicable implementation slice must define and test the smallest
+machine-readable read surface for its governed objects. The surface must preserve
+opaque canonical IDs, relationship roles and effective dates, lifecycle/history
+ordering, provenance, schema/mapping version, authorization scope, deterministic
+pagination or resumable traversal, and sufficient integrity metadata for
+independent reconstruction. Unauthorized list, detail, relationship and export
+access must fail without revealing object existence. Free-text business content
+is untrusted data and must remain distinguishable from control instructions.
+
+The AI Worker Node and its models are non-authoritative compute services. Model
+output is a proposal or derived analysis unless a later contract grants a bounded
+deterministic action with accountable approval. Persistent CRM/ERP truth remains
+in Enterprise; embeddings, vector indexes, prompts, caches and worker-local state
+are disposable derivatives. Core transaction, authorization, audit, export and
+recovery behavior must continue when the worker or model is unavailable.
+
+Business writes continue through governed Enterprise commands and validations,
+never through a crawler bypass. Actual worker deployment, model selection,
+performance tuning and autonomous action require their own bounded validation;
+they are not prerequisites for preserving an AI-friendly data and API contract.
 
 ## System-of-record transition rule
 
@@ -127,15 +159,36 @@ No product rename is required now. A separate naming decision is required only i
 
 Enterprise Operations Slice 2 may proceed unchanged. It is a bounded synthetic downstream Work Order execution slice, explicitly transfers no production CRM authority, and treats Command/EspoCRM as current rather than permanent authority. Its identity, lifecycle, isolation, authorization, empty-LAN and stop conditions remain intact.
 
-## Next CRM replacement slice
+## Current CRM replacement sequence and next slice
 
-The next CRM replacement objective is **CRM Replacement Slice 1 — Customer, Contact and Property Migration Rehearsal**.
+**CRM Replacement Slice 1 — Customer, Contact and Property Migration
+Rehearsal** is CLOSED / PASS. Its passing implementation evidence establishes the
+versioned source mapping, source-instance separation, native Party/Person/Facility
+targets, relationship and address history, replay, exception, rollback, restart
+and reconstruction controls required by phase three. It did not transfer live
+authority.
 
-This is next because CRM Slice 1 and A16 already prove the target identities and relationships, making these the lowest-ambiguity record families for a representative migration rehearsal. The slice must inventory the actual EspoCRM source model read-only, define a versioned mapping, use de-identified representative data, reconcile duplicates and exceptions, prove deterministic replay/rollback/export/reconstruction, and return a cutover-readiness finding. It must not import production data, change live routing, declare authority transfer, or make EspoCRM read-only.
+The next CRM replacement objective is **CRM Replacement Slice 2 — Lead Migration
+and Lifecycle Rehearsal**.
+
+Lead is next because phase four explicitly follows the completed identity and
+Customer/Contact/Property foundations. The approved `M24Lead` model and Capability
+001 lifecycle supply the target semantics, while the completed Slice 1 targets
+provide the relationships needed to test source history, ownership, duplicate and
+ambiguity behavior. Opportunity migration remains deferred until the Lead origin
+and lifecycle evidence is reconciled. Activities/follow-up and communications
+remain later dependencies of the stable Lead graph.
+
+Slice 2 must use de-identified source-like fixtures in a private isolated OFBiz
+copy, return a cutover-readiness finding that is not cutover approval, and prove a
+bounded versioned machine-readable Lead surface under the AI Worker boundary
+above. It must not access production EspoCRM data, change intake routing, create
+Opportunity or downstream operational records, or grant an AI consumer write
+authority.
 
 ### Exact next-chat handoff
 
-> Continue the Midwest24 CRM replacement governance in `/home/jesse/Documents/Projects/jryanrussow-site`, with implementation evidence in `/home/jesse/Documents/Projects/mwg-ofbiz` and the current EspoCRM implementation repository resolved read-only as needed. Repository authority controls over this prompt. Read ACP-013 and `ACP-013-ESPOCRM-REPLACEMENT-MIGRATION-PROGRAM.md`. Define the bounded implementation contract for **CRM Replacement Slice 1 — Customer, Contact and Property Migration Rehearsal**. Reuse the completed A16 and CRM Slice 1 identities, tests and evidence; do not restart architecture discovery. Inspect the actual EspoCRM Customer/Account, Contact, Property/address, relationship, team/role, history and source-ID model read-only. Specify a versioned source-to-Enterprise mapping, de-identified representative fixture, duplicate/conflict/exception handling, deterministic import/replay, relationship and address-history reconciliation, authorization, export/reconstruction, rollback, evidence and stop conditions. Do not migrate production data, change live EspoCRM, transfer authority, modify Apache upstream, start Lead/Opportunity migration, or implement before the contract is approved and committed. Show the exact governing diff and validation before commit or push.
+> Continue Midwest24 Core Enterprise in `/home/jesse/Documents/Projects/mwg-ofbiz` under governing repository `/home/jesse/Documents/Projects/jryanrussow-site`. Read the committed `ACP-013-CRM-REPLACEMENT-SLICE-2-CONTRACT.md`, `ACP-013-ESPOCRM-REPLACEMENT-MIGRATION-PROGRAM.md` and cited authority. Implement only **CRM Replacement Slice 2 — Lead Migration and Lifecycle Rehearsal** in a private isolated OFBiz 24.09.07 copy. Reuse completed A16, CRM V1 Slice 1, CRM Replacement Slice 1 and Enterprise Operations evidence; do not restart broad discovery. Freeze the read-only EspoCRM Lead source-schema manifest and implement the contract's versioned Lead mapping, lifecycle/history/assignment/link semantics and least-privilege machine-readable Lead surface. Prove the exact positive, denial, replay, concurrency, rollback, restart, reconstruction, tamper, human usability, machine traversal and AI-worker-unavailability requirements. Use only de-identified fixtures. Do not access production EspoCRM records/APIs, change Command or live intake, create Opportunity/activities/communications/documents/Jobs/Work Orders, grant AI write authority, modify Apache upstream, start A15/A17, or commit/push before showing the exact implementation diff and validation.
 
 ## Stop conditions
 
