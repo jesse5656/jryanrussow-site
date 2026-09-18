@@ -1,6 +1,6 @@
 # ACP-013 Addendum — EspoCRM Replacement and CRM Authority Migration Program
 
-Version: 1.2.0
+Version: 1.3.0
 
 Status: Approved
 
@@ -10,12 +10,13 @@ Authority: Systems Architect Discipline
 
 Approved: 2026-09-15
 
-Amended: 2026-09-18 — CRM Replacement Slice 2 closed PASS; advanced the governed sequence to CRM Replacement Slice 3 — Opportunity Migration and Lifecycle Rehearsal.
+Amended: 2026-09-18 — Added explicit type-aware canonical-to-native SecurityGroup mapping for CRM Replacement Slice 3; the prior canonical capability/native permission rule remains unchanged.
 
 Scope:
 
 - `docs/architecture/acp/ACP-013-ESPOCRM-REPLACEMENT-MIGRATION-PROGRAM.md`
 - `docs/architecture/acp/ACP-013-CRM-REPLACEMENT-SLICE-2-CONTRACT.md`
+- `docs/architecture/acp/ACP-013-CRM-REPLACEMENT-SLICE-3-CONTRACT.md`
 - `docs/architecture/ocp/OCP-012-MIDWESTGUARD-COMMUNICATIONS-ARCHITECTURE.md`
 - `docs/architecture/CRM-ERP-PLATFORM-EVALUATION.md`
 
@@ -79,11 +80,25 @@ never through a crawler bypass. Actual worker deployment, model selection,
 performance tuning and autonomous action require their own bounded validation;
 they are not prerequisites for preserving an AI-friendly data and API contract.
 
-## Canonical capability and native permission representation
+## Canonical security identifiers and native representations
 
-A CRM migration contract may name a canonical semantic capability whose identifier is longer than a target platform's native permission field. The canonical capability remains authoritative. A native persisted permission representation is permitted only when the contract explicitly records the canonical-to-native mapping, the native entity/field constraint, a deterministic and collision-free native identifier, enforcement behavior, and paired reconstruction/evidence requirements.
+A CRM migration contract may name a canonical capability or canonical SecurityGroup
+whose identifier is longer than its target platform's native storage field. The
+canonical identifier remains authoritative. A native persisted representation is
+permitted only when the contract explicitly records the identifier class, the
+canonical-to-native mapping, native entity/field constraint, deterministic and
+collision-free native identifier, enforcement behavior, and paired
+reconstruction/evidence requirements.
 
-The mapping must not broaden authority, create an alias with independent business meaning, or hide the canonical capability in evidence. Native permissions remain implementation enforcement records; object scope, role boundaries and service authorization remain independently required. A platform constraint discovered during rehearsal must return to governance before implementation substitutes any identifier.
+The mapping must not broaden authority, create an alias with independent business
+meaning, or hide the canonical identifier in evidence. Permission and group
+identifier classes remain separate: a mapping for
+`SecurityPermission.permissionId` does not establish a mapping for
+`SecurityGroup.groupId`, and neither rule applies to RoleType, status, entity
+or other namespaces. Native permissions and groups remain implementation
+enforcement records; object scope, role boundaries and service authorization remain
+independently required. A platform constraint discovered during rehearsal must
+return to governance before implementation substitutes any identifier.
 
 ## System-of-record transition rule
 

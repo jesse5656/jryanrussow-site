@@ -1,6 +1,6 @@
 # ACP-013 Implementation Contract — CRM Replacement Slice 3
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status: Approved
 
@@ -9,6 +9,8 @@ Type: Implementation contract addendum
 Authority: Systems Architect Discipline
 
 Approved: 2026-09-18
+
+Amended: 2026-09-18 — Added the explicit canonical Opportunity AI SecurityGroup mapping required by Apache OFBiz native group-ID storage.
 
 Scope: A private, de-identified Opportunity migration and lifecycle rehearsal from the current EspoCRM model into Midwest24 Core Enterprise. This is not a production migration, authority cutover, Lead conversion, Job creation, or live-routing change.
 
@@ -110,7 +112,7 @@ The command must enforce source-instance scope, mapping/manifest hashes, target-
 
 This slice defines `M24-ENTERPRISE-OPPORTUNITY-READ-1.0.0`, a documented, versioned, read-only JSON contract. It exposes only authorized Opportunity identity, target stage/history ordering, dated Lead/Party/Property relationship roles, four-part provenance, mapping/history-completeness state and integrity metadata.
 
-The interface must use a disabled/noninteractive `M24P_OPPORTUNITY_AI` identity, private bearer authentication, canonical capability `M24_OPPORTUNITY_AI_READ`, per-Opportunity `MACHINE_READ` scope, deterministic canonical-ID ordering, bounded pagination, signed opaque continuation, resumable traversal and no generic export. It must not scrape HTML, expose raw Entity Engine/JDBC access, use administrator credentials, grant mutation, reveal unauthorized existence, or place truth in prompts, embeddings, caches or model memory. Enterprise operation must continue when the Worker or model is unavailable.
+The interface must use a disabled/noninteractive `M24P_OPPORTUNITY_AI` identity, private bearer authentication, canonical group `M24P_OPPORTUNITY_AI_G`, canonical capability `M24_OPPORTUNITY_AI_READ`, per-Opportunity `MACHINE_READ` scope, deterministic canonical-ID ordering, bounded pagination, signed opaque continuation, resumable traversal and no generic export. It must not scrape HTML, expose raw Entity Engine/JDBC access, use administrator credentials, grant mutation, reveal unauthorized existence, or place truth in prompts, embeddings, caches or model memory. Enterprise operation must continue when the Worker or model is unavailable.
 
 ### Native permission representation
 
@@ -121,6 +123,33 @@ The interface must use a disabled/noninteractive `M24P_OPPORTUNITY_AI` identity,
 | `M24_OPPORTUNITY_AI_READ` | `SecurityPermission.permissionId` | `M24_OPP_AI_READ` | The AI Worker group receives only this native permission. Runtime authorization checks this native ID after bearer authentication, then separately checks effective `MACHINE_READ` scope. Machine, bootstrap and reconstruction evidence records both IDs together. |
 
 The native identifier is an implementation representation, never a second capability or a replacement semantic name. It is deterministic, stable across replay/restart/reconstruction, collision-free within the governed permission set, and confers no write, administrative, generic-service, raw-database or broad-export authority.
+
+### Native SecurityGroup representation
+
+`M24P_OPPORTUNITY_AI_G` is the governing canonical SecurityGroup identity.
+Apache OFBiz 24.09.07 defines `SecurityGroup.groupId` as type `id`, and the
+pinned PostgreSQL field-type definition maps `id` to `VARCHAR(20)`. The
+canonical group is 21 characters and cannot be persisted there. It maps exactly
+once to native group `M24P_OPP_AI_G` (13 characters).
+
+| Canonical group | Native entity and field | Native persisted identifier | Enforcement and evidence |
+| --- | --- | --- | --- |
+| `M24P_OPPORTUNITY_AI_G` | `SecurityGroup.groupId` | `M24P_OPP_AI_G` | Native membership and group-permission rows use this ID only. Bootstrap, machine output, parity and reconstruction evidence record the canonical/native pair with the capability/native-permission pair. |
+
+`M24P_OPP_AI_G` is deterministic, unused in the governed Midwest24 group set
+and follows the existing `M24P_LEAD_AI_G` naming pattern. It is an OFBiz
+enforcement representation only; it does not replace the canonical group in
+architecture, contracts, capability/security documentation, machine-interface
+documentation, acceptance evidence or reconstruction evidence.
+
+The authorization chain remains exactly:
+
+`bearer authentication -> canonical machine identity -> canonical group M24P_OPPORTUNITY_AI_G -> native group M24P_OPP_AI_G -> canonical capability M24_OPPORTUNITY_AI_READ -> native permission M24_OPP_AI_READ -> effective per-Opportunity MACHINE_READ -> read-only Opportunity graph`
+
+Bootstrap and reconstruction must reject missing mapping, a wrong native group,
+an ambiguous mapping or any canonical/native collision. This mapping grants no
+write, lifecycle, ownership, Lead, generic-service, native-administration,
+raw-database or broad-export authority.
 
 ## Positive acceptance contract
 
@@ -135,11 +164,12 @@ The private checkpoint passes only when it proves:
 7. restart/recreation retains mappings, history, relationships and replay behavior;
 8. normalized export independently reconstructs the graph and semantic tamper detection fails after a deliberate stage, relationship, provenance or history alteration;
 9. authorized human detail/list views render the allowed scope; and
-10. the machine interface performs ordered page traversal, continuation/resume, relationship traversal and a Worker-unavailability proof without mutation.
+10. the machine bootstrap, output and independent reconstruction retain both canonical/native permission and canonical/native group pairs, reject incorrect or ambiguous mappings, and prove that the native group has only the mapped read permission; and
+11. the machine interface performs ordered page traversal, continuation/resume, relationship traversal and a Worker-unavailability proof without mutation.
 
 ## Negative, rollback and integrity acceptance
 
-The checkpoint must deny and leave no effect for unauthenticated, disabled, wrong-role, noninteractive-browser, cross-scope, direct-route, guessed-ID, source-instance-spoofing, wrong-record-type, invalid mapping/hash, unknown-status, invalid-transition, unsupported-loss-reason, missing-target, duplicate-descriptive, ambiguous-relation, altered-payload and unscoped-AI-read attempts. Injected failure after partial graph construction must atomically roll back native and owned rows. A retained rollback archive must restore the private pre-run state and no private business fixture may reach LAN.
+The checkpoint must deny and leave no effect for unauthenticated, disabled, wrong-role, noninteractive-browser, cross-scope, direct-route, guessed-ID, source-instance-spoofing, wrong-record-type, invalid mapping/hash, missing/wrong/ambiguous/colliding native identifier mapping, unknown-status, invalid-transition, unsupported-loss-reason, missing-target, duplicate-descriptive, ambiguous-relation, altered-payload and unscoped-AI-read attempts. Injected failure after partial graph construction must atomically roll back native and owned rows. A retained rollback archive must restore the private pre-run state and no private business fixture may reach LAN.
 
 ## Targeted regressions
 
