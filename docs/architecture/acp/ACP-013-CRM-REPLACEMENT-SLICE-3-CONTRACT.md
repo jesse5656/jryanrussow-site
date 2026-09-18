@@ -110,7 +110,17 @@ The command must enforce source-instance scope, mapping/manifest hashes, target-
 
 This slice defines `M24-ENTERPRISE-OPPORTUNITY-READ-1.0.0`, a documented, versioned, read-only JSON contract. It exposes only authorized Opportunity identity, target stage/history ordering, dated Lead/Party/Property relationship roles, four-part provenance, mapping/history-completeness state and integrity metadata.
 
-The interface must use a disabled/noninteractive `M24P_OPPORTUNITY_AI` identity, private bearer authentication, `M24_OPPORTUNITY_AI_READ`, per-Opportunity `MACHINE_READ` scope, deterministic canonical-ID ordering, bounded pagination, signed opaque continuation, resumable traversal and no generic export. It must not scrape HTML, expose raw Entity Engine/JDBC access, use administrator credentials, grant mutation, reveal unauthorized existence, or place truth in prompts, embeddings, caches or model memory. Enterprise operation must continue when the Worker or model is unavailable.
+The interface must use a disabled/noninteractive `M24P_OPPORTUNITY_AI` identity, private bearer authentication, canonical capability `M24_OPPORTUNITY_AI_READ`, per-Opportunity `MACHINE_READ` scope, deterministic canonical-ID ordering, bounded pagination, signed opaque continuation, resumable traversal and no generic export. It must not scrape HTML, expose raw Entity Engine/JDBC access, use administrator credentials, grant mutation, reveal unauthorized existence, or place truth in prompts, embeddings, caches or model memory. Enterprise operation must continue when the Worker or model is unavailable.
+
+### Native permission representation
+
+`M24_OPPORTUNITY_AI_READ` is the governing semantic capability identifier. Apache OFBiz 24.09.07 persists `SecurityPermission.permissionId` as a maximum 20-character native identifier; therefore this slice maps the canonical capability exactly once to native permission `M24_OPP_AI_READ` (15 characters).
+
+| Canonical capability | Native entity and field | Native persisted identifier | Enforcement and evidence |
+| --- | --- | --- | --- |
+| `M24_OPPORTUNITY_AI_READ` | `SecurityPermission.permissionId` | `M24_OPP_AI_READ` | The AI Worker group receives only this native permission. Runtime authorization checks this native ID after bearer authentication, then separately checks effective `MACHINE_READ` scope. Machine, bootstrap and reconstruction evidence records both IDs together. |
+
+The native identifier is an implementation representation, never a second capability or a replacement semantic name. It is deterministic, stable across replay/restart/reconstruction, collision-free within the governed permission set, and confers no write, administrative, generic-service, raw-database or broad-export authority.
 
 ## Positive acceptance contract
 

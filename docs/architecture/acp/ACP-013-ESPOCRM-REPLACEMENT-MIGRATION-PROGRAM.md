@@ -79,6 +79,12 @@ never through a crawler bypass. Actual worker deployment, model selection,
 performance tuning and autonomous action require their own bounded validation;
 they are not prerequisites for preserving an AI-friendly data and API contract.
 
+## Canonical capability and native permission representation
+
+A CRM migration contract may name a canonical semantic capability whose identifier is longer than a target platform's native permission field. The canonical capability remains authoritative. A native persisted permission representation is permitted only when the contract explicitly records the canonical-to-native mapping, the native entity/field constraint, a deterministic and collision-free native identifier, enforcement behavior, and paired reconstruction/evidence requirements.
+
+The mapping must not broaden authority, create an alias with independent business meaning, or hide the canonical capability in evidence. Native permissions remain implementation enforcement records; object scope, role boundaries and service authorization remain independently required. A platform constraint discovered during rehearsal must return to governance before implementation substitutes any identifier.
+
 ## System-of-record transition rule
 
 Every migration contract must identify the source instance, exact record family/capability, current authority, target representation, mapping/version, acceptance evidence, cutover owner, rollback owner and read-only retention period. No technical replication, successful synthetic test or copied record changes authority by itself.
