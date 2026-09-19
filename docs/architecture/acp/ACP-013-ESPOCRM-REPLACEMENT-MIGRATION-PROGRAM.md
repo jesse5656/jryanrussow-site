@@ -1,6 +1,6 @@
 # ACP-013 Addendum — EspoCRM Replacement and CRM Authority Migration Program
 
-Version: 1.3.0
+Version: 1.4.0
 
 Status: Approved
 
@@ -11,6 +11,8 @@ Authority: Systems Architect Discipline
 Approved: 2026-09-15
 
 Amended: 2026-09-18 — Added explicit type-aware canonical-to-native SecurityGroup mapping for CRM Replacement Slice 3; the prior canonical capability/native permission rule remains unchanged.
+
+Amended: 2026-09-19 — Recorded CRM Replacement Slice 3 closure and governed, but did not activate, the bounded CRM Replacement Slice 4 Activity and Follow-up Foundation Rehearsal.
 
 Scope:
 
@@ -180,30 +182,56 @@ No product rename is required now. A separate naming decision is required only i
 
 Enterprise Operations Slice 2 may proceed unchanged. It is a bounded synthetic downstream Work Order execution slice, explicitly transfers no production CRM authority, and treats Command/EspoCRM as current rather than permanent authority. Its identity, lifecycle, isolation, authorization, empty-LAN and stop conditions remain intact.
 
-## Current CRM replacement sequence and next slice
+## Current CRM replacement sequence and implementation activation
 
-CRM Replacement Slices 1 and 2 are CLOSED / PASS. Slice 1 proved
-source-instance-qualified Customer/Contact/Property migration rehearsal. Slice 2
-proved `M24Lead` lifecycle/history, relationships, deterministic migration,
-reconstruction and bounded machine-readable Lead access. Neither transferred live
-authority.
+CRM Replacement Slices 1, 2 and 3 are **CLOSED / PASS** private rehearsals.
+Slice 1 proved source-instance-qualified Customer/Contact/Property migration.
+Slice 2 proved `M24Lead` lifecycle/history, relationships, deterministic
+migration, reconstruction and bounded machine-readable Lead access. Slice 3
+proved native `SalesOpportunity` migration, current-state Espo Opportunity parity
+(45 items; zero unclassified, stale or falsely-complete items), lifecycle/history,
+dated Lead/Party/Property relationships, amount and estimated-close-date
+preservation, authorization, replay/concurrency/rollback/restart,
+reconstruction/tamper controls, bounded GET-only machine access and rendered
+human parity. Slice 3 implementation is commit
+`1a45ffe18cbad47d20e8e6c8e3add092f5c31280` (`feat: add CRM Replacement Slice 3`).
 
-The next CRM replacement objective is **CRM Replacement Slice 3 — Opportunity
-Migration and Lifecycle Rehearsal** under
-`ACP-013-CRM-REPLACEMENT-SLICE-3-CONTRACT.md`.
+All three remain non-cutover rehearsals. EspoCRM/Core Command remains
+operational authority; no production EspoCRM API was accessed, no production
+record migrated, no authority transferred and no cutover occurred. LAN deployment
+was not authorized or required. Slice 3 did not authorize production conversion,
+Job or Work Order creation, communications, documents, AI authority or model
+infrastructure.
 
-Opportunity is next because phase five follows reconciled Lead origin/history and
-the completed Party/Person/Facility foundations. It must use only de-identified
-fixtures in a private isolated OFBiz copy, return a non-cutover readiness finding,
-and preserve native `SalesOpportunity` identity with governed dated
-Lead/Party/Property relationships. Activities/follow-up and communications remain
-later dependencies of the stable Opportunity graph. It must not access production
-EspoCRM data, change intake routing, create conversion/Job/Work Order records, or
-grant an AI consumer write authority.
+The next bounded CRM capability is **CRM Replacement Slice 4 — Activity and
+Follow-up Foundation Rehearsal**, governed by
+`ACP-013-CRM-REPLACEMENT-SLICE-4-CONTRACT.md`. It follows the completed stable
+Lead and Opportunity graph and is intentionally limited to private,
+de-identified Activity and Follow-up parity, migration and authorization
+rehearsal. Communications transport/session integration, Document Services,
+BR-038 conversion, accepted scope, Jobs, Work Orders, production integration and
+cutover remain separate capabilities.
 
-### Exact next-chat handoff
+The current Operating Plan's active objective is the Institutional Memory
+Diagnostic Pilot. Accordingly, Slice 4 is governed but **not activated for
+implementation** until the Operating Plan or a later explicit governing decision
+selects it. This records program state; it does not reprioritize the Operating
+Plan or authorize application changes.
 
-> Continue Midwest24 Core Enterprise in `/home/jesse/Documents/Projects/mwg-ofbiz` under governing repository `/home/jesse/Documents/Projects/jryanrussow-site`. Read the committed `ACP-013-CRM-REPLACEMENT-SLICE-3-CONTRACT.md`, `ACP-013-ESPOCRM-REPLACEMENT-MIGRATION-PROGRAM.md` and cited authority. Implement only **CRM Replacement Slice 3 — Opportunity Migration and Lifecycle Rehearsal** in a private isolated OFBiz 24.09.07 copy. Reuse completed A16, CRM Replacement Slices 1 and 2, and Enterprise Operations evidence; do not restart broad discovery. Freeze the read-only EspoCRM Opportunity manifest and implement mapping `CRM-REPLACEMENT-S3-OPPORTUNITY-MAP-1.0.0`, native `SalesOpportunity` lifecycle/history/dated links and machine contract `M24-ENTERPRISE-OPPORTUNITY-READ-1.0.0`. Prove the exact positive, denial, replay, concurrency, rollback, restart, reconstruction, tamper, human usability, machine traversal and AI-worker-unavailability requirements. Use only de-identified fixtures. Do not access production EspoCRM records/APIs, change Command or live intake, perform a cutover, create conversion/Jobs/Work Orders/activities/communications/documents, grant AI write authority, modify Apache upstream, start A15/A17, or commit/push before showing the exact implementation diff and validation.
+### Exact future implementation handoff
+
+> When the Operating Plan explicitly activates CRM Replacement Slice 4, continue
+> Midwest24 Core Enterprise in `/home/jesse/Documents/Projects/mwg-ofbiz` under
+> governing repository `/home/jesse/Documents/Projects/jryanrussow-site`. Read
+> the committed `ACP-013-CRM-REPLACEMENT-SLICE-4-CONTRACT.md`, this migration
+> program, OCP-012 and cited authority. Implement only the private,
+> de-identified Activity and Follow-up Foundation Rehearsal. First freeze the
+> current Espo Activity/Task/Meeting configuration and complete the required
+> parity and native-model-admission gates. Do not access production data or APIs,
+> alter Command/live intake, deploy communications connectors, create conversion,
+> Job/Work Order or document-byte records, grant AI write authority, modify Apache
+> upstream, touch LAN, start A15/A17, or commit/push before presenting the exact
+> bounded diff and validation.
 
 ## Stop conditions
 
