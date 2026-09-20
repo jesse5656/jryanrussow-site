@@ -1,6 +1,6 @@
 # ACP-013 Addendum — EspoCRM Replacement and CRM Authority Migration Program
 
-Version: 1.4.0
+Version: 1.6.0
 
 Status: Approved
 
@@ -14,11 +14,21 @@ Amended: 2026-09-18 — Added explicit type-aware canonical-to-native SecurityGr
 
 Amended: 2026-09-19 — Recorded CRM Replacement Slice 3 closure and governed, but did not activate, the bounded CRM Replacement Slice 4 Activity and Follow-up Foundation Rehearsal.
 
+Amended: 2026-09-19 — The Business Recovery / Cash Engine Operating Plan activates CRM Replacement Slice 4 as its bounded CRM-completion workstream and records the EspoCRM/Core Command abandonment readiness gate.
+
+Amended: 2026-09-19 — Preserved the source Appointment Confirmed and Appt Resulted workflow as governed Slice 4 Opportunity checkpoints under the existing open migration category; no production lifecycle or cutover authority changes.
+
+Amended: 2026-09-20 — Recorded CRM Replacement Slice 4 closure and selected the
+read-only Net2phone Capability & Integration Assessment as the next program
+dependency. A Communications Context Rehearsal contract remains required before
+communications implementation.
+
 Scope:
 
 - `docs/architecture/acp/ACP-013-ESPOCRM-REPLACEMENT-MIGRATION-PROGRAM.md`
 - `docs/architecture/acp/ACP-013-CRM-REPLACEMENT-SLICE-2-CONTRACT.md`
 - `docs/architecture/acp/ACP-013-CRM-REPLACEMENT-SLICE-3-CONTRACT.md`
+- `docs/architecture/acp/ACP-013-CRM-REPLACEMENT-SLICE-4-CONTRACT.md`
 - `docs/architecture/ocp/OCP-012-MIDWESTGUARD-COMMUNICATIONS-ARCHITECTURE.md`
 - `docs/architecture/CRM-ERP-PLATFORM-EVALUATION.md`
 
@@ -153,7 +163,7 @@ Unresolved exceptions remain visible and block the affected record/capability. T
 3. **Customer / Contact / Property rehearsal:** build the versioned mapping and perform a de-identified representative migration rehearsal into the proven Enterprise identities. Reconcile duplicates, relationship cardinality, address history, permissions and export.
 4. **Lead migration slice:** reconcile live Lead statuses, reasons, assignment, history, source, consent and BR-038 conversion semantics with `M24Lead`.
 5. **Opportunity migration slice:** reconcile stages, roles, Properties, activities, estimates/contracts, conversion history and native `SalesOpportunity` relationships.
-6. **Activities and follow-up:** migrate open and historical activities, ownership, due/completed state, reminders and queues before shifting staff work.
+6. **Activities and follow-up:** migrate open and historical activities, ownership, due/completed state, reminders and queues before shifting staff work. Preserve the current Appointment Confirmed and Appt Resulted workflow as immutable Opportunity checkpoints under the existing open migration category, guarded respectively by a Planned and Held canonical Opportunity-parented Appointment Meeting; do not reinterpret either as Won or Lost.
 7. **Communications integration:** attach validated net2phone, email, website/chat and other channel events to Enterprise CRM context through bounded replay-safe adapters. Cut over channel by channel.
 8. **Job conversion and downstream continuity:** use Enterprise Operations Slice 1 evidence for signed-contract conversion and Slice 2 for downstream execution; reconcile production lifecycle separately before live authority transfer.
 9. **Documents and evidence references:** migrate metadata, relationships, versions/hashes and access without duplicate canonical bytes; preserve Espo file recovery until the governed document target passes.
@@ -182,9 +192,32 @@ No product rename is required now. A separate naming decision is required only i
 
 Enterprise Operations Slice 2 may proceed unchanged. It is a bounded synthetic downstream Work Order execution slice, explicitly transfers no production CRM authority, and treats Command/EspoCRM as current rather than permanent authority. Its identity, lifecycle, isolation, authorization, empty-LAN and stop conditions remain intact.
 
+## EspoCRM/Core Command abandonment readiness gate
+
+EspoCRM/Core Command may be abandoned only after a separate final retirement
+decision confirms that every required live CRM capability has either completed
+its governed Enterprise cutover or has an explicit, retained exclusion decision.
+The minimum evidence is:
+
+1. parity and migration reconciliation for Customer, Contact, Property, Lead,
+   Opportunity, activities/follow-up, communication context, conversion,
+   documents/evidence relationships and applicable historical CRM data;
+2. human-operating usability, authorization, audit/history, reporting and
+   required integration acceptance for each transferred capability;
+3. deterministic migration, backup/restore, independent reconstruction,
+   exception handling, production cutover and rollback rehearsal evidence;
+4. an object-by-object authority matrix, Espo write-freeze/read-only plan,
+   retention period and operational ownership for the transition; and
+5. final count, relationship, history, open-work and financial/cash-visibility
+   reconciliation, followed by explicit human approval of decommissioning.
+
+This is a future program gate. Passing a private slice, including Slice 4, does
+not authorize production migration, authority transfer, EspoCRM write freeze,
+read-only conversion or retirement.
+
 ## Current CRM replacement sequence and implementation activation
 
-CRM Replacement Slices 1, 2 and 3 are **CLOSED / PASS** private rehearsals.
+CRM Replacement Slices 1, 2, 3 and 4 are **CLOSED / PASS** private rehearsals.
 Slice 1 proved source-instance-qualified Customer/Contact/Property migration.
 Slice 2 proved `M24Lead` lifecycle/history, relationships, deterministic
 migration, reconstruction and bounded machine-readable Lead access. Slice 3
@@ -195,43 +228,38 @@ preservation, authorization, replay/concurrency/rollback/restart,
 reconstruction/tamper controls, bounded GET-only machine access and rendered
 human parity. Slice 3 implementation is commit
 `1a45ffe18cbad47d20e8e6c8e3add092f5c31280` (`feat: add CRM Replacement Slice 3`).
+Slice 4, **Activity and Follow-up Foundation Rehearsal**, is closed/pass at
+implementation commit `0392835069891e034692fe0e8c9c6d749794b7dd`. It proved the
+private, de-identified Activity, Task, Meeting and follow-up capability with a
+final parity result under its contract. It did not authorize production
+communications capability, production migration, authority transfer or cutover.
 
-All three remain non-cutover rehearsals. EspoCRM/Core Command remains
+All four remain non-cutover rehearsals. EspoCRM/Core Command remains
 operational authority; no production EspoCRM API was accessed, no production
 record migrated, no authority transferred and no cutover occurred. LAN deployment
 was not authorized or required. Slice 3 did not authorize production conversion,
 Job or Work Order creation, communications, documents, AI authority or model
 infrastructure.
 
-The next bounded CRM capability is **CRM Replacement Slice 4 — Activity and
-Follow-up Foundation Rehearsal**, governed by
-`ACP-013-CRM-REPLACEMENT-SLICE-4-CONTRACT.md`. It follows the completed stable
-Lead and Opportunity graph and is intentionally limited to private,
-de-identified Activity and Follow-up parity, migration and authorization
-rehearsal. Communications transport/session integration, Document Services,
-BR-038 conversion, accepted scope, Jobs, Work Orders, production integration and
-cutover remain separate capabilities.
+The next dependency is the **Net2phone Capability & Integration Assessment**
+authorized by OCP-012. It is read-only discovery of the current MIDWESTGuard
+account and its entitlement, API/event, number/routing and retention evidence;
+it does not authorize a connector, webhook subscription, routing change, live
+integration, production migration or channel cutover. Communications,
+Document Services, BR-038 conversion, accepted scope, Jobs, Work Orders,
+production integration and retirement remain separate capabilities.
 
-The current Operating Plan's active objective is the Institutional Memory
-Diagnostic Pilot. Accordingly, Slice 4 is governed but **not activated for
-implementation** until the Operating Plan or a later explicit governing decision
-selects it. This records program state; it does not reprioritize the Operating
-Plan or authorize application changes.
+### Exact next governance handoff
 
-### Exact future implementation handoff
-
-> When the Operating Plan explicitly activates CRM Replacement Slice 4, continue
-> Midwest24 Core Enterprise in `/home/jesse/Documents/Projects/mwg-ofbiz` under
-> governing repository `/home/jesse/Documents/Projects/jryanrussow-site`. Read
-> the committed `ACP-013-CRM-REPLACEMENT-SLICE-4-CONTRACT.md`, this migration
-> program, OCP-012 and cited authority. Implement only the private,
-> de-identified Activity and Follow-up Foundation Rehearsal. First freeze the
-> current Espo Activity/Task/Meeting configuration and complete the required
-> parity and native-model-admission gates. Do not access production data or APIs,
-> alter Command/live intake, deploy communications connectors, create conversion,
-> Job/Work Order or document-byte records, grant AI write authority, modify Apache
-> upstream, touch LAN, start A15/A17, or commit/push before presenting the exact
-> bounded diff and validation.
+> In the governing repository, perform only the OCP-012 Net2phone Capability &
+> Integration Assessment. Use authorized read-only account access, preserve
+> current routing and cash-engine communications behavior, and record only
+> de-identified or access-controlled non-secret evidence. Distinguish provider
+> documentation from actual MIDWESTGuard account entitlement. Do not create an
+> API client, connector, webhook subscription, route change, test call, SMS,
+> voicemail action, production record or application code. Return the evidence
+> to governance to select one first channel and create a dedicated
+> Communications Context Rehearsal contract before implementation.
 
 ## Stop conditions
 

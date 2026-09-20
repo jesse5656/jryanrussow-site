@@ -9,7 +9,7 @@ Operating Plan
 Active
 
 **Version**
-1.1.2
+1.2.0
 
 **Authority**
 Systems Architect Discipline
@@ -68,55 +68,97 @@ These rules apply to every engineering objective unless explicitly overridden.
 
 <div class="ri-objective" markdown>
 
-**Type**
-Commercial Pilot Development
+Type:
+Business Recovery / Operating Platform Execution
 
-**Objective**
-Institutional Memory Diagnostic Pilot Prospect Qualification
+Name:
+MIDWESTGuard Business Recovery / Cash Engine
 
-**Status**
+Objective:
+MIDWESTGuard Business Recovery / Cash Engine
+
+Scope:
+Joplin metro cash-engine operation and the bounded CRM-completion workstream
+
+Status:
 In Progress
 
 </div>
 
-Identify and qualify a bounded set of organizations for the first approximately
-$10,000 Institutional Memory Diagnostic pilot using the approved Version 1.1
-prospect-identification method and the existing diagnostic authorization
-package.
+Restore MIDWESTGuard's cash engine in the Joplin metro while completing the
+bounded CRM replacement capabilities required to retire EspoCRM/Core Command
+safely. The cash-engine operating path is:
 
-This objective does not authorize organizational diagnosis, named-person
-contact enrichment, outreach automation, broad production prospecting,
-numerical scoring, or additional methodology development without a demonstrated
-deficiency.
+**lead generation → inbound qualification → outbound follow-up → inspection
+scheduling → estimate follow-up → contract conversion → production handoff →
+collections/cash visibility.**
+
+This objective has two coordinated workstreams:
+
+1. **Cash-engine operation:** use the already governed current systems to
+   restore, measure and operate the Joplin metro lead-to-cash path. This does
+   not authorize an ungoverned replacement application or an immediate change
+   of live system authority.
+2. **CRM completion prerequisite:** advance Midwest24 Core Enterprise through
+   governed private slices and separately approved capability cutovers until it
+   can become the durable CRM and ERP authority. EspoCRM/Core Command remains
+   the current live authority for every capability that has not passed its own
+   cutover gate.
+
+CRM completion is a prerequisite parallel workstream within business recovery;
+it is not a competing objective and does not create permanent dual authority.
 
 Success Criteria:
 
-- define the bounded universe, sector or geography, lookback, timebox, and
-  exclusions before research;
-- identify candidates using public evidence;
-- evaluate the noncompensatory Problem → Awareness → Corrective Action →
-  Recurrence or Persistence pattern;
-- apply the Current Meaningful Operating Boundary Gate;
-- perform independent contradiction searches;
-- preserve provenance and distinguish fact, inference, hypothesis, and unknown;
-- produce governed candidate dossiers and a comparative ranked list;
-- obtain human review before selecting or contacting a pilot prospect.
+- the Joplin metro cash-engine path has accountable, measurable handoffs from
+  lead generation through collections/cash visibility;
+- current live authority remains explicit for each operating capability until a
+  separately governed cutover passes;
+- CRM Replacement Slice 4 remains closed/pass and the next Net2phone Capability
+  & Integration Assessment stays within its read-only OCP-012 boundary;
+- every CRM replacement slice preserves canonical Enterprise identity,
+  provenance, replay safety, reconstruction and least-privilege access;
+- EspoCRM/Core Command is not retired, weakened or treated as permanently
+  authoritative before the migration-program exit gate passes; and
+- the Institutional Memory Diagnostic pilot remains preserved as a deferred,
+  resumable commercial objective.
 
-### Definition of Done
+### Cash-engine execution boundary
 
-- [x] Bounded prospect universe approved
-- [x] Candidate discovery completed
-- [x] Advanced-candidate dossiers completed
-- [x] Contradiction searches completed
-- [x] Comparative ranked list completed
-- [x] Human qualification review completed
-- [ ] One pilot prospect selected or the evidence-based no-selection result recorded
-- [ ] Next commercial action established
+The immediate operating scope is the Joplin metro. Existing governed tools,
+human processes and current operational systems remain in use while their
+replacement gates are incomplete. The priority is a reliable, measurable path
+from lead generation through collections and cash visibility, with each handoff
+owned and evidenced. No custom application is authorized solely to restate this
+workflow.
+
+### CRM completion and EspoCRM/Core Command exit gate
+
+The future abandonment gate is defined in
+[ACP-013 EspoCRM Replacement Migration Program](../architecture/acp/ACP-013-ESPOCRM-REPLACEMENT-MIGRATION-PROGRAM.md).
+It requires governed parity, migration/reconciliation, authorization and
+reporting, human usability, required integrations, communications and document
+relationships, Lead/Opportunity conversion, historical-data treatment,
+cutover/rollback rehearsal, authority transfer, read-only retention and a
+separate decommission approval. The gate is deliberately not met by this
+Operating Plan update or by any single private rehearsal.
+
+### Definition of Done:
+
+- [ ] Joplin metro cash-engine handoff owners, measures and current-system
+  boundaries recorded
+- [ ] Lead generation through collections/cash-visibility operation restored and
+  evidenced
+- [x] CRM Replacement Slice 4 private acceptance closed/pass
+- [ ] Net2phone Capability & Integration Assessment completed and returned to
+  governance for first-channel selection
+- [ ] EspoCRM/Core Command abandonment gate status recorded; no unapproved
+  authority transfer
 - [ ] Repository governance validation passed
 - [ ] Scoped diff reviewed
 - [ ] Commit completed after separate approval
 
-### Prospect Qualification Execution Record
+### Deferred Institutional Memory Diagnostic Pilot
 
 **Human review completed:** 2026-09-06
 
@@ -196,9 +238,8 @@ This bounded governance transaction:
 - makes no website runtime, DNS, Worker-route, n8n, EspoCRM, Odoo, or production
   infrastructure change.
 
-The active Institutional Memory Diagnostic objective and its current
-qualification/contact work remain unchanged by this bounded architecture
-transaction.
+This historical architecture transaction does not change the current Business
+Recovery / Cash Engine objective or the deferred Institutional Memory records.
 
 ### Pre-Implementation Audit Finding
 
@@ -210,13 +251,23 @@ objective unless a specific operational deficiency is demonstrated.
 
 ---
 
-## Priority Queue
+## Priority Queue:
 
-1. Identify and qualify candidates for the first bounded IMD pilot
-2. Select one qualified pilot prospect and complete its authorization package
-3. Define commercial terms and begin the controlled pilot
-4. Resume methodology development or historical research only for a defined
-   diagnostic, falsification, operational, or commercial requirement
+1. Restore and operate the MIDWESTGuard Joplin metro cash engine from lead
+   generation through collections/cash visibility using current governed tools
+   and accountable handoffs
+2. Complete the governed CRM replacement sequence needed for safe
+   capability-by-capability authority transfer; perform only the read-only
+   Net2phone Capability & Integration Assessment before governing a first
+   Communications Context Rehearsal
+3. Assess the EspoCRM/Core Command abandonment gate only after all required
+   capability parity, reconciliation, usability, integration, rollback and
+   retention criteria are evidenced
+4. Resume the Institutional Memory Diagnostic pilot from the preserved Protein
+   Solutions qualification package when business recovery no longer requires
+   this priority
+5. Resume methodology development or historical research only for a defined
+   diagnostic, falsification, operational or commercial requirement
 
 ---
 
@@ -278,10 +329,11 @@ Current state:
 
 The next priority is not automatic expansion into another historical case.
 
-### Highest-Priority Objective
+### Deferred Commercial Objective
 
-**Develop the Institutional Memory Diagnostic specification and pilot
-architecture.**
+**Resume the Institutional Memory Diagnostic pilot from its preserved
+qualification and authorization records when Business Recovery no longer
+requires priority.**
 
 Immediate commercial test:
 

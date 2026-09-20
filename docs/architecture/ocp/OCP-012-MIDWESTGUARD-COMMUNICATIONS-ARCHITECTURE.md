@@ -1,6 +1,6 @@
 # OCP-012 — MIDWESTGuard Communications Architecture
 
-Version: 1.1.0
+Version: 1.2.0
 
 Status: Approved
 
@@ -10,7 +10,15 @@ Authority: Systems Architect Discipline
 
 Approved: 2026-09-15
 
-Scope: Communications ownership and migration-compatible CRM context. No connector deployment, provider migration, live CRM cutover or production-data migration.
+Amended: 2026-09-20 — Authorized only the bounded, read-only Net2phone
+Capability & Integration Assessment after CRM Replacement Slice 4 closure. No
+communications connector, routing change, production migration or capability
+cutover is authorized.
+
+Scope: Communications ownership, migration-compatible CRM context and a bounded
+read-only Net2phone capability assessment. No connector deployment, provider
+migration, live CRM cutover, production-data migration or communications
+behavior change.
 
 ## Purpose
 
@@ -230,6 +238,58 @@ The assessment must distinguish:
 - capabilities enabled for the MIDWESTGuard account;
 - capabilities merely possible in theory;
 - capabilities requiring additional licensing or activation.
+
+### Assessment access and evidence boundary
+
+The assessment is research and discovery only. Where the account owner has
+authorized access, it may inspect account-level capabilities and subscribed
+products, API and authentication models, webhooks/events, number inventory,
+routing configuration, users/extensions, voice/SMS/MMS/voicemail/recording
+metadata capability, directory/contact interfaces, retention/export limits,
+rate limits, sandbox/test availability and developer-application registration.
+
+It may create only a de-identified or appropriately access-controlled inventory
+of MIDWESTGuard numbers, their purpose, routing destination, associated
+users/extensions, channel capabilities, voicemail behavior, available
+recording/event metadata and account ownership. Evidence must distinguish:
+
+1. capability documented by Net2phone generally;
+2. capability enabled for the actual MIDWESTGuard account;
+3. capability requiring another plan, product or entitlement;
+4. capability requiring provider-side enablement; and
+5. capability unavailable or not verified.
+
+The assessment may inspect available API resources, authentication mechanisms,
+webhook/event classes, call and message lifecycle fields, event identifiers,
+timestamps, caller/callee fields, dispositions, delivery/retry behavior,
+replay/idempotency characteristics, retention windows and quotas. It must
+record uncertainty explicitly. Repository evidence must not contain credentials,
+API tokens, bearer values, private call content, unrestricted recordings or
+other provider secrets.
+
+The assessment must not change routing, ring groups, IVR, forwarding, business
+hours, failover, number assignments or ports, caller ID, voicemail destinations,
+SMS routing, users/extensions or any other live production communications
+behavior. A discovery step may not alter the current cash-engine communications
+path. Any reversible test action requires a later explicit governing decision.
+
+### Required future communications contract
+
+The assessment does not authorize implementation. Its completion must return to
+governance for a dedicated **Communications Context Rehearsal** contract before
+any adapter, webhook subscription, API client, event ingestion, routing change
+or production action begins. That contract must select one first channel based
+on cash-engine value, account entitlement, reliability, event semantics,
+integration complexity, replay safety, authorization, compliance and operational
+importance; technical availability alone does not choose a channel.
+
+The later contract must freeze one channel and its included event classes,
+canonical event identity, channel/direction, external participant and internal
+user/number identity, timestamps, state/status, CRM relationship matching,
+Lead/Opportunity/Customer/Contact/Property context where applicable,
+consent/compliance metadata, provider provenance, retention, replay/idempotency,
+outage/recovery and authorization. It must separately define its private or
+production posture, acceptance evidence, rollback and cutover boundary.
 
 ## Implementation Sequence
 

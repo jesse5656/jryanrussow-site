@@ -1,16 +1,24 @@
 # ACP-013 Implementation Contract — CRM Replacement Slice 4
 
-Version: 1.0.0
+Version: 1.2.0
 
 Status: Approved
 
-Implementation activation: Deferred by Operating Plan
+Implementation status: Closed / Pass
 
 Type: Implementation contract addendum
 
 Authority: Systems Architect Discipline
 
 Approved: 2026-09-19
+
+Amended: 2026-09-19 — Activated as the bounded private CRM-completion workstream under the MIDWESTGuard Business Recovery / Cash Engine objective; scope and non-cutover boundaries are unchanged.
+
+Amended: 2026-09-19 — Governed the source Appointment Confirmed and Appt Resulted progression as immutable Opportunity checkpoints under `M24_OPP_OPEN`, preserving the source Appointment prerequisite without inventing a Won/Lost transition.
+
+Closed: 2026-09-20 — Private, de-identified rehearsal passed at implementation
+commit `0392835069891e034692fe0e8c9c6d749794b7dd`. This closure does not
+authorize production communications, migration, authority transfer or cutover.
 
 Scope: A private, de-identified Activity and Follow-up foundation rehearsal from
 current EspoCRM configuration into Midwest24 Core Enterprise. This is not a
@@ -21,10 +29,10 @@ live-routing change.
 ## Decision
 
 The next bounded CRM replacement capability is **CRM Replacement Slice 4 —
-Activity and Follow-up Foundation Rehearsal**. It may begin only when the
-Operating Plan explicitly activates this contract. Until then this contract
-records scope, dependencies and acceptance boundaries; it does not authorize
-application implementation.
+Activity and Follow-up Foundation Rehearsal**. The approved private rehearsal is
+closed/pass. The prior Operating Plan activation is satisfied and does not
+authorize new application work, production migration, authority transfer or
+cutover.
 
 The rehearsal must freeze current Espo Activity, Task and Meeting configuration
 before target implementation. It must demonstrate a representative,
@@ -124,6 +132,23 @@ implementation evidence; it is read-only, bounded, deterministic and optional
 to core Enterprise operation. AI receives no mutation, administration, raw
 Entity Engine, database, browser-scraping or broad-export authority.
 
+## Appointment progression checkpoint
+
+The preserved source hook is a lifecycle-transition prerequisite: `Appointment Confirmed` requires a canonical Opportunity-parented Appointment Meeting in `Planned`; `Appt Resulted` requires one in `Held`. It is neither a prerequisite for `M24_OPP_OPEN -> M24_OPP_WON` nor for `M24_OPP_OPEN -> M24_OPP_LOST`.
+
+Slice 4 shall represent these meanings through one owned, immutable, source-instance-qualified Opportunity checkpoint history under the existing native `SalesOpportunity` identity:
+
+| Source meaning | Canonical checkpoint | Required qualifying Activity |
+| --- | --- | --- |
+| Appointment Confirmed | `M24_OPP_APPOINTMENT_CONFIRMED` | same canonical Opportunity; `WorkEffort` Meeting; governed subtype `Appointment`; history-consistent current Meeting state `Planned` |
+| Appt Resulted | `M24_OPP_APPOINTMENT_RESULTED` | same canonical Opportunity; `WorkEffort` Meeting; governed subtype `Appointment`; history-consistent current Meeting state `Held` |
+
+The existing bounded `m24CommandOpportunityLifecycle` command is the sole server-side command boundary. It may add only a finite `RECORD_APPOINTMENT_CHECKPOINT` action with the two canonical checkpoint identifiers. It must first retain existing Opportunity command authorization and effective `TRANSITION` scope, then evaluate the qualifying Activity predicate against canonical `WorkEffort`, `M24ActivityMetadata`, `M24ActivityHistory`, and active typed `M24ActivityCrmLink`. Zero qualifying records deny with `OPPORTUNITY_APPOINTMENT_PREREQUISITE_DENIED`; one or more qualify deterministically by existence. Ordinary Meetings, Tasks, another Opportunity's Appointment, a non-Opportunity link, `Not Held`, malformed links, and history/projection inconsistency do not qualify.
+
+A successful checkpoint appends one immutable, attributable owned Opportunity-checkpoint event linked to the canonical Opportunity and qualifying Activity, preserves the Activity unchanged, and uses the existing operation receipt/payload idempotency model. A denial writes no Opportunity projection, history, Activity, relationship, or successful receipt. Checkpoint history, source status, qualifying Activity identity, mapping version and payload linkage are required reconstruction evidence. A replay returns the original checkpoint effect without a duplicate.
+
+The Activity and Opportunity human views must present the checkpoint and its qualifying Appointment context where authorized. UI presentation is advisory; command enforcement is authoritative. Slice 3 native stages and existing Won/Lost command semantics remain unchanged.
+
 ## Explicit exclusions and deferred scope
 
 This slice must not implement or activate communications channels, net2phone,
@@ -183,13 +208,14 @@ descriptive match, production access/LAN is needed, Apache upstream modification
 is required, any replay/rollback/authorization/reconstruction/tamper control
 fails, or implementation would alter current authority.
 
-## Operating Plan activation gate
+## Operating Plan closure state
 
-The current Operating Plan objective is the Institutional Memory Diagnostic
-Pilot. This contract is deliberately **not active implementation authorization**.
-A later explicit Operating Plan update or governing decision must name this
-contract before any application code, private runtime, fixture, build or
-validation work begins.
+The Business Recovery / Cash Engine Operating Plan activated this contract for
+its bounded private rehearsal. That rehearsal is now closed/pass. Further work
+must follow the CRM Replacement Program's next dependency: the read-only
+Net2phone Capability & Integration Assessment, then a separately governed
+Communications Context Rehearsal contract before any communications
+implementation.
 
 ## Non-cutover finding
 
