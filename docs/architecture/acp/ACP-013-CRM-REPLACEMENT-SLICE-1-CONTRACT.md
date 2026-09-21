@@ -1,6 +1,6 @@
 # ACP-013 Implementation Contract — CRM Replacement Slice 1
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status: Approved
 
@@ -9,6 +9,10 @@ Type: Implementation contract addendum
 Authority: Systems Architect Discipline
 
 Approved: 2026-09-15
+
+Amended: 2026-09-20 — Reconciled the private bootstrap administrator predicate
+with native Apache OFBiz 24.09.07 `UserLogin` active-state semantics. This does
+not alter administrator authority or private-runtime data.
 
 Scope: A private, de-identified Customer, Contact and Property migration rehearsal from the current EspoCRM model into Midwest24 Core Enterprise. This is not a production migration, record-family cutover, or authority transfer.
 
@@ -116,6 +120,24 @@ The current EspoCRM repository and runtime are read-only sources of schema/behav
 | Administrator/bootstrap | Configuration and recovery only | Substitute for non-admin rehearsal acceptance. |
 
 The owned service must perform object/action authorization before invoking native operations and preserve initiating human, effective executor, mapping version, source identity, canonical payload hash, decision/reason and outcome. Hiding a link is not access control.
+
+### Native `UserLogin.enabled` compatibility ruling
+
+Pinned Apache OFBiz 24.09.07 treats an empty/null `UserLogin.enabled` value as
+eligible for normal authentication, subject to an empty `disabledBy` value.
+Its `LoginWorker.isUserLoginActive` predicate is equivalently
+`enabled != 'N' && disabledBy is empty`. Therefore the private
+`m24CrmMigrationBootstrap` administrator preflight may replace only its strict
+`admin.enabled == 'Y'` test with the native-compatible active predicate:
+existing `admin` identity, `enabled != 'N'`, and empty `disabledBy`.
+
+This is a predicate correction, not a credential, role, group, permission,
+party, `UserLogin` or runtime-state mutation. It must continue to deny an
+explicitly disabled `enabled='N'` account and an account marked `disabledBy`.
+The existing coordinator and noninteractive-executor predicates remain
+unchanged. A temporary lockout must be handled by native authentication/recovery
+semantics; this amendment does not authorize clearing lockout fields or setting
+`admin.enabled='Y'`.
 
 ## Positive acceptance contract
 

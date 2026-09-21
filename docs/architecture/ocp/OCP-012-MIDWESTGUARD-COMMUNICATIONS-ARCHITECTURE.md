@@ -1,6 +1,6 @@
 # OCP-012 — MIDWESTGuard Communications Architecture
 
-Version: 1.2.0
+Version: 1.4.0
 
 Status: Approved
 
@@ -14,6 +14,14 @@ Amended: 2026-09-20 — Authorized only the bounded, read-only Net2phone
 Capability & Integration Assessment after CRM Replacement Slice 4 closure. No
 communications connector, routing change, production migration or capability
 cutover is authorized.
+
+Amended: 2026-09-20 — Recorded completion of the Net2phone assessment and
+governed the first private Communications Context Rehearsal for voice-call
+metadata only. No live provider configuration or channel cutover is authorized.
+
+Amended: 2026-09-21 — Closed the private voice-call metadata rehearsal PASS.
+The assessment unknowns remain unknown and no live provider capability is
+authorized by this closure.
 
 Scope: Communications ownership, migration-compatible CRM context and a bounded
 read-only Net2phone capability assessment. No connector deployment, provider
@@ -290,6 +298,59 @@ Lead/Opportunity/Customer/Contact/Property context where applicable,
 consent/compliance metadata, provider provenance, retention, replay/idempotency,
 outage/recovery and authorization. It must separately define its private or
 production posture, acceptance evidence, rollback and cutover boundary.
+
+### Assessment closure — 2026-09-20
+
+The Net2phone Capability & Integration Assessment is **COMPLETE**. Its
+controlled deliverables are `NET2PHONE-CAPABILITY-ASSESSMENT.md`
+(`sha256:4ffd2e8efc0f9452acddf000c78fc71eed2673f49d98bc892fe1161dd90c47a9`)
+and `MIDWESTGuard-Net2phone-Capability-Assessment-2026-09-20.zip`
+(`sha256:d7c67b84be25f8217590bb18f2653350e2c89d92aa9c1a9968f44e060d858388`).
+The archive's masked inventory, uncertainty register, source inventory and
+verified manifest are evidence inputs, not repository authorization to expose
+provider data or credentials.
+
+The assessment verified ten numbers (one direct-user, three Main Ring Group and
+six unassigned), one user/extension and one active 24/7 ring group. Voice,
+voicemail, voicemail transcription, voicemail-to-email and ring-group recording
+are account-visible. One number has active 10DLC messaging registration and nine
+are eligible but unregistered. Account administration can support API keys and
+webhooks, but neither exists currently. Provider evidence supports voice,
+SMS/MMS, voicemail and recording identifiers; webhook authentication exists;
+webhooks have **no retry** behavior; historical call-detail retrieval is the
+available potential voice reconciliation source.
+
+The assessment made no routing, number, user/extension, test-call, SMS, webhook,
+API-client, credential or live-ingestion change. Historical SMS reconciliation,
+message and voicemail retention, ordering, duplicate-delivery/replay semantics,
+sandbox availability and several account entitlements remain unknown and must
+not be assumed.
+
+The first channel selected from this evidence is **voice-call metadata**. It is
+the only candidate with current cash-engine relevance, account-visible use,
+stable provider call/resource identity and a stated historical reconciliation
+path. Its private implementation boundary is
+[ACP-013 Communications Context Voice Rehearsal](../acp/ACP-013-COMMUNICATIONS-CONTEXT-VOICE-REHEARSAL-CONTRACT.md).
+SMS/MMS remains deferred for its unresolved reconciliation path; voicemail and
+recordings remain dependent follow-on capabilities and do not authorize content
+ingestion.
+
+### Voice rehearsal closure — 2026-09-21
+
+The private, de-identified **Voice Communications Context Rehearsal is CLOSED /
+PASS**. Its canonical evidence ledger, including the final private image and
+normalized-artifact, tamper, visual, acceptance-matrix and reconciliation
+hashes, is retained in
+[ACP-013 Communications Context Voice Rehearsal](../acp/ACP-013-COMMUNICATIONS-CONTEXT-VOICE-REHEARSAL-CONTRACT.md).
+The rehearsal did not create a Net2phone credential, API key, webhook, live API
+connection, test call, routing/number/user change, content access or live
+ingestion.
+
+This result does not authorize production channel cutover or modify current
+EspoCRM/Core Command authority. Provider ordering, duplicate-delivery and
+replay guarantees, sandbox availability and retention periods remain UNKNOWN.
+Any later communications capability must be separately governed before
+implementation.
 
 ## Implementation Sequence
 

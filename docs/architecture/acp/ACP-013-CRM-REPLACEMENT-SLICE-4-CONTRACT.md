@@ -1,6 +1,6 @@
 # ACP-013 Implementation Contract — CRM Replacement Slice 4
 
-Version: 1.2.0
+Version: 1.3.0
 
 Status: Approved
 
@@ -19,6 +19,10 @@ Amended: 2026-09-19 — Governed the source Appointment Confirmed and Appt Resul
 Closed: 2026-09-20 — Private, de-identified rehearsal passed at implementation
 commit `0392835069891e034692fe0e8c9c6d749794b7dd`. This closure does not
 authorize production communications, migration, authority transfer or cutover.
+
+Amended: 2026-09-20 — Added one private canonical-chain Activity fixture for
+the governed Voice prerequisite. The closed Slice 4 fixture set and its
+acceptance evidence remain unchanged.
 
 Scope: A private, de-identified Activity and Follow-up foundation rehearsal from
 current EspoCRM configuration into Midwest24 Core Enterprise. This is not a
@@ -131,6 +135,36 @@ separately versioned least-privilege read contract must be defined in the
 implementation evidence; it is read-only, bounded, deterministic and optional
 to core Enterprise operation. AI receives no mutation, administration, raw
 Entity Engine, database, browser-scraping or broad-export authority.
+
+### Canonical-chain Activity fixture interoperability
+
+`MEETING_PLANNED_CANONICAL_CHAIN` is an additive private fixture. Its Activity
+source tuple is `(ESPOCRM, ESPOCRM_ACTIVITY_REHEARSAL_A, MEETING,
+77aa00000000000000000026)`. It must resolve, without provisioning targets,
+the exact canonical graph established by the prior fixtures:
+
+| Link | Required source tuple |
+| --- | --- |
+| Customer | `(ESPOCRM, ESPOCRM_REHEARSAL_A, ACCOUNT, 5f0000000000000000000001)` |
+| Contact | `(ESPOCRM, ESPOCRM_REHEARSAL_A, CONTACT, 5f0000000000000000000002)` |
+| Property | `(ESPOCRM, ESPOCRM_REHEARSAL_A, REAL_ESTATE_PROPERTY, 5f0000000000000000000004)` |
+| Lead | `(ESPOCRM, ESPOCRM_LEAD_REHEARSAL_A, LEAD, 65aa00000000000000000001)` |
+| Opportunity | `(ESPOCRM, ESPOCRM_OPPORTUNITY_REHEARSAL_A, OPPORTUNITY, 66bb00000000000000000118)` |
+
+The importer must require exactly one `M24CrmRecordLink` in
+`M24_LINK_MATCHED` state for every tuple and require the canonical target it
+names. It must create one native `WorkEffort` only after resolving all five
+targets, then create its typed `M24ActivityCrmLink` records and immutable
+`M24ActivityRelationshipBinding` rows with those exact source tuples and target
+IDs. A missing, ambiguous, contradictory, inactive or malformed mapping fails
+without Activity, target, link, binding, receipt or fallback-target creation.
+
+The existing fixture-target provisioning behavior remains available only to the
+already governed non-canonical fixtures. It is prohibited for this fixture.
+Exact replay, concurrent replay, restart/recreation and independent
+reconstruction must retain the same `WorkEffort`, five typed links and five
+immutable bindings. This amendment does not rewrite, replace or revalidate the
+closed Slice 4 fixture evidence.
 
 ## Appointment progression checkpoint
 

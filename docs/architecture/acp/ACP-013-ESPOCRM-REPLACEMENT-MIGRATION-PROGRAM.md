@@ -1,6 +1,6 @@
 # ACP-013 Addendum — EspoCRM Replacement and CRM Authority Migration Program
 
-Version: 1.6.0
+Version: 1.9.0
 
 Status: Approved
 
@@ -23,13 +23,27 @@ read-only Net2phone Capability & Integration Assessment as the next program
 dependency. A Communications Context Rehearsal contract remains required before
 communications implementation.
 
+Amended: 2026-09-20 — Recorded the completed Net2phone assessment and approved
+the private, metadata-only Voice Call Communications Context Rehearsal. Live
+provider configuration and communications cutover remain separately gated.
+
+Amended: 2026-09-20 — Governed the private cross-slice canonical CRM fixture
+chain required before Voice business acceptance; it changes no production
+authority, cutover or closed-slice result.
+
+Amended: 2026-09-21 — Closed the private Voice Communications Context
+Rehearsal PASS. Its evidence is retained in the Voice contract; no live
+communications integration, cutover or authority transfer is authorized.
+
 Scope:
 
 - `docs/architecture/acp/ACP-013-ESPOCRM-REPLACEMENT-MIGRATION-PROGRAM.md`
 - `docs/architecture/acp/ACP-013-CRM-REPLACEMENT-SLICE-2-CONTRACT.md`
 - `docs/architecture/acp/ACP-013-CRM-REPLACEMENT-SLICE-3-CONTRACT.md`
 - `docs/architecture/acp/ACP-013-CRM-REPLACEMENT-SLICE-4-CONTRACT.md`
+- `docs/architecture/acp/ACP-013-COMMUNICATIONS-CONTEXT-VOICE-REHEARSAL-CONTRACT.md`
 - `docs/architecture/ocp/OCP-012-MIDWESTGUARD-COMMUNICATIONS-ARCHITECTURE.md`
+- `docs/discipline/OPERATING-PLAN.md`
 - `docs/architecture/CRM-ERP-PLATFORM-EVALUATION.md`
 
 ## Decision
@@ -241,25 +255,30 @@ was not authorized or required. Slice 3 did not authorize production conversion,
 Job or Work Order creation, communications, documents, AI authority or model
 infrastructure.
 
-The next dependency is the **Net2phone Capability & Integration Assessment**
-authorized by OCP-012. It is read-only discovery of the current MIDWESTGuard
-account and its entitlement, API/event, number/routing and retention evidence;
-it does not authorize a connector, webhook subscription, routing change, live
-integration, production migration or channel cutover. Communications,
-Document Services, BR-038 conversion, accepted scope, Jobs, Work Orders,
-production integration and retirement remain separate capabilities.
+The Net2phone Capability & Integration Assessment is **COMPLETE**. Its report
+SHA-256 is `4ffd2e8efc0f9452acddf000c78fc71eed2673f49d98bc892fe1161dd90c47a9`
+and its controlled archive SHA-256 is
+`d7c67b84be25f8217590bb18f2653350e2c89d92aa9c1a9968f44e060d858388`.
+It established account-visible voice capability, stable voice identities,
+authenticated webhooks with no retries and historical call-detail retrieval as a
+voice reconciliation path. It made no live provider change. SMS historical
+reconciliation, provider retention, ordering, duplicate/replay semantics and
+sandbox availability remain unknown.
 
-### Exact next governance handoff
+The **Communications Context Rehearsal: Voice Call Metadata is CLOSED / PASS**.
+Its governing contract is
+`ACP-013-COMMUNICATIONS-CONTEXT-VOICE-REHEARSAL-CONTRACT.md` version 1.5.0,
+which retains the final normalized-artifact, tamper, visual, matrix and r18
+evidence hashes. The rehearsal remained private, de-identified and metadata
+only. It created no provider credential, API client, webhook subscription, test
+call, routing change, live ingestion, production migration or channel cutover.
+SMS/MMS, voicemail, recordings and content remain deferred; Document Services,
+BR-038 conversion, accepted scope, Jobs, Work Orders, production integration
+and retirement remain separate capabilities.
 
-> In the governing repository, perform only the OCP-012 Net2phone Capability &
-> Integration Assessment. Use authorized read-only account access, preserve
-> current routing and cash-engine communications behavior, and record only
-> de-identified or access-controlled non-secret evidence. Distinguish provider
-> documentation from actual MIDWESTGuard account entitlement. Do not create an
-> API client, connector, webhook subscription, route change, test call, SMS,
-> voicemail action, production record or application code. Return the evidence
-> to governance to select one first channel and create a dedicated
-> Communications Context Rehearsal contract before implementation.
+No further communications implementation is authorized by this closure. A
+later channel or production capability must first receive its own governed
+selection, contract, reconciliation/retention determination and cutover gate.
 
 ## Stop conditions
 

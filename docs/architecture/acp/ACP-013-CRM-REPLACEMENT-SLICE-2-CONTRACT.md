@@ -1,6 +1,6 @@
 # ACP-013 Implementation Contract — CRM Replacement Slice 2
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status: Approved
 
@@ -9,6 +9,10 @@ Type: Implementation contract addendum
 Authority: Systems Architect Discipline
 
 Approved: 2026-09-17
+
+Amended: 2026-09-20 — Reconciled the private Lead-bootstrap administrator
+predicate with native Apache OFBiz 24.09.07 `UserLogin` active-state semantics.
+This does not alter administrator authority or private-runtime data.
 
 Scope: A private, de-identified Lead migration and lifecycle rehearsal from the current EspoCRM model into Midwest24 Core Enterprise, including a bounded machine-readable Lead surface compatible with the governed AI Worker Node boundary. This is not a production migration, record-family cutover, AI authority grant, or live intake-routing change.
 
@@ -21,6 +25,24 @@ The slice proves that source-instance-qualified EspoCRM Lead evidence can be map
 The slice also proves that an authorized noninteractive consumer can traverse the resulting Lead graph through a stable, versioned, machine-readable interface without HTML scraping, raw database access or administrative credentials. This makes the Enterprise CRM foundation usable by the Midwest24 AI Worker Node and other governed integrations while keeping AI non-authoritative and optional to core operation.
 
 This is a rehearsal only. EspoCRM remains the live Lead authority until a later, separately approved cutover passes. Successful rehearsal must not freeze EspoCRM writes, redirect website intake, change Core Command behavior, enable an AI agent to mutate business state, make EspoCRM read-only, or transfer any authority.
+
+## Native `UserLogin.enabled` compatibility ruling
+
+Pinned Apache OFBiz 24.09.07 treats an empty/null `UserLogin.enabled` value as
+eligible for normal authentication when `disabledBy` is empty. Its
+`LoginWorker.isUserLoginActive` predicate is equivalently
+`enabled != 'N' && disabledBy is empty`. The private
+`m24LeadMigrationBootstrap` administrator preflight may therefore replace only
+its strict `admin.enabled == 'Y'` test with: existing `admin` identity,
+`enabled != 'N'`, and empty `disabledBy`.
+
+This is a predicate correction only. It does not authorize an administrative
+bootstrap prerequisite, a credential reset, `UserLogin` mutation, a second
+administrator, changed group/permission membership, or any Voice-executor
+authority. It continues to deny explicit `enabled='N'` and `disabledBy` states.
+Coordinator and noninteractive-executor predicates stay unchanged. Native
+authentication/recovery remains responsible for temporary lockout behavior;
+nothing may clear its state or set `admin.enabled='Y'` under this amendment.
 
 ## Why this objective is next
 

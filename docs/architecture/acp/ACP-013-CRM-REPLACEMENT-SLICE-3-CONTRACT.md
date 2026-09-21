@@ -1,6 +1,6 @@
 # ACP-013 Implementation Contract — CRM Replacement Slice 3
 
-Version: 1.1.0
+Version: 1.2.0
 
 Status: Approved
 
@@ -11,6 +11,10 @@ Authority: Systems Architect Discipline
 Approved: 2026-09-18
 
 Amended: 2026-09-18 — Added the explicit canonical Opportunity AI SecurityGroup mapping required by Apache OFBiz native group-ID storage.
+
+Amended: 2026-09-20 — Added one private canonical-chain fixture that reuses
+accepted Slice 1 and Slice 2 mappings for a later Voice prerequisite. The
+accepted `OPEN` fixture and its closure evidence remain unchanged.
 
 Scope: A private, de-identified Opportunity migration and lifecycle rehearsal from the current EspoCRM model into Midwest24 Core Enterprise. This is not a production migration, authority cutover, Lead conversion, Job creation, or live-routing change.
 
@@ -99,6 +103,50 @@ Each source identity is `(sourceSystemId, sourceInstanceId, sourceRecordTypeId, 
 ## De-identified representative fixture
 
 Use only private de-identified fixtures and existing accepted/reconstructed Slice 1 and Slice 2 targets. The fixture set must include: an open Opportunity; a won source outcome with conversion evidence preserved but no conversion write; a lost Opportunity with controlled reason; a current-only-history case; the same source record ID in a second source instance; an exact replay; an altered payload; a duplicate descriptive candidate; an ambiguous relationship candidate; and an unsupported/unknown source status. No fixture may contain production data, channel credentials, document bytes, activities, communications, Jobs, Work Orders, accounting or inventory records.
+
+### Canonical-chain fixture interoperability
+
+This is a **private-fixture interoperability limitation**, not a defect in the
+closed Slice 3 `OPEN` acceptance. `OPEN` retains its accepted private target
+bundle and evidence. The additive fixture `CANONICAL_CHAIN` is the only Slice 3
+fixture authorized to resolve its relationships through the preceding accepted
+canonical mappings. It does not alter production/candidate semantics, mapping
+version, native Opportunity identity or any accepted `OPEN`, `WON` or `LOST`
+behavior.
+
+The frozen source tuples are:
+
+| Relationship | Required source tuple |
+| --- | --- |
+| Customer | `(ESPOCRM, ESPOCRM_REHEARSAL_A, ACCOUNT, 5f0000000000000000000001)` |
+| Contact | `(ESPOCRM, ESPOCRM_REHEARSAL_A, CONTACT, 5f0000000000000000000002)` |
+| Property | `(ESPOCRM, ESPOCRM_REHEARSAL_A, REAL_ESTATE_PROPERTY, 5f0000000000000000000004)` |
+| Lead | `(ESPOCRM, ESPOCRM_LEAD_REHEARSAL_A, LEAD, 65aa00000000000000000001)` |
+| `CANONICAL_CHAIN` Opportunity | `(ESPOCRM, ESPOCRM_OPPORTUNITY_REHEARSAL_A, OPPORTUNITY, 66bb00000000000000000118)` |
+
+For each supplied relationship tuple, the Slice 3 importer must read the
+four-part tuple from the frozen fixture, resolve exactly one
+`M24CrmRecordLink` in state `M24_LINK_MATCHED`, require the corresponding
+canonical target field and target entity, then write the governed dated
+relationship to that target. Customer resolves `linkedPartyId`, Contact
+`linkedContactPartyId`, Property `linkedFacilityId`, and Lead `linkedLeadId`.
+The Opportunity itself remains one generated native `SalesOpportunity` with
+its own four-part source mapping.
+
+Missing mappings, a missing target, a non-matched mapping, contradictory
+mapping evidence or more than one eligible target are governed unmatched or
+integrity failures and write no replacement Party, Facility, Lead, Opportunity,
+relationship, receipt or fallback mapping. Supplied canonical references never
+permit private target provisioning or descriptive matching. Exact replay returns
+the same Opportunity and relationships; an altered payload conflicts. The new
+fixture must be restart-safe and preserve source-instance-qualified
+reconstruction.
+
+Targeted acceptance for this amendment is limited to Customer, Contact,
+Property and Lead canonical reuse; one native Opportunity; exact and concurrent
+replay; altered replay conflict; unmatched and ambiguous resolution; restart;
+and proof that existing `OPEN`, `WON` and `LOST` behavior is unchanged. It does
+not reopen general Slice 3 acceptance or authorize any production action.
 
 ## Authorization and allowed data flow
 

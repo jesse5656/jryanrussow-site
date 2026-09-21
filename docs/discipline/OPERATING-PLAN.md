@@ -9,7 +9,7 @@ Operating Plan
 Active
 
 **Version**
-1.2.0
+1.3.0
 
 **Authority**
 Systems Architect Discipline
@@ -114,8 +114,9 @@ Success Criteria:
   lead generation through collections/cash visibility;
 - current live authority remains explicit for each operating capability until a
   separately governed cutover passes;
-- CRM Replacement Slice 4 remains closed/pass and the next Net2phone Capability
-  & Integration Assessment stays within its read-only OCP-012 boundary;
+- CRM Replacement Slice 4, the Net2phone Capability & Integration Assessment,
+  and the private voice-call metadata rehearsal remain closed/pass; no
+  communications production capability is implied by those results;
 - every CRM replacement slice preserves canonical Enterprise identity,
   provenance, replay safety, reconstruction and least-privilege access;
 - EspoCRM/Core Command is not retired, weakened or treated as permanently
@@ -150,8 +151,8 @@ Operating Plan update or by any single private rehearsal.
 - [ ] Lead generation through collections/cash-visibility operation restored and
   evidenced
 - [x] CRM Replacement Slice 4 private acceptance closed/pass
-- [ ] Net2phone Capability & Integration Assessment completed and returned to
-  governance for first-channel selection
+- [x] Net2phone Capability & Integration Assessment completed
+- [x] Voice Call Communications Context Rehearsal private acceptance closed/pass
 - [ ] EspoCRM/Core Command abandonment gate status recorded; no unapproved
   authority transfer
 - [ ] Repository governance validation passed
@@ -257,9 +258,9 @@ objective unless a specific operational deficiency is demonstrated.
    generation through collections/cash visibility using current governed tools
    and accountable handoffs
 2. Complete the governed CRM replacement sequence needed for safe
-   capability-by-capability authority transfer; perform only the read-only
-   Net2phone Capability & Integration Assessment before governing a first
-   Communications Context Rehearsal
+   capability-by-capability authority transfer; preserve the closed private
+   Voice rehearsal and return to governance before any additional
+   communications capability or production decision
 3. Assess the EspoCRM/Core Command abandonment gate only after all required
    capability parity, reconciliation, usability, integration, rollback and
    retention criteria are evidenced
