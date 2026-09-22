@@ -1,6 +1,6 @@
 # ACP-013 Addendum — OFBiz CRM Operationalization and Cutover Gate
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status: Approved
 
@@ -103,8 +103,7 @@ isolated evidence.
 
 ## Website intake boundary
 
-Before CRM authority transfer, a dedicated Enterprise intake adapter must accept
-new website submissions from the existing durable intake ledger. It must preserve
+Before CRM authority transfer, new website submissions may be entered manually into Enterprise under a documented single-entry procedure. The dedicated Enterprise intake adapter is a post-cutover improvement. It must preserve
 the submission UUID as an immutable idempotency/provenance key, create at most
 one canonical Enterprise Lead, reconcile uncertain delivery, and expose no
 provider or administrator credential.
@@ -140,8 +139,7 @@ of the following are PASS:
    acceptance, including required lists/detail/mobile views;
 5. Lead-to-Opportunity and appointment/estimate/accepted-contract boundary
    acceptance, with explicit unsupported-state denial;
-6. Enterprise website-intake adapter replay, duplicate, ambiguity, failure and
-   recovery tests;
+6. either the Enterprise website-intake adapter tests pass, or the named cutover owner records the temporary manual single-entry procedure and accountable operator;
 7. deployed image equals the accepted operational candidate; durable database,
    current backup, restore, restart, hostname/TLS/access and log/monitoring
    checks pass for that deployment;
@@ -157,8 +155,7 @@ actual proposed runtime. No inferred pass is allowed.
 
 At the recorded effective timestamp, Enterprise becomes authoritative for all
 new in-scope CRM records: Customer, Contact, Property, Lead, Opportunity, Task
-and Meeting. EspoCRM stops receiving authoritative new records and remains
-read-only/configuration reference during the rollback window.
+and Meeting. EspoCRM stops receiving authoritative new records. After the protected final recovery snapshot and recorded authority timestamp, it may be stopped and automatic startup disabled; its preserved snapshot remains the rollback/reference point.
 
 If a material defect occurs, stop Enterprise new writes, preserve all Enterprise
 records and receipt evidence, restore the verified Espo recovery point if
