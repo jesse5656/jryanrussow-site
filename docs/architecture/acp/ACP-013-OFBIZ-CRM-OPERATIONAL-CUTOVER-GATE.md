@@ -183,3 +183,15 @@ reconstruct the cutover decision. Stop and return to governance on any:
 - duplicate or unreconciled intake result;
 - current-runtime backup, restore, deployment or access failure; or
 - request to broaden scope beyond this contract.
+
+## Cutover closure record — 2026-09-23
+
+**Effective authority transfer:** 2026-09-23T15:32:17Z.
+
+Midwest24 Core Enterprise / Apache OFBiz is authoritative for new MIDWESTGuard Customers, Contacts, Properties, Leads, Opportunities, Tasks and Meetings/follow-up. EspoCRM is retired as CRM authority; new Espo CRM entry is prohibited and no dual-write period exists.
+
+The final candidate was `m24-operational-crm-validation-r19` (`sha256:30c4f9833ea4e4319935e61f43c530fa782c7e99ef3456ccc27c34076c8ba1a0`). Jesse Russow completed the least-privilege operational acceptance, including Customer, Contact, Property, Lead, Task, inspection Meeting, Opportunity and signed-contract boundary, desktop and 390px mobile use, restart, and no-overflow checks.
+
+Espo source disposition was inventoried as test/configuration population only. The protected recovery point is `/root/m24-cutover-recovery/20260923T020836Z`: database SHA-256 `2865dda356a5237d0ff659e7a69f8fcaf3feea176d7a47a6c1aef440d55e17f9`; persistent-data archive SHA-256 `44685953c5a470f52a6b88b5a986b43bab283ee97d35900516d1e14469cd1672`. Recovery checksum verification passed.
+
+The cutover/rollback rehearsal passed. The rollback boundary stops new OFBiz writes first by stopping the isolated application while preserving its persistent database and records; it then verifies the Espo recovery point before any Espo re-enable. It creates no dual-authority interval, synchronization, or record deletion. Jesse Russow is cutover and rollback owner. Website leads are manually entered by Jesse Russow into OFBiz only; automated intake remains post-cutover work.
