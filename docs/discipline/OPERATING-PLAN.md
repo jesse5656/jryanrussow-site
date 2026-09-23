@@ -78,35 +78,35 @@ Objective:
 MIDWESTGuard Business Recovery / Cash Engine
 
 Scope:
-Joplin metro cash-engine operation and the bounded CRM-completion workstream
+Joplin metro cash-engine operation following the completed OFBiz CRM authority transfer
 
 Status:
 In Progress
 
 </div>
 
-Restore MIDWESTGuard's cash engine in the Joplin metro while completing the
-bounded CRM replacement capabilities required to retire EspoCRM/Core Command
-safely. The cash-engine operating path is:
+Restore MIDWESTGuard's cash engine in the Joplin metro using the now-authoritative
+OFBiz CRM operating record. The completed CRM authority transfer is recorded in
+ACP-013's cutover closure; this objective now governs measurable daily operation
+from lead generation through collections and cash visibility. The cash-engine
+operating path is:
 
 **lead generation → inbound qualification → outbound follow-up → inspection
 scheduling → estimate follow-up → contract conversion → production handoff →
 collections/cash visibility.**
 
-This objective has two coordinated workstreams:
+This objective has two coordinated boundaries:
 
-1. **Cash-engine operation:** use the already governed current systems to
-   restore, measure and operate the Joplin metro lead-to-cash path. This does
-   not authorize an ungoverned replacement application or an immediate change
-   of live system authority.
-2. **CRM completion prerequisite:** advance Midwest24 Core Enterprise through
-   governed private slices and separately approved capability cutovers until it
-   can become the durable CRM and ERP authority. EspoCRM/Core Command remains
-   the current live authority for every capability that has not passed its own
-   cutover gate.
+1. **Cash-engine operation:** use the current governed systems and accountable
+   human handoffs to restore, measure and operate the Joplin metro lead-to-cash
+   path. It does not authorize an ungoverned replacement application.
+2. **Completed CRM authority:** Midwest24 Core Enterprise / OFBiz is authoritative
+   for new CRM records. EspoCRM is retired as CRM authority. Production Job/Work
+   Order, accounting, collections, cash visibility, communications and website
+   automation retain their separately governed boundaries.
 
-CRM completion is a prerequisite parallel workstream within business recovery;
-it is not a competing objective and does not create permanent dual authority.
+CRM authority closure is complete. The cash-engine operating transition now
+uses OFBiz CRM without reopening the retired EspoCRM authority.
 
 Success Criteria:
 
@@ -119,8 +119,8 @@ Success Criteria:
   communications production capability is implied by those results;
 - every CRM replacement slice preserves canonical Enterprise identity,
   provenance, replay safety, reconstruction and least-privilege access;
-- EspoCRM/Core Command is not retired, weakened or treated as permanently
-  authoritative before the migration-program exit gate passes; and
+- OFBiz CRM authority and the retired, preserved Espo recovery boundary remain
+  explicit while each non-CRM cash-engine capability retains its current authority; and
 - the Institutional Memory Diagnostic pilot remains preserved as a deferred,
   resumable commercial objective.
 
@@ -133,16 +133,17 @@ from lead generation through collections and cash visibility, with each handoff
 owned and evidenced. No custom application is authorized solely to restate this
 workflow.
 
-### CRM completion and EspoCRM/Core Command exit gate
+### CRM authority closeout and downstream boundary
 
-The future abandonment gate is defined in
-[ACP-013 EspoCRM Replacement Migration Program](../architecture/acp/ACP-013-ESPOCRM-REPLACEMENT-MIGRATION-PROGRAM.md).
-It requires governed parity, migration/reconciliation, authorization and
-reporting, human usability, required integrations, communications and document
-relationships, Lead/Opportunity conversion, historical-data treatment,
-cutover/rollback rehearsal, authority transfer, read-only retention and a
-separate decommission approval. The gate is deliberately not met by this
-Operating Plan update or by any single private rehearsal.
+The CRM operational cutover is closed under
+[ACP-013 OFBiz CRM Operational Cutover Gate](../architecture/acp/ACP-013-OFBIZ-CRM-OPERATIONAL-CUTOVER-GATE.md).
+OFBiz is authoritative for new CRM records; EspoCRM is retired, stopped and
+preserved with its recovery point. This closeout does not authorize production
+Job/Work Order cutover, accounting, collections, cash visibility, communications
+integration, document-service deployment or automated website intake.
+
+The current operating transition is recorded in
+[MIDWESTGuard Joplin Cash-Engine Operating Transition](../operations/MIDWESTGUARD-JOPLIN-CASH-ENGINE-OPERATING-TRANSITION.md).
 
 ### Definition of Done:
 
@@ -153,8 +154,9 @@ Operating Plan update or by any single private rehearsal.
 - [x] CRM Replacement Slice 4 private acceptance closed/pass
 - [x] Net2phone Capability & Integration Assessment completed
 - [x] Voice Call Communications Context Rehearsal private acceptance closed/pass
-- [ ] EspoCRM/Core Command abandonment gate status recorded; no unapproved
-  authority transfer
+- [x] OFBiz CRM authority activated; EspoCRM retired, stopped and preserved
+- [ ] Joplin cash-engine handoff owners, measures and current-system boundaries
+  completed and operating
 - [ ] Repository governance validation passed
 - [ ] Scoped diff reviewed
 - [ ] Commit completed after separate approval
@@ -257,13 +259,10 @@ objective unless a specific operational deficiency is demonstrated.
 1. Restore and operate the MIDWESTGuard Joplin metro cash engine from lead
    generation through collections/cash visibility using current governed tools
    and accountable handoffs
-2. Complete the governed CRM replacement sequence needed for safe
-   capability-by-capability authority transfer; preserve the closed private
-   Voice rehearsal and return to governance before any additional
-   communications capability or production decision
-3. Assess the EspoCRM/Core Command abandonment gate only after all required
-   capability parity, reconciliation, usability, integration, rollback and
-   retention criteria are evidenced
+2. Resolve the first evidenced cash-engine handoff gap through the smallest
+   authorized process, configuration, integration or software action
+3. Consider deferred post-cutover improvements only after the operating chain is
+   accountable and measurable; return to governance before any authority change
 4. Resume the Institutional Memory Diagnostic pilot from the preserved Protein
    Solutions qualification package when business recovery no longer requires
    this priority
