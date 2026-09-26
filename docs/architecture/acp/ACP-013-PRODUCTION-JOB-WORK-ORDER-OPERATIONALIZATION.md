@@ -1,6 +1,6 @@
 # ACP-013 Addendum — Production Job and Work Order Operationalization
 
-Version: 1.0.0
+Version: 1.1.0
 
 Status: Approved
 
@@ -26,6 +26,18 @@ Before a live handoff, record in non-secret evidence:
 4. real-user identity, least-privilege role, backup/recovery point, and rollback owner.
 
 Any missing precondition blocks the affected live handoff. It does not authorize using a synthetic default, a private fixture identity, or an inferred status.
+
+## Production lifecycle configuration
+
+The first production handoff uses only these new deterministic status IDs. They are not the retained synthetic Slice 1/2 status IDs.
+
+| Object | Status IDs in order | Transition owner | Required evidence |
+| --- | --- | --- | --- |
+| Job | `M24_PRD_JOB_ACCEPT` → `M24_PRD_JOB_ACTIVE` → `M24_PRD_JOB_DONE` | Production coordinator | Accepted-contract reference at intake; attributable reason/event for each later transition |
+| Roof Work Order | `M24_PRD_ROOF_READY` → `M24_PRD_ROOF_SCHED` → `M24_PRD_ROOF_INSTALL` → `M24_PRD_ROOF_CHECK` → `M24_PRD_ROOF_DONE` | Coordinator: Ready→Scheduled, Installed→Checked, Checked→Done. Assigned Roof crew: Scheduled→Installed only. | Assignment and scoped grant before crew installation; attributable event/reason for every transition |
+| Siding Work Order | `M24_PRD_SIDE_READY` → `M24_PRD_SIDE_SCHED` → `M24_PRD_SIDE_INSTALL` → `M24_PRD_SIDE_DONE` | Coordinator: Ready→Scheduled and Installed→Done. Assigned Siding crew: Scheduled→Installed only. | Assignment and scoped grant before crew installation; attributable event/reason for every transition |
+
+No actor may skip, reverse, or perform another trade’s transition. A Job cannot complete until each selected trade Work Order is `DONE`. The first private acceptance and the first live controlled handoff must provision these status records deterministically, prove the allowed/denied transition matrix, and preserve immutable lifecycle evidence.
 
 ## Authority and data flow
 
