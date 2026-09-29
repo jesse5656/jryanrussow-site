@@ -40,3 +40,7 @@ On any callback, access, artifact, audit, provider, or recovery failure: disable
 ## Implementation handoff
 
 Document Services implementation may deploy only this isolated live pilot after this contract is approved and committed. It must show exact deployment diff, hostname/TLS evidence, access model, secret locations, backup point, live-pilot acceptance results, and rollback result before any expansion.
+
+## Enterprise workflow amendment — proposed
+
+The live path is launched from Midwest24 Core Enterprise, not from a separate Document Services user interface. Enterprise creates the signing request for one scoped Opportunity or Job and stores only `contractDocumentId`, `contractVersionId`, `contractSha256`, signing state, and immutable completion evidence. Document Services remains canonical for document bytes, versions, provider callbacks, and audit. The adapter must be allowlisted, authenticated, idempotent, and scoped to the initiating Enterprise record. No generic OFBiz-to-Document-Services bridge, duplicate PDF storage, or direct provider credential in OFBiz is permitted.
