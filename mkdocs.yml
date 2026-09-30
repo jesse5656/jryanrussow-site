@@ -66,6 +66,7 @@ nav:
       - Infrastructure, Access, and Request Flows: architecture/INFRASTRUCTURE-ACCESS-AND-REQUEST-FLOWS.md
       - Site Information Architecture: architecture/SITE-ARCHITECTURE.md
       - CRM / ERP Platform Evaluation: architecture/CRM-ERP-PLATFORM-EVALUATION.md
+      - Midwest24 Core Enterprise Brand Assets: architecture/MIDWEST24-CORE-ENTERPRISE-BRAND-ASSETS.md
       - Open-Source Platform Evaluation Skill: architecture/OPEN-SOURCE-PLATFORM-EVALUATION-SKILL-SPECIFICATION.md
       - Open-Source Platform Validation Record: architecture/EVALUATE-OPEN-SOURCE-PLATFORMS-V1.1-VALIDATION-RECORD.md
       - Open-Source Platform Production Baseline: architecture/OPEN-SOURCE-PLATFORM-EVALUATION-PRODUCTION-BASELINE.md
