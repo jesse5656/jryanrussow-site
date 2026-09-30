@@ -8,7 +8,7 @@ Implementation repository: `mwg-ofbiz`
 ## Approved visual system
 
 Midwest24 Core Enterprise uses the approved Core-family building-shield icon,
-full Enterprise wordmark, and seven-file favicon package. The assets were
+full horizontal Enterprise wordmark, and seven-file favicon package. The assets were
 approved on 2026-09-11 and recorded by the canonical branding repository as
 **activation pending**. This application-level adoption does not change product
 authority, system behavior, or public-host activation.
@@ -20,7 +20,7 @@ part of the controlled asset set.
 
 | ID | Served path | SHA-256 |
 | --- | --- | --- |
-| `M24_CORE_ENTERPRISE_WORDMARK_V1` | `/enterprise-poc/images/midwest24-core-enterprise-logo-light.png` | `98e7796c39384ae2ce9e46046b315115aad92851e72ff8808ecec6a27a1a821f` |
+| `M24_CORE_ENTERPRISE_WORDMARK_V2` | `/enterprise-poc/images/midwest24-core-enterprise-logo-light.png` | `33f1700c7bacafa423e5565cb067267a8fb4461947f381212911153fcb0a86de` |
 | `M24_CORE_ENTERPRISE_ICON_V1` | `/enterprise-poc/images/midwest24-core-enterprise-icon.png` | `34a78f07a4d6303cd039fa93a3df25070d81ecbe7514364cb56a12c294c328dc` |
 | `M24_CORE_ENTERPRISE_FAVICON_ICO_V1` | `/enterprise-poc/images/favicon.ico` | `fc3925ebd9f12dd9da467b5f9091a26941f043b6dafdf7d106f0afc65f8f2da2` |
 
