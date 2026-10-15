@@ -68,6 +68,7 @@ nav:
       - CRM / ERP Platform Evaluation: architecture/CRM-ERP-PLATFORM-EVALUATION.md
       - Midwest24 Core Enterprise Brand Assets: architecture/MIDWEST24-CORE-ENTERPRISE-BRAND-ASSETS.md
       - Midwest24 Subcontractor Compliance Workflow: architecture/MIDWEST24-SUBCONTRACTOR-COMPLIANCE-GUIDE.md
+      - Midwest24 Rental Tenant Portal and Screening: architecture/MIDWEST24-RENTAL-TENANT-PORTAL-AND-SCREENING.md
       - Open-Source Platform Evaluation Skill: architecture/OPEN-SOURCE-PLATFORM-EVALUATION-SKILL-SPECIFICATION.md
       - Open-Source Platform Validation Record: architecture/EVALUATE-OPEN-SOURCE-PLATFORMS-V1.1-VALIDATION-RECORD.md
       - Open-Source Platform Production Baseline: architecture/OPEN-SOURCE-PLATFORM-EVALUATION-PRODUCTION-BASELINE.md

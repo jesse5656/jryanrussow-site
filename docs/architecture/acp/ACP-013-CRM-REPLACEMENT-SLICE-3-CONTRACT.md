@@ -12,6 +12,8 @@ Approved: 2026-09-18
 
 Amended: 2026-09-18 — Added the explicit canonical Opportunity AI SecurityGroup mapping required by Apache OFBiz native group-ID storage.
 
+Amended: 2026-09-19 — Clarified that the Slice 3 `M24_OPP_OPEN` migration category does not erase the separately governed Appointment Confirmed and Appt Resulted workflow checkpoints required by Slice 4.
+
 Amended: 2026-09-20 — Added one private canonical-chain fixture that reuses
 accepted Slice 1 and Slice 2 mappings for a later Voice prerequisite. The
 accepted `OPEN` fixture and its closure evidence remain unchanged.
@@ -88,6 +90,10 @@ The canonical private-rehearsal stage vocabulary is:
 | `M24_OPP_LOST` | A source status explicitly mapped as a lost outcome | Require the mapped controlled loss reason in rehearsal evidence. |
 
 These are Enterprise migration categories, not a production sales-process taxonomy. The frozen mapping must name every exercised `cOpportunityStatus` value and map it to exactly one target stage or `REVIEW_REQUIRED`; it must not infer semantics from inactive `cOpportunityStage` or OFBiz demo stages. Unknown values, contradictory source fields, invalid transitions, unsupported loss reasons, missing relationship targets or unproven conversion claims create an attributable exception and no target mutation.
+
+### Appointment progression compatibility
+
+`M24_OPP_OPEN` is a Slice 3 migration category, not a permanent collapse of every active Espo workflow checkpoint. The source statuses `Appointment Confirmed` and `Appt Resulted` remain distinct source evidence even when both project to `M24_OPP_OPEN`. Slice 4 governs their Enterprise representation as immutable Opportunity checkpoints under the same canonical `SalesOpportunity`; they are not new `SalesOpportunity` stages and do not change the meaning of `M24_OPP_OPEN -> M24_OPP_WON` or `M24_OPP_OPEN -> M24_OPP_LOST`.
 
 Each source identity is `(sourceSystemId, sourceInstanceId, sourceRecordTypeId, sourceRecordId)`. For this rehearsal `sourceSystemId=ESPOCRM`, `sourceRecordTypeId=OPPORTUNITY`, and `sourceInstanceId` is the stable non-secret manifest-bound alias. Source IDs are provenance and idempotency inputs, never Enterprise identifiers.
 

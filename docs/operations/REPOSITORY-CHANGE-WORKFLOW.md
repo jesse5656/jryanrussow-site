@@ -1,6 +1,6 @@
 # Repository Change Workflow
 
-Version: 1.1.0
+Version: 1.2.0
 
 Status:
 Active
@@ -137,6 +137,42 @@ or cannot safely complete the task, use the next appropriate available model.
 Do not block necessary work solely to preserve Spark usage. Record the reason
 briefly in the existing execution record; do not create a separate report for
 every model choice.
+
+### Required user-facing model reminder
+
+Do not wait for the user to ask how to conserve credits. At the start of a
+governed task, on a request for next steps (including "what's next?"), in every
+handoff or resume, and before a material reasoning-to-execution transition,
+provide a brief, actionable model reminder before substantial execution.
+One reminder may cover coincident triggers; do not repeat it on every tool call
+or routine progress update while the phase and recommendation remain unchanged.
+
+The reminder shall state:
+
+- the recommended model for the next bounded phase and a brief reason; prefer
+  Spark when suitable without requiring a stronger-model planning phase for
+  already well-defined work;
+- whether to stay in the current task or resume from a named saved checkpoint;
+- the actual selection step when a switch is needed: use the client's supported
+  model selector; writing a model name in a prompt does not switch the model;
+- a ready-to-paste continuation instruction with the exact next action, evidence
+  or checkpoint reference, context-reuse requirement and approval boundaries;
+- the condition for returning to stronger reasoning, and the availability or
+  allowance uncertainty if those facts are not exposed.
+
+When stronger reasoning has resolved the open questions, proactively announce
+that bounded execution is ready for Spark and save the minimum sufficient
+checkpoint before the switch. Do not silently continue a substantial suitable
+execution phase on the stronger model without applying the fallback rule.
+An unknown actual model shall be reported as unknown; do not claim automatic
+switching, a separate allowance or credit savings without evidence. Respect an
+explicit user model choice and avoid making the reminder a new approval gate.
+
+For a later scheduled validation, preserve the checkpoint and exact resume
+condition instead of keeping an active reasoning turn waiting solely for the
+scheduled run. Monitoring or automation requires its own applicable authority.
+The existing governance, validation, security and destructive-action approval
+boundaries continue to apply.
 
 ### Context reuse and validation
 

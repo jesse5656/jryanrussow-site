@@ -1,6 +1,6 @@
 # OCP-001 — Engineering Execution Rules
 
-Version: 1.1.0
+Version: 1.2.0
 
 Status:
 Approved
@@ -94,3 +94,17 @@ unstaged edits. Hash comparison confirmed the pre-existing Operating Plan and
 two unrelated research artifacts were untouched. No files were staged,
 committed or pushed. Model suitability was reviewed as policy judgment; this
 amendment does not assert automated model routing or measured credit savings.
+
+## 2026-09-13 Amendment — Actionable Model Reminders
+
+Approved by the repository owner's explicit instruction to make model-selection
+and continuation reminders recurring policy. Amend the canonical workflow and
+its existing AI Collaboration Standard reference to require timely, actionable
+reminders and a reusable continuation instruction. Preserve justified fallback,
+context reuse and all existing approval boundaries.
+
+This amendment covers only this OCP, the Repository Change Workflow and the AI
+Collaboration Standard. It does not authorize commit/push, change client model
+settings or deploy a new skill version. The canonical rule applies to governed
+handoffs and resumes when resolved through existing governance entry points;
+it does not claim universal automatic loading by every chat or runtime.

@@ -9,7 +9,7 @@ Operating Plan
 Active
 
 **Version**
-1.3.0
+1.3.1
 
 **Authority**
 Systems Architect Discipline
@@ -145,6 +145,153 @@ integration, document-service deployment or automated website intake.
 The current operating transition is recorded in
 [MIDWESTGuard Joplin Cash-Engine Operating Transition](../operations/MIDWESTGUARD-JOPLIN-CASH-ENGINE-OPERATING-TRANSITION.md).
 
+### Approved bounded next objective — Location-aware Job Photo Evidence
+
+**Operating-plan approval:** 2026-10-08
+
+The worker shall be prompted for the right photos at the right point in the
+Job, with the existing Job, Property, Customer and applicable Work Order already
+selected. Enterprise may automate the prompt, assignment, filing, completeness
+check, reminder and closeout-package assembly. The authenticated worker remains
+responsible for taking or selecting the actual photos.
+
+The existing approved private
+[OCP-014 Job Readiness and Evidence Register](../architecture/ocp/OCP-014-JOB-READINESS-AND-EVIDENCE-REGISTER.md)
+already defines `PHOTO_EVIDENCE`, `DAILY_REPORT`, `TRADE_QA`, `PUNCH_LIST` and
+`WARRANTY_CLOSEOUT`, permits the governed evidence gate at Job completion and
+requires attributable immutable history. Private candidate forms exist for
+those requirements, and the controlled template inventory contains the
+Certification of Completion and Satisfaction. Those records do not prove a
+live media store, mobile capture experience, automatic prompt or Job attachment.
+
+#### Worker experience
+
+When an authorized worker arrives at a Property, the mobile interface should
+use the device location, confirmed Property coordinates, assignment and object
+scope to offer the nearby Job. It shall not silently select an ambiguous or
+unauthorized Job.
+
+> **9376 — 447 Ceola Avenue**<br>
+> Roof Work Order<br>
+> **Next required evidence: Before-work photos**<br>
+> **Start photo checklist**
+
+The worker confirms the Job once. Subsequent forms, photos and evidence retain
+that context without re-entering the customer, property, Job or Work Order.
+
+#### Required photo checkpoints
+
+| Checkpoint | Prompted evidence | Trigger or control |
+| --- | --- | --- |
+| Inspection | All elevations, roof planes, damage, penetrations, interior damage, measurements and existing conditions | Inspection cannot be marked complete until each required category is addressed. |
+| Before production | Property protection, landscaping, driveway, siding, windows and pre-existing damage | Capture before tear-off or material movement. |
+| Material delivery | Delivered materials, labels, colors, quantities, lot/batch details, delivery location and visible damage | Prompt when material delivery is recorded. |
+| Work in progress | Tear-off, decking, underlayment, flashing, penetrations, ventilation, siding wrap and concealed conditions | Prompt from the daily report and governed trade milestones. |
+| Supplement or change | Newly discovered damage, measurements, code condition, manufacturer requirement and affected scope | Require before a supplement or change request is submitted. |
+| Trade QA | Flashing, penetrations, edge details, ventilation, siding transitions, cleanup and completed trade scope | Require before the applicable Work Order is marked done. |
+| Punch list | Each defect before correction and its corrected condition | Keep the punch item open until resolution evidence exists. |
+| Final completion | Final elevations, completed Roof/Siding, cleanup, property condition and required inspection evidence | Require for Job closeout. |
+| Completion and satisfaction | Approved final photo set plus Certification of Completion and Satisfaction | Submit together as the governed completion package. |
+| Warranty | Product/installation evidence and warranty reference | Require when applicable before final archival closeout. |
+
+Every retained image must record or resolve to:
+
+- canonical Job, Property and applicable Work Order;
+- evidence category;
+- capture date and time;
+- authenticated capturing worker;
+- GPS when permitted and available;
+- original immutable file hash;
+- replay-safe upload/request identity;
+- notes and markup as separate attributable history; and
+- supplement, punch-list or completion-package relationship where applicable.
+
+The Job page shall show evidence progress in business language, for example:
+
+```text
+Before work             8 of 8 complete
+Material delivery       5 of 6 — missing delivery damage overview
+Roof installation      12 of 12 complete
+Supplement evidence     Not required
+Trade QA                 7 of 7 complete
+Final completion         3 of 8 — action required
+Completion certificate  Not signed
+```
+
+Prompts are required when the worker arrives at the Job, opens a Work Order,
+approaches a governed transition, completes the daily report, lacks a required
+category, is about to cover concealed work, requests a supplement, marks a
+trade complete or prepares the completion certificate.
+
+Raw image count is not completion evidence. Repeated images of one roof slope
+cannot satisfy unrelated evidence categories. Each governed category requires
+matching evidence or an attributable `NOT_APPLICABLE` reason where the approved
+contract permits that disposition.
+
+The supplement path is:
+
+**unexpected condition discovered → select Supplement / scope change → capture
+evidence before covering the condition → record measurement and explanation →
+associate evidence with the affected Work Order → create the supplement
+evidence package → preserve the original and every revision.**
+
+The completion path is:
+
+**Work Orders complete → final photo checklist → trade QA → punch-list
+resolution → final inspection evidence → Certification of Completion and
+Satisfaction → customer signature → immutable completion package → governed Job
+completion gate.**
+
+#### Required foundations and authority boundary
+
+Implementation requires both:
+
+1. dedicated Midwest24 Job-media storage; the existing RustFS installation is
+   RustDesk infrastructure and is not available to OFBiz or Document Services;
+2. a mobile Job Photo Evidence workspace connected to the canonical OFBiz Job,
+   Property, Work Orders and OCP-014 register.
+
+Before implementation, approve a bounded OCP-014 amendment or successor that
+defines the stage-specific category matrix, dedicated storage authority,
+completion-package relationship, authorization, offline/retry behavior,
+retention, rollback/recovery and private-to-live acceptance. Existing candidate
+forms and evidence keys must not be represented as functioning automation until
+that gate passes.
+
+This objective does not authorize Immich as the Job record, reuse of RustDesk
+storage, raw media bytes in the OFBiz PostgreSQL database, direct public object
+URLs, a second CRM/Job database, AI analysis, billing, payments, procurement,
+inventory or customer communication.
+
+#### Proposed app delivery format — subject to the governing amendment
+
+The default implementation direction is an installable Progressive Web App
+served on the Midwest24 Core Enterprise domain. It provides a phone-first app
+experience without initially maintaining separate Android and iOS codebases.
+
+- **Mobile interface:** TypeScript and a small component-based web UI, compiled
+  to standard HTML, CSS and JavaScript and installable from the browser.
+- **Offline behavior:** a service worker and IndexedDB retain the selected Job,
+  checklist and encrypted upload queue until connectivity returns.
+- **Device capabilities:** standard browser camera, file-selection and
+  geolocation APIs; location never overrides authorization or worker
+  confirmation.
+- **Business services:** owned authenticated OFBiz Groovy services remain
+  authoritative for Job, Property, Work Order, evidence status and history.
+- **Media services:** the separately governed Document Services application
+  performs multipart upload, hashing, versioning and authorized retrieval.
+- **Storage:** PostgreSQL retains business/document metadata; a dedicated
+  S3-compatible object namespace on protected TrueNAS storage retains media
+  bytes. Bucket credentials are never exposed to the worker browser.
+- **Integration:** stable document/version identifiers and hashes link media to
+  native OFBiz records. No record is duplicated merely to support the mobile
+  interface.
+
+A native mobile wrapper may be evaluated only if controlled acceptance proves
+that the PWA cannot meet camera, offline, background-upload or device-policy
+requirements. Framework choice and API contracts must be frozen in the
+governing amendment before implementation begins.
+
 ### Definition of Done:
 
 - [ ] Joplin metro cash-engine handoff owners, measures and current-system
@@ -160,6 +307,10 @@ The current operating transition is recorded in
 - [ ] Repository governance validation passed
 - [ ] Scoped diff reviewed
 - [ ] Commit completed after separate approval
+- [ ] Stage-specific Job Photo Evidence amendment/successor approved
+- [ ] Dedicated Job-media storage and recovery boundary accepted privately
+- [ ] Location-aware mobile Job Photo Evidence workspace accepted privately
+- [ ] Live rollout separately approved and verified without duplicate records
 
 ### Deferred Institutional Memory Diagnostic Pilot
 
@@ -179,6 +330,8 @@ The current operating transition is recorded in
 - [008 — Human Qualification Review](../research-programs/001-institutional-memory/diagnostic/008-JOPLIN-MANUFACTURER-HUMAN-QUALIFICATION-REVIEW.md)
 - [009 — Protein Solutions Pre-Contact Qualification Brief](../research-programs/001-institutional-memory/diagnostic/009-PROTEIN-SOLUTIONS-PRE-CONTACT-QUALIFICATION-BRIEF.md)
 - [010 — Protein Solutions Qualification Contact Authorization](../research-programs/001-institutional-memory/diagnostic/010-PROTEIN-SOLUTIONS-QUALIFICATION-CONTACT-AUTHORIZATION.md)
+- [011 — Protein Solutions Qualification Contact Package](../research-programs/001-institutional-memory/diagnostic/011-PROTEIN-SOLUTIONS-QUALIFICATION-CONTACT-PACKAGE.md)
+- [012 — Pilot Commercial Validation Framework](../research-programs/001-institutional-memory/diagnostic/012-INSTITUTIONAL-MEMORY-DIAGNOSTIC-PILOT-COMMERCIAL-VALIDATION-FRAMEWORK.md)
 
 **Contact decision completed:** 2026-09-06
 
@@ -194,15 +347,48 @@ No pilot prospect has been finally selected. The Institutional Memory Diagnostic
 is not authorized. Named-person enrichment and outreach automation remain
 unauthorized.
 
-**Exact next action:**
+**Qualification contact package approved:** 2026-09-08
 
-Prepare the Protein Solutions Qualification Contact Package: identify one
-current organization-level public contact channel, draft one neutral initial
-qualification message, and map the twelve qualification dimensions into a
-concise conversation guide. Preserve the approximately-$10,000 / 75-record /
-8-interview / 3–4-week / 70-hour boundaries. Do not perform named-person
-enrichment. Present the exact channel and message for human review before
-transmission.
+The human reviewer approved the current organization-level channel and initial
+qualification approach.
+
+**Approved channel:**
+
+Protein Solutions published main business telephone number:
+
+`(417) 624-4966`
+
+The approved package is recorded in
+`011-PROTEIN-SOLUTIONS-QUALIFICATION-CONTACT-PACKAGE.md`.
+
+**Execution boundary:**
+
+The human-directed qualification contact may be performed in a dedicated
+execution workstream. That workstream may assist with call preparation and
+capture raw contact evidence, but governing qualification disposition, pilot
+selection, authorization, methodology change, and repository promotion remain
+under the Systems Architect Discipline.
+
+Named-person enrichment and outreach automation remain unauthorized.
+
+**Commercial-validation preparation:**
+
+The first-pilot commercial and methodology validation decision rules are
+preregistered in
+`012-INSTITUTIONAL-MEMORY-DIAGNOSTIC-PILOT-COMMERCIAL-VALIDATION-FRAMEWORK.md`.
+
+This preregistration does not select a pilot prospect, authorize the Diagnostic,
+or establish commercial validation.
+
+**Deferred next action:**
+
+The bounded human-directed organization-level qualification contact using the
+approved Protein Solutions package remains authorized but is deferred while the
+Business Recovery / Cash Engine objective is active. On resumption, preserve
+the approved execution boundary, record every qualification dimension as
+answered or unresolved, preserve contradictions or changed facts, assign one
+qualification disposition using the Pilot Authorization Package vocabulary, and
+return it for separate governing human review.
 
 ### Previous Objective Closeout — ACP-006
 
@@ -261,12 +447,15 @@ objective unless a specific operational deficiency is demonstrated.
    and accountable handoffs
 2. Resolve the first evidenced cash-engine handoff gap through the smallest
    authorized process, configuration, integration or software action
-3. Consider deferred post-cutover improvements only after the operating chain is
+3. Govern and implement the Location-aware Job Photo Evidence objective only
+   after the required OCP-014 amendment/successor and dedicated media-storage
+   boundary are approved
+4. Consider deferred post-cutover improvements only after the operating chain is
    accountable and measurable; return to governance before any authority change
-4. Resume the Institutional Memory Diagnostic pilot from the preserved Protein
+5. Resume the Institutional Memory Diagnostic pilot from the preserved Protein
    Solutions qualification package when business recovery no longer requires
    this priority
-5. Resume methodology development or historical research only for a defined
+6. Resume methodology development or historical research only for a defined
    diagnostic, falsification, operational or commercial requirement
 
 ---

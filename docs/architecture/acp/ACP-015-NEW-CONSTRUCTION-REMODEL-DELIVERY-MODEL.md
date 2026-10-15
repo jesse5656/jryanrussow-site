@@ -41,7 +41,7 @@ Work Order identity.
 | **Job** | One accountable customer delivery engagement. A roof replacement, remodel, or new home may each be a Job. | Existing native `WorkEffort(PROJECT)`. The immutable native ID is canonical; a human Job number is a business key only. |
 | **Phase** | A named, bounded portion of Job delivery used to organize dependencies, accountable completion and reporting. It is not a lifecycle state. | Native `WorkEffort(PHASE)` directly under the Job `WorkEffort(PROJECT)`. |
 | **Work package** | One planned unit of scope within a Phase, such as `Install wall framing` or `Install plumbing rough-ins`. It has an accountable party/trade, prerequisites and acceptance evidence. | An immutable catalog entry plus a Job-specific instance. A selected executable package materializes one native child `WorkEffort(TASK)`. |
-| **Work Order** | An assignable, executable trade instruction. | Native `WorkEffort(TASK)` directly under its Phase, with existing Midwest24-owned trade semantics, assignment, scoped authorization, receipts and immutable history. |
+| **Work Order** | An assignable, executable trade instruction. | Existing native `WorkEffort(TASK)` with Midwest24-owned trade semantics, assignment, scoped authorization, receipts and immutable history. Existing production Roof/Siding work orders remain direct Job children; `M24DeliveryJobNode` records their containing delivery Phase. |
 | **Stage / status** | The controlled lifecycle state of a Job, Phase, work package or Work Order. | Deterministic status IDs and permitted transitions. A status is never used as a substitute for phase membership or scope. |
 | **Gate / milestone** | An evidence-backed condition that must pass before a dependent work package can begin or a phase can close. | Owned validation/evidence rule linked to the applicable Job, Phase or Work Order. It is not an assumed calendar date. |
 | **Change order** | A separately approved change to accepted scope, price, schedule or work-package graph. | Deferred. No scope or dependency may be silently rewritten after acceptance. |
@@ -62,14 +62,12 @@ The approved physical graph for this private slice is therefore:
 
 ```text
 Job WorkEffort(PROJECT)
-  └─ Phase WorkEffort(PHASE)
-       └─ Work Order WorkEffort(TASK)
+  ├─ Roof / Siding Work Order WorkEffort(TASK)
+  └─ Exterior Phase WorkEffort(PHASE)
+       └─ M24DeliveryJobNode bindings to the selected Work Orders
 ```
 
-The existing direct `PROJECT → TASK` production Roof/Siding graph remains
-valid and unchanged. This slice proves the nested graph in an isolated private
-runtime only. It must not rewrite existing Jobs or change the production
-handoff path.
+This preserves the existing direct `PROJECT → TASK` production Roof/Siding graph. The Delivery binding records the containing Phase without re-parenting, duplicating, or changing those work orders. It must not rewrite existing Jobs or change the production handoff path.
 
 ## Authority and boundaries
 
@@ -222,6 +220,35 @@ The first private fixture must record a Foundation phase as
 `NOT_APPLICABLE` with a synthetic scope reason, proving the rule without
 claiming that foundation work is irrelevant to real new construction.
 
+#### Slice 1 OUT_OF_SCOPE acceptance
+
+Slice 1 `OUT_OF_SCOPE` acceptance is an absence-and-rejection assertion, not a
+persisted applicability state. For `M24_NC_RM_EXT_V1`, only the catalog nodes
+in that immutable catalog may participate in the selected delivery plan. An
+`OUT_OF_SCOPE` node is absent from the selected bounded catalog and has no plan
+or applicability instance, `M24DeliveryJobNode`, `WorkEffort`, dependency, gate
+state, or other Job state.
+
+The canonical Slice 1 `OUT_OF_SCOPE` acceptance fixture is the synthetic,
+test-only identifier `M24_TEST_OUT_OF_SCOPE_NODE`. The materialization boundary
+must reject an attempt to introduce it with zero effects. It must never be
+inserted into the catalog, persisted as applicability, bound to a `WorkEffort`,
+or treated as production state. Any altered or invalid input that attempts to
+persist an unknown or out-of-catalog node must fail closed.
+
+Foundation remains the required attributable `NOT_APPLICABLE` fixture and must
+not be repurposed as the `OUT_OF_SCOPE` fixture. Roof and Siding remain governed
+catalog work packages and must not be treated as `OUT_OF_SCOPE` within
+`M24_NC_RM_EXT_V1`. For the Slice 1 acceptance matrix:
+
+- `APPLICABLE` means a catalog node exists and an applicable package may bind or
+  materialize governed executable work;
+- `NOT_APPLICABLE` means attributable planning evidence exists with no
+  executable-task delivery binding for that package; and
+- `OUT_OF_SCOPE` means the node is absent, attempted introduction is rejected,
+  and no plan, applicability, binding, `WorkEffort`, gate, or receipt effect is
+  created for that node.
+
 The initial typed relationship is:
 
 ```text
@@ -244,12 +271,11 @@ A successful private materialization creates exactly:
 ```text
 one Job(PROJECT)
   → one Exterior Phase(PHASE)
-      → one Roof Work Order(TASK)
-      → one Siding Work Order(TASK)
+  → one existing Roof Work Order(TASK), bound to Exterior
+  → one existing Siding Work Order(TASK), bound to Exterior
 ```
 
-Both Tasks are linked to their catalog nodes and the containing Phase. They
-reuse, without copying or changing, the committed production lifecycle from
+Both Tasks are linked to their catalog nodes and containing Phase by `M24DeliveryJobNode`. Their native direct Job parentage remains unchanged. They reuse the committed production lifecycle from
 `03d5941e490c55780aad4cca6e47bbe2c1fad3b5`:
 
 - Roof: `M24_PRD_ROOF_READY → M24_PRD_ROOF_SCHED →
@@ -283,8 +309,9 @@ In a fresh isolated OFBiz 24.09.07 runtime, prove:
 
 1. published `M24_NC_RM_EXT_V1` has a stable normalized hash and cannot be
    mutated;
-2. a synthetic accepted Job materializes one native `PHASE` and two native
-   `TASK` children only after attributed `M24_GATE_EXTERIOR_READY` evidence;
+2. a synthetic accepted Job materializes one native `PHASE` and binds exactly
+   its existing Roof and Siding `TASK` work orders only after attributed
+   `M24_GATE_EXTERIOR_READY` evidence; native Task parentage remains unchanged;
 3. the task-to-phase-to-job graph, catalog version/hash, trade context and
    applicability decisions survive restart/recreation and independently
    reconstruct;
@@ -329,9 +356,10 @@ Exterior Roof/Siding Phase** after this approved document is committed.
 
 Start from baseline `03d5941e490c55780aad4cca6e47bbe2c1fad3b5`. Use a fresh isolated
 private runtime. Add the catalog, binding, dependency and gate model described
-above; materialize `PROJECT → PHASE → TASK`; reuse the committed Roof/Siding
-lifecycle; and prove the complete private acceptance matrix. Do not change the
-existing live production handoff, existing direct `PROJECT → TASK` path,
+above; materialize the Exterior `PHASE` and explicit bindings to existing
+Roof/Siding Tasks; reuse the committed Roof/Siding lifecycle; and prove the
+complete private acceptance matrix. Do not change the existing live production
+handoff or existing direct `PROJECT → TASK` path,
 production configuration, real users, LAN, or any excluded capability.
 
 Show the exact diff and validation evidence before any implementation commit or
